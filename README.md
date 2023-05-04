@@ -5,7 +5,7 @@ Wizard Mod for Wartales
 
 힐러, 주술사, 법사 이렇게 세가지 트리일듯 (무리다 싶으면 힐러,주술사 두가지 트리 될수도)
 
-기본직업 (Title) : Mage (Magic)
+기본직업 (Title) : Mage (Magic)  
 흑마법사 Warlock / 사제 Priest / 원소술사 Sorcerer
 
 번역작업은 export_zh.xml 참고
@@ -17,9 +17,9 @@ Wizard Mod for Wartales
 
 의지에 따라서 힐량이 정해짐.
 
-힐링 공식: (skill.unit.stats.willpower/50) * (vars.value1/100) * randInt(12,20)/16
-전자는 캐릭터의 의지에 영향, 후자는 스킬 레벨에 따라 50, 100과 같이 주기.
-스킬 (타겟힐, 범위힐, 그룹힐)에 따라서 value1 값 차등주기.
+힐링 공식: (skill.unit.stats.willpower/50) * (vars.value1/100) * randInt(12,20)/16  
+전자는 캐릭터의 의지에 영향, 후자는 스킬 레벨에 따라 50, 100과 같이 주기.  
+스킬 (타겟힐, 범위힐, 그룹힐)에 따라서 value1 값 차등주기.  
 거기에 랜덤 인자 곱 (75 ~ 125% 범위)
 
 레벨링도 고쳐야함.
@@ -31,17 +31,17 @@ Wizard Mod for Wartales
 
 의지에 따라서 디버프/버프 성공률이 정해짐.
 
-주술사는 대충 좁은범위 (radius 1~2, distance 4) 광역 디버프 두가지 (공포, 슬로우나, 공/방 낮추는 커스텀 디버프 만들듯)
-하나는 공포 스택 1~5 중 랜덤 적용, (레벨업 시, 일정 확률로 부동 적용.)
+주술사는 대충 좁은범위 (radius 1-2, distance 4) 광역 디버프 두가지 (공포, 슬로우나, 공/방 낮추는 커스텀 디버프 만들듯)  
+하나는 공포 스택 1-5 중 랜덤 적용, (레벨업 시, 일정 확률로 부동 적용.)  
 -> 의지 높을수록 높은 스택 적용될 확룔 높임.
 
-다른 하나는 랜덤 디버프 적용
-( 취약성 || 골절 || 실패)
+다른 하나는 랜덤 디버프 적용  
+( 취약성 || 골절 || 실패)  
 레벨업시 일정 확률로 (감염 - 미친) 적용
 
 
-아군 버프 생각중.
-(Berserk || Elite || 실패)
+아군 버프 생각중.  
+(Berserk || Elite || 실패)  
 레벨업시 일정 확률로 (Arena_Willforce) 적용
 
 좀비화도 커스텀 버프인데 대충 베르나 투기장 버프 모티브로,
@@ -69,17 +69,17 @@ Wizard Mod for Wartales
 
 
 # Data CDB Line
-"name": "item"
-"name": "craft"
-"name": "loot"
-"name": "unitClass"
-"name": "unitPattern"
-"name": "skill"
-
+- "name": "item"
+- "name": "craft"
+- "name": "loot"
+- "name": "unitClass"
+- "name": "unitPattern"
+- "name": "skill"
+- "name": "status"
 
 
 # Skill Attribute
-```
+```json
 {
     "typeStr": "5:TargetUnit,Precision,Passive,Move,Immediate,Zone,WorldPassive",
     "name": "mode"
@@ -87,21 +87,21 @@ Wizard Mod for Wartales
 ```
 typeStr:5 -> 숫자로 계산. 중복 불가. (mode:0 => TargetUnit, 1 => Precision, 2 => Passive, 3 => Move 이런식)
 
-"group": 2 -> 공용스킬
-"group": 9 -> Swordman
-    Slashes, Estocade / Encouragement, DestabilisingStrike
-"group": 10 -> Bowman
-    Barrage, RecoilShot, ATTACK, AimedShot
-"group": 11 -> Rougue
-    PoisonFlask, Frenzy, SmokeScreen / BetweenTheEyes
-"group": 12 -> Spearman
-    SpearThrow, RallyingShout, SpearsWall, MasteredWhirlwind
-"group": 13 -> Axeman
-    Outburst, SharpWhirlwind, Ovation, PridefulStrike
-"group": 14 -> Brute
-    RelentlessCharge, PoisonedImpact, WeakeningShock, ThunderousBlow
+- "group": 2 -> 공용스킬
+- "group": 9 -> Swordman
+    - Slashes, Estocade / Encouragement, DestabilisingStrike
+- "group": 10 -> Bowman
+    - Barrage, RecoilShot, ATTACK, AimedShot
+- "group": 11 -> Rougue
+    - PoisonFlask, Frenzy, SmokeScreen / BetweenTheEyes
+- "group": 12 -> Spearman
+    - SpearThrow, RallyingShout, SpearsWall, MasteredWhirlwind
+- "group": 13 -> Axeman
+    - Outburst, SharpWhirlwind, Ovation, PridefulStrike
+- "group": 14 -> Brute
+    - RelentlessCharge, PoisonedImpact, WeakeningShock, ThunderousBlow
 
-```
+```json
 "name": "skill@range"
 {
     "typeStr": "5:Enemies,Allies,AlliesWithSelf,Self,All,AllButSelf,None",
@@ -112,12 +112,12 @@ typeStr:5 -> 숫자로 계산. 중복 불가. (mode:0 => TargetUnit, 1 => Precis
 
 
 # UnitClass Attribute
-props.flags = 2 -> (베이스 직업) Swordman, Bowman, Rogue
-32 -> (전직 직업) Protector, Fighter, Swordmaster, Hunter, BeastMaster, Skirmisher, Cutthroat, Strategist, Poisoner
-2080 -> (전직 직업 중 히든직업) Duellist,  Marksman, Assassin
+props.flags = 2 -> (베이스 직업) Swordman, Bowman, Rogue  
+32 -> (전직 직업) Protector, Fighter, Swordmaster, Hunter, BeastMaster, Skirmisher, Cutthroat, Strategist, Poisoner  
+2080 -> (전직 직업 중 히든직업) Duellist,  Marksman, Assassin  
 
 아래 unitClass@props 참고.
-```
+```json
 {
     "typeStr": "10:CanCapture,CanRecruit,CantMakePrisoner,IsChampion,NoEquipDrop,IsSpecialized,IsReserve,ForceDropWeapon,BattleNotCount,CantSurround,LockRotation,IsLocked,HasVisualVariants,GhostUnit,NoWeapon,Plagued,CanTransport,NoPunch,PreventSkilled,ArenaChampion,PreventRenfort",
     "name": "flags",
@@ -125,17 +125,18 @@ props.flags = 2 -> (베이스 직업) Swordman, Bowman, Rogue
 },
 ```
 typeStr: 10 -> Binary로 계산, (각각 true/false, 중복가능)
-2 = 10 : CanRecruit true
-32 = 100000 : IsSpecialized true
-2080 = 100000100000 : IsSpecialized & IsLocked true
 
-직업은 tier로 구분
-tier: 0 -> 베이스 직업 (Swordman, Bowman, Rouge 등)
-tier: 1 -> 전직직업 (Swordmaster, BeastMaster 등)
+2 = 10 : CanRecruit true  
+32 = 100000 : IsSpecialized true  
+2080 = 100000100000 : IsSpecialized & IsLocked true  
+
+직업은 tier로 구분  
+tier: 0 -> 베이스 직업 (Swordman, Bowman, Rouge 등)  
+tier: 1 -> 전직직업 (Swordmaster, BeastMaster 등)  
 
 ## Separators
-직업간 분리는 아래 "separators" 로 구분선을 만듬.
-skill과 class간 연결은 (unitClass의 seperators.title) 과 (skill의 seperators.title) 가 같으면 됨.
+직업간 분리는 아래 "separators" 로 구분선을 만듬.  
+skill과 class간 연결은 (unitClass의 seperators.title) 과 (skill의 seperators.title) 가 같으면 됨.  
 ex) 검사는 "title": "Sword"
 
 separators.level 은 depth를 의미함.
@@ -143,6 +144,6 @@ separators.level 은 depth를 의미함.
 
 
 # Status Attribute
-곰 광폭화: Ténacité sauvage, Berserk
-베르나 투기장 무적: G2Arena1RuleLifeLinked, Arena_Willforce
+곰 광폭화: Ténacité sauvage, Berserk  
+베르나 투기장 무적: G2Arena1RuleLifeLinked, Arena_Willforce  
 도망침 디버프: Terror
