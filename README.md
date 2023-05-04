@@ -124,6 +124,13 @@ typeStr:5 -> 숫자로 계산. 중복 불가. (mode:0 => TargetUnit, 1 => Precis
 },
 ```
 
+## props의 특수효과들
+- castFx: "히트" 이벤트 또는 애니메이션 끝에서 재생되는 이펙트
+- extraFx: 스킬 실행에 추가 이펙트를 재생합니다.
+- throwFx: 발사체에 부착된 이펙트
+- animFx: 재생된 애니메이션에 해당하는 FX 자동 검색을 대체합니다.
+
+
 # UnitClass Attribute
 props.flags = 2 -> (베이스 직업) Swordman, Bowman, Rogue  
 32 -> (전직 직업) Protector, Fighter, Swordmaster, Hunter, BeastMaster, Skirmisher, Cutthroat, Strategist, Poisoner  
