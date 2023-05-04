@@ -10,7 +10,7 @@
     ],
     "props": {
         "model": "chars/Weapons/Mace_01.fbx",
-        "skill": "MagicMissile",
+        "skill": "Crushing",
         "disableLoot": true
     },
     "icon": {
