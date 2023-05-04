@@ -29,14 +29,6 @@
 		{
 			"skill": "BraveSupport",
 			"minLevel": 2
-		},
-		{
-			"skill": "Anticipation",
-			"minLevel": 10
-		},
-		{
-			"skill": "ClassSpecialization",
-			"minLevel": 12
 		}
 	],
 	"props": {
