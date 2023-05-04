@@ -7,7 +7,7 @@
 	"props": {
 		"isHeroic": true,
 		"specialAnim": "Taunt",
-		"apCost": 2,
+		"apCost": 3,
 		"vars": {
 			"value1": 50
 		},
@@ -23,7 +23,7 @@
 		{
 			"props": {
 				"vars": {
-					"value1": 100
+					"value1": 75
 				}
 			}
 		}

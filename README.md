@@ -32,7 +32,7 @@ Wizard Mod for Wartales
 의지에 따라서 디버프/버프 성공률이 정해짐.
 
 주술사는 대충 좁은범위 (radius 1-2, distance 4) 광역 디버프 두가지 (공포, 슬로우나, 공/방 낮추는 커스텀 디버프 만들듯)  
-하나는 공포 스택 1-5 중 랜덤 적용, (레벨업 시, 일정 확률로 부동 적용.)  
+하나는 공포 스택 1-5 중 랜덤 적용, (레벨업 시, 일정 확률로 1턴간 지속되는 Immobile 적용.)  
 -> 의지 높을수록 높은 스택 적용될 확룔 높임.
 
 다른 하나는 랜덤 디버프 적용  
@@ -41,8 +41,8 @@ Wizard Mod for Wartales
 
 
 아군 버프 생각중.  
-(Berserk || Elite || 실패)  
-레벨업시 일정 확률로 (Arena_Willforce) 적용
+(Berserk || Champion || 실패)  
+레벨업시 일정 확률로 1턴 지속되는 (Arena_Willforce) 적용 // G2Arena1RuleLifeLinked 참고
 
 좀비화도 커스텀 버프인데 대충 베르나 투기장 버프 모티브로,
 

@@ -15,7 +15,7 @@
 		},
 		{
 			"skill": "GroupHeal",
-			"minLevel": 8
+			"minLevel": 10
 		}
 	],
 	"props": {
