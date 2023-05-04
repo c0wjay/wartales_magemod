@@ -2,7 +2,7 @@
 	"id": "Priest",
 	"weaponTypes": [
 		{
-			"wp": "Dagger"
+			"wp": "Wand"
 		}
 	],
 	"baseSkills": [
@@ -19,6 +19,7 @@
 		}
 	],
 	"props": {
+		"armorKind": "ArmorLight",
 		"flags": 32
 	},
 	"stats": [
@@ -52,7 +53,7 @@
             "upValue": 30
 		}
 	],
-	"model": "chars/Prefabs/Prefab_D.prefab",
+	"model": "chars/Prefabs/Prefab_WP.prefab",
 	"notes": "",
 	"name": "Priest",
 	"tier": 1,

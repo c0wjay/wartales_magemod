@@ -2,7 +2,7 @@
 	"id": "Mage",
 	"weaponTypes": [
 		{
-			"wp": "Dagger"
+			"wp": "Wand"
 		}
 	],
 	"baseSkills": [
@@ -73,14 +73,14 @@
             "upValue": 30
 		}
 	],
-	"model": "chars/Prefabs/Prefab_D.prefab",
+	"model": "chars/Prefabs/Prefab_WP.prefab",
 	"notes": "",
 	"name": "Wizard",
 	"tier": 0,
 	"equipment": [
 		{
 			"armor": "BaseArmorStart1",
-			"weapon": "DaggerStart"
+			"weapon": "WandStart"
 		}
 	],
 	"rarity": 0,

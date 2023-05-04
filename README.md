@@ -154,7 +154,22 @@ ex) 검사는 "title": "Sword"
 
 separators.level 은 depth를 의미함.
 
+## Model
+- Axeman: Prefab_AS
+- Swordman: Prefab_SS
+- Rougue: Prefab_D
+- Bowman: Prefab_B
+- Spearman: Prefab_P
+- Brute: Prefab_MS
 
+배정안된 모델들
+- Prefab_FS: 로그처럼 보이는 적당한 놈
+- Prefab_M,
+- Prefab_S,
+- Prefab_WP,
+- Prefab_WSS, 
+- TestAnim, 
+- TestChar: 적용하면 크래시남.
 
 # Status Attribute
 곰 광폭화: Ténacité sauvage, Berserk  
