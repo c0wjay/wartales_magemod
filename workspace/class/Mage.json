@@ -1,0 +1,89 @@
+{
+	"id": "Mage",
+	"weaponTypes": [
+		{
+			"wp": "Dagger"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "Wrath",
+			"minLevel": 0
+		},
+		{
+			"skill": "Dash",
+			"minLevel": 0
+		},
+		{
+			"skill": "FirstAid",
+			"minLevel": 0
+		},
+		{
+			"skill": "BraveBoldness",
+			"minLevel": 2
+		},
+		{
+			"skill": "BraveCleave",
+			"minLevel": 2
+		},
+		{
+			"skill": "BraveSupport",
+			"minLevel": 2
+		},
+		{
+			"skill": "Anticipation",
+			"minLevel": 10
+		},
+		{
+			"skill": "ClassSpecialization",
+			"minLevel": 12
+		}
+	],
+	"props": {
+		"flags": 2
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 20
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 6,
+			"attribute": "Constitution",
+			"upValue": 32
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 6,
+			"attribute": "Movement"
+		},
+		{
+			"value": 12,
+			"attribute": "Willpower",
+            "upValue": 30
+		}
+	],
+	"model": "chars/Prefabs/Prefab_D.prefab",
+	"notes": "",
+	"name": "Wizard",
+	"tier": 0,
+	"equipment": [
+		{
+			"armor": "BaseArmorStart1",
+			"weapon": "DaggerStart"
+		}
+	],
+	"rarity": 0,
+	"timelinePriority": 0,
+	"iconeDone": true
+},

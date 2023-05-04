@@ -1,0 +1,63 @@
+{
+	"id": "Priest",
+	"weaponTypes": [
+		{
+			"wp": "Dagger"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "TargetHeal"
+		},
+		{
+			"skill": "RangeHeal",
+			"minLevel": 5
+		},
+		{
+			"skill": "GroupHeal",
+			"minLevel": 8
+		}
+	],
+	"props": {
+		"flags": 32
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 20
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 6,
+			"attribute": "Constitution",
+			"upValue": 32
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 6,
+			"attribute": "Movement"
+		},
+		{
+			"value": 12,
+			"attribute": "Willpower",
+            "upValue": 30
+		}
+	],
+	"model": "chars/Prefabs/Prefab_D.prefab",
+	"notes": "",
+	"name": "Priest",
+	"tier": 1,
+	"equipment": [],
+	"rarity": 0,
+	"timelinePriority": 0,
+	"iconeDone": true
+},
