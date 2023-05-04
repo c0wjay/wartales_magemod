@@ -5,6 +5,7 @@
 	"mode": 4,
 	"range": {},
 	"props": {
+		"isHeroic": true,
 		"specialAnim": "Taunt",
 		"apCost": 2,
 		"vars": {
@@ -26,6 +27,6 @@
 		"y": 15
 	},
 	"iconeDone": true,
-	"group": 2,
+	"group": 10,
 	"done": 2
 },

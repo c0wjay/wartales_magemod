@@ -4,10 +4,11 @@
 	"desc": "",
 	"mode": 0,
 	"range": {
-		"allowedTargets": 1,
+		"allowedTargets": 2,
 		"baseDistance": 8
 	},
 	"props": {
+		"isHeroic": true,
 		"apCost": 1,
 		"vars": {
 			"value1": 50
@@ -27,7 +28,7 @@
 		"y": 12
 	},
 	"iconeDone": true,
-	"group": 2,
+	"group": 10,
 	"done": 2
 },
 
