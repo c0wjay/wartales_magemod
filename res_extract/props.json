@@ -1,0 +1,211 @@
+{
+	"renderers" : {
+		"OpenWorld" : "lib.OpenWorldMaterialSetup"
+	},
+	"defaultRenderer" : "OpenWorld",
+	"plugins": [
+		"../tools/hide-plugin.js",
+		"../tools/hide.css"
+	],
+	"script.api.files" : ["../api.xml"],
+	"script.api" : {
+		"hx" : {
+			"globals" : {
+			},
+			"context" : "script.WorldApi",
+			"allowGlobalsDefine" : true,
+			"cdbEnums" : ["place","element","element.dialog","item"]
+		},
+		"cdb.skill" : {
+			"globals" : {
+				"vars" : "cdb.skill.props.vars",
+				"skill" : "battle.skill.SkillEval",
+				"PlayerAction" : "#ent.PlayerAction"
+			},
+			"context" : "battle.skill.SkillApi",
+			"events" : "battle.skill.SkillEvents",
+			"cdbEnums" : ["status","unitClass","attribute","skill","trait","counter","sound"]
+		},
+		"cdb.element.script" : {
+			"globals" : {
+				"vars" : "cdb.element.props.vars",
+				"currentDialog" : "Element_dialogKind"
+			},
+			"contexts" : ["script.ElementApi","battle.BattleApi","script.DialogApi"],
+			"events" : "script.ElementEvents",
+			"cdbEnums" : ["element.dialog","element","status", "unitClass","attribute","skill","item", "groupType","trait", "place", "sound", "counter", "activity", "bonus","region", "constant"]
+		}
+	},
+	"scene.environment" : "assets/worldmap/textures/envmap.jpg",
+	"scene.renderProps" : "prefabs/lighting/defaultHide.prefab",
+	"scene.autoHide" : ["collision", "occlusion", "Collide", "Selection"],
+	"sceneeditor.icons" : { "group" : "shield", "place" : "home" },
+	"sceneeditor.huds" : {
+		"maxWidth" : 40,
+		"place" : "world.name",
+		"element" : ["items.content[0].item.icon","items.content[0].loot.content[0].item.icon"]
+	},
+	"sceneeditor.ranges" : {
+		"group" : {
+			"movement.range" : "0xD0F0D0",
+			"movement.aggroRange" : "0xFF0000"
+		}
+	},
+	"hmd.savePropsByAnimation" : true,
+	"haxe.classPath" : ["src", "../src"],
+	"cdb.prefabsSearchPaths" : ["content"],
+	"fx.shaders": [
+		"h3d.shader.AnimatedTexture",
+		"h3d.shader.ColorAdd",
+		"gfx/shader/ColorSet.hx",
+		"gfx/shader/ColorPulse.hx",
+		"gfx/shader/WorldPatch.hx",
+		"gfx/shader/Outline.hx",
+		"shaders/AlphaColorMap3.hx",
+		"shaders/AlphaGradient.hx",
+		"shaders/AlphaKill.hx",
+		"shaders/AlphaMap.hx",
+		"shaders/AlphaMult.hx",
+		"shaders/AutoAlpha.hx",
+		"shaders/ColorMap.hx",
+		"shaders/ColorMap3.hx",
+		"shaders/ColorMult.hx",
+		"shaders/ColorSet.hx",
+		"shaders/DepthBlend.hx",
+		"shaders/Dissolve.hx",
+		"shaders/DissolveMap.hx",
+		"shaders/DistortionMap.hx",
+		"shaders/DistortionNormal.hx",
+		"h3d.shader.Dither",
+		"h3d.shader.Emissive",
+		"shaders/FakeLight.hx",
+		"shaders/CampGrass.hx",
+		"shaders/Fresnel.hx",
+		"shaders/OffsetShadowBiasShader.hx",
+		"shaders/UVGradient.hx",
+		"shaders/UVMultiply.hx",
+		"shaders/UVDistortion.hx",
+		"shaders/UVSweep.hx",
+		"shaders/UVTransform.hx",
+		"shaders/Pestifered.hx",
+		"shaders/SSSFlesh.hx",
+		"shaders/UVSocle.hx",
+		"shaders/VertexDisplacement.hx",
+		"shaders/WorldUV.hx",
+		"hrt.shader.GradientMap",
+		"hrt.shader.ParticleColorLife",
+		"hrt.shader.ParticleColorRandom",
+		"hrt.shader.ParticleFade"
+	],
+	"fs.config" : "default",
+	"fs.convert" : {
+		"wav" : "ogg",
+		"kra" : "none",
+		"prefab" : "hbson",
+		"l3d" : "hbson",
+		"hdr" : "none",
+		"__envd" : { "convert" : "dds", "format" : "BC1" },
+		"__envs" : { "convert" : "dds", "format" : "BC1", "mips" : true },
+		"^__envd\\.dds$" : { "convert" : "dds", "format" : "BC1" },
+		"^__envs\\.dds$" : { "convert" : "dds", "format" : "BC1", "mips" : true },
+		"^assets/interior/.*\\.png$" : { "convert" : "dds", "format" : "BC1", "alpha" : 128, "mips" : true },
+		"^assets/outdoor/.*\\.png$" : { "convert" : "dds", "format" : "BC1", "alpha" : 128, "mips" : true },
+		"^assets/worldmap/buildings/.*\\.png$" : { "convert" : "dds", "format" : "BC1", "alpha" : 128, "mips" : true },
+		"^assets/worldmap/props/.*\\.png$" : { "convert" : "dds", "format" : "BC3", "mips" : true },
+		"^assets/worldmap/textures/decal/.*\\.png$" : { "convert" : "dds", "format" : "BC3", "mips" : true },
+		"^assets/worldmap/textures/terrain_worldmap/.*\\.png$" : { "convert" : "dds", "format" : "BC1" },
+		"^assets/worldmap/textures/terrain_worldmap/.*_Normal\\.png$" : { "convert" : "dds", "format" : "BC3", "priority" : 2 },
+		"^assets/worldmap/minimap/.*\\.png$" : { "convert" : "dds", "format" : "BC3", "priority" : 2 },
+		"^prefabs/battle/obstacle/.*\\.png$" : { "convert" : "dds", "format" : "BC1", "alpha" : 128, "mips" : true },
+		"^.*Metallic.*\\.png$" : { "convert" : "dds", "format" : "BC1", "priority" : 1, "mips" : true },
+		"^.*Alpha.*\\.png$" : { "convert" : "dds", "format" : "BC3", "priority" : 2, "mips" : true },
+		"^chars/.*\\.png$" : { "convert" : "dds", "format" : "BC1", "alpha" : 128, "mips" : true },
+		"^chars/unit.*\\.png$" : { "convert" : "none", "priority" : 3 },
+		"fbx" :{ "convert" : "hmd", "tangents" : true },
+		"FBX" :{ "convert" : "hmd", "tangents" : true },
+		"^chars/.*/Model.*\\.fbx$" : { "convert" : "hmd", "normals" : true, "tangents" : true },
+		"^chars/.*/Anim_Pose.*\\.fbx$" : { "convert" : "hmd", "precise" : true, "priority" : 3, "tangents" : true },
+		"^chars/.*/Anim_Death.*\\.fbx$" : { "convert" : "hmd", "precise" : true, "priority" : 3, "tangents" : true },
+		"^chars/.*/Anim_IdlePortrait.*\\.fbx$" : { "convert" : "hmd", "precise" : true, "priority" : 3, "tangents" : true },
+		"^chars/.*Metallic.*\\.png$" : { "convert" : "dds", "format" : "BC3", "priority" : 2, "mips" : true },
+		"^assets/outdoor/textures_terrain/.*Metallic.*\\.png$" : { "convert" : "dds", "format" : "BC3", "priority" : 2, "mips" : true },
+		"^console/.*\\.png$" : { "convert" : "dds", "format" : "BC1", "alpha" : 128, "mips" : true },
+		"^console/assets/worldmap/textures.*\\.png$" : { "convert" : "none", "priority" : 3}
+	},
+	"filetree.excludes": [
+		".tmp",
+		".*\\.props",
+		"data.cdb",
+		"props.json",
+		"materials.props",
+		".*\\.dat",
+		"shaders.cache.*",
+		"Anim_[^.]+\\.fbx$",
+		"assets/interior/.+\\.png",
+		"assets/outdoor/.+\\.png",
+		"assets/worldmap/buildings/.+\\.png",
+		"chars/.+\\.png",
+		"prefabs/fx/.+\\.png$",
+		"prefabs/fx/.+\\.jpg$"
+	],
+
+	"terrain.brushes": [
+        { "name": "Default", "texture" : "${HIDE}/res/brushes/default.jpg", "step" : 3, "size" : 30, "strength" : 1.0 },
+        { "name": "Square", "texture" : "${HIDE}/res/brushes/square.jpg", "step" : 3, "size" : 30, "strength" : 1.0 }
+	],
+
+	"material.drawOrder": [
+		{ "name": "Bottom", "value" : -100 },
+		{ "name": "Default", "value" : 0 },
+		{ "name": "Top", "value" : 100 }
+	],
+
+	"material.preview" : "assets/sphere_mat.fbx",
+
+	"performance.lightGradient" : "perfGradient.png",
+	"performance.maxLights" : "5",
+	"perfAnalyzer.config" : {
+		"default" : {
+			"lights" : { "medium" : "15", "high" : "30" },
+			"staticShadows" : { "medium" : "15", "high" : "30" },
+			"mixedShadows" : { "medium" : "10", "high" : "20" },
+			"dynamicShadows" : { "medium" : "2", "high" : "2" },
+			"nonDirDynamicShadows" : { "medium" : "1", "high" : "1" },
+			"lightProbes" : { "medium" : "3", "high" : "5" },
+			"mainDraw" : { "medium" : "8000", "high" : "1000" },
+			"shadowDraw" : { "medium" : "600", "high" : "800" },
+			"totalDraw" : {	"medium" : "1300", "high" : "1600" },
+			"batchMaxVertices" : { "medium" : "200000", "high" : "200000"}
+		},
+		"world.World" : {
+			"lights" : { "medium" : "1000",	"high" : "1000" },
+			"staticShadows" : { "medium" : "1000", "high" : "1000" },
+			"mixedShadows" : { "medium" : "1", "high" : "1" },
+			"dynamicShadows" : { "medium" : "2", "high" : "2" },
+			"nonDirDynamicShadows" : { "medium" : "1", "high" : "1" },
+			"lightProbes" : { "medium" : "1", "high" : "1" }
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
