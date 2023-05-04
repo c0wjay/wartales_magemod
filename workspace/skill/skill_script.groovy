@@ -137,20 +137,8 @@ function onSkill() {
     skill.target.gainsHealth( ceil( skill.target.stats.health * ( min(skill.unit.stats.willpower, 50)/50 ) * (vars.value1/100) * randInt(12,20)/16 ) , null);
     if( skill.level == 2 ) {
         var armorRecovery = ceil ( skill.target.stats.armor * min(skill.unit.stats.willpower, 50)/100 * randInt(12,20)/16 );
-        if ( skill.target.armor < armorRecovery ) {
-            skill.target.armor = armorRecovery;
-        }
+        skill.target.armor = min(skill.target.armor + armorRecovery, skill.target.stats.armor);
     }
-}
-
-
-// TotalHeal (BeastMaster, Ovation 참고)
-function onSkill() {
-    play();
-    @sync for( u in getAllies(skill.unit) ) {
-        u.gainsHealth(ceil( u.stats.health * min(skill.unit.stats.willpower, 50)/50 * (vars.value1/100) ), null);
-    }
-    spawnFx();
 }
 
 
@@ -166,6 +154,16 @@ function onSkill() {
             spawnFx();
         }
 	}
+}
+
+
+// GroupHeal (BeastMaster, Ovation 참고)
+function onSkill() {
+    play();
+    @sync for( u in getAllies(skill.unit) ) {
+        u.gainsHealth(ceil( u.stats.health * min(skill.unit.stats.willpower, 50)/50 * (vars.value1/100) ), null);
+    }
+    spawnFx();
 }
 
 // PoisonFlask

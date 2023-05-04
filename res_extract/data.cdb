@@ -75951,7 +75951,7 @@
 						"healPreview": 1,
 						"useWithoutWeapon": true
 					},
-					"script": "function onSkill() {\n\tplay();\n\tskill.target.gainsHealth( ceil( skill.target.stats.health * ( min(skill.unit.stats.willpower, 50)/50 ) * (vars.value1/100) * randInt(12,20)/16 ) , null);\n\tif( skill.level == 2 ) {\n\t\tvar armorRecovery = ceil ( skill.target.stats.armor * min(skill.unit.stats.willpower, 50)/100 * randInt(12,20)/16 );\n\t\tif ( skill.target.armor < armorRecovery ) {\n\t\t\tskill.target.armor = armorRecovery;\n\t\t}\n\t}\n}",
+					"script": "function onSkill() {\n\tplay();\n\tskill.target.gainsHealth( ceil( skill.target.stats.health * ( min(skill.unit.stats.willpower, 50)/50 ) * (vars.value1/100) * randInt(12,20)/16 ) , null);\n\tif( skill.level == 2 ) {\n\t\tvar armorRecovery = ceil ( skill.target.stats.armor * min(skill.unit.stats.willpower, 50)/100 * randInt(12,20)/16 );\n\t\tskill.target.armor = min(skill.target.armor + armorRecovery, skill.target.stats.armor);\n\t}\n}",
 					"notes": "",
 					"levels": [
 						{
