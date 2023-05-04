@@ -9,9 +9,11 @@
         "baseDistance": 6
     },
     "props": {
-        "dmgAttribute": 3,
+        "dmgAttribute": 2,
         "needDisengaged": true,
-        "extraFx": "prefabs/fx/fight/Attack/AttackPower_B.fx"
+        "castFx": "prefabs/fx/fight/hits & impacts/impactElectrical.fx",
+        "isAttack": true,
+        "defaultAction": true
     },
     "script": "",
     "notes": "",
@@ -21,8 +23,8 @@
         "x": 0,
         "y": 3
     },
-    "minDmg": 3,
-    "maxDmg": 6,
+    "minDmg": 6,
+    "maxDmg": 10,
     "iconeDone": true,
     "group": 3,
     "done": 2
