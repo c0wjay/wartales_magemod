@@ -13865,6 +13865,30 @@
 					}
 				},
 				{
+					"id": "Wand",
+					"name": "Canne",
+					"icon": {
+						"file": "ui/Icons/WM_Icons.png",
+						"size": 42,
+						"x": 5,
+						"y": 0
+					},
+					"parentType": "Weapon",
+					"props": {
+						"isCraftSeparator": true,
+						"dismantleLoot": "DismantleWand",
+						"baseBonusDefault": "WandBase",
+						"nameCraftCategory": "Cannes"
+					},
+					"equipDefault": {
+						"file": "ui/Icons/GearIcons/1HHammersIcons.png",
+						"size": 96,
+						"x": 0,
+						"y": 0,
+						"height": 2
+					}
+				},
+				{
 					"id": "AnimalAccessory",
 					"name": "Accessoire d'animal",
 					"props": {
@@ -15252,6 +15276,26 @@
 					"iconeDone": true,
 					"group": 2,
 					"type": "Bow",
+					"__ignoreLoc__": true
+				},
+				{
+					"id": "WandBase",
+					"name": "Wand de base",
+					"weight": 0.5,
+					"baseBonus": [
+						{
+							"value": 2,
+							"attribute": "Willpower",
+							"upValue": 35
+						}
+					],
+					"props": {
+						"disableLoot": true,
+						"feature": "HideInCheatMenu"
+					},
+					"iconeDone": true,
+					"group": 2,
+					"type": "Wand",
 					"__ignoreLoc__": true
 				},
 				{
@@ -18968,6 +19012,35 @@
 					"price": 259,
 					"rarity": 3,
 					"desc": "Sous ses parures et ses renforts cuivrés, Limier était auparavant un authentique arc de Traqueur."
+				},
+				{
+					"id": "WandStart",
+					"name": "Basic Wand",
+					"weight": 0.5,
+					"baseBonus": [
+						{
+							"value": 1,
+							"attribute": "Willpower"
+						}
+					],
+					"props": {
+						"model": "chars/Weapons/Mace_01.fbx",
+						"skill": "Crushing",
+						"disableLoot": true
+					},
+					"icon": {
+						"file": "ui/Icons/GearIcons/1HHammersIcons.png",
+						"size": 96,
+						"x": 0,
+						"y": 0,
+						"height": 2
+					},
+					"type": "Wand",
+					"price": 49,
+					"desc": "",
+					"rarity": 0,
+					"group": 4,
+					"iconeDone": true
 				},
 				{
 					"id": "ShieldStart",
@@ -43828,6 +43901,11 @@
 					"id": "BowStart"
 				},
 				{
+					"title": "Wands",
+					"level": 2,
+					"id": "WandStart"
+				},
+				{
 					"title": "Lefthand",
 					"level": 2,
 					"id": "ShieldStart"
@@ -57021,6 +57099,23 @@
 					]
 				},
 				{
+					"id": "DismantleWand",
+					"content": [
+						{
+							"proba": 0,
+							"item": "Wood",
+							"min": 1,
+							"max": 2
+						},
+						{
+							"proba": 0,
+							"item": "IronOre",
+							"min": 1,
+							"max": 2
+						}
+					]
+				},
+				{
 					"id": "DismantleLightArmor",
 					"content": [
 						{
@@ -61869,7 +61964,7 @@
 					"id": "Mage",
 					"weaponTypes": [
 						{
-							"wp": "Dagger"
+							"wp": "Wand"
 						}
 					],
 					"baseSkills": [
@@ -61940,14 +62035,14 @@
 							"upValue": 30
 						}
 					],
-					"model": "chars/Prefabs/Prefab_D.prefab",
+					"model": "chars/Prefabs/Prefab_WP.prefab",
 					"notes": "",
 					"name": "Wizard",
 					"tier": 0,
 					"equipment": [
 						{
 							"armor": "BaseArmorStart1",
-							"weapon": "DaggerStart"
+							"weapon": "WandStart"
 						}
 					],
 					"rarity": 0,
@@ -61958,7 +62053,7 @@
 					"id": "Priest",
 					"weaponTypes": [
 						{
-							"wp": "Dagger"
+							"wp": "Wand"
 						}
 					],
 					"baseSkills": [
@@ -61975,6 +62070,7 @@
 						}
 					],
 					"props": {
+						"armorKind": "ArmorLight",
 						"flags": 32
 					},
 					"stats": [
@@ -62008,7 +62104,7 @@
 							"upValue": 30
 						}
 					],
-					"model": "chars/Prefabs/Prefab_D.prefab",
+					"model": "chars/Prefabs/Prefab_WP.prefab",
 					"notes": "",
 					"name": "Priest",
 					"tier": 1,
@@ -69251,7 +69347,7 @@
 					"id": "Brute"
 				},
 				{
-					"title": "Magic",
+					"title": "Wand",
 					"level": 1,
 					"id": "Mage"
 				},
@@ -91326,7 +91422,7 @@
 					"id": "Opportunism"
 				},
 				{
-					"title": "Magic",
+					"title": "Wand",
 					"level": 1,
 					"id": "TargetHeal"
 				},
