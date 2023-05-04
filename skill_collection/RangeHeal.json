@@ -14,18 +14,32 @@
 		"specialAnim": "ThrowLeftGrenade",
 		"apCost": 1,
 		"vars": {
-			"value1": 25
+			"value1": 50
 		},
 		"needDisengaged": true,
         "cursor": "CursorHeal",
         "healPreview": 1,
 		"useWithoutWeapon": true,
 		"castFx": "prefabs/fx/fight/Explosion/PoisonBomb/PoisonBomb.fx",
-		"flags": 64,
 		"throwModel": "chars/Weapons/LeftHand_IncendiaryFlask.fbx"
 	},
-	"script": "function onSkill() {\n\tplayAttack();\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side == skill.unit.side ) {\n\t\t\tt.target.gainsHealth(ceil(t.target.stats.health*vars.value1/100));\n\t\t\tspawnFx();\n\t\t}\n\t}\n}",
+	"script": "function onSkill() {\n\tplayAttack();\n	for( t in skill.getTargets() ) {\n\t\tif( t.target.side == skill.unit.side ) {\n\t\t\tt.target.gainsHealth( ceil( t.target.stats.health * ( min(skill.unit.stats.willpower, 50)/50 ) * (vars.value1/100) * randInt(12,20)/16 ) , null);\n\t\t\tif( skill.level == 2 && randInt(0,3) == 3 ) {\n\t\t\t\tt.target.addStatus(Status.Protection, vars.value2, true);\n\t\t\t}\n\t\t\tspawnFx();\n\t\t}\n	}\n}",
 	"notes": "",
+	"levels": [
+		{
+			"props": {
+				"vars": {
+					"value1": 75,
+					"value2": 2
+				},
+				"tooltipStatus": [
+					{
+						"st": "Protection"
+					}
+				]
+			}
+		}
+	],
 	"icon": {
 		"file": "ui/Icons/BattleIcons96PX.png",
 		"size": 96,
@@ -33,6 +47,6 @@
 		"y": 13
 	},
 	"iconeDone": true,
-	"group": 10,
+	"group": 16,
 	"done": 2
 },

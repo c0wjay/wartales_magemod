@@ -9,17 +9,25 @@
 		"specialAnim": "Taunt",
 		"apCost": 2,
 		"vars": {
-			"value1": 25
+			"value1": 50
 		},
 		"needDisengaged": true,
         "cursor": "CursorHeal",
         "healPreview": 1,
 		"useWithoutWeapon": true,
-		"flags": 64,
 		"extraFx": "prefabs/fx/fight/BuffCry/BuffCryBlue.fx"
 	},
-	"script": "function onSkill() {\n\tplay();\n\t@sync for( u in getAllies(skill.unit) ) {\n\t\tu.gainsHealth(ceil(u.stats.health*vars.value1/100));\n\t\tspawnFx();\n\t}\n}",
+	"script": "function onSkill() {\n\tplay();\n\t@sync for( u in getAllies(skill.unit) ) {\n\t\tu.gainsHealth(ceil( u.stats.health * min(skill.unit.stats.willpower, 50)/50 * (vars.value1/100) ), null);\n\t}\n\tspawnFx();\n}",
 	"notes": "",
+	"levels": [
+		{
+			"props": {
+				"vars": {
+					"value1": 100
+				}
+			}
+		}
+	],
 	"icon": {
 		"file": "ui/Icons/BattleIcons_02_96PX.png",
 		"size": 96,
@@ -27,6 +35,6 @@
 		"y": 15
 	},
 	"iconeDone": true,
-	"group": 10,
+	"group": 16,
 	"done": 2
 },

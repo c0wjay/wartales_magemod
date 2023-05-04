@@ -17,7 +17,7 @@ Wizard Mod for Wartales
 
 의지에 따라서 힐량이 정해짐.
 
-힐링 공식: (skill.unit.stats.willpower/50) * (vars.value1/100) * randInt(12,20)/16  
+힐링 공식: ( min(skill.unit.stats.willpower, 50)/50 ) * (vars.value1/100) * 2 * randInt(12,20)/16  
 전자는 캐릭터의 의지에 영향, 후자는 스킬 레벨에 따라 50, 100과 같이 주기.  
 스킬 (타겟힐, 범위힐, 그룹힐)에 따라서 value1 값 차등주기.  
 거기에 랜덤 인자 곱 (75 ~ 125% 범위)
@@ -108,8 +108,21 @@ typeStr:5 -> 숫자로 계산. 중복 불가. (mode:0 => TargetUnit, 1 => Precis
     "name": "allowedTargets",
     "opt": true
 },
+{
+    "typeStr": "5:Disc,Cone,Square",
+    "name": "type",
+    "opt": true
+},
 ```
 
+```json
+"name": "skill@props"
+{
+    "typeStr": "10:IgnoreGuard,DamageHealth,NoFinisher,DontStartUnitTurn,NoPreviewTargets,PushbackIgnoreUnits,DistanceBonusApplied,IsTrap,HideInSkillBar",
+    "name": "flags",
+    "opt": true
+},
+```
 
 # UnitClass Attribute
 props.flags = 2 -> (베이스 직업) Swordman, Bowman, Rogue  

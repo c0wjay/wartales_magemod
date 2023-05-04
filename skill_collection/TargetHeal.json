@@ -11,16 +11,24 @@
 		"isHeroic": true,
 		"apCost": 1,
 		"vars": {
-			"value1": 50
+			"value1": 100
 		},
 		"needDisengaged": true,
         "cursor": "CursorHeal",
         "healPreview": 1,
-		"useWithoutWeapon": true,
-		"flags": 64
+		"useWithoutWeapon": true
 	},
-	"script": "function onSkill() {\n\tplay();\n\tskill.target.gainsHealth( ceil(skill.target.stats.health*vars.value1/100) , null);\n}",
+	"script": "function onSkill() {\n\tplay();\n\tskill.target.gainsHealth( ceil( skill.target.stats.health * ( min(skill.unit.stats.willpower, 50)/50 ) * (vars.value1/100) * randInt(12,20)/16 ) , null);\n\tif( skill.level == 2 ) {\n\t\tvar armorRecovery = ceil ( skill.target.stats.armor * min(skill.unit.stats.willpower, 50)/100 * randInt(12,20)/16 );\n\t\tif ( skill.target.armor < armorRecovery ) {\n\t\t\tskill.target.armor = armorRecovery;\n\t\t}\n\t}\n}",
 	"notes": "",
+	"levels": [
+		{
+			"props": {
+				"vars": {
+					"value1": 125
+				}
+			}
+		}
+	],
 	"icon": {
 		"file": "ui/Icons/BattleIcons96PX.png",
 		"size": 96,
@@ -28,11 +36,6 @@
 		"y": 12
 	},
 	"iconeDone": true,
-	"group": 10,
+	"group": 16,
 	"done": 2
 },
-
-function onSkill() {
-    play();
-    skill.target.gainsHealth( ceil(skill.target.stats.health*skill.unit.stats.willpower/50) , null);
-}
