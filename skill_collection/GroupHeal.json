@@ -1,0 +1,31 @@
+{
+	"id": "GroupHeal",
+	"name": "Group Heal",
+	"desc": "",
+	"mode": 4,
+	"range": {},
+	"props": {
+		"specialAnim": "Taunt",
+		"apCost": 2,
+		"vars": {
+			"value1": 25
+		},
+		"needDisengaged": true,
+        "cursor": "CursorHeal",
+        "healPreview": 1,
+		"useWithoutWeapon": true,
+		"flags": 64,
+		"extraFx": "prefabs/fx/fight/BuffCry/BuffCryBlue.fx"
+	},
+	"script": "function onSkill() {\n\tplay();\n\t@sync for( u in getAllies(skill.unit) ) {\n\t\tu.gainsHealth(ceil(u.stats.health*vars.value1/100));\n\t\tspawnFx();\n\t}\n}",
+	"notes": "",
+	"icon": {
+		"file": "ui/Icons/BattleIcons_02_96PX.png",
+		"size": 96,
+		"x": 1,
+		"y": 15
+	},
+	"iconeDone": true,
+	"group": 2,
+	"done": 2
+},
