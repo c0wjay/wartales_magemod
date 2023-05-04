@@ -1,1 +1,29 @@
 // TODO
+{
+    "id": "MagicMissile",
+    "name": "Magical Missile",
+    "desc": "",
+    "mode": 1,
+    "range": {
+        "minDistance": 1,
+        "baseDistance": 6
+    },
+    "props": {
+        "dmgAttribute": 3,
+        "needDisengaged": true,
+        "extraFx": "prefabs/fx/fight/Attack/AttackPower_B.fx"
+    },
+    "script": "",
+    "notes": "",
+    "icon": {
+        "file": "ui/Icons/BattleIcons_02_96PX.png",
+        "size": 96,
+        "x": 0,
+        "y": 3
+    },
+    "minDmg": 3,
+    "maxDmg": 6,
+    "iconeDone": true,
+    "group": 3,
+    "done": 2
+},

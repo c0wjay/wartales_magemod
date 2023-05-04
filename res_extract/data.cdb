@@ -19025,7 +19025,7 @@
 					],
 					"props": {
 						"model": "chars/Weapons/Mace_01.fbx",
-						"skill": "Crushing",
+						"skill": "MagicMissile",
 						"disableLoot": true
 					},
 					"icon": {
@@ -61985,7 +61985,7 @@
 							"minLevel": 2
 						},
 						{
-							"skill": "BraveCleave",
+							"skill": "BraveDuel",
 							"minLevel": 2
 						},
 						{
@@ -76062,6 +76062,34 @@
 					},
 					"iconeDone": true,
 					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "MagicMissile",
+					"name": "Magical Missile",
+					"desc": "",
+					"mode": 1,
+					"range": {
+						"minDistance": 1,
+						"baseDistance": 6
+					},
+					"props": {
+						"dmgAttribute": 3,
+						"needDisengaged": true,
+						"extraFx": "prefabs/fx/fight/Attack/AttackPower_B.fx"
+					},
+					"script": "",
+					"notes": "",
+					"icon": {
+						"file": "ui/Icons/BattleIcons_02_96PX.png",
+						"size": 96,
+						"x": 0,
+						"y": 3
+					},
+					"minDmg": 3,
+					"maxDmg": 6,
+					"iconeDone": true,
+					"group": 3,
 					"done": 2
 				},
 				{
@@ -114346,7 +114374,7 @@
 					"opt": true
 				},
 				{
-					"typeStr": "5:Strength,Dexterity,BestOfTwo",
+					"typeStr": "5:Strength,Dexterity,BestOfTwo,Willpower",
 					"name": "dmgAttribute",
 					"opt": true
 				},

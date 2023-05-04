@@ -36175,6 +36175,12 @@
         </line0>
       </levels>
     </GroupHeal>
+    <MagicMissile>
+      <name>마법 투사체</name>
+      <desc>
+        대상에게 [DMG]를 줍니다.
+      </desc>
+    </MagicMissile>
     <Protection>
       <name>보호</name>
       <desc>[Deflection]을 얻습니다.</desc>
@@ -39126,7 +39132,7 @@
     </Constitution>
     <Willpower>
       <name>의지력</name>
-      <desc>전투 시 부대의 사기를 높이는 데 사용됩니다. 또한 [CritHitPercent]이 증가합니다.</desc>
+      <desc>전투 시 부대의 사기를 높이는 데 사용됩니다. 또한 [CritHitPercent]이 증가합니다.<br/>마법사 직업군의 경우엔 스킬 효율에 영향을 줍니다.</desc>
     </Willpower>
     <CritHitPercent>
       <name>크리티컬 히트</name>
