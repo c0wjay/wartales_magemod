@@ -1,0 +1,38 @@
+{
+	"id": "TargetHeal",
+	"name": "Distance Heal",
+	"desc": "",
+	"mode": 0,
+	"range": {
+		"allowedTargets": 2,
+		"baseDistance": 8
+	},
+	"props": {
+		"isHeroic": true,
+		"apCost": 1,
+		"vars": {
+			"value1": 50
+		},
+		"needDisengaged": true,
+        "cursor": "CursorHeal",
+        "healPreview": 1,
+		"useWithoutWeapon": true,
+		"flags": 64
+	},
+	"script": "function onSkill() {\n\tplay();\n\tskill.target.gainsHealth( ceil(skill.target.stats.health*vars.value1/100) , null);\n}",
+	"notes": "",
+	"icon": {
+		"file": "ui/Icons/BattleIcons96PX.png",
+		"size": 96,
+		"x": 19,
+		"y": 12
+	},
+	"iconeDone": true,
+	"group": 10,
+	"done": 2
+},
+
+function onSkill() {
+    play();
+    skill.target.gainsHealth( ceil(skill.target.stats.health*skill.unit.stats.willpower/50) , null);
+}
