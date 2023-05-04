@@ -1,6 +1,6 @@
 {
     "id": "Wand",
-    "name": "Wand",
+    "name": "Canne",
     "icon": {
         "file": "ui/Icons/WM_Icons.png",
         "size": 42,
@@ -12,7 +12,7 @@
         "isCraftSeparator": true,
         "dismantleLoot": "DismantleWand",
         "baseBonusDefault": "WandBase",
-        "nameCraftCategory": "Canne"
+        "nameCraftCategory": "Cannes"
     },
     "equipDefault": {
         "file": "ui/Icons/GearIcons/1HHammersIcons.png",
