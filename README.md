@@ -36,12 +36,12 @@ Wizard Mod for Wartales
 -> 의지 높을수록 높은 스택 적용될 확룔 높임.
 
 다른 하나는 랜덤 디버프 적용  
-( 취약성 || 골절 || 실패)  
-레벨업시 일정 확률로 (감염 - 미친) 적용
+( Fragility || Fracture || Weakening || Bruise ) 
+레벨업시 일정 확률로 ( Stun ) 적용
 
 
 아군 버프 생각중.  
-(Berserk || Champion || 실패)  
+(Berserk || BrothersFury || Enervate || 실패)  
 레벨업시 일정 확률로 1턴 지속되는 (Arena_Willforce) 적용 // G2Arena1RuleLifeLinked 참고
 
 좀비화도 커스텀 버프인데 대충 베르나 투기장 버프 모티브로,

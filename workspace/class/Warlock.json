@@ -7,14 +7,14 @@
 	],
 	"baseSkills": [
 		{
-			"skill": ""
+			"skill": "FearVoice"
 		},
 		{
-			"skill": "",
+			"skill": "DeathScent",
 			"minLevel": 5
 		},
 		{
-			"skill": "",
+			"skill": "PainLess",
 			"minLevel": 10
 		}
 	],

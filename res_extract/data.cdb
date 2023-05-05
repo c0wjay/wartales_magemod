@@ -19025,7 +19025,7 @@
 					],
 					"props": {
 						"model": "chars/Weapons/Mace_01.fbx",
-						"skill": "FearVoice",
+						"skill": "DeathScent",
 						"disableLoot": true
 					},
 					"icon": {
@@ -76113,6 +76113,71 @@
 						"size": 96,
 						"x": 11,
 						"y": 3
+					},
+					"iconeDone": true,
+					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "DeathScent",
+					"name": "Scent of Death",
+					"desc": "",
+					"mode": 5,
+					"range": {
+						"type": 0,
+						"radius": 2,
+						"allowedTargets": 0,
+						"baseDistance": 4
+					},
+					"props": {
+						"isHeroic": true,
+						"specialAnim": "ThrowLeftGrenade",
+						"apCost": 1,
+						"vars": {
+							"value1": 10
+						},
+						"tooltipStatus": [
+							{
+								"st": "Fragility"
+							},
+							{
+								"st": "Fracture"
+							},
+							{
+								"st": "Weakening"
+							},
+							{
+								"st": "Bruise"
+							}
+						],
+						"needDisengaged": true,
+						"useWithoutWeapon": true,
+						"castFx": "prefabs/fx/fight/Explosion/ConfusingPowder/ConfusingPowder.fx",
+						"throwFx": "prefabs/fx/fight/Explosion/ConfusingPowder/ConfusingPowderThrowTrail.fx",
+						"throwModel": "chars/Weapons/LeftHand_BlindingPowder.fbx"
+					},
+					"script": "function onSkill() {\n\tplay();\n\tvar will = 50;\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side != skill.unit.side ) {\n\t\t\tvar num = randomDice( max(will - vars.value1, 0) );\n\t\t\tif ( num == 2 ) t.target.addStatus(Status.Fragility, 2, true);\n\t\t\tif ( num == 3 ) t.target.addStatus(Status.Fracture, 1, true);\n\t\t\tif ( num == 4 ) t.target.addStatus(Status.Weakening, 2, true);\n\t\t\tif ( num == 5 ) t.target.addStatus(Status.Bruise, 1, true);\n\t\t\tt.target.addStatus(Status.Stun, 2, true);\n\t\t}\n\t}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+					"notes": "",
+					"levels": [
+						{
+							"props": {
+								"vars": {
+									"value1": 0,
+									"value2": 10
+								},
+								"tooltipStatus": [
+									{
+										"st": "Stun"
+									}
+								]
+							}
+						}
+					],
+					"icon": {
+						"file": "ui/Icons/BattleIcons96PX.png",
+						"size": 96,
+						"x": 6,
+						"y": 7
 					},
 					"iconeDone": true,
 					"group": 16,

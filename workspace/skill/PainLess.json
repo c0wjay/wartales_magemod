@@ -1,0 +1,50 @@
+{
+	"id": "PainLess",
+	"name": "Painless",
+	"desc": "",
+	"mode": 0,
+	"range": {
+		"allowedTargets": 1,
+		"baseDistance": 3
+	},
+	"props": {
+		"isHeroic": true,
+		"apCost": 2,
+		"vars": {
+			"value1": 10
+		},
+		"tooltipStatus": [
+			{
+				"st": "Terror"
+			}
+		],
+		"needDisengaged": true,
+		"useWithoutWeapon": true
+	},
+	"script": "",
+	"notes": "",
+	"levels": [
+		{
+			"props": {
+				"vars": {
+					"value1": 0,
+					"value2": 10
+				},
+				"tooltipStatus": [
+					{
+						"st": "Immobile"
+					}
+				]
+			}
+		}
+	],
+	"icon": {
+		"file": "ui/Icons/BattleIcons_03_96PX.png",
+		"size": 96,
+		"x": 0,
+		"y": 0
+	},
+	"iconeDone": true,
+	"group": 16,
+	"done": 2
+},

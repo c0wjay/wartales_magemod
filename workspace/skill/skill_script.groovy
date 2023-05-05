@@ -71,7 +71,38 @@ function onSkill() {
             if( skill.level == 2 ) {
                 var num2 = randomDice( max(will - vars.value2, 0) );
                 if( num2 > 2 ) {
-                    t.target.addStatus(Status.Immobile, 1);
+                    t.target.addStatus(Status.Immobile, 1, true);
+                }
+            }
+        }
+    }
+}
+
+function randomDice (w) {
+    var dice = randInt(w, 100);
+    if ( dice <= 30 ) return 1;
+    if ( dice <= 60 ) return 2;
+    if ( dice <= 80 ) return 3;
+    if ( dice <= 90 ) return 4;
+    else return 5;
+}
+
+
+// DeathScent
+function onSkill() {
+    play();
+    var will = min(skill.unit.stats.willpower, 50);
+    for( t in skill.getTargets() ) {
+        if( t.target.side != skill.unit.side ) {
+            var num = randomDice( max(will - vars.value1, 0) );
+            if ( num == 2 ) t.target.addStatus(Status.Fragility, 2, true);
+            if ( num == 3 ) t.target.addStatus(Status.Fracture, 1, true);
+            if ( num == 4 ) t.target.addStatus(Status.Weakening, 2, true);
+            if ( num == 5 ) t.target.addStatus(Status.Bruise, 1, true);
+            if( skill.level == 2 ) {
+                var num2 = randomDice( max(will - vars.value2, 0) );
+                if( num2 > 3 ) {
+                    t.target.addStatus(Status.Stun, 2, true);
                 }
             }
         }
@@ -123,6 +154,32 @@ function onSkill() {
             if( num2 > 2 ) {
                 t.target.addStatus(Status.Immobile, 1);
             }
+        }
+    }
+}
+
+function randomDice (w) {
+    var dice = randInt(w, 100);
+    if ( dice <= 30 ) return 1;
+    if ( dice <= 60 ) return 2;
+    if ( dice <= 80 ) return 3;
+    if ( dice <= 90 ) return 4;
+    else return 5;
+}
+
+
+// DeathScentTest
+function onSkill() {
+    play();
+    var will = 50;
+    for( t in skill.getTargets() ) {
+        if( t.target.side != skill.unit.side ) {
+            var num = randomDice( max(will - vars.value1, 0) );
+            if ( num == 2 ) t.target.addStatus(Status.Fragility, 2, true);
+            if ( num == 3 ) t.target.addStatus(Status.Fracture, 1, true);
+            if ( num == 4 ) t.target.addStatus(Status.Weakening, 2, true);
+            if ( num == 5 ) t.target.addStatus(Status.Bruise, 1, true);
+            t.target.addStatus(Status.Stun, 2, true);
         }
     }
 }
