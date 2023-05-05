@@ -56,7 +56,7 @@
 	"icon": {
 		"file": "ui/Icons/BattleIcons96PX.png",
 		"size": 96,
-		"x": 6,
+		"x": 3,
 		"y": 7
 	},
 	"iconeDone": true,
