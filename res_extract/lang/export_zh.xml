@@ -34615,6 +34615,22 @@
         </line0>
       </levels>
     </PainLess>
+    <Meditation>
+      <name>명상</name>
+      <desc>용맹 점수를 [VALUE] 만큼 회복합니다.</desc>
+    </Meditation>
+    <Enlightment>
+      <name>계몽</name>
+      <desc>이 유닛의 [Willpower]가 [VALUE]% 만큼 증가합니다.</desc>
+    </Enlightment>
+    <AutoSwapPosition>
+      <name>회피 기동</name>
+      <desc>이 유닛은 공격을 받으면 범위 내의 교전 중이지 않은 아군과 위치를 바꿉니다.<br/>아군은 [Dodge]를 얻고, 공격한 적은 1 턴간 [Confus]를 얻습니다.</desc>
+    </AutoSwapPosition>
+    <SwapPosition>
+      <name>교체</name>
+      <desc>이 유닛은 선택한 아군과 위치를 바꿉니다.<br/>자리를 바꾼 아군은 [Dodge]를 얻습니다.</desc>
+    </SwapPosition>
     <MagicMissile>
       <name>마법 투사체</name>
       <desc>
