@@ -80,7 +80,7 @@
     </PainLess>
     <Meditation>
       <name>Meditation</name>
-      <desc>Restores [VALUE] Valour points.</desc>
+      <desc>Restores ::value1:: Valour points.</desc>
     </Meditation>
     <Enlightment>
       <name>Enlightment</name>
