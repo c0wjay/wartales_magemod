@@ -119,6 +119,34 @@ function randomDice (w) {
 }
 
 
+// PainLess
+function onSkill() {
+    play();
+    var will = min(skill.unit.stats.willpower, 50);
+    var num = randomDice( max(will - vars.value1, 0) );
+    if ( num == 2 || num == 4 ) {
+        skill.target.addStatus(Status.Enervate, randomDice(will));
+    }
+    if ( num == 3 ) skill.target.addStatus(Status.Berserk, 1, true);
+    if ( num == 5 ) skill.target.addStatus(Status.BrothersFury, 1, true);
+    if( skill.level == 2 ) {
+        var num2 = randomDice( max(will - vars.value2, 0) );
+        if( num2 == 5 ) {
+            skill.target.addStatus(Status.Arena_Willforce, 2, true);
+        }
+    }
+}
+
+function randomDice (w) {
+    var dice = randInt(w, 100);
+    if ( dice <= 30 ) return 1;
+    if ( dice <= 60 ) return 2;
+    if ( dice <= 80 ) return 3;
+    if ( dice <= 90 ) return 4;
+    else return 5;
+}
+
+
 // G2Arena1RuleLifeLinked
 function onBeginAction() {
     for(t in getFoeUnits()) {
@@ -182,6 +210,29 @@ function onSkill() {
             t.target.addStatus(Status.Stun, 2, true);
         }
     }
+}
+
+function randomDice (w) {
+    var dice = randInt(w, 100);
+    if ( dice <= 30 ) return 1;
+    if ( dice <= 60 ) return 2;
+    if ( dice <= 80 ) return 3;
+    if ( dice <= 90 ) return 4;
+    else return 5;
+}
+
+
+// PainLessTest
+function onSkill() {
+    play();
+    var will = 50;
+    var num = randomDice( max(will - vars.value1, 0) );
+    if ( num == 2 || num == 4 ) {
+        skill.target.addStatus(Status.Enervate, randomDice(will));
+    }
+    if ( num == 3 ) skill.target.addStatus(Status.Berserk, 1, true);
+    if ( num == 5 ) skill.target.addStatus(Status.BrothersFury, 1, true);
+    skill.target.addStatus(Status.Arena_Willforce, 2, true);
 }
 
 function randomDice (w) {
