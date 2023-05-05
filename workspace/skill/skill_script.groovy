@@ -287,6 +287,12 @@ function onSkill() {
 }
 
 
+// Meditation
+function onSkill() {
+    skill.unit.gainsActionPoint(vars.value1);
+}
+
+
 // GluckTraitorSwap
 function onDamageDealt(a) {
     if(!a.unit.isEngaged())

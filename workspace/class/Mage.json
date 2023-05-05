@@ -31,6 +31,14 @@
 			"minLevel": 2
 		},
 		{
+			"skill": "Meditation",
+			"minLevel": 8
+		},
+		{
+			"skill": "Enlightment",
+			"minLevel": 8
+		},
+		{
 			"skill": "AutoTeleportation",
 			"minLevel": 8
 		},
