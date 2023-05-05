@@ -78,6 +78,22 @@
         </line0>
       </levels>
     </PainLess>
+    <Meditation>
+      <name>Meditation</name>
+      <desc>Restores [VALUE] Valour points.</desc>
+    </Meditation>
+    <Enlightment>
+      <name>Enlightment</name>
+      <desc>Unit's [Willpower] is increased by [VALUE]%.</desc>
+    </Enlightment>
+    <AutoSwapPosition>
+      <name>Escape Maneuver</name>
+      <desc>When this unit is attacked, it swaps position with an unengaged ally nearby.<br/>Ally gains [Dodge] and attacking enemy gains [Confuse] for 1 turn.</desc>
+    </AutoSwapPosition>
+    <SwapPosition>
+      <name>Position Swap</name>
+      <desc>This unit swaps places with a selected ally.<br/>The swapped ally gains [Dodge].</desc>
+    </SwapPosition>
     <MagicMissile>
       <name>Magic Missile</name>
       <desc>
