@@ -1,0 +1,54 @@
+{
+	"id": "FearVoice",
+	"name": "Voice of Fear",
+	"desc": "",
+	"mode": 5,
+	"range": {
+		"type": 1,
+		"angle": 60,
+		"radius": 3,
+		"allowedTargets": 0
+	},
+	"props": {
+		"isHeroic": true,
+		"specialAnim": "Taunt",
+		"apCost": 1,
+		"vars": {
+			"value1": 10
+		},
+		"tooltipStatus": [
+			{
+				"st": "Terror"
+			}
+		],
+		"needDisengaged": true,
+		"useWithoutWeapon": true,
+		"extraFx": "prefabs/fx/fight/BuffCry/BionnTransformation.fx"
+	},
+	"script": "function onSkill() {\n\tplay();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side != skill.unit.side ) {\n\t\t\tvar num = randomDice( max(will - vars.value1, 0) );\n\t\t\tt.target.addStatus(Status.Terror, num);\n\t\t\tif( skill.level == 2 ) {\n\t\t\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\t\t\tif( num2 > 2 ) {\n\t\t\t\t\tt.target.addStatus(Status.Immobile, 1);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+	"notes": "",
+	"levels": [
+		{
+			"props": {
+				"vars": {
+					"value1": 0,
+					"value2": 10
+				},
+				"tooltipStatus": [
+					{
+						"st": "Immobile"
+					}
+				]
+			}
+		}
+	],
+	"icon": {
+		"file": "ui/Icons/BattleIcons_02_96PX.png",
+		"size": 96,
+		"x": 11,
+		"y": 3
+	},
+	"iconeDone": true,
+	"group": 16,
+	"done": 2
+},

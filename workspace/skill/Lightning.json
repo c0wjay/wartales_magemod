@@ -1,0 +1,26 @@
+{
+    "id": "Lightning",
+    "name": "Éclair",
+    "desc": "Un éclair va s'abattre et tuer toute unité touchée.",
+    "mode": 5,
+    "range": {
+        "type": 0,
+        "radius": 2,
+        "allowedTargets": 4
+    },
+    "props": {
+        "castFx": "prefabs/fx/environment/lightning/BattleLightning.fx",
+        "flags": 2
+    },
+    "script": "function onEval(a) {\n\ta.dmg = a.target.health;\n}",
+    "notes": "",
+    "icon": {
+        "file": "ui/Icons/BattleIcons_02_96PX.png",
+        "size": 96,
+        "x": 1,
+        "y": 7
+    },
+    "iconeDone": true,
+    "group": 69,
+    "done": 2
+},
