@@ -29,6 +29,18 @@
 		{
 			"skill": "BraveSupport",
 			"minLevel": 2
+		},
+		{
+			"skill": "AutoTeleportation",
+			"minLevel": 8
+		},
+		{
+			"skill": "Teleportation",
+			"minLevel": 12
+		},
+		{
+			"skill": "ClassSpecialization",
+			"minLevel": 12
 		}
 	],
 	"props": {

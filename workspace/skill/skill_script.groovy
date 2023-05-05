@@ -253,3 +253,89 @@ function randomDice (w) {
     if ( dice <= 90 ) return 4;
     else return 5;
 }
+
+
+// AutoTeleportation
+function onDamageTaken(a) {
+    var arr = [];
+    for(u in getAllies(skill.unit)) {
+        if( getDistance(u, skill.unit) <= vars.value1 && !u.isEngaged() && u.canMove() ) {
+            arr.push(u);
+        }
+    }
+    if( arr.length > 0 ) {
+        var target = arr[randInt(0, arr.length-1)];
+        skill.unit.swapPositionWith(target, 0.2);
+        target.addStatus( Status.Dodge );
+        a.unit.addStatus( Status.Confus, 1 );
+    }
+}
+
+
+// Teleportation
+function onEval(a) {
+    if( !a.target.canMove() ) {
+        dontAllow();
+    }
+}
+
+function onSkill() {
+    if( skill.target.canMove() ) {
+        skill.unit.swapPositionWith(skill.target, 0.2);
+        skill.target.addStatus( Status.Dodge );
+    }
+}
+
+
+// GluckTraitorSwap
+function onDamageDealt(a) {
+    if(!a.unit.isEngaged())
+        return;
+
+    var engagedUnit = a.unit.engagedUnit;
+
+    var tab = [];
+    for(u in getAllies(skill.unit)) {
+        if( getDistance(u, skill.unit) <= vars.value1 && !u.isEngaged() && !u.isAnimal && u.canMove() ) {
+            tab.push(u);
+        }
+    }
+    if(tab.length > 0) {
+        var target = tab[randInt(0, tab.length-1)];
+
+        a.unit.swapPositionWith(target, 0.2);
+
+        target.engage(engagedUnit);
+        if( target != skill.unit ) {
+            engagedUnit.opportunityAttack(target, skill);
+        }
+    }
+    else {
+        a.unit.swapPositionWith(engagedUnit, 0.2);
+        a.unit.engage(engagedUnit);
+    }
+}
+
+
+// Intervention
+function onEval(a) {
+    if( !a.target.isEngaged() || a.target.isAnimal || !a.target.canMove() ) {
+        dontAllow();
+    }
+}
+
+function onSkill() {
+    var target = skill.target;
+    var prevEngaged = target.engagedUnit;
+    target.disengage(false);
+
+    var prevPos = target.getPosition();
+    var currentPos = skill.unit.getPosition();
+    skill.unit.swapPositionWith(target, 0);
+
+    skill.unit.engage(prevEngaged);
+    skill.unit.opportunityAttack(prevEngaged, skill);
+}
+
+
+// EquipedWithIncendiaryFlaskZone
