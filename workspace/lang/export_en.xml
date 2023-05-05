@@ -84,7 +84,7 @@
     </Meditation>
     <Enlightment>
       <name>Enlightment</name>
-      <desc>Unit's [Willpower] is increased by [VALUE]%.</desc>
+      <desc>Unit's [Willpower] is increased by [ATTR]%.</desc>
     </Enlightment>
     <AutoSwapPosition>
       <name>Escape Maneuver</name>
