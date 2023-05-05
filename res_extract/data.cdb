@@ -19025,7 +19025,7 @@
 					],
 					"props": {
 						"model": "chars/Weapons/Mace_01.fbx",
-						"skill": "PainLess",
+						"skill": "MagicMissile",
 						"disableLoot": true
 					},
 					"icon": {
@@ -62106,6 +62106,70 @@
 					"iconeDone": true
 				},
 				{
+					"id": "Warlock",
+					"weaponTypes": [
+						{
+							"wp": "Wand"
+						}
+					],
+					"baseSkills": [
+						{
+							"skill": "FearVoice"
+						},
+						{
+							"skill": "DeathScent",
+							"minLevel": 5
+						},
+						{
+							"skill": "PainLess",
+							"minLevel": 10
+						}
+					],
+					"props": {
+						"armorKind": "ArmorLight",
+						"flags": 32
+					},
+					"stats": [
+						{
+							"value": 4,
+							"attribute": "Strength",
+							"upValue": 20
+						},
+						{
+							"value": 4,
+							"attribute": "Dexterity",
+							"upValue": 20
+						},
+						{
+							"value": 6,
+							"attribute": "Constitution",
+							"upValue": 32
+						},
+						{
+							"value": 0,
+							"attribute": "CritHitPercent",
+							"upValue": 10
+						},
+						{
+							"value": 6,
+							"attribute": "Movement"
+						},
+						{
+							"value": 12,
+							"attribute": "Willpower",
+							"upValue": 30
+						}
+					],
+					"model": "chars/Prefabs/Prefab_WP.prefab",
+					"notes": "",
+					"name": "Warlock",
+					"tier": 1,
+					"equipment": [],
+					"rarity": 0,
+					"timelinePriority": 0,
+					"iconeDone": true
+				},
+				{
 					"id": "Mobster",
 					"weaponTypes": [
 						{
@@ -76091,7 +76155,7 @@
 						"useWithoutWeapon": true,
 						"extraFx": "prefabs/fx/fight/Special/PoisonSlashTrail.fx"
 					},
-					"script": "function onSkill() {\n\tplay();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side != skill.unit.side ) {\n\t\t\tvar num = randomDice( 50 );\n\t\t\tt.target.addStatus(Status.Terror, num);\n\t\t\tvar num2 = randomDice( 50 );\n\t\t\tif( num2 > 2 ) {\n\t\t\t\tt.target.addStatus(Status.Immobile, 1);\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+					"script": "function onSkill() {\n\tplay();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side != skill.unit.side ) {\n\t\t\tvar num = randomDice( max(will - vars.value1, 0) );\n\t\t\tt.target.addStatus(Status.Terror, num);\n\t\t\tif( skill.level == 2 ) {\n\t\t\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\t\t\tif( num2 > 2 ) {\n\t\t\t\t\tt.target.addStatus(Status.Immobile, 1);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
 					"notes": "",
 					"levels": [
 						{
@@ -76156,7 +76220,7 @@
 						"throwFx": "prefabs/fx/fight/Explosion/ConfusingPowder/ConfusingPowderThrowTrail.fx",
 						"throwModel": "chars/Weapons/LeftHand_BlindingPowder.fbx"
 					},
-					"script": "function onSkill() {\n\tplay();\n\tvar will = 50;\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side != skill.unit.side ) {\n\t\t\tvar num = randomDice( max(will - vars.value1, 0) );\n\t\t\tif ( num == 2 ) t.target.addStatus(Status.Fragility, 2, true);\n\t\t\tif ( num == 3 ) t.target.addStatus(Status.Fracture, 1, true);\n\t\t\tif ( num == 4 ) t.target.addStatus(Status.Weakening, 2, true);\n\t\t\tif ( num == 5 ) t.target.addStatus(Status.Bruise, 1, true);\n\t\t\tt.target.addStatus(Status.Stun, 2, true);\n\t\t}\n\t}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+					"script": "function onSkill() {\n\tplay();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side != skill.unit.side ) {\n\t\t\tvar num = randomDice( max(will - vars.value1, 0) );\n\t\t\tif ( num == 2 ) t.target.addStatus(Status.Fragility, 2, true);\n\t\t\tif ( num == 3 ) t.target.addStatus(Status.Fracture, 1, true);\n\t\t\tif ( num == 4 ) t.target.addStatus(Status.Weakening, 2, true);\n\t\t\tif ( num == 5 ) t.target.addStatus(Status.Bruise, 1, true);\n\t\t\tif( skill.level == 2 ) {\n\t\t\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\t\t\tif( num2 > 3 ) {\n\t\t\t\t\tt.target.addStatus(Status.Stun, 2, true);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}",
 					"notes": "",
 					"levels": [
 						{
@@ -76212,7 +76276,7 @@
 						"needDisengaged": true,
 						"useWithoutWeapon": true
 					},
-					"script": "function onSkill() {\n\tplay();\n\tvar will = 50;\n\tvar num = randomDice( max(will - vars.value1, 0) );\n\tif ( num == 2 || num == 4 ) {\n\t\tskill.target.addStatus(Status.Enervate, randomDice(will));\n\t}\n\tif ( num == 3 ) skill.target.addStatus(Status.Berserk, 1, true);\n\tif ( num == 5 ) skill.target.addStatus(Status.BrothersFury, 1, true);\n\tskill.target.addStatus(Status.Arena_Willforce, 2, true);\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+					"script": "function onSkill() {\n\tplay();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tvar num = randomDice( max(will - vars.value1, 0) );\n\tif ( num == 2 || num == 4 ) {\n\t\tskill.target.addStatus(Status.Enervate, randomDice(will));\n\t}\n\tif ( num == 3 ) skill.target.addStatus(Status.Berserk, 1, true);\n\tif ( num == 5 ) skill.target.addStatus(Status.BrothersFury, 1, true);\n\tif( skill.level == 2 ) {\n\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\tif( num2 == 5 ) {\n\t\t\tskill.target.addStatus(Status.Arena_Willforce, 2, true);\n\t\t}\n\t}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
 					"notes": "",
 					"levels": [
 						{

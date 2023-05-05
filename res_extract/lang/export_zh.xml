@@ -33430,6 +33430,9 @@
     <Priest>
       <name>사제</name>
     </Priest>
+    <Warlock>
+      <name>주술사</name>
+    </Warlock>
 		<Vanguard>
 		  <name>전위</name>
 		</Vanguard>
@@ -34585,6 +34588,33 @@
         </line0>
       </levels>
     </GroupHeal>
+    <FearVoice>
+      <name>공포의 목소리</name>
+      <desc>목소리를 들은 적들에게 1 - 5 사이의 [Terror]를 줍니다. 시전자의 [Willpower]가 높을 수록 많은 [Terror]를 줄 수 있습니다.</desc>
+      <levels>
+        <line0>
+          <desc>목소리를 들은 적들에게 1 - 5 사이의 [Terror]를 줍니다. 시전자의 [Willpower]가 높을 수록 많은 [Terror]를 줄 수 있습니다.<br/>많은 [Terror]를 줄 수 있는 확률이 높아졌습니다. 적은 낮은 확률로 1턴 동안 [Immobile] 상태가 됩니다. </desc>
+        </line0>
+      </levels>
+    </FearVoice>
+    <DeathScent>
+      <name>죽음의 향기</name>
+      <desc>해당 범위의 적들은 [Fragility], [Fracture], [Weakening], [Bruise] 중 한가지 상태가 됩니다. 시전자의 [Willpower]가 낮으면 실패할 확률이 있습니다.</desc>
+      <levels>
+        <line0>
+          <desc>해당 범위의 적들은 [Fragility], [Fracture], [Weakening], [Bruise] 중 한가지 상태가 됩니다. 시전자의 [Willpower]가 낮으면 실패할 확률이 있습니다.<br/>적은 낮은 확률로 2턴 동안 [Stun] 상태가 됩니다.</desc>
+        </line0>
+      </levels>
+    </DeathScent>
+    <PainLess>
+      <name>무감각</name>
+      <desc>대상 아군은 [Enervate], [Berserk], [BrothersFury] 중 한가지 상태가 됩니다. 시전자의 [Willpower]가 낮으면 실패할 확률이 있습니다.</desc>
+      <levels>
+        <line0>
+          <desc>대상 아군은 [Enervate], [Berserk], [BrothersFury] 중 한가지 상태가 됩니다. 시전자의 [Willpower]가 낮으면 실패할 확률이 있습니다.<br/>아군은 낮은 확률로 2턴 동안 [Arena_Willforce] 상태가 됩니다.</desc>
+        </line0>
+      </levels>
+    </PainLess>
     <MagicMissile>
       <name>마법 투사체</name>
       <desc>
