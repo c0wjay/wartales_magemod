@@ -38,15 +38,25 @@ function onSkill() {
 // RangeHeal (BeastMaster, FirstAid, PoisonFlask 참고)
 function onSkill() {
     playAttack();
+    var will = min(skill.unit.stats.willpower, 50);
 	for( t in skill.getTargets() ) {
         if( t.target.side == skill.unit.side ) {
-            t.target.gainsHealth( ceil( t.target.stats.health * ( min(skill.unit.stats.willpower, 50)/50 ) * (vars.value1/100) * randInt(12,20)/16 ) , null);
-            if( skill.level == 2 && randInt(0,3) == 3 ) {
+            t.target.gainsHealth( ceil( t.target.stats.health * ( will/50 ) * (vars.value1/100) * randInt(12,20)/16 ) , null);
+            if( skill.level == 2 && randomDice(will) == 3 ) {
                 t.target.addStatus(Status.Protection, vars.value2, true);
             }
             spawnFx();
         }
 	}
+}
+
+function randomDice (w) {
+    var dice = randInt(w, 100);
+    if ( dice <= 30 ) return 1;
+    if ( dice <= 60 ) return 2;
+    if ( dice <= 80 ) return 3;
+    if ( dice <= 90 ) return 4;
+    else return 5;
 }
 
 

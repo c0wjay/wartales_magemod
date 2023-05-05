@@ -36,7 +36,7 @@
       <desc>해당 지역의 모든 아군 유닛들의 [Health]를 회복시킵니다. 이 스킬은 시전자의 [Willpower]에 영향을 받습니다.</desc>
       <levels>
         <line0>
-          <desc>해당 지역의 모든 아군 유닛들의 [Health]를 회복시킵니다. 이 스킬은 시전자의 [Willpower]에 영향을 받습니다.<br/>치유량이 증가하고, 25%의 확률로 해당 지역의 아군에게 ::value2:: 라운드 동안 [Protection]을 적용합니다.</desc>
+          <desc>해당 지역의 모든 아군 유닛들의 [Health]를 회복시킵니다. 이 스킬은 시전자의 [Willpower]에 영향을 받습니다.<br/>치유량이 증가하고, 일정 확률로 해당 지역의 아군에게 ::value2:: 라운드 동안 [Protection]을 적용합니다.</desc>
         </line0>
       </levels>
     </RangeHeal>
