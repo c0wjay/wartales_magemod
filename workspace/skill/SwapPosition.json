@@ -1,11 +1,11 @@
 {
-    "id": "Teleportation",
-    "name": "Teleportation",
+    "id": "SwapPosition",
+    "name": "SwapPosition",
     "desc": "",
     "mode": 0,
     "range": {
         "allowedTargets": 1,
-        "radius": 15
+        "baseDistance": 15
     },
     "props": {
         "cursor": "CursorHelp",

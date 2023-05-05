@@ -39,11 +39,11 @@
 			"minLevel": 8
 		},
 		{
-			"skill": "AutoTeleportation",
+			"skill": "AutoSwapPosition",
 			"minLevel": 8
 		},
 		{
-			"skill": "Teleportation",
+			"skill": "SwapPosition",
 			"minLevel": 12
 		},
 		{

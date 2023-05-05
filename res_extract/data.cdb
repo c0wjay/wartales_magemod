@@ -62001,11 +62001,11 @@
 							"minLevel": 8
 						},
 						{
-							"skill": "AutoTeleportation",
+							"skill": "AutoSwapPosition",
 							"minLevel": 8
 						},
 						{
-							"skill": "Teleportation",
+							"skill": "SwapPosition",
 							"minLevel": 12
 						},
 						{
@@ -76195,7 +76195,7 @@
 					"icon": {
 						"file": "ui/Icons/BattleIcons_02_96PX.png",
 						"size": 96,
-						"x": 11,
+						"x": 10,
 						"y": 3
 					},
 					"iconeDone": true,
@@ -76260,7 +76260,7 @@
 					"icon": {
 						"file": "ui/Icons/BattleIcons96PX.png",
 						"size": 96,
-						"x": 6,
+						"x": 3,
 						"y": 7
 					},
 					"iconeDone": true,
@@ -76366,17 +76366,17 @@
 					"script": "",
 					"notes": "",
 					"icon": {
-						"file": "ui/Icons/BattleIcons96PX.png",
+						"file": "ui/Icons/BattleIcons_02_96PX.png",
 						"size": 96,
-						"x": 9,
-						"y": 17
+						"x": 1,
+						"y": 13
 					},
 					"iconeDone": true,
 					"group": 16,
 					"done": 2
 				},
 				{
-					"id": "AutoTeleportation",
+					"id": "AutoSwapPosition",
 					"name": "Magical Veil",
 					"desc": "",
 					"mode": 2,
@@ -76412,13 +76412,13 @@
 					"done": 2
 				},
 				{
-					"id": "Teleportation",
-					"name": "Teleportation",
+					"id": "SwapPosition",
+					"name": "SwapPosition",
 					"desc": "",
 					"mode": 0,
 					"range": {
 						"allowedTargets": 1,
-						"radius": 15
+						"baseDistance": 15
 					},
 					"props": {
 						"cursor": "CursorHelp",
