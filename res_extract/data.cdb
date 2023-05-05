@@ -13865,6 +13865,30 @@
 					}
 				},
 				{
+					"id": "Wand",
+					"name": "Canne",
+					"icon": {
+						"file": "ui/Icons/WM_Icons.png",
+						"size": 42,
+						"x": 5,
+						"y": 0
+					},
+					"parentType": "Weapon",
+					"props": {
+						"isCraftSeparator": true,
+						"dismantleLoot": "DismantleWand",
+						"baseBonusDefault": "WandBase",
+						"nameCraftCategory": "Cannes"
+					},
+					"equipDefault": {
+						"file": "ui/Icons/GearIcons/1HHammersIcons.png",
+						"size": 96,
+						"x": 0,
+						"y": 0,
+						"height": 2
+					}
+				},
+				{
 					"id": "AnimalAccessory",
 					"name": "Accessoire d'animal",
 					"props": {
@@ -15252,6 +15276,26 @@
 					"iconeDone": true,
 					"group": 2,
 					"type": "Bow",
+					"__ignoreLoc__": true
+				},
+				{
+					"id": "WandBase",
+					"name": "Wand de base",
+					"weight": 0.5,
+					"baseBonus": [
+						{
+							"value": 2,
+							"attribute": "Willpower",
+							"upValue": 35
+						}
+					],
+					"props": {
+						"disableLoot": true,
+						"feature": "HideInCheatMenu"
+					},
+					"iconeDone": true,
+					"group": 2,
+					"type": "Wand",
 					"__ignoreLoc__": true
 				},
 				{
@@ -18968,6 +19012,35 @@
 					"price": 259,
 					"rarity": 3,
 					"desc": "Sous ses parures et ses renforts cuivrés, Limier était auparavant un authentique arc de Traqueur."
+				},
+				{
+					"id": "WandStart",
+					"name": "Basic Wand",
+					"weight": 0.5,
+					"baseBonus": [
+						{
+							"value": 1,
+							"attribute": "Willpower"
+						}
+					],
+					"props": {
+						"model": "chars/Weapons/Mace_01.fbx",
+						"skill": "MagicMissile",
+						"disableLoot": true
+					},
+					"icon": {
+						"file": "ui/Icons/GearIcons/1HHammersIcons.png",
+						"size": 96,
+						"x": 0,
+						"y": 0,
+						"height": 2
+					},
+					"type": "Wand",
+					"price": 49,
+					"desc": "",
+					"rarity": 0,
+					"group": 4,
+					"iconeDone": true
 				},
 				{
 					"id": "ShieldStart",
@@ -43828,6 +43901,11 @@
 					"id": "BowStart"
 				},
 				{
+					"title": "Wands",
+					"level": 2,
+					"id": "WandStart"
+				},
+				{
 					"title": "Lefthand",
 					"level": 2,
 					"id": "ShieldStart"
@@ -57021,6 +57099,23 @@
 					]
 				},
 				{
+					"id": "DismantleWand",
+					"content": [
+						{
+							"proba": 0,
+							"item": "Wood",
+							"min": 1,
+							"max": 2
+						},
+						{
+							"proba": 0,
+							"item": "IronOre",
+							"min": 1,
+							"max": 2
+						}
+					]
+				},
+				{
 					"id": "DismantleLightArmor",
 					"content": [
 						{
@@ -61861,6 +61956,215 @@
 					"model": "chars/Prefabs/Prefab_MS.prefab",
 					"notes": "",
 					"name": "Bastonneur",
+					"rarity": 0,
+					"timelinePriority": 0,
+					"iconeDone": true
+				},
+				{
+					"id": "Mage",
+					"weaponTypes": [
+						{
+							"wp": "Wand"
+						}
+					],
+					"baseSkills": [
+						{
+							"skill": "Wrath",
+							"minLevel": 0
+						},
+						{
+							"skill": "Dash",
+							"minLevel": 0
+						},
+						{
+							"skill": "FirstAid",
+							"minLevel": 0
+						},
+						{
+							"skill": "BraveBoldness",
+							"minLevel": 2
+						},
+						{
+							"skill": "BraveDuel",
+							"minLevel": 2
+						},
+						{
+							"skill": "BraveSupport",
+							"minLevel": 2
+						}
+					],
+					"props": {
+						"flags": 2
+					},
+					"stats": [
+						{
+							"value": 4,
+							"attribute": "Strength",
+							"upValue": 20
+						},
+						{
+							"value": 4,
+							"attribute": "Dexterity",
+							"upValue": 20
+						},
+						{
+							"value": 6,
+							"attribute": "Constitution",
+							"upValue": 32
+						},
+						{
+							"value": 0,
+							"attribute": "CritHitPercent",
+							"upValue": 10
+						},
+						{
+							"value": 6,
+							"attribute": "Movement"
+						},
+						{
+							"value": 12,
+							"attribute": "Willpower",
+							"upValue": 30
+						}
+					],
+					"model": "chars/Prefabs/Prefab_WP.prefab",
+					"notes": "",
+					"name": "Wizard",
+					"tier": 0,
+					"equipment": [
+						{
+							"armor": "BaseArmorStart1",
+							"weapon": "WandStart"
+						}
+					],
+					"rarity": 0,
+					"timelinePriority": 0,
+					"iconeDone": true
+				},
+				{
+					"id": "Priest",
+					"weaponTypes": [
+						{
+							"wp": "Wand"
+						}
+					],
+					"baseSkills": [
+						{
+							"skill": "TargetHeal"
+						},
+						{
+							"skill": "RangeHeal",
+							"minLevel": 5
+						},
+						{
+							"skill": "GroupHeal",
+							"minLevel": 10
+						}
+					],
+					"props": {
+						"armorKind": "ArmorLight",
+						"flags": 32
+					},
+					"stats": [
+						{
+							"value": 4,
+							"attribute": "Strength",
+							"upValue": 20
+						},
+						{
+							"value": 4,
+							"attribute": "Dexterity",
+							"upValue": 20
+						},
+						{
+							"value": 6,
+							"attribute": "Constitution",
+							"upValue": 32
+						},
+						{
+							"value": 0,
+							"attribute": "CritHitPercent",
+							"upValue": 10
+						},
+						{
+							"value": 6,
+							"attribute": "Movement"
+						},
+						{
+							"value": 12,
+							"attribute": "Willpower",
+							"upValue": 30
+						}
+					],
+					"model": "chars/Prefabs/Prefab_WP.prefab",
+					"notes": "",
+					"name": "Priest",
+					"tier": 1,
+					"equipment": [],
+					"rarity": 0,
+					"timelinePriority": 0,
+					"iconeDone": true
+				},
+				{
+					"id": "Warlock",
+					"weaponTypes": [
+						{
+							"wp": "Wand"
+						}
+					],
+					"baseSkills": [
+						{
+							"skill": "FearVoice"
+						},
+						{
+							"skill": "DeathScent",
+							"minLevel": 5
+						},
+						{
+							"skill": "PainLess",
+							"minLevel": 10
+						}
+					],
+					"props": {
+						"armorKind": "ArmorLight",
+						"flags": 32
+					},
+					"stats": [
+						{
+							"value": 4,
+							"attribute": "Strength",
+							"upValue": 20
+						},
+						{
+							"value": 4,
+							"attribute": "Dexterity",
+							"upValue": 20
+						},
+						{
+							"value": 6,
+							"attribute": "Constitution",
+							"upValue": 32
+						},
+						{
+							"value": 0,
+							"attribute": "CritHitPercent",
+							"upValue": 10
+						},
+						{
+							"value": 6,
+							"attribute": "Movement"
+						},
+						{
+							"value": 12,
+							"attribute": "Willpower",
+							"upValue": 30
+						}
+					],
+					"model": "chars/Prefabs/Prefab_WP.prefab",
+					"notes": "",
+					"name": "Warlock",
+					"tier": 1,
+					"equipment": [],
 					"rarity": 0,
 					"timelinePriority": 0,
 					"iconeDone": true
@@ -69099,6 +69403,11 @@
 					"id": "Brute"
 				},
 				{
+					"title": "Wand",
+					"level": 1,
+					"id": "Mage"
+				},
+				{
 					"title": "Enemies",
 					"id": "Mobster"
 				},
@@ -69243,7 +69552,7 @@
 						},
 						{
 							"slot": 3,
-							"unitClass": "Brute"
+							"unitClass": "Mage"
 						}
 					],
 					"id": "PlayerStartAdventurer"
@@ -75684,6 +75993,344 @@
 					"maxDmg": 4,
 					"iconeDone": true,
 					"group": 14,
+					"done": 2
+				},
+				{
+					"id": "TargetHeal",
+					"name": "Distance Heal",
+					"desc": "",
+					"mode": 0,
+					"range": {
+						"allowedTargets": 2,
+						"baseDistance": 8
+					},
+					"props": {
+						"isHeroic": true,
+						"apCost": 1,
+						"vars": {
+							"value1": 100
+						},
+						"needDisengaged": true,
+						"cursor": "CursorHeal",
+						"healPreview": 1,
+						"useWithoutWeapon": true
+					},
+					"script": "function onSkill() {\n\tplay();\n\tskill.target.gainsHealth( ceil( skill.target.stats.health * ( min(skill.unit.stats.willpower, 50)/50 ) * (vars.value1/100) * randInt(12,20)/16 ) , null);\n\tif( skill.level == 2 ) {\n\t\tvar armorRecovery = ceil ( skill.target.stats.armor * min(skill.unit.stats.willpower, 50)/100 * randInt(12,20)/16 );\n\t\tskill.target.armor = min(skill.target.armor + armorRecovery, skill.target.stats.armor);\n\t}\n}",
+					"notes": "",
+					"levels": [
+						{
+							"props": {
+								"vars": {
+									"value1": 125
+								}
+							}
+						}
+					],
+					"icon": {
+						"file": "ui/Icons/BattleIcons96PX.png",
+						"size": 96,
+						"x": 19,
+						"y": 12
+					},
+					"iconeDone": true,
+					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "RangeHeal",
+					"name": "Healing Bomb",
+					"desc": "",
+					"mode": 5,
+					"range": {
+						"type": 0,
+						"radius": 3,
+						"allowedTargets": 2,
+						"baseDistance": 6
+					},
+					"props": {
+						"isHeroic": true,
+						"specialAnim": "ThrowLeftGrenade",
+						"apCost": 2,
+						"vars": {
+							"value1": 50
+						},
+						"needDisengaged": true,
+						"cursor": "CursorHeal",
+						"healPreview": 1,
+						"useWithoutWeapon": true,
+						"castFx": "prefabs/fx/fight/Explosion/PoisonBomb/PoisonBomb.fx",
+						"throwModel": "chars/Weapons/LeftHand_IncendiaryFlask.fbx"
+					},
+					"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n	for( t in skill.getTargets() ) {\n\t\tif( t.target.side == skill.unit.side ) {\n\t\t\tt.target.gainsHealth( ceil( t.target.stats.health * ( will/50 ) * (vars.value1/100) * randInt(12,20)/16 ) , null);\n\t\t\tif( skill.level == 2 && randomDice(will) == 3 ) {\n\t\t\t\tt.target.addStatus(Status.Protection, vars.value2, true);\n\t\t\t}\n\t\t\tspawnFx();\n\t\t}\n	}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+					"notes": "",
+					"levels": [
+						{
+							"props": {
+								"vars": {
+									"value1": 75,
+									"value2": 2
+								},
+								"tooltipStatus": [
+									{
+										"st": "Protection"
+									}
+								]
+							}
+						}
+					],
+					"icon": {
+						"file": "ui/Icons/BattleIcons96PX.png",
+						"size": 96,
+						"x": 9,
+						"y": 13
+					},
+					"iconeDone": true,
+					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "GroupHeal",
+					"name": "Group Heal",
+					"desc": "",
+					"mode": 4,
+					"range": {},
+					"props": {
+						"isHeroic": true,
+						"specialAnim": "Taunt",
+						"apCost": 3,
+						"vars": {
+							"value1": 50
+						},
+						"needDisengaged": true,
+						"cursor": "CursorHeal",
+						"healPreview": 1,
+						"useWithoutWeapon": true,
+						"extraFx": "prefabs/fx/fight/BuffCry/BuffCryBlue.fx"
+					},
+					"script": "function onSkill() {\n\tplay();\n\t@sync for( u in getAllies(skill.unit) ) {\n\t\tu.gainsHealth(ceil( u.stats.health * min(skill.unit.stats.willpower, 50)/50 * (vars.value1/100) ), null);\n\t}\n\tspawnFx();\n}",
+					"notes": "",
+					"levels": [
+						{
+							"props": {
+								"vars": {
+									"value1": 75
+								}
+							}
+						}
+					],
+					"icon": {
+						"file": "ui/Icons/BattleIcons_02_96PX.png",
+						"size": 96,
+						"x": 1,
+						"y": 15
+					},
+					"iconeDone": true,
+					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "FearVoice",
+					"name": "Voice of Fear",
+					"desc": "",
+					"mode": 5,
+					"range": {
+						"type": 1,
+						"angle": 60,
+						"radius": 3,
+						"allowedTargets": 0
+					},
+					"props": {
+						"isHeroic": true,
+						"specialAnim": "Taunt",
+						"apCost": 1,
+						"vars": {
+							"value1": 10
+						},
+						"tooltipStatus": [
+							{
+								"st": "Terror"
+							}
+						],
+						"needDisengaged": true,
+						"useWithoutWeapon": true,
+						"extraFx": "prefabs/fx/fight/BuffCry/BionnTransformation.fx"
+					},
+					"script": "function onSkill() {\n\tplay();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side != skill.unit.side ) {\n\t\t\tvar num = randomDice( max(will - vars.value1, 0) );\n\t\t\tt.target.addStatus(Status.Terror, num);\n\t\t\tif( skill.level == 2 ) {\n\t\t\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\t\t\tif( num2 > 2 ) {\n\t\t\t\t\tt.target.addStatus(Status.Immobile, 1);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+					"notes": "",
+					"levels": [
+						{
+							"props": {
+								"vars": {
+									"value1": 0,
+									"value2": 10
+								},
+								"tooltipStatus": [
+									{
+										"st": "Immobile"
+									}
+								]
+							}
+						}
+					],
+					"icon": {
+						"file": "ui/Icons/BattleIcons_02_96PX.png",
+						"size": 96,
+						"x": 11,
+						"y": 3
+					},
+					"iconeDone": true,
+					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "DeathScent",
+					"name": "Scent of Death",
+					"desc": "",
+					"mode": 5,
+					"range": {
+						"type": 0,
+						"radius": 2,
+						"allowedTargets": 0,
+						"baseDistance": 4
+					},
+					"props": {
+						"isHeroic": true,
+						"specialAnim": "ThrowLeftGrenade",
+						"apCost": 1,
+						"vars": {
+							"value1": 10
+						},
+						"tooltipStatus": [
+							{
+								"st": "Fragility"
+							},
+							{
+								"st": "Fracture"
+							},
+							{
+								"st": "Weakening"
+							},
+							{
+								"st": "Bruise"
+							}
+						],
+						"needDisengaged": true,
+						"useWithoutWeapon": true,
+						"castFx": "prefabs/fx/fight/Explosion/ConfusingPowder/ConfusingPowder.fx",
+						"throwFx": "prefabs/fx/fight/Explosion/ConfusingPowder/ConfusingPowderThrowTrail.fx",
+						"throwModel": "chars/Weapons/LeftHand_BlindingPowder.fbx"
+					},
+					"script": "function onSkill() {\n\tplay();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side != skill.unit.side ) {\n\t\t\tvar num = randomDice( max(will - vars.value1, 0) );\n\t\t\tif ( num == 2 ) t.target.addStatus(Status.Fragility, 2, true);\n\t\t\tif ( num == 3 ) t.target.addStatus(Status.Fracture, 1, true);\n\t\t\tif ( num == 4 ) t.target.addStatus(Status.Weakening, 2, true);\n\t\t\tif ( num == 5 ) t.target.addStatus(Status.Bruise, 1, true);\n\t\t\tif( skill.level == 2 ) {\n\t\t\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\t\t\tif( num2 > 3 ) {\n\t\t\t\t\tt.target.addStatus(Status.Stun, 2, true);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+					"notes": "",
+					"levels": [
+						{
+							"props": {
+								"vars": {
+									"value1": 0,
+									"value2": 10
+								},
+								"tooltipStatus": [
+									{
+										"st": "Stun"
+									}
+								]
+							}
+						}
+					],
+					"icon": {
+						"file": "ui/Icons/BattleIcons96PX.png",
+						"size": 96,
+						"x": 6,
+						"y": 7
+					},
+					"iconeDone": true,
+					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "PainLess",
+					"name": "Painless",
+					"desc": "",
+					"mode": 0,
+					"range": {
+						"allowedTargets": 1,
+						"baseDistance": 3
+					},
+					"props": {
+						"isHeroic": true,
+						"apCost": 1,
+						"vars": {
+							"value1": 10
+						},
+						"tooltipStatus": [
+							{
+								"st": "Enervate"
+							},
+							{
+								"st": "Berserk"
+							},
+							{
+								"st": "BrothersFury"
+							}
+						],
+						"needDisengaged": true,
+						"useWithoutWeapon": true
+					},
+					"script": "function onSkill() {\n\tplay();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tvar num = randomDice( max(will - vars.value1, 0) );\n\tif ( num == 2 || num == 4 ) {\n\t\tskill.target.addStatus(Status.Enervate, randomDice(will));\n\t}\n\tif ( num == 3 ) skill.target.addStatus(Status.Berserk, 1, true);\n\tif ( num == 5 ) skill.target.addStatus(Status.BrothersFury, 1, true);\n\tif( skill.level == 2 ) {\n\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\tif( num2 == 5 ) {\n\t\t\tskill.target.addStatus(Status.Arena_Willforce, 2, true);\n\t\t}\n\t}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+					"notes": "",
+					"levels": [
+						{
+							"props": {
+								"vars": {
+									"value1": 0,
+									"value2": 10
+								},
+								"tooltipStatus": [
+									{
+										"st": "Arena_Willforce"
+									}
+								]
+							}
+						}
+					],
+					"icon": {
+						"file": "ui/Icons/BattleIcons_03_96PX.png",
+						"size": 96,
+						"x": 0,
+						"y": 0
+					},
+					"iconeDone": true,
+					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "MagicMissile",
+					"name": "Magical Missile",
+					"desc": "",
+					"mode": 1,
+					"range": {
+						"minDistance": 1,
+						"baseDistance": 6
+					},
+					"props": {
+						"dmgAttribute": 2,
+						"needDisengaged": true,
+						"castFx": "prefabs/fx/fight/hits & impacts/impactElectrical.fx",
+						"isAttack": true,
+						"defaultAction": true
+					},
+					"script": "",
+					"notes": "",
+					"icon": {
+						"file": "ui/Icons/BattleIcons_02_96PX.png",
+						"size": 96,
+						"x": 0,
+						"y": 3
+					},
+					"minDmg": 6,
+					"maxDmg": 10,
+					"iconeDone": true,
+					"group": 3,
 					"done": 2
 				},
 				{
@@ -91036,6 +91683,11 @@
 					"id": "Opportunism"
 				},
 				{
+					"title": "Wand",
+					"level": 1,
+					"id": "TargetHeal"
+				},
+				{
 					"title": "Lefthands",
 					"id": "Protection"
 				},
@@ -95204,11 +95856,10 @@
 				},
 				{
 					"id": "Willpower",
-					"defaultValue": 10,
+					"defaultValue": 8,
 					"name": "Volonté",
 					"desc": "Permet de renforcer le Moral de la troupe pendant les combats. Augmente également le [CritHitPercent].",
 					"canUp": true,
-					"noScaling": true,
 					"descAnimal": ""
 				},
 				{
@@ -106655,7 +107306,7 @@
 				},
 				{
 					"id": "WillpowerForNotDying",
-					"value": 15,
+					"value": 50,
 					"info": "Willpower required to trigger \"Resolve\" (protect the first dying) + MaxWillPower"
 				},
 				{

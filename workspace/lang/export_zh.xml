@@ -1,0 +1,91 @@
+    </Bow>
+    <Wand>
+      <name>지팡이</name>
+      <props.nameCraftCategory>지팡이</props.nameCraftCategory>
+    </Wand>
+
+    </BowLegendaryArenaH1>
+    <WandStart>
+      <name>투박한 지팡이</name>
+      <desc>볼품없는 지팡이입니다.</desc>
+    </WandStart>
+
+    </Brute>
+    <Mage>
+      <name>마법사</name>
+    </Mage>
+    <Priest>
+      <name>사제</name>
+    </Priest>
+    <Warlock>
+      <name>주술사</name>
+    </Warlock>
+    
+    </InsectSmash>
+    <TargetHeal>
+      <name>원거리 치유</name>
+      <desc>아군 유닛의 [Health]를 회복시킵니다. 이 스킬은 시전자의 [Willpower]에 영향을 받습니다.</desc>
+      <levels>
+        <line0>
+          <desc>아군 유닛의 [Health]를 회복시킵니다. 이 스킬은 시전자의 [Willpower]에 영향을 받습니다.<br/>치유량이 증가하고, 해당 유닛의 [Armor]도 일부 고칩니다.</desc>
+        </line0>
+      </levels>
+    </TargetHeal>
+    <RangeHeal>
+      <name>치유 폭탄</name>
+      <desc>해당 지역의 모든 아군 유닛들의 [Health]를 회복시킵니다. 이 스킬은 시전자의 [Willpower]에 영향을 받습니다.</desc>
+      <levels>
+        <line0>
+          <desc>해당 지역의 모든 아군 유닛들의 [Health]를 회복시킵니다. 이 스킬은 시전자의 [Willpower]에 영향을 받습니다.<br/>치유량이 증가하고, 일정 확률로 해당 지역의 아군에게 ::value2:: 라운드 동안 [Protection]을 적용합니다.</desc>
+        </line0>
+      </levels>
+    </RangeHeal>
+    <GroupHeal>
+      <name>광역 치유</name>
+      <desc>전장의 모든 아군 유닛들의 [Health]를 회복시킵니다. 이 스킬은 시전자의 [Willpower]에 영향을 받습니다.</desc>
+      <levels>
+        <line0>
+          <desc>
+            전장의 모든 아군 유닛들의 [Health]를 회복시킵니다. 이 스킬은 시전자의 [Willpower]에 영향을 받습니다.<br/>치유량이 증가합니다.
+          </desc>
+        </line0>
+      </levels>
+    </GroupHeal>
+    <FearVoice>
+      <name>공포의 목소리</name>
+      <desc>목소리를 들은 적들에게 1 - 5 사이의 [Terror]를 줍니다. 시전자의 [Willpower]가 높을 수록 많은 [Terror]를 줄 수 있습니다.</desc>
+      <levels>
+        <line0>
+          <desc>목소리를 들은 적들에게 1 - 5 사이의 [Terror]를 줍니다. 시전자의 [Willpower]가 높을 수록 많은 [Terror]를 줄 수 있습니다.<br/>많은 [Terror]를 줄 수 있는 확률이 높아졌습니다. 적은 낮은 확률로 1턴 동안 [Immobile] 상태가 됩니다. </desc>
+        </line0>
+      </levels>
+    </FearVoice>
+    <DeathScent>
+      <name>죽음의 향기</name>
+      <desc>해당 범위의 적들은 [Fragility], [Fracture], [Weakening], [Bruise] 중 한가지 상태가 됩니다. 시전자의 [Willpower]가 낮으면 실패할 확률이 있습니다.</desc>
+      <levels>
+        <line0>
+          <desc>해당 범위의 적들은 [Fragility], [Fracture], [Weakening], [Bruise] 중 한가지 상태가 됩니다. 시전자의 [Willpower]가 낮으면 실패할 확률이 있습니다.<br/>적은 낮은 확률로 2턴 동안 [Stun] 상태가 됩니다.</desc>
+        </line0>
+      </levels>
+    </DeathScent>
+    <PainLess>
+      <name>무감각</name>
+      <desc>대상 아군은 [Enervate], [Berserk], [BrothersFury] 중 한가지 상태가 됩니다. 시전자의 [Willpower]가 낮으면 실패할 확률이 있습니다.</desc>
+      <levels>
+        <line0>
+          <desc>대상 아군은 [Enervate], [Berserk], [BrothersFury] 중 한가지 상태가 됩니다. 시전자의 [Willpower]가 낮으면 실패할 확률이 있습니다.<br/>아군은 낮은 확률로 2턴 동안 [Arena_Willforce] 상태가 됩니다.</desc>
+        </line0>
+      </levels>
+    </PainLess>
+    <MagicMissile>
+      <name>마법 투사체</name>
+      <desc>
+        대상에게 [DMG]를 줍니다.
+      </desc>
+    </MagicMissile>
+
+    <Willpower>
+      <name>의지력</name>
+      <desc>전투 시 부대의 사기를 높이는 데 사용됩니다. 또한 [CritHitPercent]이 증가합니다.<br/>마법사 직업군의 경우엔 스킬 효율에 영향을 줍니다.</desc>
+    </Willpower>
