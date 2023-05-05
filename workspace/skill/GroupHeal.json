@@ -29,9 +29,9 @@
 		}
 	],
 	"icon": {
-		"file": "ui/Icons/BattleIcons_02_96PX.png",
+		"file": "ui/Icons/BattleIcons96PX.png",
 		"size": 96,
-		"x": 1,
+		"x": 0,
 		"y": 15
 	},
 	"iconeDone": true,

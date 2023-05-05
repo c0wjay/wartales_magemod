@@ -1,0 +1,36 @@
+{
+    "id": "AutoSwapPosition",
+    "name": "Magical Veil",
+    "desc": "",
+    "mode": 2,
+    "range": {
+        "allowedTargets": 1,
+        "radius": 15
+    },
+    "props": {
+        "targetAlly": true,
+        "vars": {
+            "value1": 15
+        },
+		"useWithoutWeapon": true,
+        "tooltipStatus": [
+            {
+                "st": "Dodge"
+            },
+            {
+                "st": "Confus"
+            }
+        ]
+    },
+    "script": "function onDamageTaken(a) {\n\tvar arr = [];\n\tfor(u in getAllies(skill.unit)) {\n\t\tif( getDistance(u, skill.unit) <= vars.value1 && !u.isEngaged() && u.canMove() ) {\n\t\t\tarr.push(u);\n\t\t}\n\t}\n\tif( arr.length > 0 ) {\n\t\tvar target = arr[randInt(0, arr.length-1)];\n\t\tskill.unit.swapPositionWith(target, 0.2);\n\t\ttarget.addStatus( Status.Dodge );\n\t\ta.unit.addStatus( Status.Confus, 1 );\n\t}\n}",
+    "notes": "",
+    "icon": {
+        "file": "ui/Icons/BattleIcons96PX.png",
+        "size": 96,
+        "x": 9,
+        "y": 17
+    },
+    "iconeDone": true,
+    "group": 16,
+    "done": 2
+},
