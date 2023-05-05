@@ -34617,11 +34617,11 @@
     </PainLess>
     <Meditation>
       <name>명상</name>
-      <desc>용맹 점수를 [VALUE] 만큼 회복합니다.</desc>
+      <desc>용맹 점수를 ::value1:: 만큼 회복합니다.</desc>
     </Meditation>
     <Enlightment>
       <name>계몽</name>
-      <desc>이 유닛의 [Willpower]가 [VALUE]% 만큼 증가합니다.</desc>
+      <desc>이 유닛의 [Willpower]가 [ATTR]% 만큼 증가합니다.</desc>
     </Enlightment>
     <AutoSwapPosition>
       <name>회피 기동</name>
