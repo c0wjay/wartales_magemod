@@ -95856,11 +95856,10 @@
 				},
 				{
 					"id": "Willpower",
-					"defaultValue": 10,
+					"defaultValue": 8,
 					"name": "Volonté",
 					"desc": "Permet de renforcer le Moral de la troupe pendant les combats. Augmente également le [CritHitPercent].",
 					"canUp": true,
-					"noScaling": true,
 					"descAnimal": ""
 				},
 				{
@@ -107307,7 +107306,7 @@
 				},
 				{
 					"id": "WillpowerForNotDying",
-					"value": 15,
+					"value": 50,
 					"info": "Willpower required to trigger \"Resolve\" (protect the first dying) + MaxWillPower"
 				},
 				{
