@@ -98,7 +98,7 @@
 		{
 			"value": 12,
 			"attribute": "Willpower",
-            "upValue": 30
+			"upValue": 30
 		}
 	],
 	"model": "chars/Prefabs/Prefab_WP.prefab",
