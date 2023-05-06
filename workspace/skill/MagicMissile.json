@@ -12,9 +12,12 @@
         "needDisengaged": true,
         "castFx": "prefabs/fx/fight/hits & impacts/impactElectrical.fx",
         "isAttack": true,
-        "defaultAction": true
+        "defaultAction": true,
+        "vars": {
+            "value1": 1
+        }
     },
-    "script": "",
+    "script": "function onSkill() {\nskill.target.damages(skill, ceil((skill.target.health + skill.target.armor) * skill.unit.stats.willpower * vars.value1 / 100), true);\n}",
     "notes": "",
     "icon": {
         "file": "ui/Icons/BattleIcons_02_96PX.png",

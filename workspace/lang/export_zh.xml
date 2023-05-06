@@ -9,6 +9,22 @@
       <name>투박한 지팡이</name>
       <desc>볼품없는 지팡이입니다.</desc>
     </WandStart>
+    <WandUncoCraftT1>
+		  <name>조잡한 지팡이</name>
+		  <desc>정교한 지팡이는 아니지만, 꽤 쓸만합니다.</desc>
+		</WandUncoCraftT1>
+		<WandUncoCraftT2>
+		  <name>유령 지팡이</name>
+		  <desc>이 작고 소박한 지팡이는 어두운 곳에서 빛을 발합니다.</desc>
+		</WandUncoCraftT2>
+		<WandUncoCraftT3>
+		  <name>림스틸 지팡이</name>
+		  <desc>이 지팡이에 맞으면 꽤나 아플 것 같습니다.</desc>
+		</WandUncoCraftT3>
+    <WandUncoCraftT4>
+      <name>아케드 강철 지팡이</name>
+      <desc>이 정교한 지팡이는 지혜를 상징합니다.</desc>
+    </WandUncoCraftT4>
 
     </Brute>
     <Mage>

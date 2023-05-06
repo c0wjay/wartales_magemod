@@ -157,6 +157,12 @@ function randomDice (w) {
 }
 
 
+// MagicMissile
+function onSkill() {
+    skill.target.damages(skill, ceil((skill.target.health + skill.target.armor) * skill.unit.stats.willpower * vars.value1 / 100), true);
+}
+
+
 // G2Arena1RuleLifeLinked
 function onBeginAction() {
     for(t in getFoeUnits()) {

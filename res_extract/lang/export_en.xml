@@ -30009,6 +30009,22 @@
             <name>Clunky Wand</name>
             <desc>It's a lousy wand.</desc>
         </WandStart>
+        <WandUncoCraftT1>
+            <name>Crude Wand</name>
+            <desc>It's not a sophisticated wand, but it's pretty good.</desc>
+        </WandUncoCraftT1>
+        <WandUncoCraftT2>
+            <name>Ghost Wand</name>
+            <desc>This small, simple wand glows in the dark.</desc>
+        </WandUncoCraftT2>
+        <WandUncoCraftT3>
+            <name>Rimesteel Wand</name>
+            <desc>It's going to hurt quite a bit to get hit with this wand.</desc>
+        </WandUncoCraftT3>
+        <WandUncoCraftT4>
+            <name>Akhedian Steel Wand</name>
+            <desc>This elaborate wand symbolises wisdom.</desc>
+        </WandUncoCraftT4>
         <ShieldStart>
             <name>Barrel Lid</name>
             <desc>A shield that gives off a faint odour of cheap wine.</desc>
@@ -34634,7 +34650,7 @@
         <MagicMissile>
             <name>Magic Missile</name>
             <desc>
-                Deals [DMG] to the target.
+                Deals [DMG] to the target. Deals additional damage proportional to the target's [Armour] and [Health].<br/>This additional damage increases as the caster's [Willpower] increases.
             </desc>
         </MagicMissile>
         <Protection>
