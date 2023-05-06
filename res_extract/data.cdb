@@ -61993,6 +61993,14 @@
 							"minLevel": 2
 						},
 						{
+							"skill": "RangeHeal",
+							"minLevel": 5
+						},
+						{
+							"skill": "DeathScent",
+							"minLevel": 5
+						},
+						{
 							"skill": "Meditation",
 							"minLevel": 8
 						},
@@ -62003,6 +62011,14 @@
 						{
 							"skill": "AutoSwapPosition",
 							"minLevel": 8
+						},
+						{
+							"skill": "GroupHeal",
+							"minLevel": 10
+						},
+						{
+							"skill": "PainLess",
+							"minLevel": 10
 						},
 						{
 							"skill": "SwapPosition",
@@ -62071,14 +62087,6 @@
 					"baseSkills": [
 						{
 							"skill": "TargetHeal"
-						},
-						{
-							"skill": "RangeHeal",
-							"minLevel": 5
-						},
-						{
-							"skill": "GroupHeal",
-							"minLevel": 10
 						}
 					],
 					"props": {
@@ -62135,14 +62143,6 @@
 					"baseSkills": [
 						{
 							"skill": "FearVoice"
-						},
-						{
-							"skill": "DeathScent",
-							"minLevel": 5
-						},
-						{
-							"skill": "PainLess",
-							"minLevel": 10
 						}
 					],
 					"props": {
