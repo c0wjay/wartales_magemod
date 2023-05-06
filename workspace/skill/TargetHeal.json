@@ -11,20 +11,20 @@
 		"isHeroic": true,
 		"apCost": 1,
 		"vars": {
-			"value1": 100
+			"value1": 50
 		},
 		"needDisengaged": true,
         "cursor": "CursorHeal",
         "healPreview": 1,
 		"useWithoutWeapon": true
 	},
-	"script": "function onSkill() {\n\tplay();\n\tskill.target.gainsHealth( ceil( skill.target.stats.health * ( min(skill.unit.stats.willpower, 50)/50 ) * (vars.value1/100) * randInt(12,20)/16 ) , null);\n\tif( skill.level == 2 ) {\n\t\tvar armorRecovery = ceil ( skill.target.stats.armor * min(skill.unit.stats.willpower, 50)/100 * randInt(12,20)/16 );\n\t\tskill.target.armor = min(skill.target.armor + armorRecovery, skill.target.stats.armor);\n\t}\n}",
+	"script": "function onSkill() {\n\tplay();\n\tvar recovery = vars.value1;\n\tif ( skill.unit.hasStatus(Status.ReinforcedRecovery) )\n\t\trecovery = vars.value1 * 2;\n\tskill.target.gainsHealth( ceil( skill.target.stats.health * ( min(skill.unit.stats.willpower, 50)/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);\n\tif( skill.level == 2 ) {\n\t\tvar armorRecovery = ceil ( skill.target.stats.armor * min(skill.unit.stats.willpower, 50)/100 * randInt(12,20)/16 );\n\t\tskill.target.armor = min(skill.target.armor + armorRecovery, skill.target.stats.armor);\n\t}\n}",
 	"notes": "",
 	"levels": [
 		{
 			"props": {
 				"vars": {
-					"value1": 125
+					"value1": 75
 				}
 			}
 		}

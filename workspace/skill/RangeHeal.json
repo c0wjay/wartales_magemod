@@ -14,7 +14,7 @@
 		"specialAnim": "ThrowLeftGrenade",
 		"apCost": 2,
 		"vars": {
-			"value1": 50
+			"value1": 25
 		},
 		"needDisengaged": true,
         "cursor": "CursorHeal",
@@ -23,13 +23,13 @@
 		"castFx": "prefabs/fx/fight/Explosion/PoisonBomb/PoisonBomb.fx",
 		"throwModel": "chars/Weapons/LeftHand_IncendiaryFlask.fbx"
 	},
-	"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n	for( t in skill.getTargets() ) {\n\t\tif( t.target.side == skill.unit.side ) {\n\t\t\tt.target.gainsHealth( ceil( t.target.stats.health * ( will/50 ) * (vars.value1/100) * randInt(12,20)/16 ) , null);\n\t\t\tif( skill.level == 2 && randomDice(will) == 3 ) {\n\t\t\t\tt.target.addStatus(Status.Protection, vars.value2, true);\n\t\t\t}\n\t\t\tspawnFx();\n\t\t}\n	}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+	"script": "function onSkill() {\n\tplayAttack();\n\tvar recovery = vars.value1;\n\tif ( skill.unit.hasStatus(Status.ReinforcedRecovery) )\n\t\trecovery = vars.value1 * 2;\n\tvar will = min(skill.unit.stats.willpower, 50);\n	for( t in skill.getTargets() ) {\n\t\tif( t.target.side == skill.unit.side ) {\n\t\t\tt.target.gainsHealth( ceil( t.target.stats.health * ( will/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);\n\t\t\tif( skill.level == 2 && randomDice(will) == 3 ) {\n\t\t\t\tt.target.addStatus(Status.Protection, vars.value2, true);\n\t\t\t}\n\t\t\tspawnFx();\n\t\t}\n	}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
 	"notes": "",
 	"levels": [
 		{
 			"props": {
 				"vars": {
-					"value1": 75,
+					"value1": 50,
 					"value2": 2
 				},
 				"tooltipStatus": [

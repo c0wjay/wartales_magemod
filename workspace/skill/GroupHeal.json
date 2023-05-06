@@ -9,7 +9,7 @@
 		"specialAnim": "Taunt",
 		"apCost": 3,
 		"vars": {
-			"value1": 50
+			"value1": 25
 		},
 		"needDisengaged": true,
         "cursor": "CursorHeal",
@@ -17,13 +17,13 @@
 		"useWithoutWeapon": true,
 		"extraFx": "prefabs/fx/fight/BuffCry/BuffCryBlue.fx"
 	},
-	"script": "function onSkill() {\n\tplay();\n\t@sync for( u in getAllies(skill.unit) ) {\n\t\tu.gainsHealth(ceil( u.stats.health * min(skill.unit.stats.willpower, 50)/50 * (vars.value1/100) ), null);\n\t}\n\tspawnFx();\n}",
+	"script": "function onSkill() {\n\tplay();\n\tvar recovery = vars.value1;\n\tif ( skill.unit.hasStatus(Status.ReinforcedRecovery) )\n\t\trecovery = vars.value1 * 2;\n\t@sync for( u in getAllies(skill.unit) ) {\n\t\tu.gainsHealth(ceil( u.stats.health * min(skill.unit.stats.willpower, 50)/50 * (recovery/100) ), null);\n\t}\n\tspawnFx();\n}",
 	"notes": "",
 	"levels": [
 		{
 			"props": {
 				"vars": {
-					"value1": 75
+					"value1": 50
 				}
 			}
 		}

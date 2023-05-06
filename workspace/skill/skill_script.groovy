@@ -27,7 +27,10 @@ function canCaptureTarget(t){
 // TargetHeal (TerrorLink, DopingSshot 참고)
 function onSkill() {
     play();
-    skill.target.gainsHealth( ceil( skill.target.stats.health * ( min(skill.unit.stats.willpower, 50)/50 ) * (vars.value1/100) * randInt(12,20)/16 ) , null);
+    var recovery = vars.value1;
+    if ( skill.unit.hasStatus(Status.ReinforcedRecovery) )
+        recovery = vars.value1 * 2;
+    skill.target.gainsHealth( ceil( skill.target.stats.health * ( min(skill.unit.stats.willpower, 50)/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);
     if( skill.level == 2 ) {
         var armorRecovery = ceil ( skill.target.stats.armor * min(skill.unit.stats.willpower, 50)/100 * randInt(12,20)/16 );
         skill.target.armor = min(skill.target.armor + armorRecovery, skill.target.stats.armor);
@@ -38,10 +41,13 @@ function onSkill() {
 // RangeHeal (BeastMaster, FirstAid, PoisonFlask 참고)
 function onSkill() {
     playAttack();
+    var recovery = vars.value1;
+    if ( skill.unit.hasStatus(Status.ReinforcedRecovery) )
+        recovery = vars.value1 * 2;
     var will = min(skill.unit.stats.willpower, 50);
 	for( t in skill.getTargets() ) {
         if( t.target.side == skill.unit.side ) {
-            t.target.gainsHealth( ceil( t.target.stats.health * ( will/50 ) * (vars.value1/100) * randInt(12,20)/16 ) , null);
+            t.target.gainsHealth( ceil( t.target.stats.health * ( will/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);
             if( skill.level == 2 && randomDice(will) == 3 ) {
                 t.target.addStatus(Status.Protection, vars.value2, true);
             }
@@ -63,8 +69,11 @@ function randomDice (w) {
 // GroupHeal (BeastMaster, Ovation 참고)
 function onSkill() {
     play();
+    var recovery = vars.value1;
+    if ( skill.unit.hasStatus(Status.ReinforcedRecovery) )
+        recovery = vars.value1 * 2;
     @sync for( u in getAllies(skill.unit) ) {
-        u.gainsHealth(ceil( u.stats.health * min(skill.unit.stats.willpower, 50)/50 * (vars.value1/100) ), null);
+        u.gainsHealth(ceil( u.stats.health * min(skill.unit.stats.willpower, 50)/50 * (recovery/100) ), null);
     }
     spawnFx();
 }
@@ -74,6 +83,8 @@ function onSkill() {
 function onSkill() {
     playAttack();
     var will = min(skill.unit.stats.willpower, 50);
+    if ( skill.unit.hasStatus(Status.ReinforcedCurse) )
+        will += 20;
     for( t in skill.getTargets() ) {
         if( t.target.side != skill.unit.side ) {
             var num = randomDice( max(will - vars.value1, 0) );
@@ -102,6 +113,8 @@ function randomDice (w) {
 function onSkill() {
     playAttack();
     var will = min(skill.unit.stats.willpower, 50);
+    if ( skill.unit.hasStatus(Status.ReinforcedCurse) )
+        will += 20;
     for( t in skill.getTargets() ) {
         if( t.target.side != skill.unit.side ) {
             var num = randomDice( max(will - vars.value1, 0) );
@@ -133,6 +146,8 @@ function randomDice (w) {
 function onSkill() {
     playAttack();
     var will = min(skill.unit.stats.willpower, 50);
+    if ( skill.unit.hasStatus(Status.ReinforcedCurse) )
+        will += 20;
     var num = randomDice( max(will - vars.value1, 0) );
     if ( num == 2 || num == 4 ) {
         skill.target.addStatus(Status.Enervate, randomDice(will));
@@ -354,16 +369,19 @@ function onSkill() {
 
 
 // PriestPath
-function onBeginBattle() {
+function onBeginAction() {
 skill.unit.addStatusPersist(Status.ReinforcedRecovery, skill);
+spawnFx();
 }
 
 // WarlockPath
-function onBeginBattle() {
+function onBeginAction() {
 skill.unit.addStatusPersist(Status.ReinforcedCurse, skill);
+spawnFx();
 }
 
 // SorcererPath
-function onBeginBattle() {
+function onBeginAction() {
 skill.unit.addStatusPersist(Status.ReinforcedElement, skill);
+spawnFx();
 }
