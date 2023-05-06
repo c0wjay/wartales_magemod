@@ -104346,8 +104346,8 @@
 				},
 				{
 					"id": "PitonPlaceRope",
-					"color": 12296830,
-					"value": 0.15
+					"color": 16753920,
+					"value": 0.2
 				},
 				{
 					"id": "RoamingUnitScale",
@@ -108134,15 +108134,15 @@
 				},
 				{
 					"id": "ElementOverColor",
-					"color": 8355711
+					"color": 1111111
 				},
 				{
 					"id": "ElementHighlightColor",
-					"color": 3947583
+					"color": 1111111
 				},
 				{
 					"id": "ElementImportantColor",
-					"color": 3698209
+					"color": 1111111
 				},
 				{
 					"id": "RoamingAggroColor",
