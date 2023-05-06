@@ -8,14 +8,6 @@
 	"baseSkills": [
 		{
 			"skill": "TargetHeal"
-		},
-		{
-			"skill": "RangeHeal",
-			"minLevel": 5
-		},
-		{
-			"skill": "GroupHeal",
-			"minLevel": 10
 		}
 	],
 	"props": {
