@@ -1,0 +1,23 @@
+{
+    "id": "MasterBall",
+    "name": "Master Ball",
+    "weight": 0.5,
+    "baseBonus": [],
+    "props": {
+        "disableLoot": true,
+        "skill": "MasterBall",
+        "model": "chars/Weapons/LeftHand_Flask.fbx"
+    },
+    "group": 12,
+    "type": "LeftHand",
+    "icon": {
+        "file": "ui/Icons_Resources.png",
+        "size": 96,
+        "x": 7,
+        "y": 19
+    },
+    "rarity": 2,
+    "price": 231,
+    "desc": "",
+    "iconeDone": true
+}

@@ -182,3 +182,19 @@ separators.level 은 depth를 의미함.
 곰 광폭화: Ténacité sauvage, Berserk  
 베르나 투기장 무적: G2Arena1RuleLifeLinked, Arena_Willforce  
 도망침 디버프: Terror
+
+
+# Craft
+Craft는 separators가 "id"로 분리하는게 아닌, "index"로 구분함.
+즉, 중간에 끼워넣으면 이후 separator index도 1씩 늘려줘야함.
+props.disableLoot: 시체에서 루팅 가능한지
+
+```json
+item props
+{
+    "typeStr": "10:HasColor,HideLevel,SexMan,SexWoman,Consumable,UseOnUnit,OneByDayRefill,Upgradable,KeepOnRemove,PrisonersOnly",
+    "name": "flags",
+    "opt": true
+},
+
+```

@@ -16,7 +16,9 @@ function onEval(a) {
 
 function onSkill() {
     for (t in skill.getTargets()){
-        captureTarget(t);
+        if ( randInt(0, 100) <= vars.value1 ) {
+            captureTarget(t);
+        }
     }
 }
 

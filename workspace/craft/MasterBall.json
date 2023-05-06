@@ -1,0 +1,19 @@
+{
+    "item": "MasterBall",
+    "tool": "Anvil",
+    "recipe": [
+        {
+            "qty": 1,
+            "item": "IronOre"
+        }
+    ],
+    "props": {},
+    "learnCost": [
+        {
+            "qty": 2,
+            "item": "Knowledge"
+        }
+    ],
+    "itemCost": [],
+    "jobLevel": 5
+}

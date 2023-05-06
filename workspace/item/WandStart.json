@@ -28,12 +28,10 @@
     "iconeDone": true
 },
 
-// separators
-L 43807
-under BowStart
+// separators under BowStart
 
 {
     "title": "Wands",
     "level": 2,
     "id": "WandStart"
-},
+}
