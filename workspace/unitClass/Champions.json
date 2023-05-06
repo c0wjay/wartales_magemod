@@ -1,0 +1,1797 @@
+{
+    "id": "CrawlerChampion",
+    "weaponTypes": [],
+    "equipment": [],
+    "baseSkills": [
+        {
+            "skill": "CrawlerChaosClaws"
+        },
+        {
+            "skill": "CrawlerSerratedTalons"
+        },
+        {
+            "skill": "CrawlerSurvival"
+        },
+        {
+            "skill": "CrawlerMassiveAttack"
+        },
+        {
+            "skill": "Cannibalism"
+        },
+        {
+            "skill": "AllyOfDarkness"
+        }
+    ],
+    "tier": 1,
+    "rarity": 3,
+    "props": {
+        "powerScale": 6,
+        "flags": 131228,
+        "status": [
+            {
+                "kind": "Unpushable"
+            }
+        ],
+        "skillOrder": [
+            {
+                "skill": "CrawlerSurvival"
+            },
+            {
+                "skill": "CrawlerChaosClaws"
+            },
+            {
+                "skill": "CrawlerChaosClaws"
+            },
+            {
+                "skill": "CrawlerSerratedTalons"
+            },
+            {
+                "skill": "CrawlerChaosClaws"
+            },
+            {
+                "skill": "CrawlerChaosClaws",
+                "loop": 0
+            }
+        ],
+        "feature": "Alazar1_Update",
+        "skillOrderMinNbPlayersUnit": 8,
+        "skillOrderLoopNbPlayerUnits": 2,
+        "trait": "GreatVitality",
+        "armorKind": "ArmorMedium"
+    },
+    "stats": [
+        {
+            "value": 30,
+            "attribute": "Strength",
+            "upValue": 300
+        },
+        {
+            "value": 4,
+            "attribute": "Dexterity",
+            "upValue": 20
+        },
+        {
+            "value": 27,
+            "attribute": "Constitution",
+            "upValue": 1200
+        },
+        {
+            "value": 10,
+            "attribute": "CritHitPercent"
+        },
+        {
+            "value": 10,
+            "attribute": "Movement"
+        },
+        {
+            "value": 50,
+            "attribute": "Willpower"
+        }
+    ],
+    "model": "chars/Plagued/ChampionCrawler.prefab",
+    "notes": "",
+    "name": "Roi des Rampants",
+    "icon": {
+        "file": "ui/Icons/BattleIcons_02_96PX.png",
+        "size": 96,
+        "x": 16,
+        "y": 12
+    },
+    "timelinePriority": 0,
+    "iconeDone": true
+},
+{
+    "id": "MatthiasLund",
+    "weaponTypes": [
+        {
+            "wp": "Mace2H"
+        }
+    ],
+    "equipment": [
+        {
+            "weapon": "Lucilla",
+            "armor": "MediumArmorLegendaryChampion"
+        }
+    ],
+    "baseSkills": [
+        {
+            "skill": "LucillaJudgment"
+        },
+        {
+            "skill": "LucillaVengeance"
+        },
+        {
+            "skill": "Uncontrollable"
+        }
+    ],
+    "tier": 1,
+    "props": {
+        "skillOrder": [
+            {
+                "skill": "LucillaJudgment"
+            },
+            {
+                "skill": "LucillaVengeance",
+                "preventPlayAfter": true
+            },
+            {
+                "skill": "LucillaJudgment"
+            },
+            {
+                "skill": "LucillaVengeance",
+                "preventPlayAfter": true
+            },
+            {
+                "skill": "LucillaJudgment",
+                "loop": 0
+            },
+            {
+                "skill": "LucillaVengeance",
+                "loop": 1,
+                "preventPlayAfter": true
+            }
+        ],
+        "powerScale": 6,
+        "flags": 156,
+        "status": [
+            {
+                "kind": "PreventEngage"
+            },
+            {
+                "kind": "Unpushable"
+            }
+        ],
+        "skillOrderLoopNbPlayerUnits": 2,
+        "skillOrderMinNbPlayersUnit": 6,
+        "armorKind": "ArmorMedium"
+    },
+    "stats": [
+        {
+            "value": 30,
+            "attribute": "Strength",
+            "upValue": 300
+        },
+        {
+            "value": 4,
+            "attribute": "Dexterity",
+            "upValue": 20
+        },
+        {
+            "value": 30,
+            "attribute": "Constitution",
+            "upValue": 220
+        },
+        {
+            "value": 100,
+            "attribute": "CritHitPercent"
+        },
+        {
+            "value": 15,
+            "attribute": "Movement"
+        },
+        {
+            "value": 40,
+            "attribute": "Willpower"
+        }
+    ],
+    "model": "chars/Prefabs/Prefab_F.prefab",
+    "notes": "",
+    "name": "Matthias Lund",
+    "rarity": 3,
+    "timelinePriority": 0,
+    "iconeDone": true
+},
+{
+    "id": "Smot",
+    "weaponTypes": [
+        {
+            "wp": "Dagger"
+        }
+    ],
+    "equipment": [
+        {
+            "weapon": "Viper",
+            "armor": "LightArmorLegendaryChampion1"
+        }
+    ],
+    "baseSkills": [
+        {
+            "skill": "ToxicBlade"
+        },
+        {
+            "skill": "RatMaster"
+        }
+    ],
+    "tier": 1,
+    "props": {
+        "skillOrder": [
+            {
+                "skill": "ToxicBlade"
+            },
+            {
+                "skill": "ToxicBlade"
+            }
+        ],
+        "powerScale": 4,
+        "flags": 524444,
+        "armorKind": "ArmorLight"
+    },
+    "stats": [
+        {
+            "value": 4,
+            "attribute": "Strength",
+            "upValue": 20
+        },
+        {
+            "value": 5,
+            "attribute": "Dexterity",
+            "upValue": 38
+        },
+        {
+            "value": 45,
+            "attribute": "Constitution",
+            "upValue": 330
+        },
+        {
+            "value": 0,
+            "attribute": "CritHitPercent"
+        },
+        {
+            "value": 10,
+            "attribute": "Movement"
+        },
+        {
+            "value": 15,
+            "attribute": "Willpower"
+        }
+    ],
+    "model": "chars/Prefabs/Prefab_D.prefab",
+    "notes": "",
+    "name": "Smot",
+    "rarity": 3,
+    "timelinePriority": 0,
+    "iconeDone": true
+},
+{
+    "id": "Alexa",
+    "weaponTypes": [
+        {
+            "wp": "Axe2H"
+        }
+    ],
+    "equipment": [
+        {
+            "weapon": "Splitter",
+            "armor": "MediumArmorLegendaryChampion2"
+        }
+    ],
+    "baseSkills": [
+        {
+            "skill": "SliceAndDice"
+        },
+        {
+            "skill": "LossOfControl"
+        }
+    ],
+    "tier": 1,
+    "props": {
+        "skillOrder": [
+            {
+                "skill": "SliceAndDice"
+            },
+            {
+                "skill": "SliceAndDice"
+            },
+            {
+                "skill": "SliceAndDice",
+                "loop": 0
+            }
+        ],
+        "powerScale": 6,
+        "flags": 156,
+        "skillOrderLoopNbPlayerUnits": 2,
+        "skillOrderMinNbPlayersUnit": 4,
+        "armorKind": "ArmorMedium"
+    },
+    "stats": [
+        {
+            "value": 6,
+            "attribute": "Strength",
+            "upValue": 90
+        },
+        {
+            "value": 4,
+            "attribute": "Dexterity",
+            "upValue": 20
+        },
+        {
+            "value": 58,
+            "attribute": "Constitution",
+            "upValue": 416
+        },
+        {
+            "value": 0,
+            "attribute": "CritHitPercent"
+        },
+        {
+            "value": 15,
+            "attribute": "Movement"
+        },
+        {
+            "value": 40,
+            "attribute": "Willpower"
+        }
+    ],
+    "model": "chars/Prefabs/Prefab_P.prefab",
+    "notes": "",
+    "name": "Alexa Grathan",
+    "rarity": 3,
+    "timelinePriority": 0,
+    "iconeDone": true
+},
+{
+    "id": "Kaghal",
+    "weaponTypes": [
+        {
+            "wp": "Bow"
+        }
+    ],
+    "equipment": [
+        {
+            "weapon": "BowLegendaryEliteWorld",
+            "armor": "LightArmorLegendaryChampion2"
+        }
+    ],
+    "baseSkills": [
+        {
+            "skill": "Training"
+        },
+        {
+            "skill": "PackLeader"
+        },
+        {
+            "skill": "BattleBrothers"
+        }
+    ],
+    "tier": 1,
+    "props": {
+        "skillOrder": [
+            {
+                "skill": "PiercingArrow",
+                "preventPlayAfter": true
+            },
+            {
+                "skill": "PiercingArrow",
+                "preventPlayAfter": true
+            },
+            {
+                "skill": "PiercingArrow",
+                "preventPlayAfter": true,
+                "loop": 0
+            },
+            {
+                "skill": "Training"
+            }
+        ],
+        "powerScale": 6,
+        "flags": 156,
+        "skillOrderLoopNbPlayerUnits": 2,
+        "skillOrderMinNbPlayersUnit": 6,
+        "armorKind": "ArmorLight"
+    },
+    "stats": [
+        {
+            "value": 4,
+            "attribute": "Strength",
+            "upValue": 20
+        },
+        {
+            "value": 6,
+            "attribute": "Dexterity",
+            "upValue": 50
+        },
+        {
+            "value": 18,
+            "attribute": "Constitution",
+            "upValue": 132
+        },
+        {
+            "value": 0,
+            "attribute": "CritHitPercent"
+        },
+        {
+            "value": 10,
+            "attribute": "Movement"
+        },
+        {
+            "value": 15,
+            "attribute": "Willpower"
+        }
+    ],
+    "model": "chars/Prefabs/Prefab_B.prefab",
+    "notes": "",
+    "name": "Kaghal",
+    "rarity": 3,
+    "timelinePriority": 0,
+    "iconeDone": true
+},
+{
+    "id": "KaghalBoar",
+    "weaponTypes": [],
+    "equipment": [],
+    "baseSkills": [
+        {
+            "skill": "FeralCharge"
+        },
+        {
+            "skill": "BattleBrothers"
+        }
+    ],
+    "tier": 0,
+    "props": {
+        "isAnimal": true,
+        "corpseItem": "AnimalCorpse",
+        "socleSize": 4,
+        "engagedDistance": 0.3,
+        "hitRadius": 0.5,
+        "animalCategory": "Boar"
+    },
+    "stats": [
+        {
+            "value": 5,
+            "attribute": "Strength",
+            "upValue": 46
+        },
+        {
+            "value": 4,
+            "attribute": "Dexterity",
+            "upValue": 20
+        },
+        {
+            "value": 18,
+            "attribute": "Constitution",
+            "upValue": 233
+        },
+        {
+            "value": 0,
+            "attribute": "CritHitPercent"
+        },
+        {
+            "value": 8,
+            "attribute": "Movement"
+        },
+        {
+            "value": 10,
+            "attribute": "Willpower"
+        }
+    ],
+    "model": "chars/Boar/Model.prefab",
+    "notes": "",
+    "name": "Frère d'arme de Kaghal",
+    "icon": {
+        "file": "ui/Icons/BattleIcons96PX.png",
+        "size": 96,
+        "x": 13,
+        "y": 11
+    },
+    "rarity": 3,
+    "timelinePriority": 0,
+    "iconeDone": true
+},
+{
+    "id": "KaghalWolf",
+    "weaponTypes": [],
+    "equipment": [],
+    "baseSkills": [
+        {
+            "skill": "DefenseOfTheOwner"
+        },
+        {
+            "skill": "BattleBrothers"
+        }
+    ],
+    "tier": 0,
+    "props": {
+        "isAnimal": true,
+        "corpseItem": "AnimalCorpse",
+        "socleSize": 4,
+        "engagedDistance": 0.3
+    },
+    "stats": [
+        {
+            "value": 8,
+            "attribute": "Strength",
+            "upValue": 83
+        },
+        {
+            "value": 4,
+            "attribute": "Dexterity",
+            "upValue": 20
+        },
+        {
+            "value": 15,
+            "attribute": "Constitution",
+            "upValue": 161
+        },
+        {
+            "value": 0,
+            "attribute": "CritHitPercent"
+        },
+        {
+            "value": 12,
+            "attribute": "Movement"
+        },
+        {
+            "value": 10,
+            "attribute": "Willpower"
+        }
+    ],
+    "model": "chars/Wolf/Wolf.prefab",
+    "notes": "",
+    "icon": {
+        "file": "ui/Icons/BattleIcons96PX.png",
+        "size": 96,
+        "x": 6,
+        "y": 4
+    },
+    "name": "Frère d'arme de Kaghal",
+    "rarity": 3,
+    "timelinePriority": 0,
+    "iconeDone": true
+},
+{
+    "id": "Bionn",
+    "weaponTypes": [
+        {
+            "wp": "Axe"
+        }
+    ],
+    "equipment": [
+        {
+            "weapon": "AxeLegendaryHarag",
+            "armor": "MediumArmorLegendaryChampionHarag"
+        }
+    ],
+    "baseSkills": [
+        {
+            "skill": "BionnAttack"
+        },
+        {
+            "skill": "IrrationalScreaming"
+        },
+        {
+            "skill": "PlagueOrganism"
+        },
+        {
+            "skill": "DisturbedMind"
+        },
+        {
+            "skill": "GlimmersOfMortality"
+        },
+        {
+            "skill": "Transformation"
+        }
+    ],
+    "tier": 1,
+    "props": {
+        "skillOrder": [
+            {
+                "skill": "BionnAttack"
+            },
+            {
+                "skill": "BionnAttack"
+            },
+            {
+                "skill": "IrrationalScreaming"
+            },
+            {
+                "skill": "BionnAttack"
+            },
+            {
+                "skill": "BionnAttack",
+                "loop": 0
+            },
+            {
+                "skill": "IrrationalScreaming"
+            }
+        ],
+        "powerScale": 8,
+        "flags": 156,
+        "skillOrderLoopNbPlayerUnits": 2,
+        "skillOrderMinNbPlayersUnit": 8,
+        "armorKind": "ArmorMedium"
+    },
+    "stats": [
+        {
+            "value": 5,
+            "attribute": "Strength",
+            "upValue": 33
+        },
+        {
+            "value": 4,
+            "attribute": "Dexterity",
+            "upValue": 20
+        },
+        {
+            "value": 58,
+            "attribute": "Constitution",
+            "upValue": 416
+        },
+        {
+            "value": 0,
+            "attribute": "CritHitPercent"
+        },
+        {
+            "value": 15,
+            "attribute": "Movement"
+        },
+        {
+            "value": 40,
+            "attribute": "Willpower"
+        }
+    ],
+    "model": "chars/Prefabs/Prefab_AS.prefab",
+    "notes": "",
+    "name": "Bionn",
+    "rarity": 3,
+    "timelinePriority": 0,
+    "iconeDone": true
+},
+{
+    "id": "BionnZombie",
+    "weaponTypes": [],
+    "equipment": [
+        {
+            "armor": "MediumArmorLegendaryChampionHarag"
+        }
+    ],
+    "baseSkills": [
+        {
+            "skill": "TransformedBionnAttack"
+        },
+        {
+            "skill": "IrrationalScreaming"
+        },
+        {
+            "skill": "PlagueOrganism"
+        },
+        {
+            "skill": "GlimmersOfMortality"
+        },
+        {
+            "skill": "Vomiting"
+        }
+    ],
+    "tier": 1,
+    "props": {
+        "skillOrder": [
+            {
+                "skill": "TransformedBionnAttack"
+            },
+            {
+                "skill": "TransformedBionnAttack"
+            },
+            {
+                "skill": "IrrationalScreaming"
+            },
+            {
+                "skill": "TransformedBionnAttack"
+            },
+            {
+                "skill": "TransformedBionnAttack",
+                "loop": 0
+            },
+            {
+                "skill": "IrrationalScreaming"
+            }
+        ],
+        "powerScale": 8,
+        "flags": 163996,
+        "skillOrderLoopNbPlayerUnits": 2,
+        "skillOrderMinNbPlayersUnit": 8,
+        "armorKind": "ArmorMedium"
+    },
+    "stats": [
+        {
+            "value": 5,
+            "attribute": "Strength",
+            "upValue": 33
+        },
+        {
+            "value": 4,
+            "attribute": "Dexterity",
+            "upValue": 20
+        },
+        {
+            "value": 58,
+            "attribute": "Constitution",
+            "upValue": 416
+        },
+        {
+            "value": 0,
+            "attribute": "CritHitPercent"
+        },
+        {
+            "value": 15,
+            "attribute": "Movement"
+        },
+        {
+            "value": 40,
+            "attribute": "Willpower"
+        }
+    ],
+    "model": "chars/Plagued/Model.prefab",
+    "notes": "",
+    "name": "Bionn",
+    "rarity": 3,
+    "timelinePriority": 0,
+    "iconeDone": true
+},
+{
+    "id": "Fenris",
+    "weaponTypes": [
+        {
+            "wp": "Polearm"
+        }
+    ],
+    "equipment": [
+        {
+            "weapon": "PolearmLegendaryGrinmeer",
+            "armor": "MediumArmorLegendaryChampion6"
+        }
+    ],
+    "baseSkills": [
+        {
+            "skill": "FenrisSeek"
+        },
+        {
+            "skill": "FenrisElimination"
+        },
+        {
+            "skill": "FenrisFreedom"
+        },
+        {
+            "skill": "FenrisCourage"
+        },
+        {
+            "skill": "FenrisCourageTrigger"
+        }
+    ],
+    "tier": 1,
+    "props": {
+        "powerScale": 10,
+        "flags": 156,
+        "skillOrder": [
+            {
+                "skill": "FenrisElimination"
+            },
+            {
+                "skill": "FenrisElimination"
+            },
+            {
+                "skill": "FenrisElimination"
+            },
+            {
+                "skill": "FenrisElimination",
+                "loop": 0
+            },
+            {
+                "skill": "FenrisElimination",
+                "loop": 1
+            },
+            {
+                "skill": "FenrisFreedom"
+            }
+        ],
+        "skillOrderLoopNbPlayerUnits": 2,
+        "skillOrderMinNbPlayersUnit": 8,
+        "armorKind": "ArmorMedium"
+    },
+    "stats": [
+        {
+            "value": 6,
+            "attribute": "Strength",
+            "upValue": 90
+        },
+        {
+            "value": 4,
+            "attribute": "Dexterity",
+            "upValue": 20
+        },
+        {
+            "value": 58,
+            "attribute": "Constitution",
+            "upValue": 416
+        },
+        {
+            "value": 0,
+            "attribute": "CritHitPercent"
+        },
+        {
+            "value": 15,
+            "attribute": "Movement"
+        },
+        {
+            "value": 40,
+            "attribute": "Willpower"
+        }
+    ],
+    "model": "chars/Prefabs/Prefab_AS.prefab",
+    "notes": "",
+    "name": "Fenris Dredd",
+    "rarity": 3,
+    "timelinePriority": 0,
+    "iconeDone": true
+},
+{
+    "id": "FenrisFleeing",
+    "weaponTypes": [
+        {
+            "wp": "Polearm"
+        }
+    ],
+    "equipment": [
+        {
+            "weapon": "PolearmLegendaryGrinmeer",
+            "armor": "MediumArmorLegendaryChampion6"
+        }
+    ],
+    "baseSkills": [
+        {
+            "skill": "FenrisCharge"
+        },
+        {
+            "skill": "FenrisFlee"
+        }
+    ],
+    "tier": 1,
+    "props": {
+        "powerScale": 10,
+        "flags": 156,
+        "skillOrder": [
+            {
+                "skill": "FenrisCharge"
+            },
+            {
+                "skill": "FenrisFlee"
+            },
+            {
+                "skill": "FenrisCharge"
+            },
+            {
+                "skill": "FenrisFlee"
+            },
+            {
+                "skill": "FenrisCharge",
+                "loop": 0
+            },
+            {
+                "skill": "FenrisFlee",
+                "loop": 1
+            }
+        ],
+        "skillOrderLoopNbPlayerUnits": 2,
+        "skillOrderMinNbPlayersUnit": 8,
+        "armorKind": "ArmorMedium"
+    },
+    "stats": [
+        {
+            "value": 6,
+            "attribute": "Strength",
+            "upValue": 90
+        },
+        {
+            "value": 4,
+            "attribute": "Dexterity",
+            "upValue": 20
+        },
+        {
+            "value": 58,
+            "attribute": "Constitution",
+            "upValue": 416
+        },
+        {
+            "value": 0,
+            "attribute": "CritHitPercent"
+        },
+        {
+            "value": 15,
+            "attribute": "Movement"
+        },
+        {
+            "value": 40,
+            "attribute": "Willpower"
+        }
+    ],
+    "model": "chars/Prefabs/Prefab_AS.prefab",
+    "notes": "",
+    "name": "Fenris Dredd",
+    "rarity": 3,
+    "timelinePriority": 0,
+    "iconeDone": true
+},
+{
+    "id": "PuzzleMan",
+    "weaponTypes": [],
+    "equipment": [
+        {
+            "armor": "PuzzleManClothes"
+        }
+    ],
+    "baseSkills": [],
+    "tier": 0,
+    "props": {
+        "flags": 4,
+        "armorKind": "ArmorLight"
+    },
+    "stats": [
+        {
+            "value": 5,
+            "attribute": "Strength",
+            "upValue": 33
+        },
+        {
+            "value": 4,
+            "attribute": "Dexterity",
+            "upValue": 20
+        },
+        {
+            "value": 22,
+            "attribute": "Constitution",
+            "upValue": 154
+        },
+        {
+            "value": 0,
+            "attribute": "CritHitPercent"
+        },
+        {
+            "value": 15,
+            "attribute": "Movement"
+        },
+        {
+            "value": 40,
+            "attribute": "Willpower"
+        }
+    ],
+    "model": "chars/Prefabs/Prefab_F.prefab",
+    "notes": "",
+    "name": "Solvius, le Grand Résolutionneur",
+    "rarity": 3,
+    "timelinePriority": 0,
+    "iconeDone": true
+},
+{
+    "id": "Kogo",
+    "weaponTypes": [
+        {
+            "wp": "Sword2H"
+        }
+    ],
+    "equipment": [
+        {
+            "weapon": "Sword2HLegendaryArena1G2",
+            "armor": "MediumArmorLegendaryChampion8"
+        }
+    ],
+    "baseSkills": [
+        {
+            "skill": "LightningSpin"
+        },
+        {
+            "skill": "BrotherUnion"
+        },
+        {
+            "skill": "KogoPassive"
+        },
+        {
+            "skill": "KogoTargetPassive"
+        }
+    ],
+    "tier": 1,
+    "props": {
+        "skillOrder": [
+            {
+                "skill": "LightningSpin"
+            },
+            {
+                "skill": "LightningSpin"
+            }
+        ],
+        "powerScale": 6,
+        "flags": 524444,
+        "armorKind": "ArmorMedium"
+    },
+    "stats": [
+        {
+            "value": 5,
+            "attribute": "Strength",
+            "upValue": 33
+        },
+        {
+            "value": 4,
+            "attribute": "Dexterity",
+            "upValue": 20
+        },
+        {
+            "value": 30,
+            "attribute": "Constitution",
+            "upValue": 220
+        },
+        {
+            "value": 0,
+            "attribute": "CritHitPercent"
+        },
+        {
+            "value": 15,
+            "attribute": "Movement"
+        },
+        {
+            "value": 40,
+            "attribute": "Willpower"
+        }
+    ],
+    "model": "chars/Prefabs/Prefab_F.prefab",
+    "notes": "",
+    "name": "Kogo",
+    "rarity": 3,
+    "timelinePriority": 0,
+    "iconeDone": true
+},
+{
+    "id": "Toro",
+    "weaponTypes": [
+        {
+            "wp": "Sword"
+        }
+    ],
+    "equipment": [
+        {
+            "weapon": "SwordLegendaryArena1G2",
+            "armor": "MediumArmorLegendaryChampion9"
+        }
+    ],
+    "baseSkills": [
+        {
+            "skill": "ValiantAssault"
+        },
+        {
+            "skill": "ForGlory"
+        },
+        {
+            "skill": "BrotherUnion"
+        },
+        {
+            "skill": "ToroPassive"
+        },
+        {
+            "skill": "ToroTargetPassive"
+        }
+    ],
+    "tier": 1,
+    "props": {
+        "skillOrder": [
+            {
+                "skill": "ForGlory"
+            },
+            {
+                "skill": "ValiantAssault"
+            },
+            {
+                "skill": "ValiantAssault"
+            }
+        ],
+        "powerScale": 6,
+        "flags": 524444,
+        "armorKind": "ArmorMedium"
+    },
+    "stats": [
+        {
+            "value": 5,
+            "attribute": "Strength",
+            "upValue": 33
+        },
+        {
+            "value": 4,
+            "attribute": "Dexterity",
+            "upValue": 20
+        },
+        {
+            "value": 30,
+            "attribute": "Constitution",
+            "upValue": 220
+        },
+        {
+            "value": 0,
+            "attribute": "CritHitPercent"
+        },
+        {
+            "value": 15,
+            "attribute": "Movement"
+        },
+        {
+            "value": 40,
+            "attribute": "Willpower"
+        }
+    ],
+    "model": "chars/Prefabs/Prefab_F.prefab",
+    "notes": "",
+    "name": "Toro",
+    "rarity": 3,
+    "timelinePriority": 0,
+    "iconeDone": true
+},
+{
+    "id": "TrivetteRagnol",
+    "weaponTypes": [
+        {
+            "wp": "Axe"
+        }
+    ],
+    "equipment": [
+        {
+            "weapon": "AxeLegendaryArena2G2",
+            "armor": "MediumArmorLegendaryChampion7"
+        }
+    ],
+    "baseSkills": [
+        {
+            "skill": "SoakedAxe"
+        },
+        {
+            "skill": "IncendiaryFlaskThrowing"
+        },
+        {
+            "skill": "FireResistant"
+        },
+        {
+            "skill": "EquipedWithIncendiaryFlask"
+        }
+    ],
+    "tier": 1,
+    "props": {
+        "skillOrder": [
+            {
+                "skill": "IncendiaryFlaskThrowing"
+            },
+            {
+                "skill": "SoakedAxe"
+            }
+        ],
+        "powerScale": 8,
+        "flags": 524444,
+        "status": [
+            {
+                "kind": "ResistFire"
+            }
+        ],
+        "armorKind": "ArmorMedium"
+    },
+    "stats": [
+        {
+            "value": 5,
+            "attribute": "Strength",
+            "upValue": 38
+        },
+        {
+            "value": 4,
+            "attribute": "Dexterity",
+            "upValue": 20
+        },
+        {
+            "value": 58,
+            "attribute": "Constitution",
+            "upValue": 430
+        },
+        {
+            "value": 0,
+            "attribute": "CritHitPercent"
+        },
+        {
+            "value": 10,
+            "attribute": "Movement"
+        },
+        {
+            "value": 15,
+            "attribute": "Willpower"
+        }
+    ],
+    "model": "chars/Prefabs/Prefab_A.prefab",
+    "notes": "",
+    "name": "Trivette Ragnol",
+    "rarity": 3,
+    "timelinePriority": 0,
+    "iconeDone": true
+},
+{
+    "id": "ChristophGluck",
+    "weaponTypes": [
+        {
+            "wp": "Dagger"
+        }
+    ],
+    "equipment": [
+        {
+            "weapon": "DaggerCrook",
+            "armor": "LightArmorLegendaryChampion10"
+        }
+    ],
+    "baseSkills": [
+        {
+            "skill": "GluckStiffingAttack"
+        },
+        {
+            "skill": "GluckTraitorSwap"
+        },
+        {
+            "skill": "GluckUnlimitedDodge"
+        },
+        {
+            "skill": "GluckRenfort"
+        }
+    ],
+    "tier": 1,
+    "props": {
+        "skillOrder": [
+            {
+                "skill": "GluckStiffingAttack"
+            },
+            {
+                "skill": "GluckStiffingAttack"
+            },
+            {
+                "skill": "GluckStiffingAttack",
+                "loop": 0
+            },
+            {
+                "skill": "GluckRenfort"
+            }
+        ],
+        "powerScale": 12,
+        "flags": 156,
+        "feature": "Alazar1_Update",
+        "skillOrderLoopNbPlayerUnits": 2,
+        "skillOrderMinNbPlayersUnit": 6,
+        "armorKind": "ArmorLight"
+    },
+    "stats": [
+        {
+            "value": 4,
+            "attribute": "Strength",
+            "upValue": 20
+        },
+        {
+            "value": 6,
+            "attribute": "Dexterity",
+            "upValue": 90
+        },
+        {
+            "value": 58,
+            "attribute": "Constitution",
+            "upValue": 430
+        },
+        {
+            "value": 0,
+            "attribute": "CritHitPercent"
+        },
+        {
+            "value": 15,
+            "attribute": "Movement"
+        },
+        {
+            "value": 40,
+            "attribute": "Willpower"
+        }
+    ],
+    "model": "chars/Prefabs/Prefab_A.prefab",
+    "notes": "",
+    "name": "Kristoff Kruppe",
+    "rarity": 3,
+    "timelinePriority": 0,
+    "iconeDone": true
+},
+{
+    "id": "Kriskhed",
+    "weaponTypes": [
+        {
+            "wp": "Mace"
+        }
+    ],
+    "equipment": [
+        {
+            "weapon": "MaceLegendaryArena1E1",
+            "armor": "HeavyArmorLegendaryChampionArenaE1",
+            "leftHand": "ShieldLegendaryArenaE1"
+        }
+    ],
+    "baseSkills": [
+        {
+            "skill": "TacticalSlam"
+        },
+        {
+            "skill": "Duel"
+        },
+        {
+            "skill": "StanceDancing"
+        },
+        {
+            "skill": "CombatFlow"
+        }
+    ],
+    "tier": 1,
+    "props": {
+        "skillOrder": [
+            {
+                "skill": "Duel"
+            },
+            {
+                "skill": "TacticalSlam"
+            },
+            {
+                "skill": "Duel"
+            },
+            {
+                "skill": "TacticalSlam"
+            }
+        ],
+        "powerScale": 8,
+        "flags": 524444,
+        "feature": "Alazar1_Update",
+        "armorKind": "ArmorHeavy"
+    },
+    "stats": [
+        {
+            "value": 5,
+            "attribute": "Strength",
+            "upValue": 33
+        },
+        {
+            "value": 4,
+            "attribute": "Dexterity",
+            "upValue": 20
+        },
+        {
+            "value": 65,
+            "attribute": "Constitution",
+            "upValue": 495
+        },
+        {
+            "value": 0,
+            "attribute": "CritHitPercent"
+        },
+        {
+            "value": 15,
+            "attribute": "Movement"
+        },
+        {
+            "value": 40,
+            "attribute": "Willpower"
+        }
+    ],
+    "model": "chars/Prefabs/Prefab_AS.prefab",
+    "notes": "",
+    "name": "Kriskhed",
+    "rarity": 3,
+    "timelinePriority": 0,
+    "iconeDone": true
+},
+{
+    "id": "Lisbeth",
+    "weaponTypes": [
+        {
+            "wp": "Mace2H"
+        }
+    ],
+    "equipment": [
+        {
+            "weapon": "MaceLegendaryArena1A1",
+            "armor": "MediumArmorLegendaryChampionArenaA1",
+            "leftHand": "ThrowingLegendaryArenaA1"
+        }
+    ],
+    "baseSkills": [
+        {
+            "skill": "ImpalingStrike"
+        },
+        {
+            "skill": "EuphoricAddiction"
+        },
+        {
+            "skill": "ThrowingAlazarianAxes"
+        }
+    ],
+    "tier": 1,
+    "props": {
+        "skillOrder": [
+            {
+                "skill": "ImpalingStrike"
+            },
+            {
+                "skill": "ImpalingStrike"
+            },
+            {
+                "skill": "ImpalingStrike"
+            },
+            {
+                "skill": "ImpalingStrike"
+            }
+        ],
+        "powerScale": 12,
+        "flags": 524444,
+        "feature": "Alazar1_Update",
+        "armorKind": "ArmorMedium"
+    },
+    "stats": [
+        {
+            "value": 5,
+            "attribute": "Strength",
+            "upValue": 38
+        },
+        {
+            "value": 4,
+            "attribute": "Dexterity",
+            "upValue": 20
+        },
+        {
+            "value": 58,
+            "attribute": "Constitution",
+            "upValue": 430
+        },
+        {
+            "value": 0,
+            "attribute": "CritHitPercent"
+        },
+        {
+            "value": 15,
+            "attribute": "Movement"
+        },
+        {
+            "value": 40,
+            "attribute": "Willpower"
+        }
+    ],
+    "model": "chars/Prefabs/Prefab_AS.prefab",
+    "notes": "",
+    "name": "Lisbeth ",
+    "rarity": 3,
+    "timelinePriority": 0,
+    "iconeDone": true
+},
+{
+    "id": "Nairolf",
+    "weaponTypes": [
+        {
+            "wp": "Mace"
+        }
+    ],
+    "equipment": [
+        {
+            "weapon": "BowLegendaryArenaH1",
+            "armor": "LightArmorLegendaryChampionArenaH1"
+        }
+    ],
+    "baseSkills": [
+        {
+            "skill": "PheromoneShooting"
+        },
+        {
+            "skill": "BestialShooting"
+        },
+        {
+            "skill": "UnbreakableBond2"
+        },
+        {
+            "skill": "ThrillOfTheTrack"
+        }
+    ],
+    "tier": 1,
+    "props": {
+        "skillOrder": [
+            {
+                "skill": "PheromoneShooting"
+            },
+            {
+                "skill": "BestialShooting"
+            },
+            {
+                "skill": "BestialShooting"
+            }
+        ],
+        "powerScale": 10,
+        "flags": 524444,
+        "feature": "Alazar1_Update",
+        "armorKind": "ArmorLight"
+    },
+    "stats": [
+        {
+            "value": 4,
+            "attribute": "Strength",
+            "upValue": 20
+        },
+        {
+            "value": 6,
+            "attribute": "Dexterity",
+            "upValue": 50
+        },
+        {
+            "value": 30,
+            "attribute": "Constitution",
+            "upValue": 220
+        },
+        {
+            "value": 0,
+            "attribute": "CritHitPercent"
+        },
+        {
+            "value": 15,
+            "attribute": "Movement"
+        },
+        {
+            "value": 40,
+            "attribute": "Willpower"
+        }
+    ],
+    "model": "chars/Prefabs/Prefab_A.prefab",
+    "notes": "",
+    "name": "Nairolf",
+    "rarity": 3,
+    "timelinePriority": 0,
+    "iconeDone": true
+},
+{
+    "id": "Ecila",
+    "weaponTypes": [],
+    "equipment": [],
+    "baseSkills": [
+        {
+            "skill": "EcilaWrath"
+        },
+        {
+            "skill": "UnbreakableBond1"
+        },
+        {
+            "skill": "ThrillOfTheTrack"
+        }
+    ],
+    "tier": 1,
+    "props": {
+        "isAnimal": true,
+        "corpseItem": "AnimalCorpse",
+        "socleSize": 4,
+        "engagedDistance": 0.3,
+        "hitRadius": 0.5,
+        "animalCategory": "Bear",
+        "flags": 28
+    },
+    "stats": [
+        {
+            "value": 12,
+            "attribute": "Strength",
+            "upValue": 200
+        },
+        {
+            "value": 8,
+            "attribute": "Dexterity",
+            "upValue": 40
+        },
+        {
+            "value": 70,
+            "attribute": "Constitution",
+            "upValue": 1000
+        },
+        {
+            "value": 0,
+            "attribute": "CritHitPercent"
+        },
+        {
+            "value": 10,
+            "attribute": "Movement"
+        },
+        {
+            "value": 10,
+            "attribute": "Willpower"
+        }
+    ],
+    "model": "chars/Bear/Bear.prefab",
+    "notes": "",
+    "name": "Ecila",
+    "rarity": 3,
+    "timelinePriority": 0,
+    "iconeDone": true,
+    "icon": {
+        "file": "ui/Icons/BattleIcons_02_96PX.png",
+        "size": 96,
+        "x": 1,
+        "y": 5
+    }
+},
+{
+    "id": "WeeklyBountyLight",
+    "weaponTypes": [
+        {
+            "wp": "Dagger"
+        },
+        {
+            "wp": "Bow"
+        }
+    ],
+    "equipment": [],
+    "baseSkills": [],
+    "tier": 0,
+    "props": {
+        "armorKind": "ArmorLight"
+    },
+    "stats": [
+        {
+            "value": 4,
+            "attribute": "Strength",
+            "upValue": 20
+        },
+        {
+            "value": 5,
+            "attribute": "Dexterity",
+            "upValue": 38
+        },
+        {
+            "value": 8,
+            "attribute": "Constitution",
+            "upValue": 44
+        },
+        {
+            "value": 0,
+            "attribute": "CritHitPercent",
+            "upValue": 10
+        },
+        {
+            "value": 6,
+            "attribute": "Movement"
+        },
+        {
+            "value": 10,
+            "attribute": "Willpower"
+        }
+    ],
+    "model": "chars/Prefabs/Prefab_D.prefab",
+    "notes": "",
+    "name": "Fugitif",
+    "rarity": 3,
+    "timelinePriority": 0,
+    "iconeDone": true
+},
+{
+    "id": "WeeklyBountyMedium",
+    "weaponTypes": [
+        {
+            "wp": "Sword"
+        },
+        {
+            "wp": "Axe"
+        },
+        {
+            "wp": "Mace"
+        },
+        {
+            "wp": "Polearm"
+        }
+    ],
+    "equipment": [],
+    "baseSkills": [],
+    "tier": 0,
+    "props": {
+        "armorKind": "ArmorMedium"
+    },
+    "stats": [
+        {
+            "value": 5,
+            "attribute": "Strength",
+            "upValue": 33
+        },
+        {
+            "value": 4,
+            "attribute": "Dexterity",
+            "upValue": 20
+        },
+        {
+            "value": 9,
+            "attribute": "Constitution",
+            "upValue": 64
+        },
+        {
+            "value": 0,
+            "attribute": "CritHitPercent",
+            "upValue": 10
+        },
+        {
+            "value": 10,
+            "attribute": "Movement"
+        },
+        {
+            "value": 10,
+            "attribute": "Willpower"
+        }
+    ],
+    "model": "chars/Prefabs/Prefab_SS.prefab",
+    "notes": "",
+    "name": "Fugitif",
+    "rarity": 3,
+    "timelinePriority": 0,
+    "iconeDone": true
+},
+{
+    "id": "WeeklyBountyHeavy",
+    "weaponTypes": [
+        {
+            "wp": "Sword"
+        },
+        {
+            "wp": "Axe"
+        },
+        {
+            "wp": "Mace"
+        },
+        {
+            "wp": "Shield"
+        }
+    ],
+    "equipment": [],
+    "baseSkills": [],
+    "tier": 0,
+    "props": {
+        "armorKind": "ArmorHeavy"
+    },
+    "stats": [
+        {
+            "value": 4,
+            "attribute": "Strength",
+            "upValue": 23
+        },
+        {
+            "value": 4,
+            "attribute": "Dexterity",
+            "upValue": 20
+        },
+        {
+            "value": 11,
+            "attribute": "Constitution",
+            "upValue": 93
+        },
+        {
+            "value": 0,
+            "attribute": "CritHitPercent",
+            "upValue": 10
+        },
+        {
+            "value": 10,
+            "attribute": "Movement"
+        },
+        {
+            "value": 10,
+            "attribute": "Willpower"
+        }
+    ],
+    "model": "chars/Prefabs/Prefab_SS.prefab",
+    "notes": "",
+    "name": "Fugitif",
+    "rarity": 3,
+    "timelinePriority": 0,
+    "iconeDone": true
+}

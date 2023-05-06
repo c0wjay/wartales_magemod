@@ -1,0 +1,3285 @@
+{
+	"id": "Mobster",
+	"weaponTypes": [
+		{
+			"wp": "Dagger"
+		}
+	],
+	"equipment": [
+		{
+			"armor": "LightArmorCommonOutlaws",
+			"weapon": "DaggerCommonOutlaws",
+			"group": "Bandits",
+			"leftHand": "PoisonedThrowingKnife"
+		},
+		{
+			"weapon": "DaggerCommonOutlaws",
+			"armor": "LightArmorCommonOutlaws",
+			"group": "BelerionSmugglers",
+			"leftHand": "PoisonedThrowingKnife"
+		},
+		{
+			"weapon": "DaggerCommonOutlaws",
+			"armor": "RagsClothes",
+			"group": "EscapedPrisoners",
+			"leftHand": "PoisonedThrowingKnife"
+		},
+		{
+			"weapon": "DaggerCommonOutlaws",
+			"armor": "LightArmorCommonGeneric",
+			"leftHand": "PoisonedThrowingKnife"
+		}
+	],
+	"baseSkills": [],
+	"tier": 0,
+	"props": {
+		"armorKind": "ArmorLight"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 20
+		},
+		{
+			"value": 5,
+			"attribute": "Dexterity",
+			"upValue": 38
+		},
+		{
+			"value": 8,
+			"attribute": "Constitution",
+			"upValue": 44
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_D.prefab",
+	"notes": "",
+	"name": "Truand",
+	"rarity": 0,
+	"timelinePriority": 2,
+	"iconeDone": true
+},
+{
+	"id": "Poacher",
+	"weaponTypes": [
+		{
+			"wp": "Bow"
+		}
+	],
+	"equipment": [
+		{
+			"armor": "LightArmorCommonOutlaws",
+			"weapon": "BowCommonOutlaws",
+			"group": "Bandits"
+		},
+		{
+			"weapon": "BowCommonOutlaws",
+			"armor": "LightArmorCommonOutlaws",
+			"group": "BelerionSmugglers"
+		},
+		{
+			"weapon": "BowCommonOutlaws",
+			"armor": "RagsClothes",
+			"group": "EscapedPrisoners"
+		},
+		{
+			"weapon": "BowCommonOutlaws",
+			"armor": "LightArmorCommonGeneric"
+		}
+	],
+	"baseSkills": [],
+	"tier": 0,
+	"props": {
+		"armorKind": "ArmorLight"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 20
+		},
+		{
+			"value": 5,
+			"attribute": "Dexterity",
+			"upValue": 38
+		},
+		{
+			"value": 8,
+			"attribute": "Constitution",
+			"upValue": 44
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_B.prefab",
+	"notes": "",
+	"name": "Braconnier",
+	"rarity": 0,
+	"timelinePriority": 2,
+	"iconeDone": true
+},
+{
+	"id": "Marauder",
+	"weaponTypes": [
+		{
+			"wp": "Axe"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "Axe2HUncoOutlaws",
+			"armor": "MediumArmorUncoOutlaws",
+			"group": "Bandits"
+		},
+		{
+			"weapon": "Axe2HUncoOutlaws",
+			"armor": "MediumArmorUncoOutlaws",
+			"group": "BelerionSmugglers"
+		},
+		{
+			"weapon": "Axe2HUncoOutlaws",
+			"armor": "RagsClothes",
+			"group": "EscapedPrisoners"
+		},
+		{
+			"armor": "MediumArmorUncoGeneric",
+			"weapon": "Axe2HUncoOutlaws"
+		}
+	],
+	"baseSkills": [],
+	"tier": 1,
+	"props": {
+		"armorKind": "ArmorMedium"
+	},
+	"stats": [
+		{
+			"value": 5,
+			"attribute": "Strength",
+			"upValue": 33
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 9,
+			"attribute": "Constitution",
+			"upValue": 64
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_S2.prefab",
+	"notes": "",
+	"name": "Maraudeur",
+	"rarity": 1,
+	"timelinePriority": 3,
+	"iconeDone": true
+},
+{
+	"id": "MischiefMaker",
+	"weaponTypes": [
+		{
+			"wp": "Mace"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "MaceUncoBandits",
+			"armor": "HeavyArmorUncoOutlaws",
+			"leftHand": "ShieldUncoBandits",
+			"group": "Bandits"
+		},
+		{
+			"weapon": "MaceUncoBandits",
+			"armor": "HeavyArmorUncoOutlaws",
+			"leftHand": "ShieldUncoSmugglers",
+			"group": "BelerionSmugglers"
+		},
+		{
+			"weapon": "MaceUncoBandits",
+			"armor": "RagsClothes",
+			"group": "EscapedPrisoners"
+		},
+		{
+			"weapon": "MaceUncoBandits",
+			"armor": "HeavyArmorUncoGeneric",
+			"leftHand": "ShieldUncoBandits"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "RaidExperience"
+		}
+	],
+	"tier": 2,
+	"props": {
+		"armorKind": "ArmorHeavy"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 23
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 11,
+			"attribute": "Constitution",
+			"upValue": 93
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_MS.prefab",
+	"notes": "",
+	"name": "Malfaiteur",
+	"rarity": 1,
+	"timelinePriority": 1,
+	"iconeDone": true
+},
+{
+	"id": "Criminal",
+	"weaponTypes": [
+		{
+			"wp": "Sword2H"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "Sword2HRareOutlaws",
+			"armor": "MediumArmorRareOutlaws",
+			"group": "Bandits"
+		},
+		{
+			"group": "BelerionSmugglers",
+			"weapon": "Sword2HRareOutlaws",
+			"armor": "MediumArmorRareOutlaws"
+		},
+		{
+			"weapon": "Sword2HRareOutlaws",
+			"armor": "RagsClothes",
+			"group": "EscapedPrisoners"
+		},
+		{
+			"weapon": "Sword2HRareOutlaws",
+			"armor": "MediumArmorRareGeneric"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "DisgustForTheWeak"
+		}
+	],
+	"tier": 3,
+	"props": {
+		"feature": "Difficulty_Update",
+		"armorKind": "ArmorMedium"
+	},
+	"stats": [
+		{
+			"value": 5,
+			"attribute": "Strength",
+			"upValue": 33
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 9,
+			"attribute": "Constitution",
+			"upValue": 64
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_S2.prefab",
+	"notes": "",
+	"name": "Criminel",
+	"rarity": 2,
+	"timelinePriority": 3,
+	"iconeDone": true
+},
+{
+	"id": "Ringleader",
+	"weaponTypes": [
+		{
+			"wp": "Dagger"
+		}
+	],
+	"equipment": [
+		{
+			"armor": "LightArmorRareOutlaws",
+			"weapon": "DaggerRareOutlaws",
+			"group": "Bandits",
+			"leftHand": "PoisonedThrowingKnifeT2"
+		},
+		{
+			"weapon": "DaggerRareOutlaws",
+			"armor": "LightArmorRareOutlaws",
+			"group": "BelerionSmugglers",
+			"leftHand": "PoisonedThrowingKnifeT2"
+		},
+		{
+			"weapon": "DaggerRareOutlaws",
+			"armor": "RagsClothes",
+			"group": "EscapedPrisoners",
+			"leftHand": "PoisonedThrowingKnifeT2"
+		},
+		{
+			"weapon": "DaggerRareOutlaws",
+			"armor": "LightArmorRareGeneric",
+			"leftHand": "PoisonedThrowingKnifeT2"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "RingleaderThreat"
+		}
+	],
+	"tier": 0,
+	"props": {
+		"importantStatus": "CriticalLeader",
+		"armorKind": "ArmorLight"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 20
+		},
+		{
+			"value": 5,
+			"attribute": "Dexterity",
+			"upValue": 38
+		},
+		{
+			"value": 8,
+			"attribute": "Constitution",
+			"upValue": 44
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_D.prefab",
+	"notes": "",
+	"name": "Meneur",
+	"rarity": 2,
+	"timelinePriority": 2,
+	"iconeDone": true
+},
+{
+	"id": "RoughneckSoldier",
+	"weaponTypes": [
+		{
+			"wp": "Axe"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "AxeCommonDeserters",
+			"armor": "MediumArmorCommonDeserters",
+			"leftHand": "ThrowingAxe"
+		}
+	],
+	"baseSkills": [],
+	"tier": 0,
+	"props": {
+		"armorKind": "ArmorMedium"
+	},
+	"stats": [
+		{
+			"value": 5,
+			"attribute": "Strength",
+			"upValue": 33
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 9,
+			"attribute": "Constitution",
+			"upValue": 64
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_AS.prefab",
+	"notes": "",
+	"name": "Soudard",
+	"rarity": 0,
+	"timelinePriority": 3,
+	"iconeDone": true
+},
+{
+	"id": "Raider",
+	"weaponTypes": [
+		{
+			"wp": "Mace"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "Mace2HCommonDeserters",
+			"armor": "MediumArmorCommonDeserters"
+		}
+	],
+	"baseSkills": [],
+	"tier": 0,
+	"props": {
+		"armorKind": "ArmorMedium"
+	},
+	"stats": [
+		{
+			"value": 5,
+			"attribute": "Strength",
+			"upValue": 33
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 9,
+			"attribute": "Constitution",
+			"upValue": 64
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_S2.prefab",
+	"notes": "",
+	"name": "Pillard",
+	"rarity": 0,
+	"timelinePriority": 4,
+	"iconeDone": true
+},
+{
+	"id": "Fireworks",
+	"weaponTypes": [
+		{
+			"wp": "Bow"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "BowUncoDeserters",
+			"armor": "LightArmorUncoOutlaws"
+		}
+	],
+	"baseSkills": [],
+	"tier": 1,
+	"props": {
+		"armorKind": "ArmorLight"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 20
+		},
+		{
+			"value": 5,
+			"attribute": "Dexterity",
+			"upValue": 38
+		},
+		{
+			"value": 8,
+			"attribute": "Constitution",
+			"upValue": 44
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_B.prefab",
+	"notes": "",
+	"name": "Artificier",
+	"rarity": 1,
+	"timelinePriority": 2,
+	"iconeDone": true
+},
+{
+	"id": "Renegade",
+	"weaponTypes": [
+		{
+			"wp": "Polearm"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "PolearmUncoDeserters",
+			"armor": "MediumArmorUncoDeserters"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "TacticalIntelligence"
+		}
+	],
+	"tier": 2,
+	"props": {
+		"armorKind": "ArmorMedium"
+	},
+	"stats": [
+		{
+			"value": 5,
+			"attribute": "Strength",
+			"upValue": 33
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 9,
+			"attribute": "Constitution",
+			"upValue": 64
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_P.prefab",
+	"notes": "",
+	"name": "Renégat",
+	"rarity": 1,
+	"timelinePriority": 2,
+	"iconeDone": true
+},
+{
+	"id": "Looter",
+	"weaponTypes": [
+		{
+			"wp": "Dagger"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "DaggerRareDeserters",
+			"armor": "LightArmorRareDeserters",
+			"leftHand": "ThrowingSickleT2"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "CarefulStance"
+		}
+	],
+	"tier": 3,
+	"props": {
+		"feature": "Difficulty_Update",
+		"armorKind": "ArmorLight"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 20
+		},
+		{
+			"value": 5,
+			"attribute": "Dexterity",
+			"upValue": 38
+		},
+		{
+			"value": 8,
+			"attribute": "Constitution",
+			"upValue": 44
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_D.prefab",
+	"notes": "",
+	"name": "Pilleur",
+	"rarity": 2,
+	"timelinePriority": 2,
+	"iconeDone": true
+},
+{
+	"id": "Corporal",
+	"weaponTypes": [
+		{
+			"wp": "Mace"
+		}
+	],
+	"equipment": [
+		{
+			"armor": "HeavyArmorRareDeserters",
+			"weapon": "MaceRareDeserters",
+			"leftHand": "ShieldRareDeserter"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "SurvivalStrategy"
+		}
+	],
+	"tier": 0,
+	"props": {
+		"importantStatus": "ProtectionLeader",
+		"armorKind": "ArmorHeavy"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 23
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 9,
+			"attribute": "Constitution",
+			"upValue": 93
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_MS.prefab",
+	"notes": "",
+	"name": "Caporal",
+	"rarity": 2,
+	"timelinePriority": 3,
+	"iconeDone": true
+},
+{
+	"id": "Infantryman",
+	"weaponTypes": [
+		{
+			"wp": "Mace"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "MaceCommonGuard",
+			"armor": "HeavyArmorCommonGuard",
+			"leftHand": "ShieldCommonGuard",
+			"group": "Guard"
+		},
+		{
+			"weapon": "MaceCommonGuard",
+			"leftHand": "ShieldCommonGuard",
+			"armor": "HeavyArmorCommonGeneric"
+		},
+		{
+			"weapon": "MaceCommonGuard",
+			"armor": "HeavyArmorCommonAlazar",
+			"leftHand": "ShieldCommonGuard",
+			"group": "AlazarSoldiers"
+		}
+	],
+	"baseSkills": [],
+	"tier": 0,
+	"props": {
+		"armorKind": "ArmorHeavy"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 23
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 11,
+			"attribute": "Constitution",
+			"upValue": 93
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_SS.prefab",
+	"notes": "",
+	"name": "Fantassin",
+	"rarity": 0,
+	"timelinePriority": 1,
+	"iconeDone": true
+},
+{
+	"id": "Phalange",
+	"weaponTypes": [
+		{
+			"wp": "Polearm"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "PolearmCommonGuard",
+			"armor": "MediumArmorCommonGuard",
+			"group": "Guard"
+		},
+		{
+			"weapon": "PolearmCommonGuard",
+			"armor": "MediumArmorCommonGeneric"
+		},
+		{
+			"weapon": "PolearmCommonGuard",
+			"armor": "MediumArmorCommonAlazar",
+			"group": "AlazarSoldiers"
+		}
+	],
+	"baseSkills": [],
+	"tier": 0,
+	"props": {
+		"armorKind": "ArmorMedium"
+	},
+	"stats": [
+		{
+			"value": 5,
+			"attribute": "Strength",
+			"upValue": 33
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 9,
+			"attribute": "Constitution",
+			"upValue": 64
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_P.prefab",
+	"notes": "",
+	"name": "Phalange",
+	"rarity": 0,
+	"timelinePriority": 2,
+	"iconeDone": true
+},
+{
+	"id": "Lieutenant",
+	"weaponTypes": [
+		{
+			"wp": "Mace"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "Mace2HUncoGuard",
+			"armor": "MediumArmorUncoGuard",
+			"group": "Guard"
+		},
+		{
+			"armor": "MediumArmorUncoGeneric",
+			"weapon": "Mace2HUncoGuard"
+		},
+		{
+			"weapon": "Mace2HUncoGuard",
+			"armor": "MediumArmorUncoAlazar",
+			"group": "AlazarSoldiers"
+		}
+	],
+	"baseSkills": [],
+	"tier": 1,
+	"props": {
+		"armorKind": "ArmorMedium"
+	},
+	"stats": [
+		{
+			"value": 5,
+			"attribute": "Strength",
+			"upValue": 33
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 9,
+			"attribute": "Constitution",
+			"upValue": 64
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_S2.prefab",
+	"notes": "",
+	"name": "Lieutenant",
+	"rarity": 1,
+	"timelinePriority": 1,
+	"iconeDone": true
+},
+{
+	"id": "Tactician",
+	"weaponTypes": [
+		{
+			"wp": "Dagger"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "DaggerUncoGuard",
+			"armor": "LightArmorUncoGuard",
+			"group": "Guard",
+			"leftHand": "ThrowingKnifeT2"
+		},
+		{
+			"weapon": "DaggerUncoGuard",
+			"armor": "LightArmorUncoGeneric",
+			"leftHand": "ThrowingKnifeT2"
+		},
+		{
+			"weapon": "DaggerUncoGuard",
+			"armor": "LightArmorUncoAlazar",
+			"group": "AlazarSoldiers",
+			"leftHand": "ThrowingKnifeT2"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "SkilledClearance"
+		}
+	],
+	"tier": 2,
+	"props": {
+		"armorKind": "ArmorLight"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 20
+		},
+		{
+			"value": 5,
+			"attribute": "Dexterity",
+			"upValue": 38
+		},
+		{
+			"value": 8,
+			"attribute": "Constitution",
+			"upValue": 44
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_D.prefab",
+	"notes": "",
+	"name": "Tacticien",
+	"rarity": 1,
+	"timelinePriority": 2,
+	"iconeDone": true
+},
+{
+	"id": "Defender",
+	"weaponTypes": [
+		{
+			"wp": "Sword"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "SwordRareGuard",
+			"armor": "HeavyArmorRareGuard",
+			"leftHand": "ShieldRareGuard",
+			"group": "Guard"
+		},
+		{
+			"weapon": "SwordRareGuard",
+			"armor": "HeavyArmorRareGeneric",
+			"leftHand": "ShieldRareGuard"
+		},
+		{
+			"weapon": "SwordRareGuard",
+			"group": "AlazarSoldiers",
+			"leftHand": "ShieldRareGuard",
+			"armor": "HeavyArmorCommonAlazar"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "MeasuredResponse"
+		}
+	],
+	"tier": 3,
+	"props": {
+		"feature": "Difficulty_Update",
+		"armorKind": "ArmorHeavy"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 23
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 11,
+			"attribute": "Constitution",
+			"upValue": 93
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_SS.prefab",
+	"notes": "",
+	"name": "Défenseur",
+	"rarity": 2,
+	"timelinePriority": 1,
+	"iconeDone": true
+},
+{
+	"id": "Captain",
+	"weaponTypes": [
+		{
+			"wp": "Bow"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "BowRareGuard",
+			"armor": "LightArmorRareGuard",
+			"group": "Guard"
+		},
+		{
+			"weapon": "BowRareGuard",
+			"armor": "LightArmorRareGeneric"
+		},
+		{
+			"weapon": "BowRareGuard",
+			"armor": "LightArmorRareAlazar",
+			"group": "AlazarSoldiers"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "Exaltation"
+		}
+	],
+	"tier": 0,
+	"props": {
+		"importantStatus": "InspirationLeader",
+		"armorKind": "ArmorLight"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 20
+		},
+		{
+			"value": 5,
+			"attribute": "Dexterity",
+			"upValue": 38
+		},
+		{
+			"value": 8,
+			"attribute": "Constitution",
+			"upValue": 44
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_B.prefab",
+	"notes": "",
+	"name": "Capitaine",
+	"rarity": 2,
+	"timelinePriority": 2,
+	"iconeDone": true
+},
+{
+	"id": "Legionary",
+	"weaponTypes": [
+		{
+			"wp": "Sword"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "SwordCommonLegion",
+			"armor": "HeavyArmorCommonLegion",
+			"leftHand": "ShieldCommonLegionary",
+			"group": "Legion"
+		},
+		{
+			"weapon": "SwordCommonLegion",
+			"armor": "HeavyArmorCommonGeneric",
+			"leftHand": "ShieldCommonLegionary"
+		}
+	],
+	"baseSkills": [],
+	"tier": 0,
+	"props": {
+		"armorKind": "ArmorHeavy"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 23
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 11,
+			"attribute": "Constitution",
+			"upValue": 93
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_MS.prefab",
+	"notes": "",
+	"name": "Légionnaire",
+	"rarity": 0,
+	"timelinePriority": 4,
+	"iconeDone": true
+},
+{
+	"id": "Sapper",
+	"weaponTypes": [
+		{
+			"wp": "Bow"
+		}
+	],
+	"equipment": [
+		{
+			"armor": "LightArmorCommonLegion",
+			"weapon": "BowCommonLegion",
+			"group": "Legion"
+		},
+		{
+			"weapon": "BowCommonLegion",
+			"armor": "LightArmorCommonGeneric"
+		}
+	],
+	"baseSkills": [],
+	"tier": 0,
+	"props": {
+		"armorKind": "ArmorLight"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 20
+		},
+		{
+			"value": 5,
+			"attribute": "Dexterity",
+			"upValue": 38
+		},
+		{
+			"value": 8,
+			"attribute": "Constitution",
+			"upValue": 44
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_B.prefab",
+	"notes": "",
+	"name": "Sapeur",
+	"rarity": 0,
+	"timelinePriority": 1,
+	"iconeDone": true
+},
+{
+	"id": "Spadassin",
+	"weaponTypes": [
+		{
+			"wp": "Sword"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "Sword2HUncoLegion",
+			"armor": "MediumArmorUncoLegion",
+			"group": "Legion"
+		},
+		{
+			"weapon": "Sword2HUncoLegion",
+			"armor": "MediumArmorUncoGeneric"
+		}
+	],
+	"baseSkills": [],
+	"tier": 1,
+	"props": {
+		"armorKind": "ArmorMedium"
+	},
+	"stats": [
+		{
+			"value": 5,
+			"attribute": "Strength",
+			"upValue": 33
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 9,
+			"attribute": "Constitution",
+			"upValue": 64
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_S2.prefab",
+	"notes": "",
+	"name": "Spadassin",
+	"rarity": 1,
+	"timelinePriority": 2,
+	"iconeDone": true
+},
+{
+	"id": "Emissary",
+	"weaponTypes": [
+		{
+			"wp": "Polearm"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "PolearmUncoLegion",
+			"armor": "HeavyArmorUncoLegion",
+			"group": "Legion"
+		},
+		{
+			"weapon": "PolearmUncoLegion",
+			"armor": "HeavyArmorUncoGeneric"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "MedicalAssistance"
+		}
+	],
+	"tier": 2,
+	"props": {
+		"status": [
+			{
+				"kind": "PreventEngage"
+			}
+		],
+		"armorKind": "ArmorHeavy"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 23
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 11,
+			"attribute": "Constitution",
+			"upValue": 93
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_P.prefab",
+	"notes": "",
+	"name": "Ambassadeur",
+	"rarity": 1,
+	"timelinePriority": 3,
+	"iconeDone": true
+},
+{
+	"id": "Hothead",
+	"weaponTypes": [
+		{
+			"wp": "Mace"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "MaceRareLegion",
+			"armor": "HeavyArmorRareLegion",
+			"leftHand": "ShieldRareLegion",
+			"group": "Legion"
+		},
+		{
+			"weapon": "MaceRareLegion",
+			"armor": "HeavyArmorUncoGeneric",
+			"leftHand": "ShieldRareLegion"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "MilitaryChoreography"
+		}
+	],
+	"tier": 3,
+	"props": {
+		"feature": "Difficulty_Update",
+		"armorKind": "ArmorHeavy"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 23
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 11,
+			"attribute": "Constitution",
+			"upValue": 93
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_MS.prefab",
+	"notes": "",
+	"name": "Tête brûlée",
+	"rarity": 2,
+	"timelinePriority": 2,
+	"iconeDone": true
+},
+{
+	"id": "Commander",
+	"weaponTypes": [
+		{
+			"wp": "Polearm"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "PolearmRareLegion",
+			"armor": "MediumArmorRareLegion",
+			"group": "Legion"
+		},
+		{
+			"weapon": "PolearmRareLegion",
+			"armor": "MediumArmorRareGeneric"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "TrainedToKill"
+		}
+	],
+	"tier": 0,
+	"props": {
+		"importantStatus": "TrueDamageLeader",
+		"armorKind": "ArmorMedium"
+	},
+	"stats": [
+		{
+			"value": 5,
+			"attribute": "Strength",
+			"upValue": 33
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 9,
+			"attribute": "Constitution",
+			"upValue": 64
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_P.prefab",
+	"notes": "",
+	"name": "Commandant",
+	"rarity": 2,
+	"timelinePriority": 2,
+	"iconeDone": true
+},
+{
+	"id": "Hitman",
+	"weaponTypes": [
+		{
+			"wp": "Sword"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "Sword2HCommonCompanions",
+			"armor": "MediumArmorCommonCompanions"
+		}
+	],
+	"baseSkills": [],
+	"tier": 0,
+	"props": {
+		"armorKind": "ArmorMedium"
+	},
+	"stats": [
+		{
+			"value": 5,
+			"attribute": "Strength",
+			"upValue": 33
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 9,
+			"attribute": "Constitution",
+			"upValue": 64
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_S2.prefab",
+	"notes": "",
+	"name": "Tueur à gages",
+	"rarity": 0,
+	"timelinePriority": 3,
+	"iconeDone": true
+},
+{
+	"id": "Ravager",
+	"weaponTypes": [
+		{
+			"wp": "Axe"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "Axe2HCommonCompanions",
+			"armor": "MediumArmorCommonCompanions"
+		}
+	],
+	"baseSkills": [],
+	"tier": 0,
+	"props": {
+		"armorKind": "ArmorMedium"
+	},
+	"stats": [
+		{
+			"value": 5,
+			"attribute": "Strength",
+			"upValue": 33
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 9,
+			"attribute": "Constitution",
+			"upValue": 64
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_S2.prefab",
+	"notes": "",
+	"name": "Ravageur",
+	"rarity": 0,
+	"timelinePriority": 3,
+	"iconeDone": true
+},
+{
+	"id": "Crewman",
+	"weaponTypes": [
+		{
+			"wp": "Sword"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "SwordUncoCompanion",
+			"armor": "HeavyArmorUncoCompanions",
+			"leftHand": "ShieldUncoCompanions"
+		}
+	],
+	"baseSkills": [],
+	"tier": 1,
+	"props": {
+		"armorKind": "ArmorHeavy"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 23
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 11,
+			"attribute": "Constitution",
+			"upValue": 93
+		},
+		{
+			"value": 5,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_SS.prefab",
+	"notes": "",
+	"name": "Équipier",
+	"rarity": 1,
+	"timelinePriority": 2,
+	"iconeDone": true
+},
+{
+	"id": "Arrow",
+	"weaponTypes": [
+		{
+			"wp": "Bow"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "BowUncoCompanions",
+			"armor": "LightArmorUncoCompanions"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "EagleEye"
+		}
+	],
+	"tier": 2,
+	"props": {
+		"armorKind": "ArmorLight"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 20
+		},
+		{
+			"value": 5,
+			"attribute": "Dexterity",
+			"upValue": 38
+		},
+		{
+			"value": 8,
+			"attribute": "Constitution",
+			"upValue": 44
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_B.prefab",
+	"notes": "",
+	"name": "Flèche",
+	"rarity": 1,
+	"timelinePriority": 3,
+	"iconeDone": true
+},
+{
+	"id": "Peacekeeper",
+	"weaponTypes": [
+		{
+			"wp": "Axe"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "AxeRareCompanion",
+			"armor": "HeavyArmorRareCompanion",
+			"leftHand": "ShieldRareCompanion"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "UnwaveringWill"
+		}
+	],
+	"tier": 3,
+	"props": {
+		"feature": "Difficulty_Update",
+		"armorKind": "ArmorHeavy"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 23
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 11,
+			"attribute": "Constitution",
+			"upValue": 93
+		},
+		{
+			"value": 5,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_AS.prefab",
+	"notes": "",
+	"name": "Porte-paix",
+	"rarity": 2,
+	"timelinePriority": 1,
+	"iconeDone": true
+},
+{
+	"id": "Stipendiary",
+	"weaponTypes": [
+		{
+			"wp": "Mace"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "Mace2HRareCompanions",
+			"armor": "MediumArmorRareCompanions"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "AttackStrategy"
+		}
+	],
+	"tier": 0,
+	"props": {
+		"importantStatus": "BrutalityLeader",
+		"armorKind": "ArmorMedium"
+	},
+	"stats": [
+		{
+			"value": 5,
+			"attribute": "Strength",
+			"upValue": 33
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 9,
+			"attribute": "Constitution",
+			"upValue": 64
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_S2.prefab",
+	"notes": "",
+	"name": "Stipendié",
+	"rarity": 2,
+	"timelinePriority": 2,
+	"iconeDone": true
+},
+{
+	"id": "Zealot",
+	"weaponTypes": [
+		{
+			"wp": "Mace"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "MaceCommonInquisition",
+			"armor": "MediumArmorCommonInquisition",
+			"leftHand": "Torch"
+		}
+	],
+	"baseSkills": [],
+	"tier": 0,
+	"props": {
+		"armorKind": "ArmorMedium"
+	},
+	"stats": [
+		{
+			"value": 5,
+			"attribute": "Strength",
+			"upValue": 33
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 9,
+			"attribute": "Constitution",
+			"upValue": 64
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_SS.prefab",
+	"notes": "",
+	"name": "Zélote",
+	"rarity": 0,
+	"timelinePriority": 1,
+	"iconeDone": true
+},
+{
+	"id": "Fanatic",
+	"weaponTypes": [
+		{
+			"wp": "Sword"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "Sword2HCommonInquisition",
+			"armor": "HeavyArmorCommonInquisition"
+		}
+	],
+	"baseSkills": [],
+	"tier": 0,
+	"props": {
+		"armorKind": "ArmorHeavy"
+	},
+	"stats": [
+		{
+			"value": 5,
+			"attribute": "Strength",
+			"upValue": 33
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 9,
+			"attribute": "Constitution",
+			"upValue": 64
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_S2.prefab",
+	"notes": "",
+	"name": "Fanatique",
+	"rarity": 0,
+	"timelinePriority": 1,
+	"iconeDone": true
+},
+{
+	"id": "Purgater",
+	"weaponTypes": [
+		{
+			"wp": "Axe"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "Axe2HUncoInquisition",
+			"armor": "MediumArmorUncoInquisition"
+		}
+	],
+	"baseSkills": [],
+	"tier": 1,
+	"props": {
+		"armorKind": "ArmorMedium"
+	},
+	"stats": [
+		{
+			"value": 5,
+			"attribute": "Strength",
+			"upValue": 33
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 9,
+			"attribute": "Constitution",
+			"upValue": 64
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_S2.prefab",
+	"notes": "",
+	"name": "Purgateur",
+	"rarity": 1,
+	"timelinePriority": 1,
+	"iconeDone": true
+},
+{
+	"id": "Worshipper",
+	"weaponTypes": [
+		{
+			"wp": "Dagger"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "DaggerUncoInquisition",
+			"armor": "LightArmorUncoInquisition",
+			"leftHand": "ThrowingKnifeT2"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "FanaticAura"
+		}
+	],
+	"tier": 2,
+	"props": {
+		"armorKind": "ArmorLight"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 20
+		},
+		{
+			"value": 5,
+			"attribute": "Dexterity",
+			"upValue": 38
+		},
+		{
+			"value": 8,
+			"attribute": "Constitution",
+			"upValue": 44
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_D.prefab",
+	"notes": "",
+	"name": "Adorateur",
+	"rarity": 1,
+	"timelinePriority": 2,
+	"iconeDone": true
+},
+{
+	"id": "Messenger",
+	"weaponTypes": [
+		{
+			"wp": "Bow"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "BowRareInquisition",
+			"armor": "LightArmorRareInquisition"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "TargetsInSight"
+		}
+	],
+	"tier": 3,
+	"props": {
+		"feature": "Difficulty_Update",
+		"armorKind": "ArmorLight"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 20
+		},
+		{
+			"value": 5,
+			"attribute": "Dexterity",
+			"upValue": 38
+		},
+		{
+			"value": 8,
+			"attribute": "Constitution",
+			"upValue": 44
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_B.prefab",
+	"notes": "",
+	"name": "Messager",
+	"rarity": 2,
+	"timelinePriority": 3,
+	"iconeDone": true
+},
+{
+	"id": "Paladin",
+	"weaponTypes": [
+		{
+			"wp": "Sword"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "SwordRareInquisition",
+			"armor": "HeavyArmorRareInquisition",
+			"leftHand": "ShieldRareInquisition"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "IronWill"
+		}
+	],
+	"tier": 0,
+	"props": {
+		"importantStatus": "DmgPerBonusLeader",
+		"armorKind": "ArmorHeavy"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 23
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 11,
+			"attribute": "Constitution",
+			"upValue": 93
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_MS.prefab",
+	"notes": "",
+	"name": "Paladin",
+	"rarity": 2,
+	"timelinePriority": 2,
+	"iconeDone": true
+},
+{
+	"id": "Runner",
+	"weaponTypes": [
+		{
+			"wp": "Axe"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "AxeCommonTrackers",
+			"armor": "LightArmorCommonTrackers",
+			"leftHand": "ThrowingSickle"
+		},
+		{
+			"weapon": "AxeCommonTrackers",
+			"armor": "TumblerClothes",
+			"group": "Tumblers",
+			"leftHand": "ThrowingSickle"
+		}
+	],
+	"baseSkills": [],
+	"tier": 0,
+	"props": {
+		"hasWarpaint": true,
+		"armorKind": "ArmorLight"
+	},
+	"stats": [
+		{
+			"value": 5,
+			"attribute": "Strength",
+			"upValue": 33
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 9,
+			"attribute": "Constitution",
+			"upValue": 64
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_AS.prefab",
+	"notes": "",
+	"name": "Coureur",
+	"rarity": 0,
+	"timelinePriority": 1,
+	"iconeDone": true
+},
+{
+	"id": "Slaughterer",
+	"weaponTypes": [
+		{
+			"wp": "Axe"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "Axe2HCommonTrackers",
+			"armor": "MediumArmorCommonTrackers"
+		}
+	],
+	"baseSkills": [],
+	"tier": 0,
+	"props": {
+		"hasWarpaint": true,
+		"armorKind": "ArmorMedium"
+	},
+	"stats": [
+		{
+			"value": 5,
+			"attribute": "Strength",
+			"upValue": 33
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 9,
+			"attribute": "Constitution",
+			"upValue": 64
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_S2.prefab",
+	"notes": "",
+	"name": "Abatteur",
+	"rarity": 0,
+	"timelinePriority": 2,
+	"iconeDone": true
+},
+{
+	"id": "Blocker",
+	"weaponTypes": [
+		{
+			"wp": "Axe"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "AxeUncoTrackers",
+			"armor": "HeavyArmorUncoTrackers",
+			"leftHand": "ShieldUncoTrackers",
+			"oilItem": "OilStrengthProc1"
+		}
+	],
+	"baseSkills": [],
+	"tier": 1,
+	"props": {
+		"hasWarpaint": true,
+		"armorKind": "ArmorHeavy"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 23
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 11,
+			"attribute": "Constitution",
+			"upValue": 93
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_AS.prefab",
+	"notes": "",
+	"name": "Bloqueur",
+	"rarity": 1,
+	"timelinePriority": 1,
+	"iconeDone": true
+},
+{
+	"id": "Savage",
+	"weaponTypes": [
+		{
+			"wp": "Dagger"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "DaggerUncoTrackers",
+			"armor": "LightArmorUncoTrackers",
+			"leftHand": "ThrowingSickleT2"
+		},
+		{
+			"weapon": "DaggerUncoTrackers",
+			"armor": "TumblerClothes",
+			"group": "Tumblers",
+			"leftHand": "ThrowingSickleT2"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "FeralSoul"
+		}
+	],
+	"tier": 2,
+	"props": {
+		"status": [
+			{
+				"kind": "Berserk"
+			}
+		],
+		"hasWarpaint": true,
+		"armorKind": "ArmorLight"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 20
+		},
+		{
+			"value": 5,
+			"attribute": "Dexterity",
+			"upValue": 38
+		},
+		{
+			"value": 8,
+			"attribute": "Constitution",
+			"upValue": 44
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_D.prefab",
+	"notes": "",
+	"name": "Sauvage",
+	"rarity": 1,
+	"timelinePriority": 1,
+	"iconeDone": true
+},
+{
+	"id": "Pursuer",
+	"weaponTypes": [
+		{
+			"wp": "Polearm"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "PolearmRareTrackers",
+			"armor": "MediumArmorRareTrackers"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "WildComplaint"
+		}
+	],
+	"tier": 3,
+	"props": {
+		"feature": "Difficulty_Update",
+		"armorKind": "ArmorMedium"
+	},
+	"stats": [
+		{
+			"value": 5,
+			"attribute": "Strength",
+			"upValue": 33
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 9,
+			"attribute": "Constitution",
+			"upValue": 64
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_P.prefab",
+	"notes": "",
+	"name": "Pourchasseur",
+	"rarity": 2,
+	"timelinePriority": 3,
+	"iconeDone": true
+},
+{
+	"id": "Trapper",
+	"weaponTypes": [
+		{
+			"wp": "Bow"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "BowRareTrackers",
+			"armor": "LightArmorRareTrackers"
+		},
+		{
+			"weapon": "BowRareTrackers",
+			"armor": "TumblerClothes",
+			"group": "Tumblers"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "AlphaAura"
+		}
+	],
+	"tier": 0,
+	"props": {
+		"feature": "Harag_Update",
+		"hasWarpaint": true,
+		"armorKind": "ArmorLight"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 20
+		},
+		{
+			"value": 5,
+			"attribute": "Dexterity",
+			"upValue": 38
+		},
+		{
+			"value": 8,
+			"attribute": "Constitution",
+			"upValue": 44
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_B.prefab",
+	"notes": "",
+	"name": "Trappeur",
+	"rarity": 2,
+	"timelinePriority": 2,
+	"iconeDone": true
+},
+{
+	"id": "Sentry",
+	"weaponTypes": [
+		{
+			"wp": "Sword"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "SwordCommonAlazar",
+			"leftHand": "ShieldCommonAlazar",
+			"armor": "HeavyArmorCommonAlazar",
+			"group": "AlazarSoldiers"
+		},
+		{
+			"weapon": "SwordCommonAlazar",
+			"armor": "HeavyArmorCommonAlazar",
+			"leftHand": "ShieldCommonAlazar",
+			"group": "PurifiersGuild"
+		},
+		{
+			"weapon": "SwordCommonAlazar",
+			"armor": "HeavyArmorCommonGeneric",
+			"leftHand": "ShieldCommonAlazar",
+			"group": "UnknownSoldiers"
+		},
+		{
+			"weapon": "SwordCommonAlazar",
+			"armor": "HeavyArmorCommonGeneric",
+			"leftHand": "ShieldCommonAlazar"
+		}
+	],
+	"baseSkills": [],
+	"tier": 0,
+	"rarity": 0,
+	"props": {
+		"feature": "Alazar1_Update",
+		"armorKind": "ArmorHeavy"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 23
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 11,
+			"attribute": "Constitution",
+			"upValue": 93
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_AS.prefab",
+	"notes": "wrong model",
+	"name": "Factionnaire",
+	"timelinePriority": 0,
+	"iconeDone": true
+},
+{
+	"id": "Sagittarius",
+	"weaponTypes": [
+		{
+			"wp": "Bow"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "BowCommonAlazar",
+			"armor": "LightArmorCommonAlazar",
+			"group": "AlazarSoldiers"
+		},
+		{
+			"weapon": "BowCommonAlazar",
+			"armor": "LightArmorCommonAlazar",
+			"group": "PurifiersGuild"
+		},
+		{
+			"weapon": "BowCommonAlazar",
+			"armor": "LightArmorCommonGeneric",
+			"group": "UnknownSoldiers"
+		},
+		{
+			"weapon": "BowCommonAlazar",
+			"armor": "LightArmorCommonGeneric"
+		}
+	],
+	"baseSkills": [],
+	"tier": 0,
+	"rarity": 0,
+	"props": {
+		"feature": "Alazar1_Update",
+		"armorKind": "ArmorLight"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 20
+		},
+		{
+			"value": 5,
+			"attribute": "Dexterity",
+			"upValue": 38
+		},
+		{
+			"value": 8,
+			"attribute": "Constitution",
+			"upValue": 44
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_S2.prefab",
+	"notes": "wrong model",
+	"name": "Sagittaire",
+	"timelinePriority": 0,
+	"iconeDone": true
+},
+{
+	"id": "Henchman",
+	"weaponTypes": [
+		{
+			"wp": "Mace"
+		}
+	],
+	"equipment": [
+		{
+			"armor": "HeavyArmorUncoAlazar",
+			"weapon": "MaceUncoAlazar",
+			"leftHand": "ShieldUncoAlazar",
+			"group": "AlazarSoldiers"
+		},
+		{
+			"weapon": "MaceUncoAlazar",
+			"armor": "HeavyArmorUncoAlazar",
+			"leftHand": "ShieldUncoAlazar",
+			"group": "PurifiersGuild"
+		},
+		{
+			"weapon": "MaceUncoAlazar",
+			"armor": "HeavyArmorUncoGeneric",
+			"group": "UnknownSoldiers",
+			"leftHand": "ShieldUncoAlazar"
+		},
+		{
+			"weapon": "MaceUncoAlazar",
+			"armor": "HeavyArmorUncoGeneric",
+			"leftHand": "ShieldUncoAlazar"
+		}
+	],
+	"baseSkills": [],
+	"tier": 1,
+	"rarity": 1,
+	"props": {
+		"feature": "Alazar1_Update",
+		"armorKind": "ArmorHeavy"
+	},
+	"stats": [
+		{
+			"value": 4,
+			"attribute": "Strength",
+			"upValue": 23
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 11,
+			"attribute": "Constitution",
+			"upValue": 93
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_AS.prefab",
+	"notes": "wrong model",
+	"name": "Séide",
+	"timelinePriority": 0,
+	"iconeDone": true
+},
+{
+	"id": "Recruit",
+	"weaponTypes": [
+		{
+			"wp": "Polearm"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "PolearmUncoAlazar",
+			"armor": "MediumArmorUncoAlazar",
+			"group": "AlazarSoldiers"
+		},
+		{
+			"weapon": "PolearmUncoAlazar",
+			"armor": "MediumArmorUncoAlazar",
+			"group": "PurifiersGuild"
+		},
+		{
+			"weapon": "PolearmUncoAlazar",
+			"armor": "MediumArmorUncoGeneric",
+			"group": "UnknownSoldiers"
+		},
+		{
+			"weapon": "PolearmUncoAlazar",
+			"armor": "MediumArmorUncoGeneric"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "BackEyed"
+		}
+	],
+	"tier": 2,
+	"rarity": 1,
+	"props": {
+		"feature": "Alazar1_Update",
+		"armorKind": "ArmorMedium"
+	},
+	"stats": [
+		{
+			"value": 5,
+			"attribute": "Strength",
+			"upValue": 33
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 9,
+			"attribute": "Constitution",
+			"upValue": 64
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_D.prefab",
+	"notes": "wrong model",
+	"name": "Recrue",
+	"timelinePriority": 0,
+	"iconeDone": true
+},
+{
+	"id": "Colosse",
+	"weaponTypes": [
+		{
+			"wp": "Mace2H"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "Mace2HRareAlazar",
+			"armor": "MediumArmorRareAlazar",
+			"group": "AlazarSoldiers"
+		},
+		{
+			"weapon": "Mace2HRareAlazar",
+			"armor": "MediumArmorRareAlazar",
+			"group": "PurifiersGuild"
+		},
+		{
+			"weapon": "Mace2HRareAlazar",
+			"armor": "MediumArmorRareGeneric",
+			"group": "UnknownSoldiers"
+		},
+		{
+			"weapon": "Mace2HRareAlazar",
+			"armor": "MediumArmorRareGeneric"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "Unwavering"
+		}
+	],
+	"tier": 3,
+	"rarity": 2,
+	"props": {
+		"feature": "Alazar1_Update",
+		"armorKind": "ArmorMedium"
+	},
+	"stats": [
+		{
+			"value": 5,
+			"attribute": "Strength",
+			"upValue": 33
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 9,
+			"attribute": "Constitution",
+			"upValue": 64
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_P.prefab",
+	"notes": "wrong model",
+	"name": "Colosse",
+	"timelinePriority": 0,
+	"iconeDone": true
+},
+{
+	"id": "Brigadier",
+	"weaponTypes": [
+		{
+			"wp": "Sword2H"
+		}
+	],
+	"equipment": [
+		{
+			"weapon": "Sword2HRareAlazar",
+			"armor": "MediumArmorRareAlazar",
+			"group": "AlazarSoldiers"
+		},
+		{
+			"weapon": "Sword2HRareAlazar",
+			"armor": "MediumArmorRareAlazar",
+			"group": "PurifiersGuild"
+		},
+		{
+			"weapon": "Sword2HRareAlazar",
+			"armor": "MediumArmorRareGeneric",
+			"group": "UnknownSoldiers"
+		},
+		{
+			"weapon": "Sword2HRareAlazar",
+			"armor": "MediumArmorRareGeneric"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "SupportLeader"
+		}
+	],
+	"tier": 0,
+	"rarity": 2,
+	"props": {
+		"feature": "Alazar1_Update",
+		"importantStatus": "SupportLeader",
+		"armorKind": "ArmorMedium"
+	},
+	"stats": [
+		{
+			"value": 5,
+			"attribute": "Strength",
+			"upValue": 33
+		},
+		{
+			"value": 4,
+			"attribute": "Dexterity",
+			"upValue": 20
+		},
+		{
+			"value": 9,
+			"attribute": "Constitution",
+			"upValue": 64
+		},
+		{
+			"value": 0,
+			"attribute": "CritHitPercent",
+			"upValue": 10
+		},
+		{
+			"value": 10,
+			"attribute": "Movement"
+		},
+		{
+			"value": 10,
+			"attribute": "Willpower"
+		}
+	],
+	"model": "chars/Prefabs/Prefab_B.prefab",
+	"notes": "wrong model",
+	"name": "Brigadier",
+	"timelinePriority": 0,
+	"iconeDone": true
+},
+{
+	"id": "Thief",
+	"weaponTypes": [],
+	"equipment": [
+		{
+			"armor": "LightArmorCommonOutlaws",
+			"leftHand": "BlindingPowder"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "DodgeEndTurn"
+		}
+	],
+	"tier": 0,
+	"props": {
+		"status": [
+			{
+				"kind": "FleeWithBackpack"
+			},
+			{
+				"kind": "Dodge"
+			}
+		],
+		"flags": 131076,
+		"armorKind": "ArmorLight"
+	},
+	"stats": [
+		{
+			"value": 3,
+			"attribute": "Constitution",
+			"upValue": 18
+		}
+	],
+	"model": "chars/Prefabs/Prefab_F.prefab",
+	"notes": "",
+	"name": "Voleur",
+	"rarity": 0,
+	"timelinePriority": 0,
+	"iconeDone": true
+},
+{
+	"id": "Merchant",
+	"weaponTypes": [],
+	"equipment": [
+		{
+			"armor": "TraderTunic2",
+			"leftHand": "BlindingPowder"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "DodgeEndTurn"
+		}
+	],
+	"tier": 0,
+	"props": {
+		"status": [
+			{
+				"kind": "FleeWithBackpack"
+			},
+			{
+				"kind": "Dodge"
+			}
+		],
+		"flags": 1441796,
+		"armorKind": "ArmorLight"
+	},
+	"stats": [
+		{
+			"value": 3,
+			"attribute": "Constitution",
+			"upValue": 18
+		}
+	],
+	"model": "chars/Prefabs/Prefab_F.prefab",
+	"notes": "",
+	"name": "Marchand",
+	"rarity": 0,
+	"timelinePriority": 0,
+	"iconeDone": true
+},
+{
+	"id": "Purifier",
+	"weaponTypes": [],
+	"equipment": [
+		{
+			"armor": "PurifierClothes",
+			"leftHand": "BlindingPowder"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "DodgeEndTurn"
+		}
+	],
+	"tier": 0,
+	"rarity": 0,
+	"props": {
+		"status": [
+			{
+				"kind": "FleeWithoutBackpack"
+			},
+			{
+				"kind": "Dodge"
+			}
+		],
+		"flags": 131076,
+		"armorKind": "ArmorLight"
+	},
+	"stats": [
+		{
+			"value": 3,
+			"attribute": "Constitution",
+			"upValue": 18
+		}
+	],
+	"model": "chars/Prefabs/Prefab_F.prefab",
+	"notes": "",
+	"name": "Purificateur",
+	"timelinePriority": 0,
+	"iconeDone": true
+},
+{
+	"id": "Erudit",
+	"weaponTypes": [],
+	"equipment": [
+		{
+			"armor": "TraderTunic2",
+			"leftHand": "BlindingPowder"
+		}
+	],
+	"baseSkills": [
+		{
+			"skill": "DodgeEndTurn"
+		}
+	],
+	"tier": 0,
+	"rarity": 0,
+	"props": {
+		"status": [
+			{
+				"kind": "Dodge"
+			}
+		],
+		"flags": 393216,
+		"armorKind": "ArmorLight"
+	},
+	"stats": [
+		{
+			"value": 3,
+			"attribute": "Constitution",
+			"upValue": 18
+		}
+	],
+	"model": "chars/Prefabs/Prefab_F.prefab",
+	"notes": "",
+	"name": "Érudit",
+	"timelinePriority": 0,
+	"iconeDone": true
+},
+{
+	"id": "CelestiumConsole",
+	"weaponTypes": [],
+	"equipment": [],
+	"baseSkills": [],
+	"tier": 0,
+	"timelinePriority": 0,
+	"rarity": 0,
+	"props": {},
+	"stats": [
+		{
+			"value": 70,
+			"attribute": "Constitution",
+			"upValue": 800
+		}
+	],
+	"model": "",
+	"iconeDone": true,
+	"notes": "",
+	"name": "Console de la relique"
+},
