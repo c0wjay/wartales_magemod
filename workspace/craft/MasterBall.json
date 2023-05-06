@@ -7,7 +7,9 @@
             "item": "IronOre"
         }
     ],
-    "props": {},
+    "props": {
+        "produces": 1
+    },
     "learnCost": [
         {
             "qty": 2,
