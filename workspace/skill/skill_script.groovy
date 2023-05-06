@@ -25,7 +25,7 @@ function onSkill() {
 }
 
 function canCaptureTarget(t){
-    return true;
+    return ( (t.health / t.stats.health) < (vars.value2/100) );
 }
 
 // TargetHeal (TerrorLink, DopingSshot 참고)
