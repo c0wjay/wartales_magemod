@@ -8,14 +8,6 @@
 	"baseSkills": [
 		{
 			"skill": "FearVoice"
-		},
-		{
-			"skill": "DeathScent",
-			"minLevel": 5
-		},
-		{
-			"skill": "PainLess",
-			"minLevel": 10
 		}
 	],
 	"props": {
@@ -50,7 +42,7 @@
 		{
 			"value": 12,
 			"attribute": "Willpower",
-            "upValue": 30
+			"upValue": 30
 		}
 	],
 	"model": "chars/Prefabs/Prefab_WP.prefab",

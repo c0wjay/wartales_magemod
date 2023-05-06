@@ -31,6 +31,14 @@
 			"minLevel": 2
 		},
 		{
+			"skill": "RangeHeal",
+			"minLevel": 5
+		},
+		{
+			"skill": "DeathScent",
+			"minLevel": 5
+		},
+		{
 			"skill": "Meditation",
 			"minLevel": 8
 		},
@@ -41,6 +49,14 @@
 		{
 			"skill": "AutoSwapPosition",
 			"minLevel": 8
+		},
+		{
+			"skill": "GroupHeal",
+			"minLevel": 10
+		},
+		{
+			"skill": "PainLess",
+			"minLevel": 10
 		},
 		{
 			"skill": "SwapPosition",
@@ -82,7 +98,7 @@
 		{
 			"value": 12,
 			"attribute": "Willpower",
-            "upValue": 30
+			"upValue": 30
 		}
 	],
 	"model": "chars/Prefabs/Prefab_WP.prefab",
