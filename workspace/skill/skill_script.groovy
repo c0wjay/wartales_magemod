@@ -72,7 +72,7 @@ function onSkill() {
 
 // FearVoice
 function onSkill() {
-    play();
+    playAttack();
     var will = min(skill.unit.stats.willpower, 50);
     for( t in skill.getTargets() ) {
         if( t.target.side != skill.unit.side ) {
@@ -100,7 +100,7 @@ function randomDice (w) {
 
 // DeathScent
 function onSkill() {
-    play();
+    playAttack();
     var will = min(skill.unit.stats.willpower, 50);
     for( t in skill.getTargets() ) {
         if( t.target.side != skill.unit.side ) {
@@ -131,7 +131,7 @@ function randomDice (w) {
 
 // PainLess
 function onSkill() {
-    play();
+    playAttack();
     var will = min(skill.unit.stats.willpower, 50);
     var num = randomDice( max(will - vars.value1, 0) );
     if ( num == 2 || num == 4 ) {

@@ -17,7 +17,7 @@
             "value1": 1
         }
     },
-    "script": "function onSkill() {\nskill.target.damages(skill, ceil((skill.target.health + skill.target.armor) * skill.unit.stats.willpower * vars.value1 / 100), true);\n}",
+    "script": "function onSkill() {\n\tplayAttack();\n\tskill.target.damages(skill, ceil((skill.target.health + skill.target.armor) * skill.unit.stats.willpower * vars.value1 / 100), true);\n}",
     "notes": "",
     "icon": {
         "file": "ui/Icons/BattleIcons_02_96PX.png",
