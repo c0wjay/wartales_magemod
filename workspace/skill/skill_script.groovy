@@ -15,8 +15,12 @@ function onEval(a) {
 }
 
 function onSkill() {
+    playAttack();
     for (t in skill.getTargets()){
-        captureTarget(t);
+        if ( randInt(0, 100) <= vars.value1 ) {
+            captureTarget(t);
+            spawnFx();
+        }
     }
 }
 
@@ -26,7 +30,7 @@ function canCaptureTarget(t){
 
 // TargetHeal (TerrorLink, DopingSshot 참고)
 function onSkill() {
-    play();
+    playAttack();
     skill.target.gainsHealth( ceil( skill.target.stats.health * ( min(skill.unit.stats.willpower, 50)/50 ) * (vars.value1/100) * randInt(12,20)/16 ) , null);
     if( skill.level == 2 ) {
         var armorRecovery = ceil ( skill.target.stats.armor * min(skill.unit.stats.willpower, 50)/100 * randInt(12,20)/16 );
@@ -72,7 +76,7 @@ function onSkill() {
 
 // FearVoice
 function onSkill() {
-    play();
+    playAttack();
     var will = min(skill.unit.stats.willpower, 50);
     for( t in skill.getTargets() ) {
         if( t.target.side != skill.unit.side ) {
@@ -100,7 +104,7 @@ function randomDice (w) {
 
 // DeathScent
 function onSkill() {
-    play();
+    playAttack();
     var will = min(skill.unit.stats.willpower, 50);
     for( t in skill.getTargets() ) {
         if( t.target.side != skill.unit.side ) {
@@ -131,7 +135,7 @@ function randomDice (w) {
 
 // PainLess
 function onSkill() {
-    play();
+    playAttack();
     var will = min(skill.unit.stats.willpower, 50);
     var num = randomDice( max(will - vars.value1, 0) );
     if ( num == 2 || num == 4 ) {
@@ -253,3 +257,95 @@ function randomDice (w) {
     if ( dice <= 90 ) return 4;
     else return 5;
 }
+
+
+// AutoTeleportation
+function onDamageTaken(a) {
+    var arr = [];
+    for(u in getAllies(skill.unit)) {
+        if( getDistance(u, skill.unit) <= vars.value1 && !u.isEngaged() && u.canMove() ) {
+            arr.push(u);
+        }
+    }
+    if( arr.length > 0 ) {
+        var target = arr[randInt(0, arr.length-1)];
+        skill.unit.swapPositionWith(target, 0.2);
+        target.addStatus( Status.Dodge );
+        a.unit.addStatus( Status.Confus, 1 );
+    }
+}
+
+
+// Teleportation
+function onEval(a) {
+    if( !a.target.canMove() ) {
+        dontAllow();
+    }
+}
+
+function onSkill() {
+    if( skill.target.canMove() ) {
+        skill.unit.swapPositionWith(skill.target, 0.2);
+        skill.target.addStatus( Status.Dodge );
+    }
+}
+
+
+// Meditation
+function onSkill() {
+    skill.unit.gainsActionPoint(vars.value1);
+}
+
+
+// GluckTraitorSwap
+function onDamageDealt(a) {
+    if(!a.unit.isEngaged())
+        return;
+
+    var engagedUnit = a.unit.engagedUnit;
+
+    var tab = [];
+    for(u in getAllies(skill.unit)) {
+        if( getDistance(u, skill.unit) <= vars.value1 && !u.isEngaged() && !u.isAnimal && u.canMove() ) {
+            tab.push(u);
+        }
+    }
+    if(tab.length > 0) {
+        var target = tab[randInt(0, tab.length-1)];
+
+        a.unit.swapPositionWith(target, 0.2);
+
+        target.engage(engagedUnit);
+        if( target != skill.unit ) {
+            engagedUnit.opportunityAttack(target, skill);
+        }
+    }
+    else {
+        a.unit.swapPositionWith(engagedUnit, 0.2);
+        a.unit.engage(engagedUnit);
+    }
+}
+
+
+// Intervention
+function onEval(a) {
+    if( !a.target.isEngaged() || a.target.isAnimal || !a.target.canMove() ) {
+        dontAllow();
+    }
+}
+
+function onSkill() {
+    var target = skill.target;
+    var prevEngaged = target.engagedUnit;
+    target.disengage(false);
+
+    var prevPos = target.getPosition();
+    var currentPos = skill.unit.getPosition();
+    skill.unit.swapPositionWith(target, 0);
+
+    skill.unit.engage(prevEngaged);
+    skill.unit.opportunityAttack(prevEngaged, skill);
+}
+
+
+// EquipedWithIncendiaryFlaskZone

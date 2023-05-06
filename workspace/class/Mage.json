@@ -29,6 +29,26 @@
 		{
 			"skill": "BraveSupport",
 			"minLevel": 2
+		},
+		{
+			"skill": "Meditation",
+			"minLevel": 8
+		},
+		{
+			"skill": "Enlightment",
+			"minLevel": 8
+		},
+		{
+			"skill": "AutoSwapPosition",
+			"minLevel": 8
+		},
+		{
+			"skill": "SwapPosition",
+			"minLevel": 12
+		},
+		{
+			"skill": "ClassSpecialization",
+			"minLevel": 12
 		}
 	],
 	"props": {
@@ -78,4 +98,4 @@
 	"rarity": 0,
 	"timelinePriority": 0,
 	"iconeDone": true
-},
+}
