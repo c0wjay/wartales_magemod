@@ -19,15 +19,11 @@
 			"minLevel": 0
 		},
 		{
-			"skill": "BraveBoldness",
+			"skill": "TargetHeal",
 			"minLevel": 2
 		},
 		{
-			"skill": "BraveDuel",
-			"minLevel": 2
-		},
-		{
-			"skill": "BraveSupport",
+			"skill": "FearVoice",
 			"minLevel": 2
 		},
 		{

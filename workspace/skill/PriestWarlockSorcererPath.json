@@ -1,0 +1,75 @@
+{
+    "id": "PriestPath",
+    "name": "Path of Priest",
+    "desc": "",
+    "mode": 2,
+    "range": {},
+    "props": {
+        "tooltipStatus": [
+            {
+                "st": "ReinforcedRecovery"
+            }
+        ]
+    },
+    "script": "function onBeginBattle() {\nskill.unit.addStatusPersist(Status.ReinforcedRecovery, skill);\n}\n",
+    "notes": "",
+    "icon": {
+        "file": "ui/Icons_Resources.png",
+        "size": 96,
+        "x": 11,
+        "y": 18
+    },
+    "iconeDone": true,
+    "group": 16,
+    "done": 2
+},
+{
+    "id": "WarlockPath",
+    "name": "Path of Warlock",
+    "desc": "",
+    "mode": 2,
+    "range": {},
+    "props": {
+        "tooltipStatus": [
+            {
+                "st": "ReinforcedCurse"
+            }
+        ]
+    },
+    "script": "function onBeginBattle() {\nskill.unit.addStatusPersist(Status.ReinforcedCurse, skill);\n}\n",
+    "notes": "",
+    "icon": {
+        "file": "ui/Icons_Resources.png",
+        "size": 96,
+        "x": 11,
+        "y": 17
+    },
+    "iconeDone": true,
+    "group": 16,
+    "done": 2
+},
+{
+    "id": "SorcererPath",
+    "name": "Path of Sorcerer",
+    "desc": "",
+    "mode": 2,
+    "range": {},
+    "props": {
+        "tooltipStatus": [
+            {
+                "st": "ReinforcedElement"
+            }
+        ]
+    },
+    "script": "function onBeginBattle() {\nskill.unit.addStatusPersist(Status.ReinforcedElement, skill);\n}\n",
+    "notes": "",
+    "icon": {
+        "file": "ui/Icons_Resources.png",
+        "size": 96,
+        "x": 11,
+        "y": 19
+    },
+    "iconeDone": true,
+    "group": 16,
+    "done": 2
+},

@@ -34653,6 +34653,24 @@
                 Deals [DMG] to the target. Deals additional damage proportional to the target's [Armour] and [Health].<br/>This additional damage increases as the caster's [Willpower] increases.
             </desc>
         </MagicMissile>
+        <PriestPath>
+            <name>Path of Priest</name>
+            <desc>
+                At the start of combat, you gain [ReinforcedRecovery].
+            </desc>
+        </PriestPath>
+        <WarlockPath>
+            <name>Path of Warlock</name>
+            <desc>
+                At the start of combat, you gain [ReinforcedCurse].
+            </desc>
+        </WarlockPath>
+        <SorcererPath>
+            <name>Path of Sorcerer</name>
+            <desc>
+                At the start of combat, you gain [ReinforcedElement].
+            </desc>
+        </SorcererPath>
         <Protection>
             <name>Protection</name>
             <desc>Gains [Deflection].</desc>
@@ -36959,6 +36977,24 @@
             <name>Enforcer</name>
             <desc>[Movement] increased by [ATTR_0] and [CritHitPercent] increased by [ATTR_1]%.</desc>
         </Executer>
+        <ReinforcedRecovery>
+            <name>Reinforced Recovery</name>
+            <desc>
+                Increases the effectiveness of the [Priest] class skill. Increases [Willpower] by [ATTR_0]%.
+            </desc>
+        </ReinforcedRecovery>
+        <ReinforcedCurse>
+            <name>Reinforced Curse</name>
+            <desc>
+                Increases the effectiveness of the [Warlock] class skill. Increases [Willpower] by [ATTR_0]%.
+            </desc>
+        </ReinforcedCurse>
+        <ReinforcedElement>
+            <name>Reinforced Element</name>
+            <desc>
+                Increases the effectiveness of the [Sorcerer] class skill. Increases [Willpower] by [ATTR_0]%.
+            </desc>
+        </ReinforcedElement>
         <Weakening>
             <name>Weakening</name>
             <desc>[DamageBonusPercent] reduced by [ATTR_0]%.</desc>

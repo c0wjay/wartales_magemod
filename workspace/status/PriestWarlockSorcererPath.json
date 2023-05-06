@@ -1,0 +1,69 @@
+{
+    "id": "ReinforcedRecovery",
+    "name": "Reinforced Recovery",
+    "desc": "",
+    "props": {},
+    "group": 4,
+    "icon": {
+        "file": "ui/Icons/statusIcons.png",
+        "size": 32,
+        "x": 19,
+        "y": 1
+    },
+    "attributes": [
+        {
+            "kind": "Willpower",
+            "value": 10,
+            "isPercentage": true,
+            "valueEasy": 15,
+            "valueHard": 5
+        }
+    ],
+    "iconeDone": true
+},
+{
+    "id": "ReinforcedCurse",
+    "name": "Reinforced Curse",
+    "desc": "",
+    "props": {},
+    "group": 4,
+    "icon": {
+        "file": "ui/Icons/statusIcons.png",
+        "size": 32,
+        "x": 19,
+        "y": 1
+    },
+    "attributes": [
+        {
+            "kind": "Willpower",
+            "value": 10,
+            "isPercentage": true,
+            "valueEasy": 15,
+            "valueHard": 5
+        }
+    ],
+    "iconeDone": true
+},
+{
+    "id": "ReinforcedElement",
+    "name": "Reinforced Element",
+    "desc": "",
+    "props": {},
+    "group": 4,
+    "icon": {
+        "file": "ui/Icons/statusIcons.png",
+        "size": 32,
+        "x": 19,
+        "y": 1
+    },
+    "attributes": [
+        {
+            "kind": "Willpower",
+            "value": 10,
+            "isPercentage": true,
+            "valueEasy": 15,
+            "valueHard": 5
+        }
+    ],
+    "iconeDone": true
+},

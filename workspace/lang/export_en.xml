@@ -100,6 +100,43 @@
         Deals [DMG] to the target.
       </desc>
     </MagicMissile>
+    <PriestPath>
+      <name>Path of Priest</name>
+      <desc>
+        At the start of combat, you gain [ReinforcedRecovery].
+      </desc>
+    </PriestPath>
+    <WarlockPath>
+      <name>Path of Warlock</name>
+      <desc>
+        At the start of combat, you gain [ReinforcedCurse].
+      </desc>
+    </WarlockPath>
+    <SorcererPath>
+      <name>Path of Sorcerer</name>
+      <desc>
+        At the start of combat, you gain [ReinforcedElement].
+      </desc>
+    </SorcererPath>
+
+    <ReinforcedRecovery>
+      <name>Reinforced Recovery</name>
+      <desc>
+        Increases the effectiveness of the [Priest] class skill. Increases [Willpower] by [ATTR_0]%.
+      </desc>
+    </ReinforcedRecovery>
+    <ReinforcedCurse>
+      <name>Reinforced Curse</name>
+      <desc>
+        Increases the effectiveness of the [Warlock] class skill. Increases [Willpower] by [ATTR_0]%.
+      </desc>
+    </ReinforcedCurse>
+    <ReinforcedElement>
+      <name>Reinforced Element</name>
+      <desc>
+        Increases the effectiveness of the [Sorcerer] class skill. Increases [Willpower] by [ATTR_0]%.
+      </desc>
+    </ReinforcedElement>
 
     <Willpower>
       <name>Willpower</name>

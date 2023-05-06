@@ -351,3 +351,19 @@ function onSkill() {
 
 
 // EquipedWithIncendiaryFlaskZone
+
+
+// PriestPath
+function onBeginBattle() {
+skill.unit.addStatusPersist(Status.ReinforcedRecovery, skill);
+}
+
+// WarlockPath
+function onBeginBattle() {
+skill.unit.addStatusPersist(Status.ReinforcedCurse, skill);
+}
+
+// SorcererPath
+function onBeginBattle() {
+skill.unit.addStatusPersist(Status.ReinforcedElement, skill);
+}

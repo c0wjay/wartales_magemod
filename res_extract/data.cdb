@@ -62214,15 +62214,11 @@
 							"minLevel": 0
 						},
 						{
-							"skill": "BraveBoldness",
+							"skill": "TargetHeal",
 							"minLevel": 2
 						},
 						{
-							"skill": "BraveDuel",
-							"minLevel": 2
-						},
-						{
-							"skill": "BraveSupport",
+							"skill": "FearVoice",
 							"minLevel": 2
 						},
 						{
@@ -62319,7 +62315,7 @@
 					],
 					"baseSkills": [
 						{
-							"skill": "TargetHeal"
+							"skill": "PriestPath"
 						}
 					],
 					"props": {
@@ -62375,7 +62371,7 @@
 					],
 					"baseSkills": [
 						{
-							"skill": "FearVoice"
+							"skill": "WarlockPath"
 						}
 					],
 					"props": {
@@ -76669,6 +76665,81 @@
 						"size": 96,
 						"x": 1,
 						"y": 1
+					},
+					"iconeDone": true,
+					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "PriestPath",
+					"name": "Path of Priest",
+					"desc": "",
+					"mode": 2,
+					"range": {},
+					"props": {
+						"tooltipStatus": [
+							{
+								"st": "ReinforcedRecovery"
+							}
+						]
+					},
+					"script": "function onBeginBattle() {\nskill.unit.addStatusPersist(Status.ReinforcedRecovery, skill);\n}\n",
+					"notes": "",
+					"icon": {
+						"file": "ui/Icons_Resources.png",
+						"size": 96,
+						"x": 11,
+						"y": 18
+					},
+					"iconeDone": true,
+					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "WarlockPath",
+					"name": "Path of Warlock",
+					"desc": "",
+					"mode": 2,
+					"range": {},
+					"props": {
+						"tooltipStatus": [
+							{
+								"st": "ReinforcedCurse"
+							}
+						]
+					},
+					"script": "function onBeginBattle() {\nskill.unit.addStatusPersist(Status.ReinforcedCurse, skill);\n}\n",
+					"notes": "",
+					"icon": {
+						"file": "ui/Icons_Resources.png",
+						"size": 96,
+						"x": 11,
+						"y": 17
+					},
+					"iconeDone": true,
+					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "SorcererPath",
+					"name": "Path of Sorcerer",
+					"desc": "",
+					"mode": 2,
+					"range": {},
+					"props": {
+						"tooltipStatus": [
+							{
+								"st": "ReinforcedElement"
+							}
+						]
+					},
+					"script": "function onBeginBattle() {\nskill.unit.addStatusPersist(Status.ReinforcedElement, skill);\n}\n",
+					"notes": "",
+					"icon": {
+						"file": "ui/Icons_Resources.png",
+						"size": 96,
+						"x": 11,
+						"y": 19
 					},
 					"iconeDone": true,
 					"group": 16,
@@ -94255,6 +94326,75 @@
 						"x": 9,
 						"y": 8
 					}
+				},
+				{
+					"id": "ReinforcedRecovery",
+					"name": "Reinforced Recovery",
+					"desc": "",
+					"props": {},
+					"group": 4,
+					"icon": {
+						"file": "ui/Icons/statusIcons.png",
+						"size": 32,
+						"x": 19,
+						"y": 1
+					},
+					"attributes": [
+						{
+							"kind": "Willpower",
+							"value": 10,
+							"isPercentage": true,
+							"valueEasy": 15,
+							"valueHard": 5
+						}
+					],
+					"iconeDone": true
+				},
+				{
+					"id": "ReinforcedCurse",
+					"name": "Reinforced Curse",
+					"desc": "",
+					"props": {},
+					"group": 4,
+					"icon": {
+						"file": "ui/Icons/statusIcons.png",
+						"size": 32,
+						"x": 19,
+						"y": 1
+					},
+					"attributes": [
+						{
+							"kind": "Willpower",
+							"value": 10,
+							"isPercentage": true,
+							"valueEasy": 15,
+							"valueHard": 5
+						}
+					],
+					"iconeDone": true
+				},
+				{
+					"id": "ReinforcedElement",
+					"name": "Reinforced Element",
+					"desc": "",
+					"props": {},
+					"group": 4,
+					"icon": {
+						"file": "ui/Icons/statusIcons.png",
+						"size": 32,
+						"x": 19,
+						"y": 1
+					},
+					"attributes": [
+						{
+							"kind": "Willpower",
+							"value": 10,
+							"isPercentage": true,
+							"valueEasy": 15,
+							"valueHard": 5
+						}
+					],
+					"iconeDone": true
 				},
 				{
 					"id": "Weakening",
