@@ -15,9 +15,11 @@ function onEval(a) {
 }
 
 function onSkill() {
+    playAttack();
     for (t in skill.getTargets()){
         if ( randInt(0, 100) <= vars.value1 ) {
             captureTarget(t);
+            spawnFx();
         }
     }
 }
@@ -28,7 +30,7 @@ function canCaptureTarget(t){
 
 // TargetHeal (TerrorLink, DopingSshot 참고)
 function onSkill() {
-    play();
+    playAttack();
     skill.target.gainsHealth( ceil( skill.target.stats.health * ( min(skill.unit.stats.willpower, 50)/50 ) * (vars.value1/100) * randInt(12,20)/16 ) , null);
     if( skill.level == 2 ) {
         var armorRecovery = ceil ( skill.target.stats.armor * min(skill.unit.stats.willpower, 50)/100 * randInt(12,20)/16 );
@@ -74,7 +76,7 @@ function onSkill() {
 
 // FearVoice
 function onSkill() {
-    play();
+    playAttack();
     var will = min(skill.unit.stats.willpower, 50);
     for( t in skill.getTargets() ) {
         if( t.target.side != skill.unit.side ) {
@@ -102,7 +104,7 @@ function randomDice (w) {
 
 // DeathScent
 function onSkill() {
-    play();
+    playAttack();
     var will = min(skill.unit.stats.willpower, 50);
     for( t in skill.getTargets() ) {
         if( t.target.side != skill.unit.side ) {
@@ -133,7 +135,7 @@ function randomDice (w) {
 
 // PainLess
 function onSkill() {
-    play();
+    playAttack();
     var will = min(skill.unit.stats.willpower, 50);
     var num = randomDice( max(will - vars.value1, 0) );
     if ( num == 2 || num == 4 ) {

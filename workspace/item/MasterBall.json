@@ -1,3 +1,5 @@
+// under "ThrowingAxeLegendary02"
+
 {
     "id": "MasterBall",
     "name": "Master Ball",
@@ -6,7 +8,7 @@
     "props": {
         "disableLoot": true,
         "skill": "MasterBall",
-        "model": "chars/Weapons/LeftHand_Flask.fbx"
+        "model": "chars/Weapons/LeftHand_BlindingPowder.fbx"
     },
     "group": 12,
     "type": "LeftHand",
@@ -16,7 +18,7 @@
         "x": 7,
         "y": 19
     },
-    "rarity": 2,
+    "rarity": 3,
     "price": 231,
     "desc": "",
     "iconeDone": true
