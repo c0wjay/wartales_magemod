@@ -34656,19 +34656,19 @@
     <PriestPath>
       <name>사제의 길</name>
       <desc>
-        전투를 시작할 때, [ReinforcedRecovery]를 얻습니다.
+        전투를 시작할 때, [ReinforcedRecovery]를 ::value1:: 스택 얻습니다.
       </desc>
     </PriestPath>
     <WarlockPath>
       <name>주술사의 길</name>
       <desc>
-        전투를 시작할 때, [ReinforcedCurse]를 얻습니다.
+        전투를 시작할 때, [ReinforcedCurse]를 ::value1:: 스택 얻습니다.
       </desc>
     </WarlockPath>
     <SorcererPath>
       <name>원소술사의 길</name>
       <desc>
-        전투를 시작할 때, [ReinforcedElement]를 얻습니다.
+        전투를 시작할 때, [ReinforcedElement]를 ::value1:: 스택 얻습니다.
       </desc>
     </SorcererPath>
 		<Protection>
@@ -36980,19 +36980,19 @@
     <ReinforcedRecovery>
       <name>치유 강화</name>
       <desc>
-        [Priest] 직업 기술의 효율을 향상시킵니다. [Willpower]이 [ATTR_0]% 만큼 증가합니다.
+        [Priest] 직업 기술의 효율을 향상시킵니다. [Willpower]이 [ATTR_0]% 만큼 증가합니다.<br/>최대 10 스택 까지 중첩 가능.
       </desc>
     </ReinforcedRecovery>
     <ReinforcedCurse>
       <name>저주 강화</name>
       <desc>
-        [Warlock] 직업 기술의 효율을 향상시킵니다. [Willpower]이 [ATTR_0]% 만큼 증가합니다.
+        [Warlock] 직업 기술의 효율을 향상시킵니다. [Willpower]이 [ATTR_0]% 만큼 증가합니다.<br/>최대 10 스택 까지 중첩 가능.
       </desc>
     </ReinforcedCurse>
     <ReinforcedElement>
       <name>마력 강화</name>
       <desc>
-        [Sorcerer] 직업 기술의 효율을 향상시킵니다. [Willpower]이 [ATTR_0]% 만큼 증가합니다.
+        [Sorcerer] 직업 기술의 효율을 향상시킵니다. [Willpower]이 [ATTR_0]% 만큼 증가합니다.<br/>최대 10 스택 까지 중첩 가능.
       </desc>
     </ReinforcedElement>
 		<Weakening>

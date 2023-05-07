@@ -17,7 +17,7 @@
             "value1": 1
         }
     },
-    "script": "function onSkill() {\n\tplayAttack();\n\tvar damage = skill.target.health + (skill.target.armor >= 1 ? skill.target.armor : 0);\n\tskill.target.damages(skill, ceil(damage * skill.unit.stats.willpower * vars.value1 / 100), true);\n}",
+    "script": "function onSkill() {\n\tplayAttack();\n\tvar target_hp = skill.target.health + (skill.target.armor >= 1 ? skill.target.armor : 0);\n\tvar damage = floor(target_hp * skill.unit.stats.willpower * vars.value1 / 100);\n\tskill.target.damages(skill, min(damage, skill.target.health - 1), true);\n}",
     "notes": "",
     "icon": {
         "file": "ui/Icons/BattleIcons_02_96PX.png",

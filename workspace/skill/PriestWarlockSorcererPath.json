@@ -9,9 +9,13 @@
             {
                 "st": "ReinforcedRecovery"
             }
-        ]
+        ],
+        "vars": {
+            "start": false,
+            "value1": 5
+        }
     },
-    "script": "function onBeginBattle() {\nskill.unit.addStatusPersist(Status.ReinforcedRecovery, skill);\n}\n",
+    "script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedRecovery, vars.value1);\n\t\tvars.start = true;\n\t}\n\tspawnFx();\n}",
     "notes": "",
     "icon": {
         "file": "ui/Icons_Resources.png",
@@ -34,9 +38,13 @@
             {
                 "st": "ReinforcedCurse"
             }
-        ]
+        ],
+        "vars": {
+            "start": false,
+            "value1": 5
+        }
     },
-    "script": "function onBeginBattle() {\nskill.unit.addStatusPersist(Status.ReinforcedCurse, skill);\n}\n",
+    "script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedCurse, vars.value1);\n\t\tvars.start = true;\n\t}\n\tspawnFx();\n}",
     "notes": "",
     "icon": {
         "file": "ui/Icons_Resources.png",
@@ -59,9 +67,13 @@
             {
                 "st": "ReinforcedElement"
             }
-        ]
+        ],
+        "vars": {
+            "start": false,
+            "value1": 5
+        }
     },
-    "script": "function onBeginBattle() {\nskill.unit.addStatusPersist(Status.ReinforcedElement, skill);\n}\n",
+    "script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedElement, vars.value1);\n\t\tvars.start = true;\n\t}\n\tspawnFx();\n}",
     "notes": "",
     "icon": {
         "file": "ui/Icons_Resources.png",

@@ -24,15 +24,19 @@ function canCaptureTarget(t){
     return true;
 }
 
+
 // TargetHeal (TerrorLink, DopingSshot 참고)
 function onSkill() {
     play();
     var recovery = vars.value1;
-    if ( skill.unit.hasStatus(Status.ReinforcedRecovery) )
-        recovery = vars.value1 * 2;
+    for ( s in skill.unit.getAllStatus() ) {
+        if( s.kind == Status.ReinforcedRecovery ) {
+            recovery += ( vars.value1 * s.count / 10 );
+        }
+    }
     skill.target.gainsHealth( ceil( skill.target.stats.health * ( min(skill.unit.stats.willpower, 50)/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);
     if( skill.level == 2 ) {
-        var armorRecovery = ceil ( skill.target.stats.armor * min(skill.unit.stats.willpower, 50)/100 * randInt(12,20)/16 );
+        var armorRecovery = ceil ( skill.target.stats.armor * min(skill.unit.stats.willpower, 50)/100 * (recovery/75) * randInt(12,20)/16 );
         skill.target.armor = min(skill.target.armor + armorRecovery, skill.target.stats.armor);
     }
 }
@@ -42,8 +46,11 @@ function onSkill() {
 function onSkill() {
     playAttack();
     var recovery = vars.value1;
-    if ( skill.unit.hasStatus(Status.ReinforcedRecovery) )
-        recovery = vars.value1 * 2;
+    for ( s in skill.unit.getAllStatus() ) {
+        if( s.kind == Status.ReinforcedRecovery ) {
+            recovery += ( vars.value1 * s.count / 10 );
+        }
+    }
     var will = min(skill.unit.stats.willpower, 50);
 	for( t in skill.getTargets() ) {
         if( t.target.side == skill.unit.side ) {
@@ -70,8 +77,11 @@ function randomDice (w) {
 function onSkill() {
     play();
     var recovery = vars.value1;
-    if ( skill.unit.hasStatus(Status.ReinforcedRecovery) )
-        recovery = vars.value1 * 2;
+    for ( s in skill.unit.getAllStatus() ) {
+        if( s.kind == Status.ReinforcedRecovery ) {
+            recovery += ( vars.value1 * s.count / 10 );
+        }
+    }
     @sync for( u in getAllies(skill.unit) ) {
         u.gainsHealth(ceil( u.stats.health * min(skill.unit.stats.willpower, 50)/50 * (recovery/100) ), null);
     }
@@ -83,8 +93,11 @@ function onSkill() {
 function onSkill() {
     playAttack();
     var will = min(skill.unit.stats.willpower, 50);
-    if ( skill.unit.hasStatus(Status.ReinforcedCurse) )
-        will += 20;
+    for ( s in skill.unit.getAllStatus() ) {
+        if( s.kind == Status.ReinforcedCurse ) {
+            will += ( s.count * 2 );
+        }
+    }
     for( t in skill.getTargets() ) {
         if( t.target.side != skill.unit.side ) {
             var num = randomDice( max(will - vars.value1, 0) );
@@ -113,8 +126,11 @@ function randomDice (w) {
 function onSkill() {
     playAttack();
     var will = min(skill.unit.stats.willpower, 50);
-    if ( skill.unit.hasStatus(Status.ReinforcedCurse) )
-        will += 20;
+    for ( s in skill.unit.getAllStatus() ) {
+        if( s.kind == Status.ReinforcedCurse ) {
+            will += ( s.count * 2 );
+        }
+    }
     for( t in skill.getTargets() ) {
         if( t.target.side != skill.unit.side ) {
             var num = randomDice( max(will - vars.value1, 0) );
@@ -146,8 +162,11 @@ function randomDice (w) {
 function onSkill() {
     playAttack();
     var will = min(skill.unit.stats.willpower, 50);
-    if ( skill.unit.hasStatus(Status.ReinforcedCurse) )
-        will += 20;
+    for ( s in skill.unit.getAllStatus() ) {
+        if( s.kind == Status.ReinforcedCurse ) {
+            will += ( s.count * 2 );
+        }
+    }
     var num = randomDice( max(will - vars.value1, 0) );
     if ( num == 2 || num == 4 ) {
         skill.target.addStatus(Status.Enervate, randomDice(will));
@@ -175,8 +194,9 @@ function randomDice (w) {
 // MagicMissile
 function onSkill() {
     playAttack();
-    var damage = skill.target.health + (skill.target.armor >= 1 ? skill.target.armor : 0);
-    skill.target.damages(skill, ceil(damage * skill.unit.stats.willpower * vars.value1 / 100), true);
+    var target_hp = skill.target.health + (skill.target.armor >= 1 ? skill.target.armor : 0);
+    var damage = floor(target_hp * skill.unit.stats.willpower * vars.value1 / 100);
+    skill.target.damages(skill, min(damage, skill.target.health - 1), true);
 }
 
 
@@ -371,19 +391,40 @@ function onSkill() {
 
 
 // PriestPath
+function onBeginBattle() {
+    vars.start = false;
+}
+
 function onBeginAction() {
-skill.unit.addStatusPersist(Status.ReinforcedRecovery, skill);
-spawnFx();
+    if ( vars.start == false ) {
+        skill.unit.addStatus(Status.ReinforcedRecovery, vars.value1);
+        vars.start = true;
+    }
+    spawnFx();
 }
 
 // WarlockPath
+function onBeginBattle() {
+    vars.start = false;
+}
+
 function onBeginAction() {
-skill.unit.addStatusPersist(Status.ReinforcedCurse, skill);
-spawnFx();
+    if ( vars.start == false ) {
+        skill.unit.addStatus(Status.ReinforcedCurse, vars.value1);
+        vars.start = true;
+    }
+    spawnFx();
 }
 
 // SorcererPath
+function onBeginBattle() {
+    vars.start = false;
+}
+
 function onBeginAction() {
-skill.unit.addStatusPersist(Status.ReinforcedElement, skill);
-spawnFx();
+    if ( vars.start == false ) {
+        skill.unit.addStatus(Status.ReinforcedElement, vars.value1);
+        vars.start = true;
+    }
+    spawnFx();
 }

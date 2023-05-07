@@ -76264,7 +76264,7 @@
 						"healPreview": 1,
 						"useWithoutWeapon": true
 					},
-					"script": "function onSkill() {\n\tplay();\n\tvar recovery = vars.value1;\n\tif ( skill.unit.hasStatus(Status.ReinforcedRecovery) )\n\t\trecovery = vars.value1 * 2;\n\tskill.target.gainsHealth( ceil( skill.target.stats.health * ( min(skill.unit.stats.willpower, 50)/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);\n\tif( skill.level == 2 ) {\n\t\tvar armorRecovery = ceil ( skill.target.stats.armor * min(skill.unit.stats.willpower, 50)/100 * randInt(12,20)/16 );\n\t\tskill.target.armor = min(skill.target.armor + armorRecovery, skill.target.stats.armor);\n\t}\n}",
+					"script": "function onSkill() {\n\tplay();\n\tvar recovery = vars.value1;\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedRecovery ) {\n\t\t\trecovery += ( vars.value1 * s.count / 10 );\n\t\t}\n\t}\n\tskill.target.gainsHealth( ceil( skill.target.stats.health * ( min(skill.unit.stats.willpower, 50)/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);\n\tif( skill.level == 2 ) {\n\t\tvar armorRecovery = ceil ( skill.target.stats.armor * min(skill.unit.stats.willpower, 50)/100 * (recovery/75) * randInt(12,20)/16 );\n\t\tskill.target.armor = min(skill.target.armor + armorRecovery, skill.target.stats.armor);\n\t}\n}",
 					"notes": "",
 					"levels": [
 						{
@@ -76299,7 +76299,7 @@
 					"props": {
 						"isHeroic": true,
 						"specialAnim": "ThrowLeftGrenade",
-						"apCost": 2,
+						"apCost": 1,
 						"vars": {
 							"value1": 25
 						},
@@ -76310,7 +76310,7 @@
 						"castFx": "prefabs/fx/fight/Explosion/PoisonBomb/PoisonBomb.fx",
 						"throwModel": "chars/Weapons/LeftHand_IncendiaryFlask.fbx"
 					},
-					"script": "function onSkill() {\n\tplayAttack();\n\tvar recovery = vars.value1;\n\tif ( skill.unit.hasStatus(Status.ReinforcedRecovery) )\n\t\trecovery = vars.value1 * 2;\n\tvar will = min(skill.unit.stats.willpower, 50);\n	for( t in skill.getTargets() ) {\n\t\tif( t.target.side == skill.unit.side ) {\n\t\t\tt.target.gainsHealth( ceil( t.target.stats.health * ( will/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);\n\t\t\tif( skill.level == 2 && randomDice(will) == 3 ) {\n\t\t\t\tt.target.addStatus(Status.Protection, vars.value2, true);\n\t\t\t}\n\t\t\tspawnFx();\n\t\t}\n	}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+					"script": "function onSkill() {\n\tplayAttack();\n\tvar recovery = vars.value1;\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedRecovery ) {\n\t\t\trecovery += ( vars.value1 * s.count / 10 );\n\t\t}\n\t}\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side == skill.unit.side ) {\n\t\t\tt.target.gainsHealth( ceil( t.target.stats.health * ( will/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);\n\t\t\tif( skill.level == 2 && randomDice(will) == 3 ) {\n\t\t\t\tt.target.addStatus(Status.Protection, vars.value2, true);\n\t\t\t}\n\t\t\tspawnFx();\n\t\t}\n\t}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
 					"notes": "",
 					"levels": [
 						{
@@ -76346,7 +76346,7 @@
 					"props": {
 						"isHeroic": true,
 						"specialAnim": "Taunt",
-						"apCost": 3,
+						"apCost": 2,
 						"vars": {
 							"value1": 25
 						},
@@ -76356,7 +76356,7 @@
 						"useWithoutWeapon": true,
 						"extraFx": "prefabs/fx/fight/BuffCry/BuffCryBlue.fx"
 					},
-					"script": "function onSkill() {\n\tplay();\n\tvar recovery = vars.value1;\n\tif ( skill.unit.hasStatus(Status.ReinforcedRecovery) )\n\t\trecovery = vars.value1 * 2;\n\t@sync for( u in getAllies(skill.unit) ) {\n\t\tu.gainsHealth(ceil( u.stats.health * min(skill.unit.stats.willpower, 50)/50 * (recovery/100) ), null);\n\t}\n\tspawnFx();\n}",
+					"script": "function onSkill() {\n\tplay();\n\tvar recovery = vars.value1;\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedRecovery ) {\n\t\t\trecovery += ( vars.value1 * s.count / 10 );\n\t\t}\n\t}\n\t@sync for( u in getAllies(skill.unit) ) {\n\t\tu.gainsHealth(ceil( u.stats.health * min(skill.unit.stats.willpower, 50)/50 * (recovery/100) ), null);\n\t}\n\tspawnFx();\n}",
 					"notes": "",
 					"levels": [
 						{
@@ -76404,7 +76404,7 @@
 						"useWithoutWeapon": true,
 						"extraFx": "prefabs/fx/fight/BuffCry/BionnTransformation.fx"
 					},
-					"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tif ( skill.unit.hasStatus(Status.ReinforcedCurse) )\n\t\twill += 20;\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side != skill.unit.side ) {\n\t\t\tvar num = randomDice( max(will - vars.value1, 0) );\n\t\t\tt.target.addStatus(Status.Terror, num);\n\t\t\tif( skill.level == 2 ) {\n\t\t\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\t\t\tif( num2 > 2 ) {\n\t\t\t\t\tt.target.addStatus(Status.Immobile, 1, true);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+					"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedCurse ) {\n\t\t\twill += ( s.count * 2 );\n\t\t}\n\t}\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side != skill.unit.side ) {\n\t\t\tvar num = randomDice( max(will - vars.value1, 0) );\n\t\t\tt.target.addStatus(Status.Terror, num);\n\t\t\tif( skill.level == 2 ) {\n\t\t\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\t\t\tif( num2 > 2 ) {\n\t\t\t\t\tt.target.addStatus(Status.Immobile, 1, true);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
 					"notes": "",
 					"levels": [
 						{
@@ -76469,7 +76469,7 @@
 						"throwFx": "prefabs/fx/fight/Explosion/ConfusingPowder/ConfusingPowderThrowTrail.fx",
 						"throwModel": "chars/Weapons/LeftHand_BlindingPowder.fbx"
 					},
-					"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tif ( skill.unit.hasStatus(Status.ReinforcedCurse) )\n\t\twill += 20;\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side != skill.unit.side ) {\n\t\t\tvar num = randomDice( max(will - vars.value1, 0) );\n\t\t\tif ( num == 2 ) t.target.addStatus(Status.Fragility, 2, true);\n\t\t\tif ( num == 3 ) t.target.addStatus(Status.Fracture, 1, true);\n\t\t\tif ( num == 4 ) t.target.addStatus(Status.Weakening, 2, true);\n\t\t\tif ( num == 5 ) t.target.addStatus(Status.Bruise, 1, true);\n\t\t\tif( skill.level == 2 ) {\n\t\t\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\t\t\tif( num2 > 3 ) {\n\t\t\t\t\tt.target.addStatus(Status.Stun, 2, true);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+					"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedCurse ) {\n\t\t\twill += ( s.count * 2 );\n\t\t}\n\t}\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side != skill.unit.side ) {\n\t\t\tvar num = randomDice( max(will - vars.value1, 0) );\n\t\t\tif ( num == 2 ) t.target.addStatus(Status.Fragility, 2, true);\n\t\t\tif ( num == 3 ) t.target.addStatus(Status.Fracture, 1, true);\n\t\t\tif ( num == 4 ) t.target.addStatus(Status.Weakening, 2, true);\n\t\t\tif ( num == 5 ) t.target.addStatus(Status.Bruise, 1, true);\n\t\t\tif( skill.level == 2 ) {\n\t\t\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\t\t\tif( num2 > 3 ) {\n\t\t\t\t\tt.target.addStatus(Status.Stun, 2, true);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
 					"notes": "",
 					"levels": [
 						{
@@ -76525,7 +76525,7 @@
 						"needDisengaged": true,
 						"useWithoutWeapon": true
 					},
-					"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tif ( skill.unit.hasStatus(Status.ReinforcedCurse) )\n\t\twill += 20;\n\tvar num = randomDice( max(will - vars.value1, 0) );\n\tif ( num == 2 || num == 4 ) {\n\t\tskill.target.addStatus(Status.Enervate, randomDice(will));\n\t}\n\tif ( num == 3 ) skill.target.addStatus(Status.Berserk, 1, true);\n\tif ( num == 5 ) skill.target.addStatus(Status.BrothersFury, 1, true);\n\tif( skill.level == 2 ) {\n\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\tif( num2 == 5 ) {\n\t\t\tskill.target.addStatus(Status.Arena_Willforce, 2, true);\n\t\t}\n\t}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+					"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedCurse ) {\n\t\t\twill += ( s.count * 2 );\n\t\t}\n\t}\n\tvar num = randomDice( max(will - vars.value1, 0) );\n\tif ( num == 2 || num == 4 ) {\n\t\tskill.target.addStatus(Status.Enervate, randomDice(will));\n\t}\n\tif ( num == 3 ) skill.target.addStatus(Status.Berserk, 1, true);\n\tif ( num == 5 ) skill.target.addStatus(Status.BrothersFury, 1, true);\n\tif( skill.level == 2 ) {\n\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\tif( num2 == 5 ) {\n\t\t\tskill.target.addStatus(Status.Arena_Willforce, 2, true);\n\t\t}\n\t}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
 					"notes": "",
 					"levels": [
 						{
@@ -76681,14 +76681,18 @@
 							{
 								"st": "ReinforcedRecovery"
 							}
-						]
+						],
+						"vars": {
+							"start": false,
+							"value1": 5
+						}
 					},
-					"script": "function onBeginBattle() {\nskill.unit.addStatusPersist(Status.ReinforcedRecovery, skill);\n}\n",
+					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedRecovery, vars.value1);\n\t\tvars.start = true;\n\t}\n\tspawnFx();\n}",
 					"notes": "",
 					"icon": {
 						"file": "ui/Icons_Resources.png",
 						"size": 96,
-						"x": 11,
+						"x": 13,
 						"y": 18
 					},
 					"iconeDone": true,
@@ -76706,14 +76710,18 @@
 							{
 								"st": "ReinforcedCurse"
 							}
-						]
+						],
+						"vars": {
+							"start": false,
+							"value1": 5
+						}
 					},
-					"script": "function onBeginBattle() {\nskill.unit.addStatusPersist(Status.ReinforcedCurse, skill);\n}\n",
+					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedCurse, vars.value1);\n\t\tvars.start = true;\n\t}\n\tspawnFx();\n}",
 					"notes": "",
 					"icon": {
 						"file": "ui/Icons_Resources.png",
 						"size": 96,
-						"x": 11,
+						"x": 13,
 						"y": 17
 					},
 					"iconeDone": true,
@@ -76731,15 +76739,19 @@
 							{
 								"st": "ReinforcedElement"
 							}
-						]
+						],
+						"vars": {
+							"start": false,
+							"value1": 5
+						}
 					},
-					"script": "function onBeginBattle() {\nskill.unit.addStatusPersist(Status.ReinforcedElement, skill);\n}\n",
+					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedElement, vars.value1);\n\t\tvars.start = true;\n\t}\n\tspawnFx();\n}",
 					"notes": "",
 					"icon": {
 						"file": "ui/Icons_Resources.png",
 						"size": 96,
-						"x": 11,
-						"y": 19
+						"x": 12,
+						"y": 16
 					},
 					"iconeDone": true,
 					"group": 16,
@@ -76764,7 +76776,7 @@
 							"value1": 1
 						}
 					},
-					"script": "function onSkill() {\n\tplayAttack();\n\tvar damage = skill.target.health + (skill.target.armor >= 1 ? skill.target.armor : 0);\n\tskill.target.damages(skill, ceil(damage * skill.unit.stats.willpower * vars.value1 / 100), true);\n}",
+					"script": "function onSkill() {\n\tplayAttack();\n\tvar target_hp = skill.target.health + (skill.target.armor >= 1 ? skill.target.armor : 0);\n\tvar damage = floor(target_hp * skill.unit.stats.willpower * vars.value1 / 100);\n\tskill.target.damages(skill, min(damage, skill.target.health - 1), true);\n}",
 					"notes": "",
 					"icon": {
 						"file": "ui/Icons/BattleIcons_02_96PX.png",
@@ -94331,7 +94343,10 @@
 					"id": "ReinforcedRecovery",
 					"name": "Reinforced Recovery",
 					"desc": "",
-					"props": {},
+					"props": {
+						"stackable": true,
+						"maxStacks": 10
+					},
 					"group": 4,
 					"icon": {
 						"file": "ui/Icons/statusIcons.png",
@@ -94342,10 +94357,10 @@
 					"attributes": [
 						{
 							"kind": "Willpower",
-							"value": 10,
+							"value": 2,
 							"isPercentage": true,
-							"valueEasy": 15,
-							"valueHard": 5
+							"valueEasy": 3,
+							"valueHard": 1
 						}
 					],
 					"iconeDone": true
@@ -94354,7 +94369,10 @@
 					"id": "ReinforcedCurse",
 					"name": "Reinforced Curse",
 					"desc": "",
-					"props": {},
+					"props": {
+						"stackable": true,
+						"maxStacks": 10
+					},
 					"group": 4,
 					"icon": {
 						"file": "ui/Icons/statusIcons.png",
@@ -94365,10 +94383,10 @@
 					"attributes": [
 						{
 							"kind": "Willpower",
-							"value": 10,
+							"value": 2,
 							"isPercentage": true,
-							"valueEasy": 15,
-							"valueHard": 5
+							"valueEasy": 3,
+							"valueHard": 1
 						}
 					],
 					"iconeDone": true
@@ -94377,7 +94395,10 @@
 					"id": "ReinforcedElement",
 					"name": "Reinforced Element",
 					"desc": "",
-					"props": {},
+					"props": {
+						"stackable": true,
+						"maxStacks": 10
+					},
 					"group": 4,
 					"icon": {
 						"file": "ui/Icons/statusIcons.png",
@@ -94388,10 +94409,10 @@
 					"attributes": [
 						{
 							"kind": "Willpower",
-							"value": 10,
+							"value": 2,
 							"isPercentage": true,
-							"valueEasy": 15,
-							"valueHard": 5
+							"valueEasy": 3,
+							"valueHard": 1
 						}
 					],
 					"iconeDone": true

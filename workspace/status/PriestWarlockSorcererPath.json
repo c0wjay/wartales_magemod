@@ -2,7 +2,10 @@
     "id": "ReinforcedRecovery",
     "name": "Reinforced Recovery",
     "desc": "",
-    "props": {},
+    "props": {
+        "stackable": true,
+        "maxStacks": 10
+    },
     "group": 4,
     "icon": {
         "file": "ui/Icons/statusIcons.png",
@@ -13,10 +16,10 @@
     "attributes": [
         {
             "kind": "Willpower",
-            "value": 10,
+            "value": 2,
             "isPercentage": true,
-            "valueEasy": 15,
-            "valueHard": 5
+            "valueEasy": 3,
+            "valueHard": 1
         }
     ],
     "iconeDone": true
@@ -25,7 +28,10 @@
     "id": "ReinforcedCurse",
     "name": "Reinforced Curse",
     "desc": "",
-    "props": {},
+    "props": {
+        "stackable": true,
+        "maxStacks": 10
+    },
     "group": 4,
     "icon": {
         "file": "ui/Icons/statusIcons.png",
@@ -36,10 +42,10 @@
     "attributes": [
         {
             "kind": "Willpower",
-            "value": 10,
+            "value": 2,
             "isPercentage": true,
-            "valueEasy": 15,
-            "valueHard": 5
+            "valueEasy": 3,
+            "valueHard": 1
         }
     ],
     "iconeDone": true
@@ -48,7 +54,10 @@
     "id": "ReinforcedElement",
     "name": "Reinforced Element",
     "desc": "",
-    "props": {},
+    "props": {
+        "stackable": true,
+        "maxStacks": 10
+    },
     "group": 4,
     "icon": {
         "file": "ui/Icons/statusIcons.png",
@@ -59,10 +68,10 @@
     "attributes": [
         {
             "kind": "Willpower",
-            "value": 10,
+            "value": 2,
             "isPercentage": true,
-            "valueEasy": 15,
-            "valueHard": 5
+            "valueEasy": 3,
+            "valueHard": 1
         }
     ],
     "iconeDone": true

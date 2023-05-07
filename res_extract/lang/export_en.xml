@@ -34656,19 +34656,19 @@
         <PriestPath>
             <name>Path of Priest</name>
             <desc>
-                At the start of combat, you gain [ReinforcedRecovery].
+                At the start of combat, you gain ::value1:: stacks of [ReinforcedRecovery].
             </desc>
         </PriestPath>
         <WarlockPath>
             <name>Path of Warlock</name>
             <desc>
-                At the start of combat, you gain [ReinforcedCurse].
+                At the start of combat, you gain ::value1:: stacks of [ReinforcedCurse].
             </desc>
         </WarlockPath>
         <SorcererPath>
             <name>Path of Sorcerer</name>
             <desc>
-                At the start of combat, you gain [ReinforcedElement].
+                At the start of combat, you gain ::value1:: stacks of [ReinforcedElement].
             </desc>
         </SorcererPath>
         <Protection>
@@ -36980,19 +36980,19 @@
         <ReinforcedRecovery>
             <name>Reinforced Recovery</name>
             <desc>
-                Increases the effectiveness of the [Priest] class skill. Increases [Willpower] by [ATTR_0]%.
+                Increases the effectiveness of the [Priest] class skill. Increases [Willpower] by [ATTR_0]%.<br/>Stackable up to 10 stacks.
             </desc>
         </ReinforcedRecovery>
         <ReinforcedCurse>
             <name>Reinforced Curse</name>
             <desc>
-                Increases the effectiveness of the [Warlock] class skill. Increases [Willpower] by [ATTR_0]%.
+                Increases the effectiveness of the [Warlock] class skill. Increases [Willpower] by [ATTR_0]%.<br/>Stackable up to 10 stacks.
             </desc>
         </ReinforcedCurse>
         <ReinforcedElement>
             <name>Reinforced Element</name>
             <desc>
-                Increases the effectiveness of the [Sorcerer] class skill. Increases [Willpower] by [ATTR_0]%.
+                Increases the effectiveness of the [Sorcerer] class skill. Increases [Willpower] by [ATTR_0]%.<br/>Stackable up to 10 stacks.
             </desc>
         </ReinforcedElement>
         <Weakening>

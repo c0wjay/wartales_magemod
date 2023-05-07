@@ -1,0 +1,175 @@
+{
+	"id": "FearVoice",
+	"name": "Voice of Fear",
+	"desc": "",
+	"mode": 5,
+	"range": {
+		"type": 1,
+		"angle": 60,
+		"radius": 3,
+		"allowedTargets": 0
+	},
+	"props": {
+		"isHeroic": true,
+		"specialAnim": "Taunt",
+		"apCost": 1,
+		"vars": {
+			"value1": 20
+		},
+		"tooltipStatus": [
+			{
+				"st": "Terror"
+			}
+		],
+		"needDisengaged": true,
+		"useWithoutWeapon": true,
+		"extraFx": "prefabs/fx/fight/BuffCry/BionnTransformation.fx"
+	},
+	"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedCurse ) {\n\t\t\twill += ( s.count * 2 );\n\t\t}\n\t}\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side != skill.unit.side ) {\n\t\t\tvar num = randomDice( max(will - vars.value1, 0) );\n\t\t\tt.target.addStatus(Status.Terror, num);\n\t\t\tif( skill.level == 2 ) {\n\t\t\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\t\t\tif( num2 > 2 ) {\n\t\t\t\t\tt.target.addStatus(Status.Immobile, 1, true);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+	"notes": "",
+	"levels": [
+		{
+			"props": {
+				"vars": {
+					"value1": 10,
+					"value2": 10
+				},
+				"tooltipStatus": [
+					{
+						"st": "Immobile"
+					}
+				]
+			}
+		}
+	],
+	"icon": {
+		"file": "ui/Icons/BattleIcons_02_96PX.png",
+		"size": 96,
+		"x": 10,
+		"y": 3
+	},
+	"iconeDone": true,
+	"group": 16,
+	"done": 2
+},
+{
+	"id": "DeathScent",
+	"name": "Scent of Death",
+	"desc": "",
+	"mode": 5,
+	"range": {
+		"type": 0,
+		"radius": 2,
+		"allowedTargets": 0,
+		"baseDistance": 4
+	},
+	"props": {
+		"isHeroic": true,
+		"specialAnim": "ThrowLeftGrenade",
+		"apCost": 1,
+		"vars": {
+			"value1": 20
+		},
+		"tooltipStatus": [
+			{
+				"st": "Fragility"
+			},
+			{
+				"st": "Fracture"
+			},
+			{
+				"st": "Weakening"
+			},
+			{
+				"st": "Bruise"
+			}
+		],
+		"needDisengaged": true,
+		"useWithoutWeapon": true,
+        "castFx": "prefabs/fx/fight/Explosion/ConfusingPowder/ConfusingPowder.fx",
+        "throwFx": "prefabs/fx/fight/Explosion/ConfusingPowder/ConfusingPowderThrowTrail.fx",
+		"throwModel": "chars/Weapons/LeftHand_BlindingPowder.fbx"
+	},
+	"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedCurse ) {\n\t\t\twill += ( s.count * 2 );\n\t\t}\n\t}\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side != skill.unit.side ) {\n\t\t\tvar num = randomDice( max(will - vars.value1, 0) );\n\t\t\tif ( num == 2 ) t.target.addStatus(Status.Fragility, 2, true);\n\t\t\tif ( num == 3 ) t.target.addStatus(Status.Fracture, 1, true);\n\t\t\tif ( num == 4 ) t.target.addStatus(Status.Weakening, 2, true);\n\t\t\tif ( num == 5 ) t.target.addStatus(Status.Bruise, 1, true);\n\t\t\tif( skill.level == 2 ) {\n\t\t\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\t\t\tif( num2 > 3 ) {\n\t\t\t\t\tt.target.addStatus(Status.Stun, 2, true);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+	"notes": "",
+	"levels": [
+		{
+			"props": {
+				"vars": {
+					"value1": 10,
+					"value2": 10
+				},
+				"tooltipStatus": [
+					{
+						"st": "Stun"
+					}
+				]
+			}
+		}
+	],
+	"icon": {
+		"file": "ui/Icons/BattleIcons96PX.png",
+		"size": 96,
+		"x": 3,
+		"y": 7
+	},
+	"iconeDone": true,
+	"group": 16,
+	"done": 2
+},
+{
+	"id": "PainLess",
+	"name": "Painless",
+	"desc": "",
+	"mode": 0,
+	"range": {
+		"allowedTargets": 1,
+		"baseDistance": 3
+	},
+	"props": {
+		"isHeroic": true,
+		"apCost": 1,
+		"vars": {
+			"value1": 20
+		},
+		"tooltipStatus": [
+			{
+				"st": "Enervate"
+			},
+			{
+				"st": "Berserk"
+			},
+			{
+				"st": "BrothersFury"
+			}
+		],
+		"needDisengaged": true,
+		"useWithoutWeapon": true
+	},
+	"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedCurse ) {\n\t\t\twill += ( s.count * 2 );\n\t\t}\n\t}\n\tvar num = randomDice( max(will - vars.value1, 0) );\n\tif ( num == 2 || num == 4 ) {\n\t\tskill.target.addStatus(Status.Enervate, randomDice(will));\n\t}\n\tif ( num == 3 ) skill.target.addStatus(Status.Berserk, 1, true);\n\tif ( num == 5 ) skill.target.addStatus(Status.BrothersFury, 1, true);\n\tif( skill.level == 2 ) {\n\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\tif( num2 == 5 ) {\n\t\t\tskill.target.addStatus(Status.Arena_Willforce, 2, true);\n\t\t}\n\t}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+	"notes": "",
+	"levels": [
+		{
+			"props": {
+				"vars": {
+					"value1": 10,
+					"value2": 10
+				},
+				"tooltipStatus": [
+					{
+						"st": "Arena_Willforce"
+					}
+				]
+			}
+		}
+	],
+	"icon": {
+		"file": "ui/Icons/BattleIcons_03_96PX.png",
+		"size": 96,
+		"x": 0,
+		"y": 0
+	},
+	"iconeDone": true,
+	"group": 16,
+	"done": 2
+},
