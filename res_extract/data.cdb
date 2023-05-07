@@ -19048,7 +19048,7 @@
 					"weight": 1,
 					"baseBonus": [
 						{
-							"value": 3,
+							"value": 1,
 							"attribute": "Willpower"
 						}
 					],
@@ -19079,7 +19079,7 @@
 					"weight": 1,
 					"baseBonus": [
 						{
-							"value": 5,
+							"value": 2,
 							"attribute": "Willpower"
 						}
 					],
@@ -19110,7 +19110,7 @@
 					"weight": 1,
 					"baseBonus": [
 						{
-							"value": 7,
+							"value": 3,
 							"attribute": "Willpower"
 						}
 					],
@@ -19141,7 +19141,7 @@
 					"weight": 1,
 					"baseBonus": [
 						{
-							"value": 10,
+							"value": 4,
 							"attribute": "Willpower"
 						}
 					],
@@ -19788,6 +19788,156 @@
 					"price": 129,
 					"rarity": 3,
 					"desc": "Cet aspis n'a pas seulement la réputation d'être infranchissable ! Son pourtour a été perfidement effilé pour fracasser les crânes."
+				},
+				{
+					"id": "PriestSkillBookUncoCraftT1",
+					"name": "Priest Skill Book I",
+					"weight": 0.5,
+					"baseBonus": [],
+					"props": {
+						"model": "chars/Weapons/LeftHand_BlindingPowder.fbx",
+						"passiveSkill": "PriestSkillBook1",
+						"requireLevel": 5,
+						"disableLoot": true,
+						"fixedLevel": 6
+					},
+					"icon": {
+						"file": "ui/Icons_Resources.png",
+						"size": 96,
+						"x": 11,
+						"y": 18
+					},
+					"type": "LeftHand",
+					"price": 129,
+					"desc": "",
+					"rarity": 1,
+					"group": 12,
+					"iconeDone": true
+				},
+				{
+					"id": "WarlockSkillBookUncoCraftT1",
+					"name": "Warlock Skill Book I",
+					"weight": 0.5,
+					"baseBonus": [],
+					"props": {
+						"model": "chars/Weapons/LeftHand_BlindingPowder.fbx",
+						"passiveSkill": "WarlockSkillBook1",
+						"requireLevel": 5,
+						"disableLoot": true,
+						"fixedLevel": 6
+					},
+					"icon": {
+						"file": "ui/Icons_Resources.png",
+						"size": 96,
+						"x": 11,
+						"y": 17
+					},
+					"type": "LeftHand",
+					"price": 129,
+					"desc": "",
+					"rarity": 1,
+					"group": 12,
+					"iconeDone": true
+				},
+				{
+					"id": "SorcererSkillBookUncoCraftT1",
+					"name": "Sorcerer Skill Book I",
+					"weight": 0.5,
+					"baseBonus": [],
+					"props": {
+						"model": "chars/Weapons/LeftHand_BlindingPowder.fbx",
+						"passiveSkill": "SorcererSkillBook1",
+						"requireLevel": 5,
+						"disableLoot": true,
+						"fixedLevel": 6
+					},
+					"icon": {
+						"file": "ui/Icons_Resources.png",
+						"size": 96,
+						"x": 10,
+						"y": 16
+					},
+					"type": "LeftHand",
+					"price": 129,
+					"desc": "",
+					"rarity": 1,
+					"group": 12,
+					"iconeDone": true
+				},
+				{
+					"id": "PriestSkillBookUncoCraftT2",
+					"name": "Priest Skill Book II",
+					"weight": 0.5,
+					"baseBonus": [],
+					"props": {
+						"model": "chars/Weapons/LeftHand_BlindingPowder.fbx",
+						"passiveSkill": "PriestSkillBook2",
+						"requireLevel": 11,
+						"disableLoot": true,
+						"fixedLevel": 12
+					},
+					"icon": {
+						"file": "ui/Icons_Resources.png",
+						"size": 96,
+						"x": 12,
+						"y": 18
+					},
+					"type": "LeftHand",
+					"price": 234,
+					"desc": "",
+					"rarity": 1,
+					"group": 12,
+					"iconeDone": true
+				},
+				{
+					"id": "WarlockSkillBookUncoCraftT2",
+					"name": "Warlock Skill Book II",
+					"weight": 0.5,
+					"baseBonus": [],
+					"props": {
+						"model": "chars/Weapons/LeftHand_BlindingPowder.fbx",
+						"passiveSkill": "WarlockSkillBook2",
+						"requireLevel": 11,
+						"disableLoot": true,
+						"fixedLevel": 12
+					},
+					"icon": {
+						"file": "ui/Icons_Resources.png",
+						"size": 96,
+						"x": 12,
+						"y": 17
+					},
+					"type": "LeftHand",
+					"price": 234,
+					"desc": "",
+					"rarity": 1,
+					"group": 12,
+					"iconeDone": true
+				},
+				{
+					"id": "SorcererSkillBookUncoCraftT2",
+					"name": "Sorcerer Skill Book II",
+					"weight": 0.5,
+					"baseBonus": [],
+					"props": {
+						"model": "chars/Weapons/LeftHand_BlindingPowder.fbx",
+						"passiveSkill": "SorcererSkillBook2",
+						"requireLevel": 11,
+						"disableLoot": true,
+						"fixedLevel": 12
+					},
+					"icon": {
+						"file": "ui/Icons_Resources.png",
+						"size": 96,
+						"x": 11,
+						"y": 16
+					},
+					"type": "LeftHand",
+					"price": 234,
+					"desc": "",
+					"rarity": 1,
+					"group": 12,
+					"iconeDone": true
 				},
 				{
 					"id": "BlindingPowder",
@@ -21463,6 +21613,44 @@
 					},
 					"type": "BundleForge",
 					"desc": "Apprend les plans des <narrator>armes de jet spéciale</narrator> suivantes :"
+				},
+				{
+					"id": "BundleSkillBookT1",
+					"name": "Skill Book I",
+					"weight": 0,
+					"baseBonus": [],
+					"props": {
+						"feature": "HideInCheatMenu"
+					},
+					"group": 13,
+					"type": "BundleForge",
+					"desc": "",
+					"iconeDone": true,
+					"icon": {
+						"file": "ui/Icons/Icons_Resources_02.png",
+						"size": 1,
+						"x": 4,
+						"y": 1918
+					}
+				},
+				{
+					"id": "BundleSkillBookT2",
+					"name": "Skill Book II",
+					"weight": 0,
+					"baseBonus": [],
+					"props": {
+						"feature": "HideInCheatMenu"
+					},
+					"group": 13,
+					"type": "BundleForge",
+					"desc": "",
+					"iconeDone": true,
+					"icon": {
+						"file": "ui/Icons/Icons_Resources_02.png",
+						"size": 1,
+						"x": 4,
+						"y": 1918
+					}
 				},
 				{
 					"id": "HeavyArmorCommonGeneric",
@@ -45612,6 +45800,20 @@
 					"itemCost": []
 				},
 				{
+					"item": "BundleSkillBookT1",
+					"tool": "Anvil",
+					"recipe": [],
+					"props": {},
+					"learnCost": [
+						{
+							"qty": 1,
+							"item": "Knowledge"
+						}
+					],
+					"itemCost": [],
+					"jobLevel": 3
+				},
+				{
 					"item": "BundleOneHandedSwordAxeMaceT3",
 					"tool": "Anvil",
 					"recipe": [],
@@ -45814,6 +46016,26 @@
 						}
 					],
 					"itemCost": []
+				},
+				{
+					"item": "BundleSkillBookT2",
+					"tool": "Anvil",
+					"recipe": [],
+					"props": {
+						"require": [
+							{
+								"item": "BundleSkillBookT1"
+							}
+						]
+					},
+					"learnCost": [
+						{
+							"qty": 1,
+							"item": "Knowledge"
+						}
+					],
+					"itemCost": [],
+					"jobLevel": 5
 				},
 				{
 					"item": "ThrowingSickle",
@@ -48261,6 +48483,174 @@
 					"props": {
 						"bundle": "BundleOneHandedSwordAxeMaceT4",
 						"feature": "Alazar1_Update"
+					},
+					"jobLevel": 5,
+					"learnCost": [],
+					"itemCost": []
+				},
+				{
+					"item": "PriestSkillBookUncoCraftT1",
+					"tool": "Anvil",
+					"recipe": [
+						{
+							"qty": 6,
+							"item": "IronOre"
+						},
+						{
+							"qty": 5,
+							"item": "Wood"
+						},
+						{
+							"qty": 4,
+							"item": "Rimesteel"
+						},
+						{
+							"qty": 6,
+							"item": "Charcoal"
+						}
+					],
+					"props": {
+						"bundle": "BundleSkillBookT1"
+					},
+					"learnCost": [],
+					"itemCost": [],
+					"jobLevel": 3
+				},
+				{
+					"item": "WarlockSkillBookUncoCraftT1",
+					"tool": "Anvil",
+					"recipe": [
+						{
+							"qty": 6,
+							"item": "IronOre"
+						},
+						{
+							"qty": 5,
+							"item": "Wood"
+						},
+						{
+							"qty": 4,
+							"item": "Rimesteel"
+						},
+						{
+							"qty": 6,
+							"item": "Charcoal"
+						}
+					],
+					"props": {
+						"bundle": "BundleSkillBookT1"
+					},
+					"learnCost": [],
+					"itemCost": [],
+					"jobLevel": 3
+				},
+				{
+					"item": "SorcererSkillBookUncoCraftT1",
+					"tool": "Anvil",
+					"recipe": [
+						{
+							"qty": 6,
+							"item": "IronOre"
+						},
+						{
+							"qty": 5,
+							"item": "Wood"
+						},
+						{
+							"qty": 4,
+							"item": "Rimesteel"
+						},
+						{
+							"qty": 6,
+							"item": "Charcoal"
+						}
+					],
+					"props": {
+						"bundle": "BundleSkillBookT1"
+					},
+					"learnCost": [],
+					"itemCost": [],
+					"jobLevel": 3
+				},
+				{
+					"item": "PriestSkillBookUncoCraftT2",
+					"tool": "Anvil",
+					"recipe": [
+						{
+							"qty": 6,
+							"item": "IronOre"
+						},
+						{
+							"qty": 6,
+							"item": "GoldMineral"
+						},
+						{
+							"qty": 5,
+							"item": "Wood"
+						},
+						{
+							"qty": 6,
+							"item": "Charcoal"
+						}
+					],
+					"props": {
+						"bundle": "BundleSkillBookT2"
+					},
+					"jobLevel": 5,
+					"learnCost": [],
+					"itemCost": []
+				},
+				{
+					"item": "WarlockSkillBookUncoCraftT2",
+					"tool": "Anvil",
+					"recipe": [
+						{
+							"qty": 6,
+							"item": "IronOre"
+						},
+						{
+							"qty": 6,
+							"item": "GoldMineral"
+						},
+						{
+							"qty": 5,
+							"item": "Wood"
+						},
+						{
+							"qty": 6,
+							"item": "Charcoal"
+						}
+					],
+					"props": {
+						"bundle": "BundleSkillBookT2"
+					},
+					"jobLevel": 5,
+					"learnCost": [],
+					"itemCost": []
+				},
+				{
+					"item": "SorcererSkillBookUncoCraftT2",
+					"tool": "Anvil",
+					"recipe": [
+						{
+							"qty": 6,
+							"item": "IronOre"
+						},
+						{
+							"qty": 6,
+							"item": "GoldMineral"
+						},
+						{
+							"qty": 5,
+							"item": "Wood"
+						},
+						{
+							"qty": 6,
+							"item": "Charcoal"
+						}
+					],
+					"props": {
+						"bundle": "BundleSkillBookT2"
 					},
 					"jobLevel": 5,
 					"learnCost": [],
@@ -54996,61 +55386,61 @@
 					"title": "Anvil"
 				},
 				{
-					"index": 153,
+					"index": 161,
 					"title": "Workshop"
 				},
 				{
-					"index": 153,
+					"index": 161,
 					"title": "Divers",
 					"level": 1
 				},
 				{
-					"index": 165,
+					"index": 173,
 					"level": 1,
 					"title": "Animal"
 				},
 				{
-					"index": 175,
+					"index": 183,
 					"level": 1,
 					"title": "Belts"
 				},
 				{
-					"index": 192,
+					"index": 200,
 					"level": 1,
 					"title": "ToolCampUpgradable"
 				},
 				{
-					"index": 229,
+					"index": 237,
 					"level": 1,
 					"title": "ToolCampNonUpgradable"
 				},
 				{
-					"index": 237,
+					"index": 245,
 					"title": "Apothecary"
 				},
 				{
-					"index": 329,
+					"index": 337,
 					"title": "ConverterTools"
 				},
 				{
-					"index": 347,
+					"index": 355,
 					"title": "Meta"
 				},
 				{
-					"index": 373,
+					"index": 381,
 					"title": "PathMight"
 				},
 				{
-					"index": 385,
+					"index": 393,
 					"title": "PathTrade"
 				},
 				{
-					"index": 397,
+					"index": 405,
 					"level": 1,
 					"title": "PathCrime"
 				},
 				{
-					"index": 409,
+					"index": 417,
 					"title": "PathMystery"
 				}
 			],
@@ -62287,7 +62677,7 @@
 							"attribute": "Movement"
 						},
 						{
-							"value": 12,
+							"value": 10,
 							"attribute": "Willpower",
 							"upValue": 30
 						}
@@ -62348,7 +62738,7 @@
 							"attribute": "Movement"
 						},
 						{
-							"value": 12,
+							"value": 10,
 							"attribute": "Willpower",
 							"upValue": 30
 						}
@@ -62404,7 +62794,7 @@
 							"attribute": "Movement"
 						},
 						{
-							"value": 12,
+							"value": 10,
 							"attribute": "Willpower",
 							"upValue": 30
 						}
@@ -76665,6 +77055,180 @@
 						"size": 96,
 						"x": 1,
 						"y": 1
+					},
+					"iconeDone": true,
+					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "PriestSkillBook1",
+					"name": "Priest Skill Book I",
+					"desc": "",
+					"mode": 2,
+					"range": {},
+					"props": {
+						"tooltipStatus": [
+							{
+								"st": "ReinforcedRecovery"
+							}
+						],
+						"vars": {
+							"start": false,
+							"value1": 1
+						}
+					},
+					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedRecovery, vars.value1);\n\t\tvars.start = true;\n\t}\n\tspawnFx();\n}",
+					"notes": "",
+					"icon": {
+						"file": "ui/Icons_Resources.png",
+						"size": 96,
+						"x": 11,
+						"y": 18
+					},
+					"iconeDone": true,
+					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "WarlockSkillBook1",
+					"name": "Warlock Skill Book I",
+					"desc": "",
+					"mode": 2,
+					"range": {},
+					"props": {
+						"tooltipStatus": [
+							{
+								"st": "ReinforcedCurse"
+							}
+						],
+						"vars": {
+							"start": false,
+							"value1": 1
+						}
+					},
+					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedCurse, vars.value1);\n\t\tvars.start = true;\n\t}\n\tspawnFx();\n}",
+					"notes": "",
+					"icon": {
+						"file": "ui/Icons_Resources.png",
+						"size": 96,
+						"x": 11,
+						"y": 17
+					},
+					"iconeDone": true,
+					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "SorcererSkillBook1",
+					"name": "Sorcerer Skill Book I",
+					"desc": "",
+					"mode": 2,
+					"range": {},
+					"props": {
+						"tooltipStatus": [
+							{
+								"st": "ReinforcedElement"
+							}
+						],
+						"vars": {
+							"start": false,
+							"value1": 1
+						}
+					},
+					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedElement, vars.value1);\n\t\tvars.start = true;\n\t}\n\tspawnFx();\n}",
+					"notes": "",
+					"icon": {
+						"file": "ui/Icons_Resources.png",
+						"size": 96,
+						"x": 10,
+						"y": 16
+					},
+					"iconeDone": true,
+					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "PriestSkillBook2",
+					"name": "Priest Skill Book II",
+					"desc": "",
+					"mode": 2,
+					"range": {},
+					"props": {
+						"tooltipStatus": [
+							{
+								"st": "ReinforcedRecovery"
+							}
+						],
+						"vars": {
+							"start": false,
+							"value1": 2
+						}
+					},
+					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedRecovery, vars.value1);\n\t\tvars.start = true;\n\t}\n\tspawnFx();\n}",
+					"notes": "",
+					"icon": {
+						"file": "ui/Icons_Resources.png",
+						"size": 96,
+						"x": 12,
+						"y": 18
+					},
+					"iconeDone": true,
+					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "WarlockSkillBook2",
+					"name": "Warlock Skill Book II",
+					"desc": "",
+					"mode": 2,
+					"range": {},
+					"props": {
+						"tooltipStatus": [
+							{
+								"st": "ReinforcedCurse"
+							}
+						],
+						"vars": {
+							"start": false,
+							"value1": 2
+						}
+					},
+					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedCurse, vars.value1);\n\t\tvars.start = true;\n\t}\n\tspawnFx();\n}",
+					"notes": "",
+					"icon": {
+						"file": "ui/Icons_Resources.png",
+						"size": 96,
+						"x": 12,
+						"y": 17
+					},
+					"iconeDone": true,
+					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "SorcererSkillBook2",
+					"name": "Sorcerer Skill Book II",
+					"desc": "",
+					"mode": 2,
+					"range": {},
+					"props": {
+						"tooltipStatus": [
+							{
+								"st": "ReinforcedElement"
+							}
+						],
+						"vars": {
+							"start": false,
+							"value1": 2
+						}
+					},
+					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedElement, vars.value1);\n\t\tvars.start = true;\n\t}\n\tspawnFx();\n}",
+					"notes": "",
+					"icon": {
+						"file": "ui/Icons_Resources.png",
+						"size": 96,
+						"x": 11,
+						"y": 16
 					},
 					"iconeDone": true,
 					"group": 16,

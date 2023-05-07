@@ -30025,6 +30025,30 @@
             <name>Akhedian Steel Wand</name>
             <desc>This elaborate wand symbolises wisdom.</desc>
         </WandUncoCraftT4>
+        <PriestSkillBookUncoCraftT1>
+            <name>Priest Skill Book I</name>
+            <desc>Slightly increases the effectiveness of the [Priest] class skill.</desc>
+		</PriestSkillBookUncoCraftT1>
+        <WarlockSkillBookUncoCraftT1>
+            <name>Warlock Skill Book I</name>
+            <desc>Slightly increases the effectiveness of the [Warlock] class skill.</desc>
+		</WarlockSkillBookUncoCraftT1>
+        <SorcererSkillBookUncoCraftT1>
+            <name>Sorcerer Skill Book I</name>
+            <desc>Slightly increases the effectiveness of the [Sorcerer] class skill.</desc>
+		</SorcererSkillBookUncoCraftT1>
+        <PriestSkillBookUncoCraftT2>
+            <name>Priest Skill Book II</name>
+            <desc>Increases the effectiveness of the [Priest] class skill.</desc>
+		</PriestSkillBookUncoCraftT2>
+        <WarlockSkillBookUncoCraftT2>
+            <name>Warlock Skill Book II</name>
+            <desc>Increases the effectiveness of the [Warlock] class skill.</desc>
+		</WarlockSkillBookUncoCraftT2>
+        <SorcererSkillBookUncoCraftT2>
+            <name>Sorcerer Skill Book II</name>
+            <desc>Increases the effectiveness of the [Sorcerer] class skill.</desc>
+		</SorcererSkillBookUncoCraftT2>
         <ShieldStart>
             <name>Barrel Lid</name>
             <desc>A shield that gives off a faint odour of cheap wine.</desc>
@@ -30337,6 +30361,10 @@
             <name>Experienced Blacksmith Set - V</name>
             <desc>Learn the following &lt;narrator&gt;Throwing Weapon&lt;/narrator&gt; blueprints:</desc>
         </BundleThrowingLeftHandT2>
+        <BundleSkillBookT1>
+            <name>Experienced Blacksmith Set - VI</name>
+            <desc>Learn the following &lt;narrator&gt;Skill Book&lt;/narrator&gt; blueprints:</desc>
+        </BundleSkillBookT1>
         <BundleThrowingLeftHandSpecialT2>
             <name>Experienced Alchemist Set - I</name>
             <desc>Learn the following &lt;narrator&gt;Special Throwing Weapon&lt;/narrator&gt; blueprints:</desc>
@@ -30385,6 +30413,10 @@
             <name>Master Blacksmith Set - V</name>
             <desc>Learn the following &lt;narrator&gt;Throwing Weapon&lt;/narrator&gt; blueprints:</desc>
         </BundleThrowingLeftHandT4>
+        <BundleSkillBookT2>
+            <name>Master Blacksmith Set - VI</name>
+            <desc>Learn the following &lt;narrator&gt;Skill Book&lt;/narrator&gt; blueprints:</desc>
+        </BundleSkillBookT2>
         <BundleThrowingLeftHandSpecialT4>
             <name>Master Alchemist Set - I</name>
             <desc>Learn the following &lt;narrator&gt;Special Throwing Weapon&lt;/narrator&gt; blueprints:</desc>
@@ -34653,6 +34685,42 @@
                 Deals [DMG] to the target. Deals additional damage proportional to the target's [Armour] and [Health].<br/>This additional damage increases as the caster's [Willpower] increases.
             </desc>
         </MagicMissile>
+        <PriestSkillBook1>
+            <name>Priest Skill Book I</name>
+            <desc>
+                At the start of combat, you gain ::value1:: stacks of [ReinforcedRecovery].
+            </desc>
+        </PriestSkillBook1>
+        <WarlockSkillBook1>
+            <name>Warlock Skill Book I</name>
+            <desc>
+                At the start of combat, you gain ::value1:: stacks of [ReinforcedCurse].
+            </desc>
+        </WarlockSkillBook1>
+        <SorcererSkillBook1>
+            <name>Sorcerer Skill Book I</name>
+            <desc>
+                At the start of combat, you gain ::value1:: stacks of [ReinforcedElement].
+            </desc>
+        </SorcererSkillBook1>
+        <PriestSkillBook2>
+            <name>Priest Skill Book II</name>
+            <desc>
+                At the start of combat, you gain ::value1:: stacks of [ReinforcedRecovery].
+            </desc>
+        </PriestSkillBook2>
+        <WarlockSkillBook2>
+            <name>Warlock Skill Book II</name>
+            <desc>
+                At the start of combat, you gain ::value1:: stacks of [ReinforcedCurse].
+            </desc>
+        </WarlockSkillBook2>
+        <SorcererSkillBook2>
+            <name>Sorcerer Skill Book II</name>
+            <desc>
+                At the start of combat, you gain ::value1:: stacks of [ReinforcedElement].
+            </desc>
+        </SorcererSkillBook2>
         <PriestPath>
             <name>Path of Priest</name>
             <desc>

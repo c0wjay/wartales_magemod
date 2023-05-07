@@ -30025,6 +30025,30 @@
       <name>아케드 강철 지팡이</name>
       <desc>이 정교한 지팡이는 지혜를 상징합니다.</desc>
     </WandUncoCraftT4>
+    <PriestSkillBookUncoCraftT1>
+		  <name>사제 스킬북 1</name>
+		  <desc>사제 스킬의 효율을 조금 늘려줍니다.</desc>
+		</PriestSkillBookUncoCraftT1>
+    <WarlockSkillBookUncoCraftT1>
+		  <name>주술사 스킬북 1</name>
+		  <desc>주술사 스킬의 효율을 조금 늘려줍니다.</desc>
+		</WarlockSkillBookUncoCraftT1>
+    <SorcererSkillBookUncoCraftT1>
+		  <name>원소술사 스킬북 1</name>
+		  <desc>원소술사 스킬의 효율을 조금 늘려줍니다.</desc>
+		</SorcererSkillBookUncoCraftT1>
+    <PriestSkillBookUncoCraftT2>
+		  <name>사제 스킬북 2</name>
+		  <desc>사제 스킬의 효율을 꽤 늘려줍니다.</desc>
+		</PriestSkillBookUncoCraftT2>
+    <WarlockSkillBookUncoCraftT2>
+		  <name>주술사 스킬북 2</name>
+		  <desc>주술사 스킬의 효율을 꽤 늘려줍니다.</desc>
+		</WarlockSkillBookUncoCraftT2>
+    <SorcererSkillBookUncoCraftT2>
+		  <name>원소술사 스킬북 2</name>
+		  <desc>원소술사 스킬의 효율을 꽤 늘려줍니다.</desc>
+		</SorcererSkillBookUncoCraftT2>
 		<ShieldStart>
 		  <name>통 뚜껑</name>
 		  <desc>싸구려 와인의 희미한 냄새를 풍기는 방패입니다.</desc>
@@ -30337,10 +30361,14 @@
 		  <name>숙련 대장장이 세트 - V</name>
 		  <desc>다음 <narrator>투척 무기</narrator> 설계도를 배웁니다:</desc>
 		</BundleThrowingLeftHandT2>
-        <BundleThrowingLeftHandSpecialT2>
-            <name>숙련 연금술사 세트 - I</name>
-            <desc>다음 &lt;narrator&gt;특수 투척 무기&lt;/narrator&gt; 설계도를 배웁니다:</desc>
-        </BundleThrowingLeftHandSpecialT2>
+		<BundleSkillBookT1>
+		  <name>숙련 대장장이 세트 - VI</name>
+		  <desc>다음 <narrator>스킬북</narrator> 설계도를 배웁니다:</desc>
+		</BundleSkillBookT1>
+    <BundleThrowingLeftHandSpecialT2>
+        <name>숙련 연금술사 세트 - I</name>
+        <desc>다음 &lt;narrator&gt;특수 투척 무기&lt;/narrator&gt; 설계도를 배웁니다:</desc>
+    </BundleThrowingLeftHandSpecialT2>
 		<BundleOneHandedSwordAxeMaceT3>
 		  <name>장인 대장장이 세트 - I</name>
 		  <desc>다음 <narrator>무기</narrator> 설계도를 배웁니다:</desc>
@@ -30361,34 +30389,38 @@
 		  <name>장인 대장장이 세트 - V</name>
 		  <desc>다음 <narrator>투척 무기</narrator> 설계도를 배웁니다:</desc>
 		</BundleThrowingLeftHandT3>
-        <BundleThrowingLeftHandSpecialT3>
-            <name>장인 연금술사 세트 - I</name>
-            <desc>다음 &lt;narrator&gt;특수 투척 무기&lt;/narrator&gt; 설계도를 배웁니다:</desc>
-        </BundleThrowingLeftHandSpecialT3>
-        <BundleOneHandedSwordAxeMaceT4>
-            <name>달인 대장장이 세트 - I</name>
-            <desc>다음 <narrator>무기</narrator> 설계도를 배웁니다:</desc>
-        </BundleOneHandedSwordAxeMaceT4>
-        <BundleTwoHandedSwordAxeMaceT4>
-            <name>달인 대장장이 세트 - II</name>
-            <desc>다음 <narrator>무기</narrator> 설계도를 배웁니다:</desc>
-        </BundleTwoHandedSwordAxeMaceT4>
-        <BundleBowDaggerPolearmT4>
-            <name>달인 대장장이 세트 - III</name>
-            <desc>다음 <narrator>무기</narrator> 설계도를 배웁니다:</desc>
-        </BundleBowDaggerPolearmT4>
-        <BundleArmorT4>
-            <name>달인 대장장이 세트 - IV</name>
-            <desc>다음 <narrator>갑옷</narrator> 설계도를 배웁니다:</desc>
-        </BundleArmorT4>
-        <BundleThrowingLeftHandT4>
-            <name>달인 대장장이 세트 - V</name>
-            <desc>다음 <narrator>투척 무기</narrator> 설계도를 배웁니다:</desc>
-        </BundleThrowingLeftHandT4>
-        <BundleThrowingLeftHandSpecialT4>
-            <name>달인 연금술사 세트 - I</name>
-            <desc>다음 &lt;narrator&gt;특수 투척 무기&lt;/narrator&gt; 설계도를 배웁니다:</desc>
-        </BundleThrowingLeftHandSpecialT4>
+    <BundleThrowingLeftHandSpecialT3>
+        <name>장인 연금술사 세트 - I</name>
+        <desc>다음 &lt;narrator&gt;특수 투척 무기&lt;/narrator&gt; 설계도를 배웁니다:</desc>
+    </BundleThrowingLeftHandSpecialT3>
+    <BundleOneHandedSwordAxeMaceT4>
+        <name>달인 대장장이 세트 - I</name>
+        <desc>다음 <narrator>무기</narrator> 설계도를 배웁니다:</desc>
+    </BundleOneHandedSwordAxeMaceT4>
+    <BundleTwoHandedSwordAxeMaceT4>
+        <name>달인 대장장이 세트 - II</name>
+        <desc>다음 <narrator>무기</narrator> 설계도를 배웁니다:</desc>
+    </BundleTwoHandedSwordAxeMaceT4>
+    <BundleBowDaggerPolearmT4>
+        <name>달인 대장장이 세트 - III</name>
+        <desc>다음 <narrator>무기</narrator> 설계도를 배웁니다:</desc>
+    </BundleBowDaggerPolearmT4>
+    <BundleArmorT4>
+        <name>달인 대장장이 세트 - IV</name>
+        <desc>다음 <narrator>갑옷</narrator> 설계도를 배웁니다:</desc>
+    </BundleArmorT4>
+    <BundleThrowingLeftHandT4>
+        <name>달인 대장장이 세트 - V</name>
+        <desc>다음 <narrator>투척 무기</narrator> 설계도를 배웁니다:</desc>
+    </BundleThrowingLeftHandT4>
+    <BundleSkillBookT2>
+        <name>달인 대장장이 세트 - VI</name>
+        <desc>다음 <narrator>스킬북</narrator> 설계도를 배웁니다:</desc>
+    </BundleSkillBookT2>
+    <BundleThrowingLeftHandSpecialT4>
+        <name>달인 연금술사 세트 - I</name>
+        <desc>다음 &lt;narrator&gt;특수 투척 무기&lt;/narrator&gt; 설계도를 배웁니다:</desc>
+    </BundleThrowingLeftHandSpecialT4>
 		<HeavyArmorCommonGeneric>
 		  <name>전투 판금갑옷</name>
 		  <desc>이 갑옷은 무게 외에도 몇 가지 단점이 있습니다.</desc>
@@ -34653,6 +34685,42 @@
         대상에게 [DMG]를 줍니다. 대상의 [Armor] 및 [Health]에 비례하는 추가 데미지를 줍니다. 이 추가 데미지는 시전자의 [Willpower]가 증가하면 강해집니다.
       </desc>
     </MagicMissile>
+    <PriestSkillBook1>
+      <name>사제 스킬북 1</name>
+      <desc>
+        전투를 시작할 때, [ReinforcedRecovery]를 ::value1:: 스택 얻습니다.
+      </desc>
+    </PriestSkillBook1>
+    <WarlockSkillBook1>
+      <name>주술사 스킬북 1</name>
+      <desc>
+        전투를 시작할 때, [ReinforcedCurse]를 ::value1:: 스택 얻습니다.
+      </desc>
+    </WarlockSkillBook1>
+    <SorcererSkillBook1>
+      <name>원소술사 스킬북 1</name>
+      <desc>
+        전투를 시작할 때, [ReinforcedElement]를 ::value1:: 스택 얻습니다.
+      </desc>
+    </SorcererSkillBook1>
+    <PriestSkillBook2>
+      <name>사제 스킬북 2</name>
+      <desc>
+        전투를 시작할 때, [ReinforcedRecovery]를 ::value1:: 스택 얻습니다.
+      </desc>
+    </PriestSkillBook2>
+    <WarlockSkillBook2>
+      <name>주술사 스킬북 2</name>
+      <desc>
+        전투를 시작할 때, [ReinforcedCurse]를 ::value1:: 스택 얻습니다.
+      </desc>
+    </WarlockSkillBook2>
+    <SorcererSkillBook2>
+      <name>원소술사 스킬북 2</name>
+      <desc>
+        전투를 시작할 때, [ReinforcedElement]를 ::value1:: 스택 얻습니다.
+      </desc>
+    </SorcererSkillBook2>
     <PriestPath>
       <name>사제의 길</name>
       <desc>
