@@ -16,7 +16,7 @@
     "icon": {
         "file": "ui/Icons_Resources.png",
         "size": 96,
-        "x": 11,
+        "x": 13,
         "y": 18
     },
     "iconeDone": true,
@@ -41,7 +41,7 @@
     "icon": {
         "file": "ui/Icons_Resources.png",
         "size": 96,
-        "x": 11,
+        "x": 13,
         "y": 17
     },
     "iconeDone": true,
@@ -66,8 +66,8 @@
     "icon": {
         "file": "ui/Icons_Resources.png",
         "size": 96,
-        "x": 11,
-        "y": 19
+        "x": 12,
+        "y": 16
     },
     "iconeDone": true,
     "group": 16,

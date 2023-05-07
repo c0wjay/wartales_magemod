@@ -12,7 +12,7 @@
 	"props": {
 		"isHeroic": true,
 		"specialAnim": "ThrowLeftGrenade",
-		"apCost": 2,
+		"apCost": 1,
 		"vars": {
 			"value1": 25
 		},
