@@ -174,7 +174,9 @@ function randomDice (w) {
 
 // MagicMissile
 function onSkill() {
-    skill.target.damages(skill, ceil((skill.target.health + skill.target.armor) * skill.unit.stats.willpower * vars.value1 / 100), true);
+    playAttack();
+    var damage = skill.target.health + (skill.target.armor >= 1 ? skill.target.armor : 0);
+    skill.target.damages(skill, ceil(damage * skill.unit.stats.willpower * vars.value1 / 100), true);
 }
 
 
