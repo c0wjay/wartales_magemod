@@ -1,3 +1,4 @@
+[
 {
     "id": "Mobster",
     "weaponTypes": [
@@ -7190,3 +7191,136 @@
     "timelinePriority": 0,
     "iconeDone": true
 }
+],
+"props": {},
+"separators": [
+    {
+        "title": "Characters",
+        "id": "Civil"
+    },
+    {
+        "title": "Classes",
+        "id": "Swordman"
+    },
+    {
+        "level": 1,
+        "title": "Sword",
+        "id": "Swordman"
+    },
+    {
+        "title": "Bow",
+        "level": 1,
+        "id": "Bowman"
+    },
+    {
+        "title": "Dagger",
+        "level": 1,
+        "id": "Rogue"
+    },
+    {
+        "title": "Polearm",
+        "level": 1,
+        "id": "Spearman"
+    },
+    {
+        "title": "Axe",
+        "level": 1,
+        "id": "Axeman"
+    },
+    {
+        "title": "Mace",
+        "level": 1,
+        "id": "Brute"
+    },
+    {
+        "title": "Wand",
+        "level": 1,
+        "id": "Mage"
+    },
+    {
+        "title": "Enemies",
+        "id": "Mobster"
+    },
+    {
+        "level": 1,
+        "title": "Bandits",
+        "id": "Mobster"
+    },
+    {
+        "title": "Deserters",
+        "level": 1,
+        "id": "RoughneckSoldier"
+    },
+    {
+        "title": "Guard",
+        "level": 1,
+        "id": "Infantryman"
+    },
+    {
+        "title": "Legion",
+        "level": 1,
+        "id": "Legionary"
+    },
+    {
+        "title": "Companions",
+        "level": 1,
+        "id": "Hitman"
+    },
+    {
+        "title": "Inquisition",
+        "level": 1,
+        "id": "Zealot"
+    },
+    {
+        "level": 1,
+        "title": "Trackers",
+        "id": "Runner"
+    },
+    {
+        "level": 1,
+        "title": "Alazar",
+        "id": "Sentry"
+    },
+    {
+        "level": 1,
+        "title": "Backpack",
+        "id": "Thief"
+    },
+    {
+        "level": 1,
+        "title": "Misc",
+        "id": "Erudit"
+    },
+    {
+        "title": "Animals",
+        "id": "Wolf"
+    },
+    {
+        "title": "Tracker Beasts",
+        "id": "TrackerBears"
+    },
+    {
+        "title": "GhostPack",
+        "id": "GhostWolf"
+    },
+    {
+        "title": "Plague",
+        "id": "PlaguedRat"
+    },
+    {
+        "title": "Ruins",
+        "id": "Crawler"
+    },
+    {
+        "title": "Livestock",
+        "id": "Pony"
+    },
+    {
+        "title": "Champions",
+        "id": "CrawlerChampion"
+    },
+    {
+        "title": "Special",
+        "id": "WeeklyBountyLight"
+    }
+]

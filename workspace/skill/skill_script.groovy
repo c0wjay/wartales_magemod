@@ -179,8 +179,11 @@ function onSkill() {
     if( skill.level == 2 ) {
         var num2 = randomDice( max(will - vars.value2, 0) );
         if( num2 > 3 ) {
-            if (!skill.target.getPassiveSkills().contains(Skill.Immortal))
+            if (!skill.target.getPassiveSkills().contains(Skill.Immortal)) {
                 skill.target.addTemporarySkill(Skill.Immortal);
+            } else {
+                skill.target.addStatus(Status.Enervate, 3);
+            }
         }
     }
     spawnFx();
