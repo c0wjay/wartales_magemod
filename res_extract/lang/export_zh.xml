@@ -33481,6 +33481,9 @@
     <Warlock>
       <name>주술사</name>
     </Warlock>
+    <Sorcerer>
+      <name>원소술사</name>
+    </Sorcerer>
 		<Vanguard>
 		  <name>전위</name>
 		</Vanguard>
@@ -34663,6 +34666,37 @@
         </line0>
       </levels>
     </PainLess>
+    <EarthQuake>
+      <name>지진</name>
+      <desc>해당 적은 시전자의 [Willpower]에 비례하는 데미지를 얻습니다. 이 공격은 [Guard]를 무시합니다.</desc>
+      <levels>
+        <line0>
+          <desc>해당 적은 시전자의 [Willpower]에 비례하는 <b>강한</b> 데미지를 얻습니다. 이 공격은 [Guard]를 무시합니다.</desc>
+        </line0>
+      </levels>
+    </EarthQuake>
+    <FireBall>
+      <name>화염구</name>
+      <desc>해당 범위의 유닛들은 시전자의 [Willpower]에 비례하는 데미지를 얻습니다. 이 공격은 [Guard]를 무시합니다.<br/>이 공격은 [Fire]를 생성하여 범위의 유닛들에게 [Burning]을 적용합니다.</desc>
+      <levels>
+        <line0>
+          <desc>해당 범위의 유닛들은 시전자의 [Willpower]에 비례하는 <b>강한</b> 데미지를 얻습니다. 이 공격은 [Guard]를 무시합니다.<br/>이 공격은 [Fire]를 생성하여 범위의 유닛들에게 [Burning]을 적용합니다.</desc>
+        </line0>
+      </levels>
+    </FireBall>
+    <ThunderStorm>
+      <name>뇌우</name>
+      <desc>해당 범위의 유닛들은 시전자의 [Willpower]에 비례하는 데미지를 얻습니다.<br/>이 공격은 [Armor]를 관통하여 [Health]에 직접적인 데미지를 입힙니다.</desc>
+      <levels>
+        <line0>
+          <desc>해당 범위의 유닛들은 시전자의 [Willpower]에 비례하는 <b>강한</b> 데미지를 얻습니다.<br/>이 공격은 [Armor]를 관통하여 [Health]에 직접적인 데미지를 입힙니다.<br/>이 공격을 맞은 유닛은 [Immobile] 상태가 되며, 생존한 유닛이 없다면 지나가는 유닛을 [Immobile] 상태로 만드는 [ThunderStormZone]를 생성합니다.</desc>
+        </line0>
+      </levels>
+    </ThunderStorm>
+    <ThunderStormZone>
+      <name>전하 구름</name>
+      <desc>지나가는 유닛을 [Immobile] 상태로 만듭니다.</desc>
+    </ThunderStormZone>
     <Meditation>
       <name>명상</name>
       <desc>용맹 점수를 ::value1:: 만큼 회복합니다.</desc>

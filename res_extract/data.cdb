@@ -62612,11 +62612,19 @@
 							"minLevel": 2
 						},
 						{
+							"skill": "EarthQuake",
+							"minLevel": 2
+						},
+						{
 							"skill": "RangeHeal",
 							"minLevel": 5
 						},
 						{
 							"skill": "DeathScent",
+							"minLevel": 5
+						},
+						{
+							"skill": "FireBall",
 							"minLevel": 5
 						},
 						{
@@ -62637,6 +62645,10 @@
 						},
 						{
 							"skill": "PainLess",
+							"minLevel": 10
+						},
+						{
+							"skill": "ThunderStorm",
 							"minLevel": 10
 						},
 						{
@@ -62802,6 +62814,62 @@
 					"model": "chars/Prefabs/Prefab_WP.prefab",
 					"notes": "",
 					"name": "Warlock",
+					"tier": 1,
+					"equipment": [],
+					"rarity": 0,
+					"timelinePriority": 0,
+					"iconeDone": true
+				},
+				{
+					"id": "Sorcerer",
+					"weaponTypes": [
+						{
+							"wp": "Wand"
+						}
+					],
+					"baseSkills": [
+						{
+							"skill": "SorcererPath"
+						}
+					],
+					"props": {
+						"armorKind": "ArmorLight",
+						"flags": 32
+					},
+					"stats": [
+						{
+							"value": 4,
+							"attribute": "Strength",
+							"upValue": 20
+						},
+						{
+							"value": 4,
+							"attribute": "Dexterity",
+							"upValue": 20
+						},
+						{
+							"value": 6,
+							"attribute": "Constitution",
+							"upValue": 32
+						},
+						{
+							"value": 0,
+							"attribute": "CritHitPercent",
+							"upValue": 10
+						},
+						{
+							"value": 6,
+							"attribute": "Movement"
+						},
+						{
+							"value": 6,
+							"attribute": "Willpower",
+							"upValue": 30
+						}
+					],
+					"model": "chars/Prefabs/Prefab_WP.prefab",
+					"notes": "",
+					"name": "Sorcerer",
 					"tier": 1,
 					"equipment": [],
 					"rarity": 0,
@@ -76942,6 +77010,190 @@
 					"done": 2
 				},
 				{
+					"id": "EarthQuake",
+					"name": "Earthquake",
+					"desc": "",
+					"mode": 5,
+					"range": {
+						"type": 0,
+						"radius": 1,
+						"baseDistance": 6
+					},
+					"props": {
+						"isHeroic": true,
+						"apCost": 0,
+						"defaultAction": true,
+						"vars": {
+							"value1": 0.5,
+							"value2": 100
+						},
+						"needDisengaged": true,
+						"castFx": "prefabs/fx/environment/RockSlide/RockSlide.fx",
+						"flags": 1
+					},
+					"script": "function onSkillEval(a) {\n\tfor( u in a.getTargets() ) {\n\t\tu.dmg += calculateDamage(u.target);\n\t}\n}\nfunction calculateDamage(t) {\n\tvar target_hp = t.stats.health + t.stats.armor;\n\tvar damage = (target_hp * vars.value1) + vars.value2;\n\tdamage = damage * (skill.unit.stats.willpower / 100);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedElement ) {\n\t\t\tdamage += ( damage * s.count / 10 );\n\t\t}\n\t}\n\treturn ceil(damage);\n}",
+					"notes": "",
+					"levels": [
+						{
+							"props": {
+								"vars": {
+									"value1": 0.75,
+									"value2": 200
+								}
+							}
+						}
+					],
+					"icon": {
+						"file": "ui/Icons/BattleIcons_02_96PX.png",
+						"size": 96,
+						"x": 3,
+						"y": 7
+					},
+					"iconeDone": true,
+					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "FireBall",
+					"name": "Fire Ball",
+					"desc": "",
+					"mode": 5,
+					"range": {
+						"type": 0,
+						"radius": 3,
+						"allowedTargets": 4,
+						"baseDistance": 6
+					},
+					"props": {
+						"isHeroic": true,
+						"tooltipStatus": [
+							{
+								"st": "Fire"
+							},
+							{
+								"st": "Burning"
+							}
+						],
+						"apCost": 1,
+						"damageType": [
+							0
+						],
+						"castFx": "prefabs/fx/fight/Explosion/Molotov/MolotovExplosion.fx",
+						"vars": {
+							"value1": 0.25,
+							"value2": 50
+						},
+						"flags": 1,
+						"throwFx": "prefabs/fx/fight/Explosion/Grenade/MolotovThrowTrail.fx",
+						"needDisengaged": true
+					},
+					"script": "function onSkillEval(a) {\n\tfor( u in a.getTargets() ) {\n\t\tu.dmg += calculateDamage(u.target);\n\t}\n}\nfunction onZoneHit() {\n\tcreateSkillZone(Skill.FireZone);\n}\nfunction calculateDamage(t) {\n\tvar target_hp = t.stats.health + t.stats.armor;\n\tvar damage = (target_hp * vars.value1) + vars.value2;\n\tdamage = damage * (skill.unit.stats.willpower / 100);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedElement ) {\n\t\t\tdamage += ( damage * s.count / 10 );\n\t\t}\n\t}\n\treturn ceil(damage);\n}",
+					"notes": "",
+					"levels": [
+						{
+							"props": {
+								"vars": {
+									"value1": 0.4,
+									"value2": 100
+								}
+							}
+						}
+					],
+					"icon": {
+						"file": "ui/Icons/BattleIcons_02_96PX.png",
+						"size": 96,
+						"x": 10,
+						"y": 19
+					},
+					"iconeDone": true,
+					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "ThunderStorm",
+					"name": "Thunder Storm",
+					"desc": "",
+					"mode": 5,
+					"range": {
+						"type": 0,
+						"radius": 2,
+						"allowedTargets": 4,
+						"baseDistance": 6
+					},
+					"props": {
+						"isHeroic": true,
+						"apCost": 2,
+						"castFx": "prefabs/fx/environment/lightning/CelestiumBattleLightning.fx",
+						"vars": {
+							"value1": 0.3,
+							"value2": 50
+						},
+						"needDisengaged": true,
+						"flags": 2
+					},
+					"script": "function onSkillEval(a) {\n\tfor( u in a.getTargets() ) {\n\t\tu.dmg += calculateDamage(u.target);\n\t}\n}\nfunction onPostSkill() {\n\tif ( skill.level == 2 )\n\t\tcast(Skill.ThunderStormZone, { skill : skill }, skill);\n}\nfunction calculateDamage(t) {\n\tvar target_hp = t.stats.health;\n\tvar damage = (target_hp * vars.value1) + vars.value2;\n\tdamage = damage * (skill.unit.stats.willpower / 100);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedElement ) {\n\t\t\tdamage += ( damage * s.count / 10 );\n\t\t}\n\t}\n\treturn ceil(damage);\n}",
+					"notes": "",
+					"levels": [
+						{
+							"props": {
+								"vars": {
+									"value1": 0.6,
+									"value2": 100
+								},
+								"tooltipStatus": [
+									{
+										"st": "Immobile"
+									}
+								]
+							}
+						}
+					],
+					"icon": {
+						"file": "ui/Icons/BattleIcons_02_96PX.png",
+						"size": 96,
+						"x": 0,
+						"y": 19
+					},
+					"iconeDone": true,
+					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "ThunderStormZone",
+					"name": "Charged Cloud",
+					"desc": "",
+					"mode": 5,
+					"range": {
+						"type": 0,
+						"radius": 2,
+						"allowedTargets": 4
+					},
+					"props": {
+						"castFx": "prefabs/fx/environment/lightning/CelestiumBattleLightning.fx",
+						"flags": 2,
+						"tooltipStatus": [
+							{
+								"st": "Immobile"
+							}
+						],
+						"vars": {
+							"value1": 25
+						},
+						"zoneFx": "prefabs/fx/environment/lightning/BattleCelestiumElectrifiedZone.fx"
+					},
+					"script": "function onSkill() {\n\tcreateAreaEffect(\"Infinite\", 0);\n}\n\nfunction onZoneIn( a ) {\n\tfor( u in a.getTargets() )\n\t\tu.addStatus(Status.Immobile);\n\ta.remove();\n}",
+					"notes": "",
+					"iconeDone": true,
+					"group": 16,
+					"icon": {
+						"file": "ui/Icons/BattleIcons_02_96PX.png",
+						"size": 96,
+						"x": 1,
+						"y": 19
+					},
+					"done": 2
+				},
+				{
 					"id": "Meditation",
 					"name": "Meditation",
 					"desc": "",
@@ -77337,7 +77589,8 @@
 						"defaultAction": true,
 						"vars": {
 							"value1": 1
-						}
+						},
+						"flags": 1
 					},
 					"script": "function onEval(a) {\n\ta.dmg += calculateDamage(a.target);\n}\nfunction calculateDamage(t) {\n\tvar target_hp = t.health + t.armor;\n\tvar damage = ceil(target_hp * skill.unit.stats.willpower * vars.value1 / 100);\n\treturn damage;\n}",
 					"notes": "",

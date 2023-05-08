@@ -33481,6 +33481,9 @@
         <Warlock>
             <name>Warlock</name>
         </Warlock>
+        <Sorcerer>
+            <name>Sorcerer</name>
+        </Sorcerer>
         <Vanguard>
             <name>Vanguard</name>
         </Vanguard>
@@ -34612,7 +34615,7 @@
             <desc>Restores [Health] to an allied unit. This skill is affected by the caster's [Willpower].</desc>
             <levels>
                 <line0>
-                    <desc>Restores [Health] to an allied unit. This skill is affected by the caster's [Willpower].<br/>Increases healing and repairs some of the target's [Armour]..</desc>
+                    <desc>Restores [Health] to an allied unit. This skill is affected by the caster's [Willpower].<br/>Increases healing and repairs some of the target's [Armor].</desc>
                 </line0>
             </levels>
         </TargetHeal>
@@ -34663,6 +34666,37 @@
                 </line0>
             </levels>
         </PainLess>
+        <EarthQuake>
+            <name>Earthquake</name>
+            <desc>Enemy takes damage proportional to the caster's [Willpower]. This attack ignores [Guard].</desc>
+            <levels>
+                <line0>
+                    <desc>Enemy takes <b>Heavy</b> damage proportional to the caster's [Willpower]. This attack ignores [Guard].</desc>
+                </line0>
+            </levels>
+        </EarthQuake>
+        <FireBall>
+            <name>Fire Ball</name>
+            <desc>Units in the area take damage proportional to the caster's [Willpower]. This attack ignores [Guard].<br/>This attack creates [Fire], which applies [Burning] to units in area.</desc>
+            <levels>
+                <line0>
+                    <desc>Units in the area take <b>Heavy</b> damage proportional to the caster's [Willpower]. This attack ignores [Guard].<br/>This attack creates [Fire], which applies [Burning] to units in area.</desc>
+                </line0>
+            </levels>
+        </FireBall>
+        <ThunderStorm>
+            <name>Thunder Storm</name>
+            <desc>Units in the area take damage proportional to the caster's [Willpower].<br/>This attack penetrates [Armor] and deals direct damage to [Health].</desc>
+            <levels>
+                <line0>
+                    <desc>Units in the area take <b>Heavy</b> damage proportional to the caster's [Willpower].<br/>This attack penetrates [Armor] and deals direct damage to [Health].<br/>Units hit by this attack are [Immobile], and if none survive, it creates a [ThunderStormZone] that makes passing units [Immobile].</desc>
+                </line0>
+            </levels>
+        </ThunderStorm>
+        <ThunderStormZone>
+            <name>Charged Cloud</name>
+            <desc>Makes passing units [Immobile].</desc>
+        </ThunderStormZone>
         <Meditation>
             <name>Meditation</name>
             <desc>Restores ::value1:: Valour points.</desc>
@@ -34682,7 +34716,7 @@
         <MagicMissile>
             <name>Magic Missile</name>
             <desc>
-                Deals [DMG] to the target. Deals additional damage proportional to the target's [Armour] and [Health].<br/>This additional damage increases as the caster's [Willpower] increases.
+                Deals [DMG] to the target. Deals additional damage proportional to the target's [Armor] and [Health].<br/>This additional damage increases as the caster's [Willpower] increases.
             </desc>
         </MagicMissile>
         <PriestSkillBook1>
