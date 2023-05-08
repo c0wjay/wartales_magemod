@@ -202,13 +202,9 @@ function calculateDamage(t) {
 }
 
 // MagicMissileTest
-function onEval(a) {
-    a.dmg += 100;
-}
+function onEval(a) { a.dmg += 100; }
 
-function onEval(a) {
-    a.dmg = 100;
-}
+function onEval(a) { a.dmg = 100; }
 
 
 // function onEval(a) {
