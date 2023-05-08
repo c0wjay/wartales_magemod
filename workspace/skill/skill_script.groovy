@@ -179,7 +179,6 @@ function onSkill() {
         }
     }
 }
-
 function randomDice (w) {
     var dice = randInt(w, 100);
     if ( dice <= 30 ) return 1;

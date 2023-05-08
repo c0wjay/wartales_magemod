@@ -34647,19 +34647,19 @@
         </FearVoice>
         <DeathScent>
             <name>Scent of Death</name>
-            <desc>Enemies in the range will be in one of the following states: [Fragility], [Fracture], [Weakening], or [Bruise]. If the caster's [Willpower] is low, there is a chance of failure.</desc>
+            <desc>Enemies in the range will be in one of the following states: 3 - 5 stacks of [Fever], [Slowdown], or [Weakening].</desc>
             <levels>
                 <line0>
-                    <desc>Enemies in the range will be in one of the following states: [Fragility], [Fracture], [Weakening], or [Bruise]. If the caster's [Willpower] is low, there is a chance of failure.<br/>Enemies have a low chance to be [Stun] for 2 turns.</desc>
+                    <desc>Enemies in the range will be in one of the following states: 3 - 5 stacks of [Fever], [Slowdown], or [Weakening].<br/>Enemies will be [Stun] for 2 turns or get 2 stacks of [Fever].</desc>
                 </line0>
             </levels>
         </DeathScent>
         <PainLess>
             <name>Painless</name>
-            <desc>The targeted ally will be in one of the following states: [Enervate], [Berserk], or [BrothersFury]. If the caster's [Willpower] is low, there is a chance of failure.</desc>
+            <desc>The targeted ally will be in one of the following states: [Enervate], [Berserk], or [BrothersFury].</desc>
             <levels>
                 <line0>
-                    <desc>The targeted ally will be in one of the following states: [Enervate], [Berserk], or [BrothersFury]. If the caster's [Willpower] is low, there is a chance of failure.<br/>Allies have a low chance to become [Arena_Willforce] for 2 turns.</desc>
+                    <desc>The targeted ally will be in one of the following states: [Enervate], [Berserk], or [BrothersFury].<br/>Allies have a low chance to become [Arena_Willforce] for 2 turns.</desc>
                 </line0>
             </levels>
         </PainLess>
