@@ -192,12 +192,37 @@ function randomDice (w) {
 
 
 // MagicMissile
-function onSkill() {
-    playAttack();
-    var target_hp = skill.target.health + (skill.target.armor >= 1 ? skill.target.armor : 0);
-    var damage = floor(target_hp * skill.unit.stats.willpower * vars.value1 / 100);
-    skill.target.damages(skill, min(damage, skill.target.health - 1), true);
+function onEval(a) {
+    a.dmg += calculateDamage(a);
 }
+function calculateDamage(t) {
+    var target_hp = t.health + t.armor;
+    var damage = ceil(target_hp * skill.unit.stats.willpower * vars.value1 / 100);
+    return damage;
+}
+
+// MagicMissileTest
+function onEval(a) {
+    a.dmg += 100;
+}
+
+function onEval(a) {
+    a.dmg = 100;
+}
+
+
+// function onEval(a) {
+//     a.dmg += calculateDamage(a);
+// }
+// function onSkill() {
+//     playAttack();
+//     skill.target.damages(skill, calculateDamage(skill.target));
+// }
+// function calculateDamage(t) {
+//     var target_hp = t.health + (t.armor >= 1 ? t.armor : 0);
+//     var damage = floor(target_hp * skill.unit.stats.willpower * vars.value1 / 100);
+//     return min(damage, t.health - 1);
+// }
 
 
 // G2Arena1RuleLifeLinked
@@ -238,7 +263,6 @@ function onSkill() {
         }
     }
 }
-
 function randomDice (w) {
     var dice = randInt(w, 100);
     if ( dice <= 30 ) return 1;
@@ -264,7 +288,6 @@ function onSkill() {
         }
     }
 }
-
 function randomDice (w) {
     var dice = randInt(w, 100);
     if ( dice <= 30 ) return 1;
@@ -287,7 +310,6 @@ function onSkill() {
     if ( num == 5 ) skill.target.addStatus(Status.BrothersFury, 1, true);
     skill.target.addStatus(Status.Arena_Willforce, 2, true);
 }
-
 function randomDice (w) {
     var dice = randInt(w, 100);
     if ( dice <= 30 ) return 1;
@@ -321,7 +343,6 @@ function onEval(a) {
         dontAllow();
     }
 }
-
 function onSkill() {
     if( skill.target.canMove() ) {
         skill.unit.swapPositionWith(skill.target, 0.2);
@@ -336,95 +357,100 @@ function onSkill() {
 }
 
 
-// GluckTraitorSwap
-function onDamageDealt(a) {
-    if(!a.unit.isEngaged())
-        return;
-
-    var engagedUnit = a.unit.engagedUnit;
-
-    var tab = [];
-    for(u in getAllies(skill.unit)) {
-        if( getDistance(u, skill.unit) <= vars.value1 && !u.isEngaged() && !u.isAnimal && u.canMove() ) {
-            tab.push(u);
-        }
-    }
-    if(tab.length > 0) {
-        var target = tab[randInt(0, tab.length-1)];
-
-        a.unit.swapPositionWith(target, 0.2);
-
-        target.engage(engagedUnit);
-        if( target != skill.unit ) {
-            engagedUnit.opportunityAttack(target, skill);
-        }
-    }
-    else {
-        a.unit.swapPositionWith(engagedUnit, 0.2);
-        a.unit.engage(engagedUnit);
-    }
-}
-
-
-// Intervention
-function onEval(a) {
-    if( !a.target.isEngaged() || a.target.isAnimal || !a.target.canMove() ) {
-        dontAllow();
-    }
-}
-
-function onSkill() {
-    var target = skill.target;
-    var prevEngaged = target.engagedUnit;
-    target.disengage(false);
-
-    var prevPos = target.getPosition();
-    var currentPos = skill.unit.getPosition();
-    skill.unit.swapPositionWith(target, 0);
-
-    skill.unit.engage(prevEngaged);
-    skill.unit.opportunityAttack(prevEngaged, skill);
-}
-
-
-// EquipedWithIncendiaryFlaskZone
-
-
 // PriestPath
 function onBeginBattle() {
     vars.start = false;
 }
-
 function onBeginAction() {
     if ( vars.start == false ) {
         skill.unit.addStatus(Status.ReinforcedRecovery, vars.value1);
         vars.start = true;
     }
-    spawnFx();
 }
 
 // WarlockPath
 function onBeginBattle() {
     vars.start = false;
 }
-
 function onBeginAction() {
     if ( vars.start == false ) {
         skill.unit.addStatus(Status.ReinforcedCurse, vars.value1);
         vars.start = true;
     }
-    spawnFx();
 }
 
 // SorcererPath
 function onBeginBattle() {
     vars.start = false;
 }
-
 function onBeginAction() {
     if ( vars.start == false ) {
         skill.unit.addStatus(Status.ReinforcedElement, vars.value1);
         vars.start = true;
     }
-    spawnFx();
 }
+
+// Renfort (네크 참고용)
+function onSkill() {
+    play();
+    var tab = [UnitClass.Mobster, UnitClass.Poacher, UnitClass.Marauder, UnitClass.MischiefMaker];
+    for(u in getAllies(skill.unit)) {
+        tab.remove(u.kind);
+    }
+    for(t in tab)
+        spawnRenfort(t, 1, false);
+}
+
+// MasteredWhirlwind
+function onEval(a) {
+    a.dmg += ceil(skill.value*skill.getTargetsCount()-skill.value);
+}
+function onHit(a) {
+    a.target.pushback({ unit : skill.unit }, getPushback(a));
+}
+function getPushback( a ) {
+    return vars.value1;
+}
+
+// ToxicBlade
+function onEval(a) {
+    for( s in a.target.getAllStatus() ) {
+        if( s.kind == Status.Poison ) {
+            a.baseDamageBonus += s.count * vars.value1;
+        }
+    }
+}
+function onDamage(a) {
+    for( st in a.target.getAllStatus() ) {
+        if( st.kind == Status.Poison ) {
+            st.cancel();
+        }
+    }
+}
+
+
+// EquipedWithIncendiaryFlaskZone
+function onSkill() {
+    createAreaEffect(\"Immediate\", 1, { skillId: Skill.FireZone });
+}
+
+"
+
+// FireZone
+function onZoneIn(a) {
+    a.target.addStatus(Status.Burning);
+}
+
+function onZoneMoveEnd(a) {
+    a.target.addStatus(Status.Burning);
+}
+
+// LightningZone
+
+
+// CelestiumLightning
+
+
+// PestiferedFromCelling
+
+// RockSlideZone
