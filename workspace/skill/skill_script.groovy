@@ -32,6 +32,7 @@ function onSkill() {
     for ( s in skill.unit.getAllStatus() ) {
         if( s.kind == Status.ReinforcedRecovery ) {
             recovery += ( vars.value1 * s.count / 10 );
+            break;
         }
     }
     skill.target.gainsHealth( ceil( skill.target.stats.health * ( min(skill.unit.stats.willpower, 50)/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);
@@ -51,6 +52,7 @@ function onSkill() {
     for ( s in skill.unit.getAllStatus() ) {
         if( s.kind == Status.ReinforcedRecovery ) {
             recovery += ( vars.value1 * s.count / 10 );
+            break;
         }
     }
     var will = min(skill.unit.stats.willpower, 50);
@@ -80,6 +82,7 @@ function onSkill() {
     for ( s in skill.unit.getAllStatus() ) {
         if( s.kind == Status.ReinforcedRecovery ) {
             recovery += ( vars.value1 * s.count / 10 );
+            break;
         }
     }
     @sync for( u in getAllies(skill.unit) ) {
@@ -99,6 +102,7 @@ function onSkill() {
     for ( s in skill.unit.getAllStatus() ) {
         if( s.kind == Status.ReinforcedCurse ) {
             will += ( s.count * 2 );
+            break;
         }
     }
     for( t in skill.getTargets() ) {
@@ -131,6 +135,7 @@ function onSkill() {
     for ( s in skill.unit.getAllStatus() ) {
         if( s.kind == Status.ReinforcedCurse ) {
             will += ( s.count * 2 );
+            break;
         }
     }
     for( t in skill.getTargets() ) {
@@ -168,6 +173,7 @@ function onSkill() {
     for ( s in skill.unit.getAllStatus() ) {
         if( s.kind == Status.ReinforcedCurse ) {
             will += ( s.count * 2 );
+            break;
         }
     }
     var num = randomDice( max(will - vars.value1, 0) );
@@ -222,6 +228,7 @@ function calculateDamage(t) {
     for ( s in skill.unit.getAllStatus() ) {
         if( s.kind == Status.ReinforcedElement ) {
             damage += ( damage * s.count / 10 );
+            break;
         }
     }
     return ceil(damage);
@@ -244,6 +251,7 @@ function calculateDamage(t) {
     for ( s in skill.unit.getAllStatus() ) {
         if( s.kind == Status.ReinforcedElement ) {
             damage += ( damage * s.count / 10 );
+            break;
         }
     }
     return ceil(damage);
@@ -266,6 +274,7 @@ function calculateDamage(t) {
     for ( s in skill.unit.getAllStatus() ) {
         if( s.kind == Status.ReinforcedElement ) {
             damage += ( damage * s.count / 10 );
+            break;
         }
     }
     return ceil(damage);
@@ -468,12 +477,63 @@ function onSkill() {
     var tab = [UnitClass.Kogo, UnitClass.Toro, UnitClass.TrivetteRagnol, UnitClass.Nairolf, UnitClass.Kriskhed];
     var idx = [1, 2, 0, 1, 1];
     var i = 0;
-    while(i < 5) {
+    while(i < min(tab.length, idx.length))) {
         if (idx[i] != 0) {
             spawnRenfort(tab[i], idx[i], false);
         }
         i++;
     }
+}
+
+
+// SummoningUndead
+function onBeginBattle() {
+    vars.value2 = 2;
+}
+function onEval(a) {
+    if( vars.value2 < 2 ){
+        dontAllow();
+    }
+}
+function onSkill() {
+    play();
+    var tab = [UnitClass.Kogo, UnitClass.Toro, UnitClass.TrivetteRagnol, UnitClass.Nairolf, UnitClass.Kriskhed];
+    var idx = [1, 2, 0, 1, 1];
+    var i = 0;
+    while(i < min(tab.length, idx.length))) {
+        if (idx[i] != 0) {
+            spawnRenfort(tab[i], idx[i], false);
+        }
+        i++;
+    }
+    vars.value2 = 0;
+}
+function onEndRound() {
+    vars.value2++;
+}
+
+
+// SummoningBoss
+function onBeginBattle() {
+    vars.allowed = true;
+}
+function onEval(a) {
+    if( !vars.allowed ){
+        dontAllow();
+    }
+}
+function onSkill() {
+    play();
+    var tab = [UnitClass.Kogo, UnitClass.Toro, UnitClass.TrivetteRagnol, UnitClass.Nairolf, UnitClass.Kriskhed];
+    var idx = [1, 2, 0, 1, 1];
+    var i = 0;
+    while(i < min(tab.length, idx.length))) {
+        if (idx[i] != 0) {
+            spawnRenfort(tab[i], idx[i], false);
+        }
+        i++;
+    }
+    vars.allowed = false;
 }
 
 
