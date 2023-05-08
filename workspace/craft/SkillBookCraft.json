@@ -121,6 +121,10 @@
     "tool": "Anvil",
     "recipe": [
         {
+            "qty": 1,
+            "item": "PriestSkillBookUncoCraftT1"
+        },
+        {
             "qty": 6,
             "item": "IronOre"
         },
@@ -149,6 +153,10 @@
     "tool": "Anvil",
     "recipe": [
         {
+            "qty": 1,
+            "item": "WarlockSkillBookUncoCraftT1"
+        },
+        {
             "qty": 6,
             "item": "IronOre"
         },
@@ -176,6 +184,10 @@
     "item": "SorcererSkillBookUncoCraftT2",
     "tool": "Anvil",
     "recipe": [
+        {
+            "qty": 1,
+            "item": "SorcererSkillBookUncoCraftT1"
+        },
         {
             "qty": 6,
             "item": "IronOre"

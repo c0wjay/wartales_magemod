@@ -9,7 +9,8 @@
 	},
 	"props": {
 		"isHeroic": true,
-		"apCost": 1,
+		"apCost": 0,
+        "defaultAction": true,
 		"vars": {
 			"value1": 50
 		},

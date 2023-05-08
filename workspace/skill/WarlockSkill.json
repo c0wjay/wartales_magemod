@@ -12,7 +12,8 @@
 	"props": {
 		"isHeroic": true,
 		"specialAnim": "Taunt",
-		"apCost": 1,
+		"apCost": 0,
+        "defaultAction": true,
 		"vars": {
 			"value1": 20
 		},
