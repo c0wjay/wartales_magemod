@@ -36,8 +36,10 @@ function onSkill() {
     }
     skill.target.gainsHealth( ceil( skill.target.stats.health * ( min(skill.unit.stats.willpower, 50)/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);
     if( skill.level == 2 ) {
-        var armorRecovery = ceil ( skill.target.stats.armor * min(skill.unit.stats.willpower, 50)/100 * (recovery/75) * randInt(12,20)/16 );
-        skill.target.armor = min(skill.target.armor + armorRecovery, skill.target.stats.armor);
+        for( s in skill.target.getAllStatus() ) {
+            if( s.isMalus )
+                s.cancel();
+        }
     }
 }
 
@@ -82,6 +84,10 @@ function onSkill() {
     }
     @sync for( u in getAllies(skill.unit) ) {
         u.gainsHealth(ceil( u.stats.health * min(skill.unit.stats.willpower, 50)/50 * (recovery/100) ), null);
+        if( skill.level == 2 ) {
+            var armorRecovery = ceil ( u.stats.armor * min(skill.unit.stats.willpower, 50)/100 * (recovery/100) );
+            u.armor = min(u.armor + armorRecovery, u.stats.armor);
+        }
     }
 }
 
@@ -172,10 +178,12 @@ function onSkill() {
     if ( num == 5 ) skill.target.addStatus(Status.BrothersFury, 1, true);
     if( skill.level == 2 ) {
         var num2 = randomDice( max(will - vars.value2, 0) );
-        if( num2 == 5 ) {
-            skill.target.addStatus(Status.Arena_Willforce, 2, true);
+        if( num2 > 3 ) {
+            if (!skill.target.getPassiveSkills().contains(Skill.Immortal))
+                skill.target.addTemporarySkill(Skill.Immortal);
         }
     }
+    spawnFx();
 }
 function randomDice (w) {
     var dice = randInt(w, 100);
@@ -456,9 +464,12 @@ function onSkill() {
     play();
     var tab = [UnitClass.Kogo, UnitClass.Toro, UnitClass.TrivetteRagnol, UnitClass.Nairolf, UnitClass.Kriskhed];
     var idx = [1, 2, 0, 1, 1];
-    for(i in [0, 1, 2, 3, 4]) {
-        if (idx[i] != 0)
+    var i = 0;
+    while(i < 5) {
+        if (idx[i] != 0) {
             spawnRenfort(tab[i], idx[i], false);
+        }
+        i++;
     }
 }
 
