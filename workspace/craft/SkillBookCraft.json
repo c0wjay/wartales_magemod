@@ -117,6 +117,34 @@
     "jobLevel": 3
 },
 {
+    "item": "NecromancerSkillBookUncoCraftT1",
+    "tool": "Anvil",
+    "recipe": [
+        {
+            "qty": 6,
+            "item": "IronOre"
+        },
+        {
+            "qty": 5,
+            "item": "Wood"
+        },
+        {
+            "qty": 4,
+            "item": "Rimesteel"
+        },
+        {
+            "qty": 6,
+            "item": "Charcoal"
+        }
+    ],
+    "props": {
+        "bundle": "BundleSkillBookT1"
+    },
+    "learnCost": [],
+    "itemCost": [],
+    "jobLevel": 3
+},
+{
     "item": "PriestSkillBookUncoCraftT2",
     "tool": "Anvil",
     "recipe": [
@@ -187,6 +215,38 @@
         {
             "qty": 1,
             "item": "SorcererSkillBookUncoCraftT1"
+        },
+        {
+            "qty": 6,
+            "item": "IronOre"
+        },
+        {
+            "qty": 6,
+            "item": "GoldMineral"
+        },
+        {
+            "qty": 5,
+            "item": "Wood"
+        },
+        {
+            "qty": 6,
+            "item": "Charcoal"
+        }
+    ],
+    "props": {
+        "bundle": "BundleSkillBookT2"
+    },
+    "jobLevel": 5,
+    "learnCost": [],
+    "itemCost": []
+},
+{
+    "item": "NecromancerSkillBookUncoCraftT2",
+    "tool": "Anvil",
+    "recipe": [
+        {
+            "qty": 1,
+            "item": "NecromancerSkillBookUncoCraftT1"
         },
         {
             "qty": 6,

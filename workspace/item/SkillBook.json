@@ -114,6 +114,31 @@
 	"iconeDone": true
 },
 {
+	"id": "NecromancerSkillBookUncoCraftT1",
+	"name": "Necromancer Skill Book I",
+	"weight": 0.5,
+	"baseBonus": [],
+	"props": {
+		"model": "chars/Weapons/LeftHand_BlindingPowder.fbx",
+		"passiveSkill": "NecromancerSkillBook1",
+		"requireLevel": 5,
+		"disableLoot": true,
+		"fixedLevel": 6
+	},
+	"icon": {
+		"file": "ui/Icons_Resources.png",
+		"size": 96,
+		"x": 7,
+		"y": 16
+	},
+	"type": "LeftHand",
+	"price": 129,
+	"desc": "",
+	"rarity": 1,
+	"group": 12,
+	"iconeDone": true
+},
+{
 	"id": "PriestSkillBookUncoCraftT2",
 	"name": "Priest Skill Book II",
 	"weight": 0.5,
@@ -179,6 +204,31 @@
 		"file": "ui/Icons_Resources.png",
 		"size": 96,
 		"x": 11,
+		"y": 16
+	},
+	"type": "LeftHand",
+	"price": 234,
+	"desc": "",
+	"rarity": 1,
+	"group": 12,
+	"iconeDone": true
+},
+{
+	"id": "NecromancerSkillBookUncoCraftT2",
+	"name": "Necromancer Skill Book II",
+	"weight": 0.5,
+	"baseBonus": [],
+	"props": {
+		"model": "chars/Weapons/LeftHand_BlindingPowder.fbx",
+		"passiveSkill": "NecromancerSkillBook2",
+		"requireLevel": 11,
+		"disableLoot": true,
+		"fixedLevel": 12
+	},
+	"icon": {
+		"file": "ui/Icons_Resources.png",
+		"size": 96,
+		"x": 8,
 		"y": 16
 	},
 	"type": "LeftHand",

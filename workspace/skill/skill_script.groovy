@@ -58,7 +58,6 @@ function onSkill() {
             if( skill.level == 2 && randomDice(will) == 3 ) {
                 t.target.addStatus(Status.Protection, vars.value2, true);
             }
-            spawnFx();
         }
 	}
 }
@@ -84,7 +83,6 @@ function onSkill() {
     @sync for( u in getAllies(skill.unit) ) {
         u.gainsHealth(ceil( u.stats.health * min(skill.unit.stats.willpower, 50)/50 * (recovery/100) ), null);
     }
-    spawnFx();
 }
 
 
