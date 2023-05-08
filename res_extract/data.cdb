@@ -62677,7 +62677,7 @@
 							"attribute": "Movement"
 						},
 						{
-							"value": 10,
+							"value": 6,
 							"attribute": "Willpower",
 							"upValue": 30
 						}
@@ -62738,7 +62738,7 @@
 							"attribute": "Movement"
 						},
 						{
-							"value": 10,
+							"value": 6,
 							"attribute": "Willpower",
 							"upValue": 30
 						}
@@ -62794,7 +62794,7 @@
 							"attribute": "Movement"
 						},
 						{
-							"value": 10,
+							"value": 6,
 							"attribute": "Willpower",
 							"upValue": 30
 						}
