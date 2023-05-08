@@ -27,11 +27,19 @@
 			"minLevel": 2
 		},
 		{
+			"skill": "EarthQuake",
+			"minLevel": 2
+		},
+		{
 			"skill": "RangeHeal",
 			"minLevel": 5
 		},
 		{
 			"skill": "DeathScent",
+			"minLevel": 5
+		},
+		{
+			"skill": "FireBall",
 			"minLevel": 5
 		},
 		{
@@ -52,6 +60,10 @@
 		},
 		{
 			"skill": "PainLess",
+			"minLevel": 10
+		},
+		{
+			"skill": "ThunderStorm",
 			"minLevel": 10
 		},
 		{

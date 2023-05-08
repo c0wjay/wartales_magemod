@@ -62,7 +62,6 @@ function onSkill() {
         }
 	}
 }
-
 function randomDice (w) {
     var dice = randInt(w, 100);
     if ( dice <= 30 ) return 1;
@@ -111,7 +110,6 @@ function onSkill() {
         }
     }
 }
-
 function randomDice (w) {
     var dice = randInt(w, 100);
     if ( dice <= 30 ) return 1;
@@ -134,20 +132,21 @@ function onSkill() {
     for( t in skill.getTargets() ) {
         if( t.target.side != skill.unit.side ) {
             var num = randomDice( max(will - vars.value1, 0) );
-            if ( num == 2 ) t.target.addStatus(Status.Fragility, 2, true);
-            if ( num == 3 ) t.target.addStatus(Status.Fracture, 1, true);
-            if ( num == 4 ) t.target.addStatus(Status.Weakening, 2, true);
-            if ( num == 5 ) t.target.addStatus(Status.Bruise, 1, true);
+            if ( num == 1 ) t.target.addStatus(Status.Slowdown, 1, true);
+            if ( num == 2 ) t.target.addStatus(Status.Fever, 3, true);
+            if ( num == 3 || num == 4 ) t.target.addStatus(Status.Weakening, 2, true);
+            if ( num == 5 ) t.target.addStatus(Status.Fever, 5, true);
             if( skill.level == 2 ) {
                 var num2 = randomDice( max(will - vars.value2, 0) );
                 if( num2 > 3 ) {
                     t.target.addStatus(Status.Stun, 2, true);
+                } else {
+                    t.target.addStatus(Status.Fever, 2, true);
                 }
             }
         }
     }
 }
-
 function randomDice (w) {
     var dice = randInt(w, 100);
     if ( dice <= 30 ) return 1;
@@ -168,7 +167,7 @@ function onSkill() {
         }
     }
     var num = randomDice( max(will - vars.value1, 0) );
-    if ( num == 2 || num == 4 ) {
+    if ( num < 3 || num == 4 ) {
         skill.target.addStatus(Status.Enervate, randomDice(will));
     }
     if ( num == 3 ) skill.target.addStatus(Status.Berserk, 1, true);
@@ -193,7 +192,7 @@ function randomDice (w) {
 
 // MagicMissile
 function onEval(a) {
-    a.dmg += calculateDamage(a);
+    a.dmg += calculateDamage(a.target);
 }
 function calculateDamage(t) {
     var target_hp = t.health + t.armor;
@@ -201,25 +200,82 @@ function calculateDamage(t) {
     return damage;
 }
 
-// MagicMissileTest
-function onEval(a) { a.dmg += 100; }
 
-function onEval(a) { a.dmg = 100; }
+// EarthQuake
+function onSkillEval(a) {
+    for( u in a.getTargets() ) {
+        u.dmg += calculateDamage(u.target);
+    }
+}
+function calculateDamage(t) {
+    var target_hp = t.stats.health + t.stats.armor;
+    var damage = (target_hp * vars.value1) + vars.value2;
+    damage = damage * (skill.unit.stats.willpower / 100);
+    for ( s in skill.unit.getAllStatus() ) {
+        if( s.kind == Status.ReinforcedElement ) {
+            damage += ( damage * s.count / 10 );
+        }
+    }
+    return ceil(damage);
+}
 
 
-// function onEval(a) {
-//     a.dmg += calculateDamage(a);
-// }
-// function onSkill() {
-//     playAttack();
-//     skill.target.damages(skill, calculateDamage(skill.target));
-// }
-// function calculateDamage(t) {
-//     var target_hp = t.health + (t.armor >= 1 ? t.armor : 0);
-//     var damage = floor(target_hp * skill.unit.stats.willpower * vars.value1 / 100);
-//     return min(damage, t.health - 1);
-// }
+// FireBall
+function onSkillEval(a) {
+    for( u in a.getTargets() ) {
+        u.dmg += calculateDamage(u.target);
+    }
+}
+function onZoneHit() {
+    createSkillZone(Skill.FireZone);
+}
+function calculateDamage(t) {
+    var target_hp = t.stats.health + t.stats.armor;
+    var damage = (target_hp * vars.value1) + vars.value2;
+    damage = damage * (skill.unit.stats.willpower / 100);
+    for ( s in skill.unit.getAllStatus() ) {
+        if( s.kind == Status.ReinforcedElement ) {
+            damage += ( damage * s.count / 10 );
+        }
+    }
+    return ceil(damage);
+}
 
+// ThunderStorm
+function onSkillEval(a) {
+    for( u in a.getTargets() ) {
+        u.dmg += calculateDamage(u.target);
+    }
+}
+function onPostSkill() {
+    if ( skill.level == 2 )
+        cast(Skill.ThunderStormZone, { skill : skill }, skill);
+}
+function calculateDamage(t) {
+    var target_hp = t.stats.health;
+    var damage = (target_hp * vars.value1) + vars.value2;
+    damage = damage * (skill.unit.stats.willpower / 100);
+    for ( s in skill.unit.getAllStatus() ) {
+        if( s.kind == Status.ReinforcedElement ) {
+            damage += ( damage * s.count / 10 );
+        }
+    }
+    return ceil(damage);
+}
+
+
+// ThunderStormZone
+function onSkill() {
+    createAreaEffect(\"Infinite\", 0);
+}
+
+function onZoneIn( a ) {
+    for( u in a.getTargets() )
+        u.addStatus(Status.Immobile);
+    a.remove();
+}
+
+"
 
 // G2Arena1RuleLifeLinked
 function onBeginAction() {
@@ -397,30 +453,15 @@ function onSkill() {
         spawnRenfort(t, 1, false);
 }
 
-// MasteredWhirlwind
-function onEval(a) {
-    a.dmg += ceil(skill.value*skill.getTargetsCount()-skill.value);
-}
-function onHit(a) {
-    a.target.pushback({ unit : skill.unit }, getPushback(a));
-}
-function getPushback( a ) {
-    return vars.value1;
-}
 
-// ToxicBlade
-function onEval(a) {
-    for( s in a.target.getAllStatus() ) {
-        if( s.kind == Status.Poison ) {
-            a.baseDamageBonus += s.count * vars.value1;
-        }
-    }
-}
-function onDamage(a) {
-    for( st in a.target.getAllStatus() ) {
-        if( st.kind == Status.Poison ) {
-            st.cancel();
-        }
+// Summoning
+function onSkill() {
+    play();
+    var tab = [UnitClass.Kogo, UnitClass.Toro, UnitClass.TrivetteRagnol, UnitClass.Nairolf, UnitClass.Kriskhed];
+    var idx = [1, 2, 0, 1, 1];
+    for(i in [0, 1, 2, 3, 4]) {
+        if (idx[i] != 0)
+            spawnRenfort(tab[i], idx[i], false);
     }
 }
 
@@ -445,7 +486,13 @@ function onZoneMoveEnd(a) {
 
 
 // CelestiumLightning
+function onEval(a) {
+    a.dmg = floor(a.target.stats.health * vars.value1 / 100);
+}
 
+function onPostSkill() {
+    cast(Skill.CelestiumLightningPersist, { skill : skill }, skill);
+}
 
 // PestiferedFromCelling
 

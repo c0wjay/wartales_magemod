@@ -77342,7 +77342,7 @@
 							"value1": 1
 						}
 					},
-					"script": "function onEval(a) {\n\ta.dmg += calculateDamage(a);\n}\nfunction calculateDamage(t) {\n\tvar target_hp = t.health + t.armor;\n\tvar damage = ceil(target_hp * skill.unit.stats.willpower * vars.value1 / 100);\n\treturn damage;\n}",
+					"script": "function onEval(a) {\n\ta.dmg += calculateDamage(a.target);\n}\nfunction calculateDamage(t) {\n\tvar target_hp = t.health + t.armor;\n\tvar damage = ceil(target_hp * skill.unit.stats.willpower * vars.value1 / 100);\n\treturn damage;\n}",
 					"notes": "",
 					"icon": {
 						"file": "ui/Icons/BattleIcons_02_96PX.png",
