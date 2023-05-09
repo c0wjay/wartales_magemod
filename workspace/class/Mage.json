@@ -31,6 +31,10 @@
 			"minLevel": 2
 		},
 		{
+			"skill": "SummonBeast",
+			"minLevel": 2
+		},
+		{
 			"skill": "RangeHeal",
 			"minLevel": 5
 		},
@@ -40,6 +44,10 @@
 		},
 		{
 			"skill": "FireBall",
+			"minLevel": 5
+		},
+		{
+			"skill": "SummonUndead",
 			"minLevel": 5
 		},
 		{
@@ -64,6 +72,10 @@
 		},
 		{
 			"skill": "ThunderStorm",
+			"minLevel": 10
+		},
+		{
+			"skill": "SummonChampion",
 			"minLevel": 10
 		},
 		{

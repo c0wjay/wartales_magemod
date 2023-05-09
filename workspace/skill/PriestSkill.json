@@ -19,7 +19,7 @@
         "healPreview": 1,
 		"useWithoutWeapon": true
 	},
-	"script": "function onSkill() {\n\tplay();\n\tvar recovery = vars.value1;\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedRecovery ) {\n\t\t\trecovery += ( vars.value1 * s.count / 10 );\n\t\t}\n\t}\n\tskill.target.gainsHealth( ceil( skill.target.stats.health * ( min(skill.unit.stats.willpower, 50)/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);\n\tif( skill.level == 2 ) {\n\t\tvar armorRecovery = ceil ( skill.target.stats.armor * min(skill.unit.stats.willpower, 50)/100 * (recovery/75) * randInt(12,20)/16 );\n\t\tskill.target.armor = min(skill.target.armor + armorRecovery, skill.target.stats.armor);\n\t}\n}",
+	"script": "function onSkill() {\n\tplay();\n\tvar recovery = vars.value1;\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedRecovery ) {\n\t\t\trecovery += ( vars.value1 * s.count / 10 );\n\t\t\tbreak;\n\t\t}\n\t}\n\tskill.target.gainsHealth( ceil( skill.target.stats.health * ( min(skill.unit.stats.willpower, 50)/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);\n\tif( skill.level == 2 ) {\n\t\tfor( s in skill.target.getAllStatus() ) {\n\t\t\tif( s.isMalus )\n\t\t\t\ts.cancel();\n\t\t}\n\t}\n}",
 	"notes": "",
 	"levels": [
 		{
@@ -56,7 +56,8 @@
 		"specialAnim": "ThrowLeftGrenade",
 		"apCost": 1,
 		"vars": {
-			"value1": 25
+			"value1": 25,
+			"value2": 1
 		},
 		"needDisengaged": true,
         "cursor": "CursorHeal",
@@ -65,7 +66,7 @@
 		"castFx": "prefabs/fx/fight/Explosion/PoisonBomb/PoisonBomb.fx",
 		"throwModel": "chars/Weapons/LeftHand_IncendiaryFlask.fbx"
 	},
-	"script": "function onSkill() {\n\tplayAttack();\n\tvar recovery = vars.value1;\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedRecovery ) {\n\t\t\trecovery += ( vars.value1 * s.count / 10 );\n\t\t}\n\t}\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side == skill.unit.side ) {\n\t\t\tt.target.gainsHealth( ceil( t.target.stats.health * ( will/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);\n\t\t\tif( skill.level == 2 && randomDice(will) == 3 ) {\n\t\t\t\tt.target.addStatus(Status.Protection, vars.value2, true);\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+	"script": "function onSkill() {\n\tplayAttack();\n\tvar recovery = vars.value1;\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedRecovery ) {\n\t\t\trecovery += ( vars.value1 * s.count / 10 );\n\t\t\tbreak;\n\t\t}\n\t}\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side == skill.unit.side ) {\n\t\t\tt.target.gainsHealth( ceil( t.target.stats.health * ( will/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);\n\t\t\tif( skill.level == 2 && randomDice(will) == 3 ) {\n\t\t\t\tt.target.addStatus(Status.Protection, vars.value2, true);\n\t\t\t}\n\t\t}\n\t}\n}\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice > 90 ) return 5;\n\tif ( dice > 80 ) return 4;\n\tif ( dice > 60 ) return 3;\n\tif ( dice > 30 ) return 2;\n\telse return 1;\n}",
 	"notes": "",
 	"levels": [
 		{
@@ -111,7 +112,7 @@
 		"useWithoutWeapon": true,
 		"extraFx": "prefabs/fx/fight/BuffCry/BuffCryBlue.fx"
 	},
-	"script": "function onSkill() {\n\tplay();\n\tvar recovery = vars.value1;\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedRecovery ) {\n\t\t\trecovery += ( vars.value1 * s.count / 10 );\n\t\t}\n\t}\n\t@sync for( u in getAllies(skill.unit) ) {\n\t\tu.gainsHealth(ceil( u.stats.health * min(skill.unit.stats.willpower, 50)/50 * (recovery/100) ), null);\n\t}\n}",
+	"script": "function onSkill() {\n\tplay();\n\tvar recovery = vars.value1;\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedRecovery ) {\n\t\t\trecovery += ( vars.value1 * s.count / 10 );\n\t\t\tbreak;\n\t\t}\n\t}\n\t@sync for( u in getAllies(skill.unit) ) {\n\t\tu.gainsHealth(ceil( u.stats.health * min(skill.unit.stats.willpower, 50)/50 * (recovery/100) ), null);\n\t\tif( skill.level == 2 ) {\n\t\t\tvar armorRecovery = ceil ( u.stats.armor * min(skill.unit.stats.willpower, 50)/100 * (recovery/100) );\n\t\t\tu.armor = min(u.armor + armorRecovery, u.stats.armor);\n\t\t}\n\t}\n}",
 	"notes": "",
 	"levels": [
 		{

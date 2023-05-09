@@ -15,7 +15,8 @@
 		"apCost": 0,
         "defaultAction": true,
 		"vars": {
-			"value1": 20
+			"value1": 20,
+			"value2": 20
 		},
 		"tooltipStatus": [
 			{
@@ -26,7 +27,7 @@
 		"useWithoutWeapon": true,
 		"extraFx": "prefabs/fx/fight/BuffCry/BionnTransformation.fx"
 	},
-	"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedCurse ) {\n\t\t\twill += ( s.count * 2 );\n\t\t}\n\t}\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side != skill.unit.side ) {\n\t\t\tvar num = randomDice( max(will - vars.value1, 0) );\n\t\t\tt.target.addStatus(Status.Terror, num);\n\t\t\tif( skill.level == 2 ) {\n\t\t\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\t\t\tif( num2 > 2 ) {\n\t\t\t\t\tt.target.addStatus(Status.Immobile, 1, true);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+	"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedCurse ) {\n\t\t\twill += ( s.count * 2 );\n\t\t\tbreak;\n\t\t}\n\t}\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side != skill.unit.side ) {\n\t\t\tvar num = randomDice( max(will - vars.value1, 0) );\n\t\t\tt.target.addStatus(Status.Terror, num);\n\t\t\tif( skill.level == 2 ) {\n\t\t\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\t\t\tif( num2 > 2 ) {\n\t\t\t\t\tt.target.addStatus(Status.Immobile, 1, true);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice > 90 ) return 5;\n\tif ( dice > 80 ) return 4;\n\tif ( dice > 60 ) return 3;\n\tif ( dice > 30 ) return 2;\n\telse return 1;\n}",
 	"notes": "",
 	"levels": [
 		{
@@ -69,7 +70,8 @@
 		"specialAnim": "ThrowLeftGrenade",
 		"apCost": 1,
 		"vars": {
-			"value1": 20
+			"value1": 20,
+			"value2": 20
 		},
 		"tooltipStatus": [
 			{
@@ -88,7 +90,7 @@
         "throwFx": "prefabs/fx/fight/Explosion/ConfusingPowder/ConfusingPowderThrowTrail.fx",
 		"throwModel": "chars/Weapons/LeftHand_BlindingPowder.fbx"
 	},
-	"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedCurse ) {\n\t\t\twill += ( s.count * 2 );\n\t\t}\n\t}\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side != skill.unit.side ) {\n\t\t\tvar num = randomDice( max(will - vars.value1, 0) );\n\t\t\tif ( num == 1 ) t.target.addStatus(Status.Slowdown, 1, true);\n\t\t\tif ( num == 2 ) t.target.addStatus(Status.Fever, 3, true);\n\t\t\tif ( num == 3 || num == 4 ) t.target.addStatus(Status.Weakening, 2, true);\n\t\t\tif ( num == 5 ) t.target.addStatus(Status.Fever, 5, true);\n\t\t\tif( skill.level == 2 ) {\n\t\t\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\t\t\tif( num2 > 3 ) {\n\t\t\t\t\tt.target.addStatus(Status.Stun, 2, true);\n\t\t\t\t} else {\n\t\t\t\t\tt.target.addStatus(Status.Fever, 2, true);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+	"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedCurse ) {\n\t\t\twill += ( s.count * 2 );\n\t\t\tbreak;\n\t\t}\n\t}\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side != skill.unit.side ) {\n\t\t\tvar num = randomDice( max(will - vars.value1, 0) );\n\t\t\tif ( num == 1 ) t.target.addStatus(Status.Slowdown, 1, true);\n\t\t\tif ( num == 2 ) t.target.addStatus(Status.Fever, 3, true);\n\t\t\tif ( num == 3 || num == 4 ) t.target.addStatus(Status.Weakening, 2, true);\n\t\t\tif ( num == 5 ) t.target.addStatus(Status.Fever, 5, true);\n\t\t\tif( skill.level == 2 ) {\n\t\t\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\t\t\tif( num2 > 3 ) {\n\t\t\t\t\tt.target.addStatus(Status.Stun, 2, true);\n\t\t\t\t} else {\n\t\t\t\t\tt.target.addStatus(Status.Fever, 2, true);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice > 90 ) return 5;\n\tif ( dice > 80 ) return 4;\n\tif ( dice > 60 ) return 3;\n\tif ( dice > 30 ) return 2;\n\telse return 1;\n}",
 	"notes": "",
 	"levels": [
 		{
@@ -128,7 +130,8 @@
 		"isHeroic": true,
 		"apCost": 1,
 		"vars": {
-			"value1": 20
+			"value1": 20,
+			"value2": 20
 		},
 		"tooltipStatus": [
 			{
@@ -144,7 +147,7 @@
 		"needDisengaged": true,
 		"useWithoutWeapon": true
 	},
-	"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedCurse ) {\n\t\t\twill += ( s.count * 2 );\n\t\t}\n\t}\n\tvar num = randomDice( max(will - vars.value1, 0) );\n\tif ( num < 3 || num == 4 ) {\n\t\tskill.target.addStatus(Status.Enervate, randomDice(will));\n\t}\n\tif ( num == 3 ) skill.target.addStatus(Status.Berserk, 1, true);\n\tif ( num == 5 ) skill.target.addStatus(Status.BrothersFury, 1, true);\n\tif( skill.level == 2 ) {\n\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\tif( num2 == 5 ) {\n\t\t\tskill.target.addStatus(Status.Arena_Willforce, 2, true);\n\t\t}\n\t}\n}\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+	"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedCurse ) {\n\t\t\twill += ( s.count * 2 );\n\t\t\tbreak;\n\t\t}\n\t}\n\tvar num = randomDice( max(will - vars.value1, 0) );\n\tif ( num < 3 || num == 4 ) {\n\t\tskill.target.addStatus(Status.Enervate, randomDice(will));\n\t}\n\tif ( num == 3 ) skill.target.addStatus(Status.Berserk, 1, true);\n\tif ( num == 5 ) skill.target.addStatus(Status.BrothersFury, 1, true);\n\tif( skill.level == 2 ) {\n\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\tif( num2 > 3 ) {\n\t\t\tif (!skill.target.getPassiveSkills().contains(Skill.Immortal)) {\n\t\t\t\tskill.target.addTemporarySkill(Skill.Immortal);\n\t\t\t} else {\n\t\t\t\tskill.target.addStatus(Status.Enervate, 3);\n\t\t\t}\n\t\t}\n\t}\n\tspawnFx();\n}\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice > 90 ) return 5;\n\tif ( dice > 80 ) return 4;\n\tif ( dice > 60 ) return 3;\n\tif ( dice > 30 ) return 2;\n\telse return 1;\n}",
 	"notes": "",
 	"levels": [
 		{

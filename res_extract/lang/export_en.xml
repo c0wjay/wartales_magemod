@@ -30037,6 +30037,10 @@
             <name>Sorcerer Skill Book I</name>
             <desc>Slightly increases the effectiveness of the [Sorcerer] class skill.</desc>
 		</SorcererSkillBookUncoCraftT1>
+        <NecromancerSkillBookUncoCraftT1>
+            <name>Necromancer Skill Book I</name>
+            <desc>Slightly increases the effectiveness of the [Necromancer] class skill.</desc>
+		</NecromancerSkillBookUncoCraftT1>
         <PriestSkillBookUncoCraftT2>
             <name>Priest Skill Book II</name>
             <desc>Increases the effectiveness of the [Priest] class skill.</desc>
@@ -30049,6 +30053,14 @@
             <name>Sorcerer Skill Book II</name>
             <desc>Increases the effectiveness of the [Sorcerer] class skill.</desc>
 		</SorcererSkillBookUncoCraftT2>
+        <NecromancerSkillBookUncoCraftT2>
+            <name>Necromancer Skill Book II</name>
+            <desc>Increases the effectiveness of the [Necromancer] class skill.</desc>
+		</NecromancerSkillBookUncoCraftT2>
+        <Puppet>
+            <name>Ritual Puppet</name>
+            <desc>Used to Necromancer's summoning.</desc>
+		</Puppet>
         <ShieldStart>
             <name>Barrel Lid</name>
             <desc>A shield that gives off a faint odour of cheap wine.</desc>
@@ -33484,6 +33496,9 @@
         <Sorcerer>
             <name>Sorcerer</name>
         </Sorcerer>
+        <Necromancer>
+            <name>Necromancer</name>
+        </Necromancer>
         <Vanguard>
             <name>Vanguard</name>
         </Vanguard>
@@ -34697,6 +34712,33 @@
             <name>Charged Cloud</name>
             <desc>Makes passing units [Immobile].</desc>
         </ThunderStormZone>
+        <SummonBeast>
+            <name>Summoning Beasts</name>
+            <desc>Summon 1-3 of one of the following: [Boar], [Wolf], [Alpha], or [Bear].<br/>This spell costs 1 [Puppet].<br/>The higher the caster's [Willpower], the stronger the unit summoned.</desc>
+            <levels>
+                <line0>
+                    <desc>Summon 1-3 of one of the following: [Swamoar], [SnowWolf], [SnowAlpha], or [WhiteBear].<br/>This spell costs 1 [Puppet].<br/>The higher the caster's [Willpower], the stronger the unit summoned.</desc>
+                </line0>
+            </levels>
+        </SummonBeast>
+        <SummonUndead>
+            <name>Summoning Undeads</name>
+            <desc>Summon 1-5 of one of the following: [Molerat], [GhostBoar], [GhostWolf], or [Crawler].<br/>This spell costs 2 [Puppet].<br/>The higher the caster's [Willpower], the stronger the unit summoned.</desc>
+            <levels>
+                <line0>
+                    <desc>Summon 1-5 of one of the following: [PlaguedRat], [Plagueridden], [Nightmare], or [SnowCrawler].<br/>This spell costs 2 [Puppet].<br/>The higher the caster's [Willpower], the stronger the unit summoned.</desc>
+                </line0>
+            </levels>
+        </SummonUndead>
+        <SummonChampion>
+            <name>Summoning Legendary</name>
+            <desc>Summon one of the following: [PuzzleMan], [Smot], [Kogo] and [Toro], or [Bionn].<br/>If the cast fails, summon [Mobster]s.<br/>This spell costs 4 [Puppet].<br/>The higher the caster's [Willpower], the stronger the unit summoned.</desc>
+            <levels>
+                <line0>
+                    <desc>Summon one of the following: [PuzzleMan], [Smot], [Kaghal], [Kogo] and [Toro], [CrawlerChampion], [Bionn], or [ChristophGluck].<br/>If the cast fails, summon [Mobster]s.<br/>This spell costs 4 [Puppet].<br/>The higher the caster's [Willpower], the stronger the unit summoned.</desc>
+                </line0>
+            </levels>
+        </SummonChampion>
         <Meditation>
             <name>Meditation</name>
             <desc>Restores ::value1:: Valour points.</desc>
@@ -34737,6 +34779,12 @@
                 At the start of combat, you gain ::value1:: stacks of [ReinforcedElement].
             </desc>
         </SorcererSkillBook1>
+        <NecromancerSkillBook1>
+            <name>Necromancer Skill Book I</name>
+            <desc>
+                At the start of combat, you gain ::value1:: stacks of [ReinforcedNecromancy].
+            </desc>
+        </NecromancerSkillBook1>
         <PriestSkillBook2>
             <name>Priest Skill Book II</name>
             <desc>
@@ -34755,6 +34803,12 @@
                 At the start of combat, you gain ::value1:: stacks of [ReinforcedElement].
             </desc>
         </SorcererSkillBook2>
+        <NecromancerSkillBook2>
+            <name>Necromancer Skill Book II</name>
+            <desc>
+                At the start of combat, you gain ::value1:: stacks of [ReinforcedNecromancy].
+            </desc>
+        </NecromancerSkillBook2>
         <PriestPath>
             <name>Path of Priest</name>
             <desc>
@@ -34773,6 +34827,12 @@
                 At the start of combat, you gain ::value1:: stacks of [ReinforcedElement].
             </desc>
         </SorcererPath>
+        <NecromancerPath>
+            <name>Path of Necromancer</name>
+            <desc>
+                At the start of combat, you gain ::value1:: stacks of [ReinforcedNecromancy].
+            </desc>
+        </NecromancerPath>
         <Protection>
             <name>Protection</name>
             <desc>Gains [Deflection].</desc>
@@ -37097,6 +37157,12 @@
                 Increases the effectiveness of the [Sorcerer] class skill. Increases [Willpower] by [ATTR_0]%.<br/>Stackable up to 10 stacks.
             </desc>
         </ReinforcedElement>
+        <ReinforcedNecromancy>
+            <name>Reinforced Necromancy</name>
+            <desc>
+                Increases the effectiveness of the [Necromancer] class skill. Increases [Willpower] by [ATTR_0]%.<br/>Stackable up to 10 stacks.
+            </desc>
+        </ReinforcedNecromancy>
         <Weakening>
             <name>Weakening</name>
             <desc>[DamageBonusPercent] reduced by [ATTR_0]%.</desc>

@@ -67,11 +67,11 @@ function onSkill() {
 }
 function randomDice (w) {
     var dice = randInt(w, 100);
-    if ( dice <= 30 ) return 1;
-    if ( dice <= 60 ) return 2;
-    if ( dice <= 80 ) return 3;
-    if ( dice <= 90 ) return 4;
-    else return 5;
+    if ( dice > 90 ) return 5;
+    if ( dice > 80 ) return 4;
+    if ( dice > 60 ) return 3;
+    if ( dice > 30 ) return 2;
+    else return 1;
 }
 
 
@@ -120,11 +120,11 @@ function onSkill() {
 }
 function randomDice (w) {
     var dice = randInt(w, 100);
-    if ( dice <= 30 ) return 1;
-    if ( dice <= 60 ) return 2;
-    if ( dice <= 80 ) return 3;
-    if ( dice <= 90 ) return 4;
-    else return 5;
+    if ( dice > 90 ) return 5;
+    if ( dice > 80 ) return 4;
+    if ( dice > 60 ) return 3;
+    if ( dice > 30 ) return 2;
+    else return 1;
 }
 
 
@@ -158,11 +158,11 @@ function onSkill() {
 }
 function randomDice (w) {
     var dice = randInt(w, 100);
-    if ( dice <= 30 ) return 1;
-    if ( dice <= 60 ) return 2;
-    if ( dice <= 80 ) return 3;
-    if ( dice <= 90 ) return 4;
-    else return 5;
+    if ( dice > 90 ) return 5;
+    if ( dice > 80 ) return 4;
+    if ( dice > 60 ) return 3;
+    if ( dice > 30 ) return 2;
+    else return 1;
 }
 
 
@@ -196,11 +196,11 @@ function onSkill() {
 }
 function randomDice (w) {
     var dice = randInt(w, 100);
-    if ( dice <= 30 ) return 1;
-    if ( dice <= 60 ) return 2;
-    if ( dice <= 80 ) return 3;
-    if ( dice <= 90 ) return 4;
-    else return 5;
+    if ( dice > 90 ) return 5;
+    if ( dice > 80 ) return 4;
+    if ( dice > 60 ) return 3;
+    if ( dice > 30 ) return 2;
+    else return 1;
 }
 
 
@@ -294,29 +294,6 @@ function onZoneIn( a ) {
 
 "
 
-// G2Arena1RuleLifeLinked
-function onBeginAction() {
-    for(t in getFoeUnits()) {
-        if(t.health == vars.value) {
-            if(!t.hasStatus(Status.Arena_Willforce)) {
-                t.addStatus(Status.Arena_Willforce);
-                spawnFx(t);
-            }
-        }
-        else {
-            t.cancelStatus(Status.Arena_Willforce);
-        }
-    }
-
-    for(u in getFoeUnits()) {
-        if(!u.hasStatus(Status.Arena_Willforce)) {
-            return;
-        }
-    }
-    win(true);
-}
-
-
 // FearVoiceTest
 function onSkill() {
     play();
@@ -334,11 +311,11 @@ function onSkill() {
 }
 function randomDice (w) {
     var dice = randInt(w, 100);
-    if ( dice <= 30 ) return 1;
-    if ( dice <= 60 ) return 2;
-    if ( dice <= 80 ) return 3;
-    if ( dice <= 90 ) return 4;
-    else return 5;
+    if ( dice > 90 ) return 5;
+    if ( dice > 80 ) return 4;
+    if ( dice > 60 ) return 3;
+    if ( dice > 30 ) return 2;
+    else return 1;
 }
 
 
@@ -359,11 +336,11 @@ function onSkill() {
 }
 function randomDice (w) {
     var dice = randInt(w, 100);
-    if ( dice <= 30 ) return 1;
-    if ( dice <= 60 ) return 2;
-    if ( dice <= 80 ) return 3;
-    if ( dice <= 90 ) return 4;
-    else return 5;
+    if ( dice > 90 ) return 5;
+    if ( dice > 80 ) return 4;
+    if ( dice > 60 ) return 3;
+    if ( dice > 30 ) return 2;
+    else return 1;
 }
 
 
@@ -381,11 +358,11 @@ function onSkill() {
 }
 function randomDice (w) {
     var dice = randInt(w, 100);
-    if ( dice <= 30 ) return 1;
-    if ( dice <= 60 ) return 2;
-    if ( dice <= 80 ) return 3;
-    if ( dice <= 90 ) return 4;
-    else return 5;
+    if ( dice > 90 ) return 5;
+    if ( dice > 80 ) return 4;
+    if ( dice > 60 ) return 3;
+    if ( dice > 30 ) return 2;
+    else return 1;
 }
 
 
@@ -459,35 +436,47 @@ function onBeginAction() {
     }
 }
 
-// Renfort (네크 참고용)
+// SummonBeast
 function onSkill() {
     play();
-    var tab = [UnitClass.Mobster, UnitClass.Poacher, UnitClass.Marauder, UnitClass.MischiefMaker];
-    for(u in getAllies(skill.unit)) {
-        tab.remove(u.kind);
-    }
-    for(t in tab)
-        spawnRenfort(t, 1, false);
-}
-
-
-// Summoning
-function onSkill() {
-    play();
-    var tab = [UnitClass.Kogo, UnitClass.Toro, UnitClass.TrivetteRagnol, UnitClass.Nairolf, UnitClass.Kriskhed];
-    var idx = [1, 2, 0, 1, 1];
-    var i = 0;
-    while(i < min(tab.length, idx.length))) {
-        if (idx[i] != 0) {
-            spawnRenfort(tab[i], idx[i], false);
+    var will = min(skill.unit.stats.willpower, 50);
+    for ( s in skill.unit.getAllStatus() ) {
+        if( s.kind == Status.ReinforcedNecromancy ) {
+            will += ( s.count * 2 );
+            break;
         }
-        i++;
     }
+    var dice = [];
+    dice.push(randomDice(will));
+    dice.push(randomDice(max(will - vars.value1, 0)));
+
+    if (skill.level == 2) {
+        var tab = [UnitClass.Swamoar, UnitClass.SnowWolf, UnitClass.SnowAlpha, UnitClass.WhiteBear, UnitClass.Swamoar];
+    } else {
+        var tab = [UnitClass.Boar, UnitClass.Wolf, UnitClass.Alpha, UnitClass.Bear, UnitClass.Boar];
+    }
+
+    var idx = dice[0] -1;
+    if (idx ==3) {
+        var num = 1;
+    } else {
+        var num = ceil(dice[1]/2);
+    }
+    spawnRenfort(tab[idx], num, false);
+}
+function randomDice (w) {
+    var dice = randInt(w, 100);
+    if ( dice > 90 ) return 5;
+    if ( dice > 80 ) return 4;
+    if ( dice > 60 ) return 3;
+    if ( dice > 30 ) return 2;
+    else return 1;
 }
 
 
-// SummoningUndead
+// SummonUndead
 function onBeginBattle() {
+    vars.allowed = true;
     vars.value2 = 2;
 }
 function onEval(a) {
@@ -497,23 +486,41 @@ function onEval(a) {
 }
 function onSkill() {
     play();
-    var tab = [UnitClass.Kogo, UnitClass.Toro, UnitClass.TrivetteRagnol, UnitClass.Nairolf, UnitClass.Kriskhed];
-    var idx = [1, 2, 0, 1, 1];
-    var i = 0;
-    while(i < min(tab.length, idx.length))) {
-        if (idx[i] != 0) {
-            spawnRenfort(tab[i], idx[i], false);
+    var will = min(skill.unit.stats.willpower, 50);
+    for ( s in skill.unit.getAllStatus() ) {
+        if( s.kind == Status.ReinforcedNecromancy ) {
+            will += ( s.count * 2 );
+            break;
         }
-        i++;
     }
+    var dice = [];
+    dice.push(randomDice(will));
+    dice.push(randomDice(max(will - vars.value1, 0)));
+
+    if (skill.level == 2) {
+        var tab = [UnitClass.PlaguedRat, UnitClass.Plagueridden, UnitClass.Nightmare, UnitClass.SnowCrawler, UnitClass.PlaguedRat];
+    } else {
+        var tab = [UnitClass.Molerat, UnitClass.GhostBoar, UnitClass.GhostWolf, UnitClass.Crawler, UnitClass.Molerat];
+    }
+
+    var idx = dice[0] -1;
+    spawnRenfort(tab[idx], dice[1], false);
     vars.value2 = 0;
 }
 function onEndRound() {
     vars.value2++;
 }
+function randomDice (w) {
+    var dice = randInt(w, 100);
+    if ( dice > 90 ) return 5;
+    if ( dice > 80 ) return 4;
+    if ( dice > 60 ) return 3;
+    if ( dice > 30 ) return 2;
+    else return 1;
+}
 
 
-// SummoningBoss
+// SummonChampion
 function onBeginBattle() {
     vars.allowed = true;
 }
@@ -524,10 +531,53 @@ function onEval(a) {
 }
 function onSkill() {
     play();
-    var tab = [UnitClass.Kogo, UnitClass.Toro, UnitClass.TrivetteRagnol, UnitClass.Nairolf, UnitClass.Kriskhed];
-    var idx = [1, 2, 0, 1, 1];
+    var will = min(skill.unit.stats.willpower, 50);
+    for ( s in skill.unit.getAllStatus() ) {
+        if( s.kind == Status.ReinforcedNecromancy ) {
+            will += ( s.count * 2 );
+            break;
+        }
+    }
+    var dice = [];
+    dice.push(randomDice(max(will - vars.value1, 0)));
+    dice.push(randomDice(will));
+
+    var tab = [];
+    var idx = [];
+    if (dice[0] == 2) {
+        tab.push(UnitClass.PuzzleMan);
+        idx.push(1);
+    } else if (dice[0] == 3) {
+        if (skill.level == 2 && dice[1] > 3 ) {
+            tab.push(UnitClass.Kaghal);
+            idx.push(1);
+        } else {
+            tab.push(UnitClass.Smot);
+            idx.push(1);
+        }
+    } else if (dice[0] == 4) {
+        if (skill.level == 2 && dice[1] > 3 ) {
+            tab.push(UnitClass.CrawlerChampion);
+            idx.push(1);
+        } else {
+            tab.push(UnitClass.Kogo).push(UnitClass.Toro);
+            idx.push(1).push(1);
+        }
+    } else if (dice[0] == 5) {
+        if (skill.level == 2 && dice[1] > 3 ) {
+            tab.push(UnitClass.ChristophGluck);
+            idx.push(1);
+        } else {
+            tab.push(UnitClass.Bionn);
+            idx.push(1);
+        }
+    } else {
+        tab.push(UnitClass.Mobster);
+        idx.push(dice[1]);
+    }
+
     var i = 0;
-    while(i < min(tab.length, idx.length))) {
+    while(i < min(tab.length, idx.length)) {
         if (idx[i] != 0) {
             spawnRenfort(tab[i], idx[i], false);
         }
@@ -535,36 +585,38 @@ function onSkill() {
     }
     vars.allowed = false;
 }
-
-
-// EquipedWithIncendiaryFlaskZone
-function onSkill() {
-    createAreaEffect(\"Immediate\", 1, { skillId: Skill.FireZone });
+function randomDice (w) {
+    var dice = randInt(w, 100);
+    if ( dice > 90 ) return 5;
+    if ( dice > 80 ) return 4;
+    if ( dice > 60 ) return 3;
+    if ( dice > 30 ) return 2;
+    else return 1;
 }
 
-"
 
-// FireZone
-function onZoneIn(a) {
-    a.target.addStatus(Status.Burning);
+
+// SummonChampion Test
+function onBeginBattle() {
+    vars.allowed = true;
 }
-
-function onZoneMoveEnd(a) {
-    a.target.addStatus(Status.Burning);
-}
-
-// LightningZone
-
-
-// CelestiumLightning
 function onEval(a) {
-    a.dmg = floor(a.target.stats.health * vars.value1 / 100);
+    if( !vars.allowed ){
+        dontAllow();
+    }
 }
+function onSkill() {
+    play();
 
-function onPostSkill() {
-    cast(Skill.CelestiumLightningPersist, { skill : skill }, skill);
+    var tab = [UnitClass.Kogo, UnitClass.Toro, UnitClass.Kaghal, UnitClass.ChristophGluck, UnitClass.Bionn];
+    var idx = [1, 1, 1, 1, 1];
+
+    var i = 0;
+    while(i < min(tab.length, idx.length)) {
+        if (idx[i] != 0) {
+            spawnRenfort(tab[i], idx[i], false);
+        }
+        i++;
+    }
+    vars.allowed = false;
 }
-
-// PestiferedFromCelling
-
-// RockSlideZone

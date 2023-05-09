@@ -32,6 +32,7 @@
     "itemCost": [],
     "jobLevel": 5
 },
+
 {
     "item": "PriestSkillBookUncoCraftT1",
     "tool": "Anvil",
@@ -269,6 +270,26 @@
         "bundle": "BundleSkillBookT2"
     },
     "jobLevel": 5,
+    "learnCost": [],
+    "itemCost": []
+},
+
+
+{
+    "item": "Puppet",
+    "tool": "ApothecaryTable",
+    "recipe": [
+        {
+            "qty": 1,
+            "item": "AnimalCorpse"
+        },
+        {
+            "qty": 1,
+            "item": "Corpse"
+        }
+    ],
+    "props": {},
+    "jobLevel": 1,
     "learnCost": [],
     "itemCost": []
 },

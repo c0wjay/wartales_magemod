@@ -19940,6 +19940,28 @@
 					"iconeDone": true
 				},
 				{
+					"id": "Puppet",
+					"name": "Shaman's Puppet",
+					"weight": 3,
+					"baseBonus": [],
+					"props": {
+						"model": "chars/Weapons/LeftHand_BlindingPowder.fbx",
+						"disableLoot": true
+					},
+					"icon": {
+						"file": "ui/Icons_Resources.png",
+						"size": 96,
+						"x": 7,
+						"y": 3
+					},
+					"type": "LeftHand",
+					"price": 1,
+					"desc": "",
+					"rarity": 1,
+					"group": 12,
+					"iconeDone": true
+				},
+				{
 					"id": "BlindingPowder",
 					"name": "Poudre aveuglante",
 					"weight": 0.2,
@@ -27249,6 +27271,54 @@
 					"rarity": 3,
 					"price": 200,
 					"desc": "Il est difficile de décrire cet objet tant il est incongru. Taillé dans de l’os, ce boitier présente une sorte d’interrupteur qui, lorsqu’il est pressé, produit un bruit enchanteur pour les animaux."
+				},
+				{
+					"id": "NecromancerSkillBookUncoCraftT1",
+					"name": "Necromancer Skill Book I",
+					"weight": 0.5,
+					"baseBonus": [],
+					"props": {
+						"passiveSkill": "NecromancerSkillBook1",
+						"requireLevel": 5,
+						"disableLoot": true,
+						"fixedLevel": 6
+					},
+					"icon": {
+						"file": "ui/Icons_Resources.png",
+						"size": 96,
+						"x": 7,
+						"y": 16
+					},
+					"type": "BeltAccessory",
+					"price": 129,
+					"desc": "",
+					"rarity": 1,
+					"group": 21,
+					"iconeDone": true
+				},
+				{
+					"id": "NecromancerSkillBookUncoCraftT2",
+					"name": "Necromancer Skill Book II",
+					"weight": 0.5,
+					"baseBonus": [],
+					"props": {
+						"passiveSkill": "NecromancerSkillBook2",
+						"requireLevel": 11,
+						"disableLoot": true,
+						"fixedLevel": 12
+					},
+					"icon": {
+						"file": "ui/Icons_Resources.png",
+						"size": 96,
+						"x": 8,
+						"y": 16
+					},
+					"type": "BeltAccessory",
+					"price": 234,
+					"desc": "",
+					"rarity": 1,
+					"group": 21,
+					"iconeDone": true
 				},
 				{
 					"id": "BackAccMiningGemsChance",
@@ -48573,6 +48643,34 @@
 					"jobLevel": 3
 				},
 				{
+					"item": "NecromancerSkillBookUncoCraftT1",
+					"tool": "Anvil",
+					"recipe": [
+						{
+							"qty": 6,
+							"item": "IronOre"
+						},
+						{
+							"qty": 5,
+							"item": "Wood"
+						},
+						{
+							"qty": 4,
+							"item": "Rimesteel"
+						},
+						{
+							"qty": 6,
+							"item": "Charcoal"
+						}
+					],
+					"props": {
+						"bundle": "BundleSkillBookT1"
+					},
+					"learnCost": [],
+					"itemCost": [],
+					"jobLevel": 3
+				},
+				{
 					"item": "PriestSkillBookUncoCraftT2",
 					"tool": "Anvil",
 					"recipe": [
@@ -48632,6 +48730,38 @@
 					"item": "SorcererSkillBookUncoCraftT2",
 					"tool": "Anvil",
 					"recipe": [
+						{
+							"qty": 6,
+							"item": "IronOre"
+						},
+						{
+							"qty": 6,
+							"item": "GoldMineral"
+						},
+						{
+							"qty": 5,
+							"item": "Wood"
+						},
+						{
+							"qty": 6,
+							"item": "Charcoal"
+						}
+					],
+					"props": {
+						"bundle": "BundleSkillBookT2"
+					},
+					"jobLevel": 5,
+					"learnCost": [],
+					"itemCost": []
+				},
+				{
+					"item": "NecromancerSkillBookUncoCraftT2",
+					"tool": "Anvil",
+					"recipe": [
+						{
+							"qty": 1,
+							"item": "NecromancerSkillBookUncoCraftT1"
+						},
 						{
 							"qty": 6,
 							"item": "IronOre"
@@ -53725,6 +53855,24 @@
 					"itemCost": []
 				},
 				{
+					"item": "Puppet",
+					"tool": "ApothecaryTable",
+					"recipe": [
+						{
+							"qty": 1,
+							"item": "AnimalCorpse"
+						},
+						{
+							"qty": 1,
+							"item": "Corpse"
+						}
+					],
+					"props": {},
+					"jobLevel": 1,
+					"learnCost": [],
+					"itemCost": []
+				},
+				{
 					"item": "Beer",
 					"tool": "BrewBarrel",
 					"recipe": [
@@ -55386,61 +55534,61 @@
 					"title": "Anvil"
 				},
 				{
-					"index": 161,
+					"index": 163,
 					"title": "Workshop"
 				},
 				{
-					"index": 161,
+					"index": 163,
 					"title": "Divers",
 					"level": 1
 				},
 				{
-					"index": 173,
+					"index": 175,
 					"level": 1,
 					"title": "Animal"
 				},
 				{
-					"index": 183,
+					"index": 185,
 					"level": 1,
 					"title": "Belts"
 				},
 				{
-					"index": 200,
+					"index": 202,
 					"level": 1,
 					"title": "ToolCampUpgradable"
 				},
 				{
-					"index": 237,
+					"index": 239,
 					"level": 1,
 					"title": "ToolCampNonUpgradable"
 				},
 				{
-					"index": 245,
+					"index": 247,
 					"title": "Apothecary"
 				},
 				{
-					"index": 337,
+					"index": 340,
 					"title": "ConverterTools"
 				},
 				{
-					"index": 355,
+					"index": 358,
 					"title": "Meta"
 				},
 				{
-					"index": 381,
+					"index": 384,
 					"title": "PathMight"
 				},
 				{
-					"index": 393,
+					"index": 396,
 					"title": "PathTrade"
 				},
 				{
-					"index": 405,
+					"index": 408,
 					"level": 1,
 					"title": "PathCrime"
 				},
 				{
-					"index": 417,
+					"index": 420,
 					"title": "PathMystery"
 				}
 			],
@@ -62616,6 +62764,10 @@
 							"minLevel": 2
 						},
 						{
+							"skill": "SummonBeast",
+							"minLevel": 2
+						},
+						{
 							"skill": "RangeHeal",
 							"minLevel": 5
 						},
@@ -62625,6 +62777,10 @@
 						},
 						{
 							"skill": "FireBall",
+							"minLevel": 5
+						},
+						{
+							"skill": "SummonUndead",
 							"minLevel": 5
 						},
 						{
@@ -62649,6 +62805,10 @@
 						},
 						{
 							"skill": "ThunderStorm",
+							"minLevel": 10
+						},
+						{
+							"skill": "SummonChampion",
 							"minLevel": 10
 						},
 						{
@@ -62870,6 +63030,62 @@
 					"model": "chars/Prefabs/Prefab_WP.prefab",
 					"notes": "",
 					"name": "Sorcerer",
+					"tier": 1,
+					"equipment": [],
+					"rarity": 0,
+					"timelinePriority": 0,
+					"iconeDone": true
+				},
+				{
+					"id": "Necromancer",
+					"weaponTypes": [
+						{
+							"wp": "Wand"
+						}
+					],
+					"baseSkills": [
+						{
+							"skill": "NecromancerPath"
+						}
+					],
+					"props": {
+						"armorKind": "ArmorLight",
+						"flags": 32
+					},
+					"stats": [
+						{
+							"value": 4,
+							"attribute": "Strength",
+							"upValue": 20
+						},
+						{
+							"value": 4,
+							"attribute": "Dexterity",
+							"upValue": 20
+						},
+						{
+							"value": 6,
+							"attribute": "Constitution",
+							"upValue": 32
+						},
+						{
+							"value": 0,
+							"attribute": "CritHitPercent",
+							"upValue": 10
+						},
+						{
+							"value": 6,
+							"attribute": "Movement"
+						},
+						{
+							"value": 6,
+							"attribute": "Willpower",
+							"upValue": 30
+						}
+					],
+					"model": "chars/Prefabs/Prefab_WP.prefab",
+					"notes": "",
+					"name": "Necromancer",
 					"tier": 1,
 					"equipment": [],
 					"rarity": 0,
@@ -76723,7 +76939,7 @@
 						"healPreview": 1,
 						"useWithoutWeapon": true
 					},
-					"script": "function onSkill() {\n\tplay();\n\tvar recovery = vars.value1;\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedRecovery ) {\n\t\t\trecovery += ( vars.value1 * s.count / 10 );\n\t\t}\n\t}\n\tskill.target.gainsHealth( ceil( skill.target.stats.health * ( min(skill.unit.stats.willpower, 50)/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);\n\tif( skill.level == 2 ) {\n\t\tvar armorRecovery = ceil ( skill.target.stats.armor * min(skill.unit.stats.willpower, 50)/100 * (recovery/75) * randInt(12,20)/16 );\n\t\tskill.target.armor = min(skill.target.armor + armorRecovery, skill.target.stats.armor);\n\t}\n}",
+					"script": "function onSkill() {\n\tplay();\n\tvar recovery = vars.value1;\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedRecovery ) {\n\t\t\trecovery += ( vars.value1 * s.count / 10 );\n\t\t\tbreak;\n\t\t}\n\t}\n\tskill.target.gainsHealth( ceil( skill.target.stats.health * ( min(skill.unit.stats.willpower, 50)/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);\n\tif( skill.level == 2 ) {\n\t\tfor( s in skill.target.getAllStatus() ) {\n\t\t\tif( s.isMalus )\n\t\t\t\ts.cancel();\n\t\t}\n\t}\n}",
 					"notes": "",
 					"levels": [
 						{
@@ -76760,7 +76976,8 @@
 						"specialAnim": "ThrowLeftGrenade",
 						"apCost": 1,
 						"vars": {
-							"value1": 25
+							"value1": 25,
+							"value2": 1
 						},
 						"needDisengaged": true,
 						"cursor": "CursorHeal",
@@ -76769,7 +76986,7 @@
 						"castFx": "prefabs/fx/fight/Explosion/PoisonBomb/PoisonBomb.fx",
 						"throwModel": "chars/Weapons/LeftHand_IncendiaryFlask.fbx"
 					},
-					"script": "function onSkill() {\n\tplayAttack();\n\tvar recovery = vars.value1;\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedRecovery ) {\n\t\t\trecovery += ( vars.value1 * s.count / 10 );\n\t\t}\n\t}\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side == skill.unit.side ) {\n\t\t\tt.target.gainsHealth( ceil( t.target.stats.health * ( will/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);\n\t\t\tif( skill.level == 2 && randomDice(will) == 3 ) {\n\t\t\t\tt.target.addStatus(Status.Protection, vars.value2, true);\n\t\t\t}\n\t\t}\n\t}\n}\n\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+					"script": "function onSkill() {\n\tplayAttack();\n\tvar recovery = vars.value1;\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedRecovery ) {\n\t\t\trecovery += ( vars.value1 * s.count / 10 );\n\t\t\tbreak;\n\t\t}\n\t}\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side == skill.unit.side ) {\n\t\t\tt.target.gainsHealth( ceil( t.target.stats.health * ( will/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);\n\t\t\tif( skill.level == 2 && randomDice(will) == 3 ) {\n\t\t\t\tt.target.addStatus(Status.Protection, vars.value2, true);\n\t\t\t}\n\t\t}\n\t}\n}\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice > 90 ) return 5;\n\tif ( dice > 80 ) return 4;\n\tif ( dice > 60 ) return 3;\n\tif ( dice > 30 ) return 2;\n\telse return 1;\n}",
 					"notes": "",
 					"levels": [
 						{
@@ -76815,7 +77032,7 @@
 						"useWithoutWeapon": true,
 						"extraFx": "prefabs/fx/fight/BuffCry/BuffCryBlue.fx"
 					},
-					"script": "function onSkill() {\n\tplay();\n\tvar recovery = vars.value1;\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedRecovery ) {\n\t\t\trecovery += ( vars.value1 * s.count / 10 );\n\t\t}\n\t}\n\t@sync for( u in getAllies(skill.unit) ) {\n\t\tu.gainsHealth(ceil( u.stats.health * min(skill.unit.stats.willpower, 50)/50 * (recovery/100) ), null);\n\t}\n}",
+					"script": "function onSkill() {\n\tplay();\n\tvar recovery = vars.value1;\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedRecovery ) {\n\t\t\trecovery += ( vars.value1 * s.count / 10 );\n\t\t\tbreak;\n\t\t}\n\t}\n\t@sync for( u in getAllies(skill.unit) ) {\n\t\tu.gainsHealth(ceil( u.stats.health * min(skill.unit.stats.willpower, 50)/50 * (recovery/100) ), null);\n\t\tif( skill.level == 2 ) {\n\t\t\tvar armorRecovery = ceil ( u.stats.armor * min(skill.unit.stats.willpower, 50)/100 * (recovery/100) );\n\t\t\tu.armor = min(u.armor + armorRecovery, u.stats.armor);\n\t\t}\n\t}\n}",
 					"notes": "",
 					"levels": [
 						{
@@ -76853,7 +77070,8 @@
 						"apCost": 0,
 						"defaultAction": true,
 						"vars": {
-							"value1": 20
+							"value1": 20,
+							"value2": 20
 						},
 						"tooltipStatus": [
 							{
@@ -76864,7 +77082,7 @@
 						"useWithoutWeapon": true,
 						"extraFx": "prefabs/fx/fight/BuffCry/BionnTransformation.fx"
 					},
-					"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedCurse ) {\n\t\t\twill += ( s.count * 2 );\n\t\t}\n\t}\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side != skill.unit.side ) {\n\t\t\tvar num = randomDice( max(will - vars.value1, 0) );\n\t\t\tt.target.addStatus(Status.Terror, num);\n\t\t\tif( skill.level == 2 ) {\n\t\t\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\t\t\tif( num2 > 2 ) {\n\t\t\t\t\tt.target.addStatus(Status.Immobile, 1, true);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+					"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedCurse ) {\n\t\t\twill += ( s.count * 2 );\n\t\t\tbreak;\n\t\t}\n\t}\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side != skill.unit.side ) {\n\t\t\tvar num = randomDice( max(will - vars.value1, 0) );\n\t\t\tt.target.addStatus(Status.Terror, num);\n\t\t\tif( skill.level == 2 ) {\n\t\t\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\t\t\tif( num2 > 2 ) {\n\t\t\t\t\tt.target.addStatus(Status.Immobile, 1, true);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice > 90 ) return 5;\n\tif ( dice > 80 ) return 4;\n\tif ( dice > 60 ) return 3;\n\tif ( dice > 30 ) return 2;\n\telse return 1;\n}",
 					"notes": "",
 					"levels": [
 						{
@@ -76907,7 +77125,8 @@
 						"specialAnim": "ThrowLeftGrenade",
 						"apCost": 1,
 						"vars": {
-							"value1": 20
+							"value1": 20,
+							"value2": 20
 						},
 						"tooltipStatus": [
 							{
@@ -76926,7 +77145,7 @@
 						"throwFx": "prefabs/fx/fight/Explosion/ConfusingPowder/ConfusingPowderThrowTrail.fx",
 						"throwModel": "chars/Weapons/LeftHand_BlindingPowder.fbx"
 					},
-					"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedCurse ) {\n\t\t\twill += ( s.count * 2 );\n\t\t}\n\t}\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side != skill.unit.side ) {\n\t\t\tvar num = randomDice( max(will - vars.value1, 0) );\n\t\t\tif ( num == 1 ) t.target.addStatus(Status.Slowdown, 1, true);\n\t\t\tif ( num == 2 ) t.target.addStatus(Status.Fever, 3, true);\n\t\t\tif ( num == 3 || num == 4 ) t.target.addStatus(Status.Weakening, 2, true);\n\t\t\tif ( num == 5 ) t.target.addStatus(Status.Fever, 5, true);\n\t\t\tif( skill.level == 2 ) {\n\t\t\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\t\t\tif( num2 > 3 ) {\n\t\t\t\t\tt.target.addStatus(Status.Stun, 2, true);\n\t\t\t\t} else {\n\t\t\t\t\tt.target.addStatus(Status.Fever, 2, true);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+					"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedCurse ) {\n\t\t\twill += ( s.count * 2 );\n\t\t\tbreak;\n\t\t}\n\t}\n\tfor( t in skill.getTargets() ) {\n\t\tif( t.target.side != skill.unit.side ) {\n\t\t\tvar num = randomDice( max(will - vars.value1, 0) );\n\t\t\tif ( num == 1 ) t.target.addStatus(Status.Slowdown, 1, true);\n\t\t\tif ( num == 2 ) t.target.addStatus(Status.Fever, 3, true);\n\t\t\tif ( num == 3 || num == 4 ) t.target.addStatus(Status.Weakening, 2, true);\n\t\t\tif ( num == 5 ) t.target.addStatus(Status.Fever, 5, true);\n\t\t\tif( skill.level == 2 ) {\n\t\t\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\t\t\tif( num2 > 3 ) {\n\t\t\t\t\tt.target.addStatus(Status.Stun, 2, true);\n\t\t\t\t} else {\n\t\t\t\t\tt.target.addStatus(Status.Fever, 2, true);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice > 90 ) return 5;\n\tif ( dice > 80 ) return 4;\n\tif ( dice > 60 ) return 3;\n\tif ( dice > 30 ) return 2;\n\telse return 1;\n}",
 					"notes": "",
 					"levels": [
 						{
@@ -76966,7 +77185,8 @@
 						"isHeroic": true,
 						"apCost": 1,
 						"vars": {
-							"value1": 20
+							"value1": 20,
+							"value2": 20
 						},
 						"tooltipStatus": [
 							{
@@ -76982,7 +77202,7 @@
 						"needDisengaged": true,
 						"useWithoutWeapon": true
 					},
-					"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedCurse ) {\n\t\t\twill += ( s.count * 2 );\n\t\t}\n\t}\n\tvar num = randomDice( max(will - vars.value1, 0) );\n\tif ( num < 3 || num == 4 ) {\n\t\tskill.target.addStatus(Status.Enervate, randomDice(will));\n\t}\n\tif ( num == 3 ) skill.target.addStatus(Status.Berserk, 1, true);\n\tif ( num == 5 ) skill.target.addStatus(Status.BrothersFury, 1, true);\n\tif( skill.level == 2 ) {\n\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\tif( num2 == 5 ) {\n\t\t\tskill.target.addStatus(Status.Arena_Willforce, 2, true);\n\t\t}\n\t}\n}\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice <= 30 ) return 1;\n\tif ( dice <= 60 ) return 2;\n\tif ( dice <= 80 ) return 3;\n\tif ( dice <= 90 ) return 4;\n\telse return 5;\n}",
+					"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedCurse ) {\n\t\t\twill += ( s.count * 2 );\n\t\t\tbreak;\n\t\t}\n\t}\n\tvar num = randomDice( max(will - vars.value1, 0) );\n\tif ( num < 3 || num == 4 ) {\n\t\tskill.target.addStatus(Status.Enervate, randomDice(will));\n\t}\n\tif ( num == 3 ) skill.target.addStatus(Status.Berserk, 1, true);\n\tif ( num == 5 ) skill.target.addStatus(Status.BrothersFury, 1, true);\n\tif( skill.level == 2 ) {\n\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\tif( num2 > 3 ) {\n\t\t\tif (!skill.target.getPassiveSkills().contains(Skill.Immortal)) {\n\t\t\t\tskill.target.addTemporarySkill(Skill.Immortal);\n\t\t\t} else {\n\t\t\t\tskill.target.addStatus(Status.Enervate, 3);\n\t\t\t}\n\t\t}\n\t}\n\tspawnFx();\n}\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice > 90 ) return 5;\n\tif ( dice > 80 ) return 4;\n\tif ( dice > 60 ) return 3;\n\tif ( dice > 30 ) return 2;\n\telse return 1;\n}",
 					"notes": "",
 					"levels": [
 						{
@@ -77031,7 +77251,7 @@
 						"castFx": "prefabs/fx/environment/RockSlide/RockSlide.fx",
 						"flags": 1
 					},
-					"script": "function onSkillEval(a) {\n\tfor( u in a.getTargets() ) {\n\t\tu.dmg += calculateDamage(u.target);\n\t}\n}\nfunction calculateDamage(t) {\n\tvar target_hp = t.stats.health + t.stats.armor;\n\tvar damage = (target_hp * vars.value1) + vars.value2;\n\tdamage = damage * (skill.unit.stats.willpower / 100);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedElement ) {\n\t\t\tdamage += ( damage * s.count / 10 );\n\t\t}\n\t}\n\treturn ceil(damage);\n}",
+					"script": "function onSkillEval(a) {\n\tfor( u in a.getTargets() ) {\n\t\tu.dmg += calculateDamage(u.target);\n\t}\n}\nfunction calculateDamage(t) {\n\tvar target_hp = t.stats.health + t.stats.armor;\n\tvar damage = (target_hp * vars.value1) + vars.value2;\n\tdamage = damage * (skill.unit.stats.willpower / 100);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedElement ) {\n\t\t\tdamage += ( damage * s.count / 10 );\n\t\t\tbreak;\n\t\t}\n\t}\n\treturn ceil(damage);\n}",
 					"notes": "",
 					"levels": [
 						{
@@ -77087,7 +77307,7 @@
 						"throwFx": "prefabs/fx/fight/Explosion/Grenade/MolotovThrowTrail.fx",
 						"needDisengaged": true
 					},
-					"script": "function onSkillEval(a) {\n\tfor( u in a.getTargets() ) {\n\t\tu.dmg += calculateDamage(u.target);\n\t}\n}\nfunction onZoneHit() {\n\tcreateSkillZone(Skill.FireZone);\n}\nfunction calculateDamage(t) {\n\tvar target_hp = t.stats.health + t.stats.armor;\n\tvar damage = (target_hp * vars.value1) + vars.value2;\n\tdamage = damage * (skill.unit.stats.willpower / 100);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedElement ) {\n\t\t\tdamage += ( damage * s.count / 10 );\n\t\t}\n\t}\n\treturn ceil(damage);\n}",
+					"script": "function onSkillEval(a) {\n\tfor( u in a.getTargets() ) {\n\t\tu.dmg += calculateDamage(u.target);\n\t}\n}\nfunction onZoneHit() {\n\tcreateSkillZone(Skill.FireZone);\n}\nfunction calculateDamage(t) {\n\tvar target_hp = t.stats.health + t.stats.armor;\n\tvar damage = (target_hp * vars.value1) + vars.value2;\n\tdamage = damage * (skill.unit.stats.willpower / 100);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedElement ) {\n\t\t\tdamage += ( damage * s.count / 10 );\n\t\t\tbreak;\n\t\t}\n\t}\n\treturn ceil(damage);\n}",
 					"notes": "",
 					"levels": [
 						{
@@ -77131,7 +77351,7 @@
 						"needDisengaged": true,
 						"flags": 2
 					},
-					"script": "function onSkillEval(a) {\n\tfor( u in a.getTargets() ) {\n\t\tu.dmg += calculateDamage(u.target);\n\t}\n}\nfunction onPostSkill() {\n\tif ( skill.level == 2 )\n\t\tcast(Skill.ThunderStormZone, { skill : skill }, skill);\n}\nfunction calculateDamage(t) {\n\tvar target_hp = t.stats.health;\n\tvar damage = (target_hp * vars.value1) + vars.value2;\n\tdamage = damage * (skill.unit.stats.willpower / 100);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedElement ) {\n\t\t\tdamage += ( damage * s.count / 10 );\n\t\t}\n\t}\n\treturn ceil(damage);\n}",
+					"script": "function onSkillEval(a) {\n\tfor( u in a.getTargets() ) {\n\t\tu.dmg += calculateDamage(u.target);\n\t}\n}\nfunction onPostSkill() {\n\tif ( skill.level == 2 )\n\t\tcast(Skill.ThunderStormZone, { skill : skill }, skill);\n}\nfunction calculateDamage(t) {\n\tvar target_hp = t.stats.health;\n\tvar damage = (target_hp * vars.value1) + vars.value2;\n\tdamage = damage * (skill.unit.stats.willpower / 100);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedElement ) {\n\t\t\tdamage += ( damage * s.count / 10 );\n\t\t\tbreak;\n\t\t}\n\t}\n\treturn ceil(damage);\n}",
 					"notes": "",
 					"levels": [
 						{
@@ -77191,6 +77411,138 @@
 						"x": 1,
 						"y": 19
 					},
+					"done": 2
+				},
+				{
+					"id": "SummonBeast",
+					"name": "Summoning Beast",
+					"desc": "",
+					"mode": 4,
+					"range": {},
+					"props": {
+						"isHeroic": true,
+						"specialAnim": "Taunt",
+						"apCost": 0,
+						"defaultAction": true,
+						"vars": {
+							"value1": 20
+						},
+						"itemCost": {
+							"item": "Puppet",
+							"qty": 1
+						},
+						"needDisengaged": true,
+						"useWithoutWeapon": true,
+						"extraFx": "prefabs/fx/fight/BuffCry/BuffCryWhite.fx"
+					},
+					"script": "function onSkill() {\n\tplay();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedNecromancy ) {\n\t\t\twill += ( s.count * 2 );\n\t\t\tbreak;\n\t\t}\n\t}\n\tvar dice = [];\n\tdice.push(randomDice(will));\n\tdice.push(randomDice(max(will - vars.value1, 0)));\n\n\tif (skill.level == 2) {\n\t\tvar tab = [UnitClass.Swamoar, UnitClass.SnowWolf, UnitClass.SnowAlpha, UnitClass.WhiteBear, UnitClass.Swamoar];\n\t} else {\n\t\tvar tab = [UnitClass.Boar, UnitClass.Wolf, UnitClass.Alpha, UnitClass.Bear, UnitClass.Boar];\n\t}\n\n\tvar idx = dice[0] -1;\n\tif (idx ==3) {\n\t\tvar num = 1;\n\t} else {\n\t\tvar num = ceil(dice[1]/2);\n\t}\n\tspawnRenfort(tab[idx], num, false);\n}\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice > 90 ) return 5;\n\tif ( dice > 80 ) return 4;\n\tif ( dice > 60 ) return 3;\n\tif ( dice > 30 ) return 2;\n\telse return 1;\n}",
+					"notes": "",
+					"levels": [
+						{
+							"props": {
+								"vars": {
+									"value1": 10
+								}
+							}
+						}
+					],
+					"icon": {
+						"file": "ui/Icons/BattleIcons_02_96PX.png",
+						"size": 96,
+						"x": 13,
+						"y": 3
+					},
+					"iconeDone": true,
+					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "SummonUndead",
+					"name": "Summoning Undead",
+					"desc": "",
+					"mode": 4,
+					"range": {},
+					"props": {
+						"isHeroic": true,
+						"specialAnim": "Taunt",
+						"apCost": 1,
+						"defaultAction": true,
+						"vars": {
+							"value1": 20,
+							"value2": 2,
+							"allowed": true
+						},
+						"itemCost": {
+							"item": "Puppet",
+							"qty": 2
+						},
+						"needDisengaged": true,
+						"useWithoutWeapon": true,
+						"extraFx": "prefabs/fx/fight/BuffCry/BuffCryBlue.fx"
+					},
+					"script": "function onBeginBattle() {\n\tvars.allowed = true;\n\tvars.value2 = 2;\n}\nfunction onEval(a) {\n\tif( vars.value2 < 2 ){\n\t\tdontAllow();\n\t}\n}\nfunction onSkill() {\n\tplay();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedNecromancy ) {\n\t\t\twill += ( s.count * 2 );\n\t\t\tbreak;\n\t\t}\n\t}\n\tvar dice = [];\n\tdice.push(randomDice(will));\n\tdice.push(randomDice(max(will - vars.value1, 0)));\n\n\tif (skill.level == 2) {\n\t\tvar tab = [UnitClass.PlaguedRat, UnitClass.Plagueridden, UnitClass.Nightmare, UnitClass.SnowCrawler, UnitClass.PlaguedRat];\n\t} else {\n\t\tvar tab = [UnitClass.Molerat, UnitClass.GhostBoar, UnitClass.GhostWolf, UnitClass.Crawler, UnitClass.Molerat];\n\t}\n\n\tvar idx = dice[0] -1;\n\tspawnRenfort(tab[idx], dice[1], false);\n\tvars.value2 = 0;\n}\nfunction onEndRound() {\n\tvars.value2++;\n}\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice > 90 ) return 5;\n\tif ( dice > 80 ) return 4;\n\tif ( dice > 60 ) return 3;\n\tif ( dice > 30 ) return 2;\n\telse return 1;\n}",
+					"notes": "",
+					"levels": [
+						{
+							"props": {
+								"vars": {
+									"value1": 10
+								}
+							}
+						}
+					],
+					"icon": {
+						"file": "ui/Icons/BattleIcons96PX.png",
+						"size": 96,
+						"x": 14,
+						"y": 7
+					},
+					"iconeDone": true,
+					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "SummonChampion",
+					"name": "Summoning Legendary",
+					"desc": "",
+					"mode": 4,
+					"range": {},
+					"props": {
+						"isHeroic": true,
+						"specialAnim": "Taunt",
+						"apCost": 2,
+						"defaultAction": true,
+						"vars": {
+							"value1": 20,
+							"allowed": true
+						},
+						"itemCost": {
+							"item": "Puppet",
+							"qty": 4
+						},
+						"needDisengaged": true,
+						"useWithoutWeapon": true,
+						"extraFx": "prefabs/fx/fight/BuffCry/BionnTransformation.fx"
+					},
+					"script": "function onBeginBattle() {\n\tvars.allowed = true;\n}\nfunction onEval(a) {\n\tif( !vars.allowed ){\n\t\tdontAllow();\n\t}\n}\nfunction onSkill() {\n\tplay();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedNecromancy ) {\n\t\t\twill += ( s.count * 2 );\n\t\t\tbreak;\n\t\t}\n\t}\n\tvar dice = [];\n\tdice.push(randomDice(max(will - vars.value1, 0)));\n\tdice.push(randomDice(will));\n\n\tvar tab = [];\n\tvar idx = [];\n\tif (dice[0] == 2) {\n\t\ttab.push(UnitClass.PuzzleMan);\n\t\tidx.push(1);\n\t} else if (dice[0] == 3) {\n\t\tif (skill.level == 2 && dice[1] > 3 ) {\n\t\t\ttab.push(UnitClass.Kaghal);\n\t\t\tidx.push(1);\n\t\t} else {\n\t\t\ttab.push(UnitClass.Smot);\n\t\t\tidx.push(1);\n\t\t}\n\t} else if (dice[0] == 4) {\n\t\tif (skill.level == 2 && dice[1] > 3 ) {\n\t\t\ttab.push(UnitClass.CrawlerChampion);\n\t\t\tidx.push(1);\n\t\t} else {\n\t\t\ttab.push(UnitClass.Kogo).push(UnitClass.Toro);\n\t\t\tidx.push(1).push(1);\n\t\t}\n\t} else if (dice[0] == 5) {\n\t\tif (skill.level == 2 && dice[1] > 3 ) {\n\t\t\ttab.push(UnitClass.ChristophGluck);\n\t\t\tidx.push(1);\n\t\t} else {\n\t\t\ttab.push(UnitClass.Bionn);\n\t\t\tidx.push(1);\n\t\t}\n\t} else {\n\t\ttab.push(UnitClass.Mobster);\n\t\tidx.push(dice[1]);\n\t}\n\n\tvar i = 0;\n\twhile(i < min(tab.length, idx.length)) {\n\t\tif (idx[i] != 0) {\n\t\t\tspawnRenfort(tab[i], idx[i], false);\n\t\t}\n\t\ti++;\n\t}\n\tvars.allowed = false;\n}\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice > 90 ) return 5;\n\tif ( dice > 80 ) return 4;\n\tif ( dice > 60 ) return 3;\n\tif ( dice > 30 ) return 2;\n\telse return 1;\n}",
+					"notes": "",
+					"levels": [
+						{
+							"props": {
+								"vars": {
+									"value1": 10
+								}
+							}
+						}
+					],
+					"icon": {
+						"file": "ui/Icons/BattleIcons_02_96PX.png",
+						"size": 96,
+						"x": 8,
+						"y": 15
+					},
+					"iconeDone": true,
+					"group": 16,
 					"done": 2
 				},
 				{
@@ -77328,7 +77680,7 @@
 							"value1": 1
 						}
 					},
-					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedRecovery, vars.value1);\n\t\tvars.start = true;\n\t}\n\tspawnFx();\n}",
+					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedRecovery, vars.value1);\n\t\tvars.start = true;\n\t}\n}",
 					"notes": "",
 					"icon": {
 						"file": "ui/Icons_Resources.png",
@@ -77357,7 +77709,7 @@
 							"value1": 1
 						}
 					},
-					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedCurse, vars.value1);\n\t\tvars.start = true;\n\t}\n\tspawnFx();\n}",
+					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedCurse, vars.value1);\n\t\tvars.start = true;\n\t}\n}",
 					"notes": "",
 					"icon": {
 						"file": "ui/Icons_Resources.png",
@@ -77386,12 +77738,41 @@
 							"value1": 1
 						}
 					},
-					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedElement, vars.value1);\n\t\tvars.start = true;\n\t}\n\tspawnFx();\n}",
+					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedElement, vars.value1);\n\t\tvars.start = true;\n\t}\n}",
 					"notes": "",
 					"icon": {
 						"file": "ui/Icons_Resources.png",
 						"size": 96,
 						"x": 10,
+						"y": 16
+					},
+					"iconeDone": true,
+					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "NecromancerSkillBook1",
+					"name": "Necromancer Skill Book I",
+					"desc": "",
+					"mode": 2,
+					"range": {},
+					"props": {
+						"tooltipStatus": [
+							{
+								"st": "ReinforcedNecromancy"
+							}
+						],
+						"vars": {
+							"start": false,
+							"value1": 1
+						}
+					},
+					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedNecromancy, vars.value1);\n\t\tvars.start = true;\n\t}\n}",
+					"notes": "",
+					"icon": {
+						"file": "ui/Icons_Resources.png",
+						"size": 96,
+						"x": 7,
 						"y": 16
 					},
 					"iconeDone": true,
@@ -77415,7 +77796,7 @@
 							"value1": 2
 						}
 					},
-					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedRecovery, vars.value1);\n\t\tvars.start = true;\n\t}\n\tspawnFx();\n}",
+					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedRecovery, vars.value1);\n\t\tvars.start = true;\n\t}\n}",
 					"notes": "",
 					"icon": {
 						"file": "ui/Icons_Resources.png",
@@ -77444,7 +77825,7 @@
 							"value1": 2
 						}
 					},
-					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedCurse, vars.value1);\n\t\tvars.start = true;\n\t}\n\tspawnFx();\n}",
+					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedCurse, vars.value1);\n\t\tvars.start = true;\n\t}\n}",
 					"notes": "",
 					"icon": {
 						"file": "ui/Icons_Resources.png",
@@ -77473,12 +77854,41 @@
 							"value1": 2
 						}
 					},
-					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedElement, vars.value1);\n\t\tvars.start = true;\n\t}\n\tspawnFx();\n}",
+					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedElement, vars.value1);\n\t\tvars.start = true;\n\t}\n}",
 					"notes": "",
 					"icon": {
 						"file": "ui/Icons_Resources.png",
 						"size": 96,
 						"x": 11,
+						"y": 16
+					},
+					"iconeDone": true,
+					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "NecromancerSkillBook2",
+					"name": "Necromancer Skill Book II",
+					"desc": "",
+					"mode": 2,
+					"range": {},
+					"props": {
+						"tooltipStatus": [
+							{
+								"st": "ReinforcedNecromancy"
+							}
+						],
+						"vars": {
+							"start": false,
+							"value1": 2
+						}
+					},
+					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedNecromancy, vars.value1);\n\t\tvars.start = true;\n\t}\n}",
+					"notes": "",
+					"icon": {
+						"file": "ui/Icons_Resources.png",
+						"size": 96,
+						"x": 8,
 						"y": 16
 					},
 					"iconeDone": true,
@@ -77502,7 +77912,7 @@
 							"value1": 5
 						}
 					},
-					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedRecovery, vars.value1);\n\t\tvars.start = true;\n\t}\n\tspawnFx();\n}",
+					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedRecovery, vars.value1);\n\t\tvars.start = true;\n\t}\n}",
 					"notes": "",
 					"icon": {
 						"file": "ui/Icons_Resources.png",
@@ -77531,7 +77941,7 @@
 							"value1": 5
 						}
 					},
-					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedCurse, vars.value1);\n\t\tvars.start = true;\n\t}\n\tspawnFx();\n}",
+					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedCurse, vars.value1);\n\t\tvars.start = true;\n\t}\n}",
 					"notes": "",
 					"icon": {
 						"file": "ui/Icons_Resources.png",
@@ -77560,12 +77970,41 @@
 							"value1": 5
 						}
 					},
-					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedElement, vars.value1);\n\t\tvars.start = true;\n\t}\n\tspawnFx();\n}",
+					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedElement, vars.value1);\n\t\tvars.start = true;\n\t}\n}",
 					"notes": "",
 					"icon": {
 						"file": "ui/Icons_Resources.png",
 						"size": 96,
 						"x": 12,
+						"y": 16
+					},
+					"iconeDone": true,
+					"group": 16,
+					"done": 2
+				},
+				{
+					"id": "NecromancerPath",
+					"name": "Path of Necromancer",
+					"desc": "",
+					"mode": 2,
+					"range": {},
+					"props": {
+						"tooltipStatus": [
+							{
+								"st": "ReinforcedNecromancy"
+							}
+						],
+						"vars": {
+							"start": false,
+							"value1": 5
+						}
+					},
+					"script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedNecromancy, vars.value1);\n\t\tvars.start = true;\n\t}\n}",
+					"notes": "",
+					"icon": {
+						"file": "ui/Icons_Resources.png",
+						"size": 96,
+						"x": 9,
 						"y": 16
 					},
 					"iconeDone": true,
@@ -95210,6 +95649,32 @@
 				{
 					"id": "ReinforcedElement",
 					"name": "Reinforced Element",
+					"desc": "",
+					"props": {
+						"stackable": true,
+						"maxStacks": 10
+					},
+					"group": 4,
+					"icon": {
+						"file": "ui/Icons/statusIcons.png",
+						"size": 32,
+						"x": 13,
+						"y": 8
+					},
+					"attributes": [
+						{
+							"kind": "Willpower",
+							"value": 2,
+							"isPercentage": true,
+							"valueEasy": 3,
+							"valueHard": 1
+						}
+					],
+					"iconeDone": true
+				},
+				{
+					"id": "ReinforcedNecromancy",
+					"name": "Reinforced Necromancy",
 					"desc": "",
 					"props": {
 						"stackable": true,
