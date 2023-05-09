@@ -448,19 +448,28 @@ function onSkill() {
     dice.push(randomDice(will));
     dice.push(randomDice(max(will - vars.value1, 0)));
 
+    var tab = [];
     if (skill.level == 2) {
-        var tab = [UnitClass.Swamoar, UnitClass.SnowWolf, UnitClass.SnowAlpha, UnitClass.WhiteBear, UnitClass.Swamoar];
+        tab.push(UnitClass.Swamoar);
+        tab.push(UnitClass.SnowWolf);
+        tab.push(UnitClass.SnowAlpha);
+        tab.push(UnitClass.WhiteBear);
     } else {
-        var tab = [UnitClass.Boar, UnitClass.Wolf, UnitClass.Alpha, UnitClass.Bear, UnitClass.Boar];
+        tab.push(UnitClass.Boar);
+        tab.push(UnitClass.Wolf);
+        tab.push(UnitClass.Alpha);
+        tab.push(UnitClass.Bear);
     }
 
     var idx = dice[0] -1;
+    var num = (dice[1]+1)/2;
     if (idx ==3) {
-        var num = 1;
+        spawnRenfort(tab[3], 1, false);
+    } else if (idx == 4) {
+        spawnRenfort(tab[0], num, false);
     } else {
-        var num = ceil(dice[1]/2);
+        spawnRenfort(tab[idx], num, false);
     }
-    spawnRenfort(tab[idx], num, false);
 }
 function randomDice (w) {
     var dice = randInt(w, 100);
@@ -495,14 +504,25 @@ function onSkill() {
     dice.push(randomDice(will));
     dice.push(randomDice(max(will - vars.value1, 0)));
 
+    var tab = [];
     if (skill.level == 2) {
-        var tab = [UnitClass.PlaguedRat, UnitClass.Plagueridden, UnitClass.Nightmare, UnitClass.SnowCrawler, UnitClass.PlaguedRat];
+        tab.push(UnitClass.PlaguedRat);
+        tab.push(UnitClass.Plagueridden);
+        tab.push(UnitClass.Nightmare);
+        tab.push(UnitClass.SnowCrawler);
     } else {
-        var tab = [UnitClass.Molerat, UnitClass.GhostBoar, UnitClass.GhostWolf, UnitClass.Crawler, UnitClass.Molerat];
+        tab.push(UnitClass.Molerat);
+        tab.push(UnitClass.GhostBoar);
+        tab.push(UnitClass.GhostWolf);
+        tab.push(UnitClass.Crawler);
     }
 
     var idx = dice[0] -1;
-    spawnRenfort(tab[idx], dice[1], false);
+    if (idx == 4) {
+        spawnRenfort(tab[0], dice[1], false);
+    } else {
+        spawnRenfort(tab[idx], dice[1], false);
+    }
     vars.value2 = 0;
 }
 function onEndRound() {
@@ -558,8 +578,10 @@ function onSkill() {
             tab.push(UnitClass.CrawlerChampion);
             idx.push(1);
         } else {
-            tab.push(UnitClass.Kogo).push(UnitClass.Toro);
-            idx.push(1).push(1);
+            tab.push(UnitClass.Kogo);
+            tab.push(UnitClass.Toro);
+            idx.push(1);
+            idx.push(1);
         }
     } else if (dice[0] == 5) {
         if (skill.level == 2 && dice[1] > 3 ) {
