@@ -77245,20 +77245,20 @@
 						"defaultAction": true,
 						"vars": {
 							"value1": 0.5,
-							"value2": 100
+							"value2": 80
 						},
 						"needDisengaged": true,
 						"castFx": "prefabs/fx/environment/RockSlide/RockSlide.fx",
 						"flags": 1
 					},
-					"script": "function onSkillEval(a) {\n\tfor( u in a.getTargets() ) {\n\t\tu.dmg += calculateDamage(u.target);\n\t}\n}\nfunction calculateDamage(t) {\n\tvar target_hp = t.stats.health + t.stats.armor;\n\tvar damage = (target_hp * vars.value1) + vars.value2;\n\tdamage = damage * (skill.unit.stats.willpower / 100);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedElement ) {\n\t\t\tdamage += ( damage * s.count / 10 );\n\t\t\tbreak;\n\t\t}\n\t}\n\treturn ceil(damage);\n}",
+					"script": "function onEval(a) {\n\ta.dmg += calculateDamage(a.target);\n}\nfunction calculateDamage(t) {\n\tvar target_hp = t.stats.health + t.stats.armor;\n\tvar damage = (target_hp * vars.value1) + vars.value2;\n\tdamage = damage * (skill.unit.stats.willpower / 100);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedElement ) {\n\t\t\tdamage += ( damage * s.count / 10 );\n\t\t\tbreak;\n\t\t}\n\t}\n\treturn ceil(damage);\n}",
 					"notes": "",
 					"levels": [
 						{
 							"props": {
 								"vars": {
 									"value1": 0.75,
-									"value2": 200
+									"value2": 150
 								}
 							}
 						}
@@ -77307,7 +77307,7 @@
 						"throwFx": "prefabs/fx/fight/Explosion/Grenade/MolotovThrowTrail.fx",
 						"needDisengaged": true
 					},
-					"script": "function onSkillEval(a) {\n\tfor( u in a.getTargets() ) {\n\t\tu.dmg += calculateDamage(u.target);\n\t}\n}\nfunction onZoneHit() {\n\tcreateSkillZone(Skill.FireZone);\n}\nfunction calculateDamage(t) {\n\tvar target_hp = t.stats.health + t.stats.armor;\n\tvar damage = (target_hp * vars.value1) + vars.value2;\n\tdamage = damage * (skill.unit.stats.willpower / 100);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedElement ) {\n\t\t\tdamage += ( damage * s.count / 10 );\n\t\t\tbreak;\n\t\t}\n\t}\n\treturn ceil(damage);\n}",
+					"script": "function onEval(a) {\n\ta.dmg += calculateDamage(a.target);\n}\nfunction onZoneHit() {\n\tcreateSkillZone(Skill.FireZone);\n}\nfunction calculateDamage(t) {\n\tvar target_hp = t.stats.health + t.stats.armor;\n\tvar damage = (target_hp * vars.value1) + vars.value2;\n\tdamage = damage * (skill.unit.stats.willpower / 100);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedElement ) {\n\t\t\tdamage += ( damage * s.count / 10 );\n\t\t\tbreak;\n\t\t}\n\t}\n\treturn ceil(damage);\n}",
 					"notes": "",
 					"levels": [
 						{
@@ -77351,7 +77351,7 @@
 						"needDisengaged": true,
 						"flags": 2
 					},
-					"script": "function onSkillEval(a) {\n\tfor( u in a.getTargets() ) {\n\t\tu.dmg += calculateDamage(u.target);\n\t}\n}\nfunction onPostSkill() {\n\tif ( skill.level == 2 )\n\t\tcast(Skill.ThunderStormZone, { skill : skill }, skill);\n}\nfunction calculateDamage(t) {\n\tvar target_hp = t.stats.health;\n\tvar damage = (target_hp * vars.value1) + vars.value2;\n\tdamage = damage * (skill.unit.stats.willpower / 100);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedElement ) {\n\t\t\tdamage += ( damage * s.count / 10 );\n\t\t\tbreak;\n\t\t}\n\t}\n\treturn ceil(damage);\n}",
+					"script": "function onEval(a) {\n\ta.dmg += calculateDamage(a.target);\n}\nfunction onPostSkill() {\n\tif ( skill.level == 2 )\n\t\tcast(Skill.ThunderStormZone, { skill : skill }, skill);\n}\nfunction calculateDamage(t) {\n\tvar target_hp = t.stats.health;\n\tvar damage = (target_hp * vars.value1) + vars.value2;\n\tdamage = damage * (skill.unit.stats.willpower / 100);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedElement ) {\n\t\t\tdamage += ( damage * s.count / 10 );\n\t\t\tbreak;\n\t\t}\n\t}\n\treturn ceil(damage);\n}",
 					"notes": "",
 					"levels": [
 						{
@@ -78026,7 +78026,7 @@
 						"isAttack": true,
 						"defaultAction": true,
 						"vars": {
-							"value1": 0.4,
+							"value1": 0.5,
 							"value2": 50
 						},
 						"flags": 1

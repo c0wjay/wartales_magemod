@@ -220,10 +220,8 @@ function calculateDamage(t) {
 
 
 // EarthQuake
-function onSkillEval(a) {
-    for( u in a.getTargets() ) {
-        u.dmg += calculateDamage(u.target);
-    }
+function onEval(a) {
+    a.dmg += calculateDamage(a.target);
 }
 function calculateDamage(t) {
     var target_hp = t.stats.health + t.stats.armor;
@@ -240,10 +238,8 @@ function calculateDamage(t) {
 
 
 // FireBall
-function onSkillEval(a) {
-    for( u in a.getTargets() ) {
-        u.dmg += calculateDamage(u.target);
-    }
+function onEval(a) {
+    a.dmg += calculateDamage(a.target);
 }
 function onZoneHit() {
     createSkillZone(Skill.FireZone);
@@ -262,10 +258,8 @@ function calculateDamage(t) {
 }
 
 // ThunderStorm
-function onSkillEval(a) {
-    for( u in a.getTargets() ) {
-        u.dmg += calculateDamage(u.target);
-    }
+function onEval(a) {
+    a.dmg += calculateDamage(a.target);
 }
 function onPostSkill() {
     if ( skill.level == 2 )

@@ -13,7 +13,7 @@
         "isAttack": true,
         "defaultAction": true,
         "vars": {
-            "value1": 0.4,
+            "value1": 0.5,
             "value2": 50
         },
         "flags": 1
