@@ -78021,17 +78021,17 @@
 						"baseDistance": 6
 					},
 					"props": {
-						"dmgAttribute": 2,
 						"needDisengaged": true,
 						"castFx": "prefabs/fx/fight/hits & impacts/impactElectrical.fx",
 						"isAttack": true,
 						"defaultAction": true,
 						"vars": {
-							"value1": 1
+							"value1": 0.4,
+							"value2": 50
 						},
 						"flags": 1
 					},
-					"script": "function onEval(a) {\n\ta.dmg += calculateDamage(a.target);\n}\nfunction calculateDamage(t) {\n\tvar target_hp = t.health + t.armor;\n\tvar damage = ceil(target_hp * skill.unit.stats.willpower * vars.value1 / 100);\n\treturn damage;\n}",
+					"script": "function onEval(a) {\n\ta.dmg += calculateDamage(a.target);\n}\nfunction calculateDamage(t) {\n\tvar target_hp = t.health + t.armor;\n\tif (target_hp == null) {\n\t\ttarget_hp = t.stats.health;\n\t}\n\tvar damage = (target_hp * vars.value1) + vars.value2; \n\tdamage = damage * skill.unit.stats.willpower / 100;\n\treturn ceil(damage);\n}",
 					"notes": "",
 					"icon": {
 						"file": "ui/Icons/BattleIcons_02_96PX.png",

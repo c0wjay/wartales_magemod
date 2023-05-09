@@ -210,8 +210,12 @@ function onEval(a) {
 }
 function calculateDamage(t) {
     var target_hp = t.health + t.armor;
-    var damage = ceil(target_hp * skill.unit.stats.willpower * vars.value1 / 100);
-    return damage;
+    if (target_hp == null) {
+        target_hp = t.stats.health;
+    }
+    var damage = (target_hp * vars.value1) + vars.value2; 
+    damage = damage * skill.unit.stats.willpower / 100;
+    return ceil(damage);
 }
 
 
