@@ -14,7 +14,7 @@
         "defaultAction": true,
 		"vars": {
             "value1": 0.5,
-            "value2": 80
+            "value2": 70
 		},
 		"needDisengaged": true,
         "castFx": "prefabs/fx/environment/RockSlide/RockSlide.fx",
@@ -27,7 +27,7 @@
 			"props": {
 				"vars": {
 					"value1": 0.75,
-					"value2": 150
+					"value2": 120
 				}
 			}
 		}

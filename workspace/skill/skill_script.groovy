@@ -462,9 +462,9 @@ function onSkill() {
     }
 
     var idx = dice[0] -1;
-    var num = (dice[1]+1)/2;
+    var num = (dice[1]+2)/2;
     if (idx ==3) {
-        spawnRenfort(tab[3], 1, false);
+        spawnRenfort(tab[3], (num+1)/2, false);
     } else if (idx == 4) {
         spawnRenfort(tab[0], num, false);
     } else {

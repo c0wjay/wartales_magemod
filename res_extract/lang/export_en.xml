@@ -34630,7 +34630,7 @@
             <desc>Restores [Health] to an allied unit. This skill is affected by the caster's [Willpower].</desc>
             <levels>
                 <line0>
-                    <desc>Restores [Health] to an allied unit. This skill is affected by the caster's [Willpower].<br/>Increases healing and repairs some of the target's [Armor].</desc>
+                    <desc>Restores [Health] to an allied unit. This skill is affected by the caster's [Willpower].<br/>Increases healing and remove any harmful effects from this unit.</desc>
                 </line0>
             </levels>
         </TargetHeal>
@@ -34649,7 +34649,7 @@
             <levels>
                 <line0>
                     <desc>
-                        Restores [Health] to all allied units on the battlefield. This skill is affected by the caster's [Willpower].<br/>Increases healing.
+                        Restores [Health] to all allied units on the battlefield. This skill is affected by the caster's [Willpower].<br/>Increases healing and repairs some of the target's [Armor].
                     </desc>
                 </line0>
             </levels>
@@ -34677,7 +34677,7 @@
             <desc>The targeted ally will be in one of the following states: [Enervate], [Berserk], or [BrothersFury].</desc>
             <levels>
                 <line0>
-                    <desc>The targeted ally will be in one of the following states: [Enervate], [Berserk], or [BrothersFury].<br/>Allies have a low chance to become [Arena_Willforce] for 2 turns.</desc>
+                    <desc>The targeted ally will be in one of the following states: [Enervate], [Berserk], or [BrothersFury].<br/>Allies have a low chance to become [Immortal]sss.</desc>
                 </line0>
             </levels>
         </PainLess>
@@ -34723,19 +34723,19 @@
         </SummonBeast>
         <SummonUndead>
             <name>Summoning Undeads</name>
-            <desc>Summon 1-5 of one of the following: [Molerat], [GhostBoar], [GhostWolf], or [Crawler].<br/>This spell costs 2 [Puppet].<br/>The higher the caster's [Willpower], the stronger the unit summoned.</desc>
+            <desc>Summon 1-5 of one of the following: [Molerat], [GhostBoar], [GhostWolf], or [Crawler].<br/>This spell costs 2 [Puppet], and can use once per 2 turns.<br/>The higher the caster's [Willpower], the stronger the unit summoned.</desc>
             <levels>
                 <line0>
-                    <desc>Summon 1-5 of one of the following: [PlaguedRat], [Plagueridden], [Nightmare], or [SnowCrawler].<br/>This spell costs 2 [Puppet].<br/>The higher the caster's [Willpower], the stronger the unit summoned.</desc>
+                    <desc>Summon 1-5 of one of the following: [PlaguedRat], [Plagueridden], [Nightmare], or [SnowCrawler].<br/>This spell costs 2 [Puppet], and can use once per 2 turns.<br/>The higher the caster's [Willpower], the stronger the unit summoned.</desc>
                 </line0>
             </levels>
         </SummonUndead>
         <SummonChampion>
             <name>Summoning Legendary</name>
-            <desc>Summon one of the following: [PuzzleMan], [Smot], [Kogo] and [Toro], or [Bionn].<br/>If the cast fails, summon [Mobster]s.<br/>This spell costs 4 [Puppet].<br/>The higher the caster's [Willpower], the stronger the unit summoned.</desc>
+            <desc>Summon one of the following: [PuzzleMan], [Smot], [Kogo] and [Toro], or [Bionn].<br/>If the cast fails, summon [Mobster]s.<br/>This spell costs 4 [Puppet], and can use once in a battle.<br/>The higher the caster's [Willpower], the stronger the unit summoned.</desc>
             <levels>
                 <line0>
-                    <desc>Summon one of the following: [PuzzleMan], [Smot], [Kaghal], [Kogo] and [Toro], [CrawlerChampion], [Bionn], or [ChristophGluck].<br/>If the cast fails, summon [Mobster]s.<br/>This spell costs 4 [Puppet].<br/>The higher the caster's [Willpower], the stronger the unit summoned.</desc>
+                    <desc>Summon one of the following: [PuzzleMan], [Smot], [Kaghal], [Kogo] and [Toro], [CrawlerChampion], [Bionn], or [ChristophGluck].<br/>If the cast fails, summon [Mobster]s.<br/>This spell costs 4 [Puppet], and can use once in a battle.<br/>The higher the caster's [Willpower], the stronger the unit summoned.</desc>
                 </line0>
             </levels>
         </SummonChampion>

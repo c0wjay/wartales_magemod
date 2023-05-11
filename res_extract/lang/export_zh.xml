@@ -34630,7 +34630,7 @@
       <desc>아군 유닛의 [Health]를 회복시킵니다. 이 스킬은 시전자의 [Willpower]에 영향을 받습니다.</desc>
       <levels>
         <line0>
-          <desc>아군 유닛의 [Health]를 회복시킵니다. 이 스킬은 시전자의 [Willpower]에 영향을 받습니다.<br/>치유량이 증가하고, 해당 유닛의 [Armor]도 일부 고칩니다.</desc>
+          <desc>아군 유닛의 [Health]를 회복시킵니다. 이 스킬은 시전자의 [Willpower]에 영향을 받습니다.<br/>치유량이 증가하고, 해당 유닛의 해로운 효과들을 없앱니다.</desc>
         </line0>
       </levels>
     </TargetHeal>
@@ -34649,7 +34649,7 @@
       <levels>
         <line0>
           <desc>
-            전장의 모든 아군 유닛들의 [Health]를 회복시킵니다. 이 스킬은 시전자의 [Willpower]에 영향을 받습니다.<br/>치유량이 증가합니다.
+            전장의 모든 아군 유닛들의 [Health]를 회복시킵니다. 이 스킬은 시전자의 [Willpower]에 영향을 받습니다.<br/>치유량이 증가하고, 해당 유닛의 [Armor]도 일부 고칩니다.
           </desc>
         </line0>
       </levels>
@@ -34677,7 +34677,7 @@
       <desc>대상 아군은 [Enervate], [Berserk], [BrothersFury] 중 한가지 상태가 됩니다.</desc>
       <levels>
         <line0>
-          <desc>대상 아군은 [Enervate], [Berserk], [BrothersFury] 중 한가지 상태가 됩니다.<br/>아군은 낮은 확률로 2턴 동안 [Arena_Willforce] 상태가 됩니다.</desc>
+          <desc>대상 아군은 [Enervate], [Berserk], [BrothersFury] 중 한가지 상태가 됩니다.<br/>아군은 낮은 확률로 [Immortal]을 부여합니다.</desc>
         </line0>
       </levels>
     </PainLess>
@@ -34723,19 +34723,19 @@
     </SummonBeast>
     <SummonUndead>
       <name>언데드 소환</name>
-      <desc>[Molerat], [GhostBoar], [GhostWolf], [Crawler] 중 하나를 1-5 마리 소환합니다.<br/>이 주문은 [Puppet]을 2개 소모합니다.<br/>시전자의 [Willpower]가 높을 수록 강력한 유닛을 소환합니다.</desc>
+      <desc>[Molerat], [GhostBoar], [GhostWolf], [Crawler] 중 하나를 1-5 마리 소환합니다.<br/>이 주문은 [Puppet]을 2개 소모하며, 두 턴에 한 번 사용 가능합니다.<br/>시전자의 [Willpower]가 높을 수록 강력한 유닛을 소환합니다.</desc>
       <levels>
         <line0>
-          <desc>[PlaguedRat], [Plagueridden], [Nightmare], [SnowCrawler] 중 하나를 1-5 마리 소환합니다.<br/>이 주문은 [Puppet]을 2개 소모합니다.<br/>시전자의 [Willpower]가 높을 수록 강력한 유닛을 소환합니다.</desc>
+          <desc>[PlaguedRat], [Plagueridden], [Nightmare], [SnowCrawler] 중 하나를 1-5 마리 소환합니다.<br/>이 주문은 [Puppet]을 2개 소모하며, 두 턴에 한 번 사용 가능합니다.<br/>시전자의 [Willpower]가 높을 수록 강력한 유닛을 소환합니다.</desc>
         </line0>
       </levels>
     </SummonUndead>
     <SummonChampion>
       <name>예토전생</name>
-      <desc>[PuzzleMan], [Smot], [Kogo]와 [Toro], [Bionn] 중 하나를 소환합니다.<br/>시전 실패 시, [Mobster]를 소환합니다.<br/>이 주문은 [Puppet]을 4개 소모합니다.<br/>시전자의 [Willpower]가 높을 수록 강력한 유닛을 소환합니다.</desc>
+      <desc>[PuzzleMan], [Smot], [Kogo]와 [Toro], [Bionn] 중 하나를 소환합니다.<br/>시전 실패 시, [Mobster]를 소환합니다.<br/>이 주문은 [Puppet]을 4개 소모하며, 한 전투에 한 번만 사용 가능합니다.<br/>시전자의 [Willpower]가 높을 수록 강력한 유닛을 소환합니다.</desc>
       <levels>
         <line0>
-          <desc>[PuzzleMan], [Smot], [Kaghal], [Kogo]와 [Toro], [CrawlerChampion], [Bionn], [ChristophGluck] 중 하나를 소환합니다.<br/>시전 실패 시, [Mobster]를 소환합니다.<br/>이 주문은 [Puppet]을 4개 소모합니다.<br/>시전자의 [Willpower]가 높을 수록 강력한 유닛을 소환합니다.</desc>
+          <desc>[PuzzleMan], [Smot], [Kaghal], [Kogo]와 [Toro], [CrawlerChampion], [Bionn], [ChristophGluck] 중 하나를 소환합니다.<br/>시전 실패 시, [Mobster]를 소환합니다.<br/>이 주문은 [Puppet]을 4개 소모하며, 한 전투에 한 번만 사용 가능합니다.<br/>시전자의 [Willpower]가 높을 수록 강력한 유닛을 소환합니다.</desc>
         </line0>
       </levels>
     </SummonChampion>
