@@ -60,7 +60,7 @@ function onSkill() {
         if( t.target.side == skill.unit.side ) {
             t.target.gainsHealth( ceil( t.target.stats.health * ( will/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);
             if( skill.level == 2 && randomDice(will) == 3 ) {
-                t.target.addStatus(Status.Protection, vars.value2, true);
+                t.target.addStatus(Status.Protection);
             }
         }
 	}
@@ -106,14 +106,12 @@ function onSkill() {
         }
     }
     for( t in skill.getTargets() ) {
-        if( t.target.side != skill.unit.side ) {
-            var num = randomDice( max(will - vars.value1, 0) );
-            t.target.addStatus(Status.Terror, num);
-            if( skill.level == 2 ) {
-                var num2 = randomDice( max(will - vars.value2, 0) );
-                if( num2 > 2 ) {
-                    t.target.addStatus(Status.Immobile, 1, true);
-                }
+        var num = randomDice( max(will - vars.value1, 0) );
+        t.target.addStatus(Status.Terror, num);
+        if( skill.level == 2 ) {
+            var num2 = randomDice( max(will - vars.value2, 0) );
+            if( num2 > 2 ) {
+                t.target.addStatus(Status.Immobile);
             }
         }
     }
@@ -139,21 +137,19 @@ function onSkill() {
         }
     }
     for( t in skill.getTargets() ) {
-        if( t.target.side != skill.unit.side ) {
             var num = randomDice( max(will - vars.value1, 0) );
-            if ( num == 1 ) t.target.addStatus(Status.Slowdown, 1, true);
-            if ( num == 2 ) t.target.addStatus(Status.Fever, 3, true);
-            if ( num == 3 || num == 4 ) t.target.addStatus(Status.Weakening, 2, true);
-            if ( num == 5 ) t.target.addStatus(Status.Fever, 5, true);
+            if ( num == 1 ) t.target.addStatus(Status.Slowdown);
+            if ( num == 2 ) t.target.addStatus(Status.Fever, 3);
+            if ( num == 3 || num == 4 ) t.target.addStatus(Status.Weakening);
+            if ( num == 5 ) t.target.addStatus(Status.Fever, 5);
             if( skill.level == 2 ) {
                 var num2 = randomDice( max(will - vars.value2, 0) );
                 if( num2 > 3 ) {
-                    t.target.addStatus(Status.Stun, 2, true);
+                    t.target.addStatus(Status.Stun);
                 } else {
-                    t.target.addStatus(Status.Fever, 2, true);
+                    t.target.addStatus(Status.Fever, 2);
                 }
             }
-        }
     }
 }
 function randomDice (w) {
@@ -180,8 +176,8 @@ function onSkill() {
     if ( num < 3 || num == 4 ) {
         skill.target.addStatus(Status.Enervate, randomDice(will));
     }
-    if ( num == 3 ) skill.target.addStatus(Status.Berserk, 1, true);
-    if ( num == 5 ) skill.target.addStatus(Status.BrothersFury, 1, true);
+    if ( num == 3 ) skill.target.addStatus(Status.Berserk, 1,);
+    if ( num == 5 ) skill.target.addStatus(Status.BrothersFury, 1);
     if( skill.level == 2 ) {
         var num2 = randomDice( max(will - vars.value2, 0) );
         if( num2 > 3 ) {
@@ -292,76 +288,6 @@ function onZoneIn( a ) {
 
 "
 
-// FearVoiceTest
-function onSkill() {
-    play();
-    var will = min(skill.unit.stats.willpower, 50);
-    for( t in skill.getTargets() ) {
-        if( t.target.side != skill.unit.side ) {
-            var num = randomDice( 50 );
-            t.target.addStatus(Status.Terror, num);
-            var num2 = randomDice( 50 );
-            if( num2 > 2 ) {
-                t.target.addStatus(Status.Immobile, 1);
-            }
-        }
-    }
-}
-function randomDice (w) {
-    var dice = randInt(w, 100);
-    if ( dice > 90 ) return 5;
-    if ( dice > 80 ) return 4;
-    if ( dice > 60 ) return 3;
-    if ( dice > 30 ) return 2;
-    else return 1;
-}
-
-
-// DeathScentTest
-function onSkill() {
-    play();
-    var will = 50;
-    for( t in skill.getTargets() ) {
-        if( t.target.side != skill.unit.side ) {
-            var num = randomDice( max(will - vars.value1, 0) );
-            if ( num == 2 ) t.target.addStatus(Status.Fragility, 2, true);
-            if ( num == 3 ) t.target.addStatus(Status.Fracture, 1, true);
-            if ( num == 4 ) t.target.addStatus(Status.Weakening, 2, true);
-            if ( num == 5 ) t.target.addStatus(Status.Bruise, 1, true);
-            t.target.addStatus(Status.Stun, 2, true);
-        }
-    }
-}
-function randomDice (w) {
-    var dice = randInt(w, 100);
-    if ( dice > 90 ) return 5;
-    if ( dice > 80 ) return 4;
-    if ( dice > 60 ) return 3;
-    if ( dice > 30 ) return 2;
-    else return 1;
-}
-
-
-// PainLessTest
-function onSkill() {
-    play();
-    var will = 50;
-    var num = randomDice( max(will - vars.value1, 0) );
-    if ( num == 2 || num == 4 ) {
-        skill.target.addStatus(Status.Enervate, randomDice(will));
-    }
-    if ( num == 3 ) skill.target.addStatus(Status.Berserk, 1, true);
-    if ( num == 5 ) skill.target.addStatus(Status.BrothersFury, 1, true);
-    skill.target.addStatus(Status.Arena_Willforce, 2, true);
-}
-function randomDice (w) {
-    var dice = randInt(w, 100);
-    if ( dice > 90 ) return 5;
-    if ( dice > 80 ) return 4;
-    if ( dice > 60 ) return 3;
-    if ( dice > 30 ) return 2;
-    else return 1;
-}
 
 
 // AutoTeleportation

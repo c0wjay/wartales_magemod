@@ -34639,7 +34639,7 @@
             <desc>Restores [Health] to all allied units in the area. This skill is affected by the caster's [Willpower].</desc>
             <levels>
                 <line0>
-                    <desc>Restores [Health] to all allied units in the area. This skill is affected by the caster's [Willpower].<br/>Increases healing and has a chance to apply ::value2:: [Protection] for a round.</desc>
+                    <desc>Restores [Health] to all allied units in the area. This skill is affected by the caster's [Willpower].<br/>Increases healing and has a chance to apply [Protection].</desc>
                 </line0>
             </levels>
         </RangeHeal>
@@ -34659,7 +34659,7 @@
             <desc>Enemies who hear the voice will receive between 1 and 5 [Terror]. The higher the caster's [Willpower], the more [Terror] they can deal.</desc>
             <levels>
                 <line0>
-                    <desc>Enemies who hear the voice will receive between 1 and 5 [Terror]. The higher the caster's [Willpower], the more [Terror] they can deal.<br/>Higher chance to deal more [Terror], and have a chance to inflict [Immobile] for 1 turn.</desc>
+                    <desc>Enemies who hear the voice will receive between 1 and 5 [Terror]. The higher the caster's [Willpower], the more [Terror] they can deal.<br/>Higher chance to deal more [Terror], and have a chance to inflict [Immobile].</desc>
                 </line0>
             </levels>
         </FearVoice>
@@ -34668,7 +34668,7 @@
             <desc>Enemies in the range will be in one of the following states: 3 - 5 stacks of [Fever], [Slowdown], or [Weakening].</desc>
             <levels>
                 <line0>
-                    <desc>Enemies in the range will be in one of the following states: 3 - 5 stacks of [Fever], [Slowdown], or [Weakening].<br/>Enemies will be [Stun] for 2 turns or get 2 stacks of [Fever].</desc>
+                    <desc>Enemies in the range will be in one of the following states: 3 - 5 stacks of [Fever], [Slowdown], or [Weakening].<br/>Enemies will be [Stun] or get 2 stacks of [Fever].</desc>
                 </line0>
             </levels>
         </DeathScent>
@@ -34677,7 +34677,7 @@
             <desc>The targeted ally will be in one of the following states: [Enervate], [Berserk], or [BrothersFury].</desc>
             <levels>
                 <line0>
-                    <desc>The targeted ally will be in one of the following states: [Enervate], [Berserk], or [BrothersFury].<br/>Allies have a low chance to become [Immortal]sss.</desc>
+                    <desc>The targeted ally will be in one of the following states: [Enervate], [Berserk], or [BrothersFury].<br/>Allies have a low chance to become [Immortal].</desc>
                 </line0>
             </levels>
         </PainLess>
