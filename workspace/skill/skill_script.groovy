@@ -418,6 +418,12 @@ function onBeginBattle() {
     vars.allowed = true;
     vars.value2 = 2;
 }
+function onBeginAction() {
+    vars.allowed = false;
+    if( vars.value2 >= 2 ){
+        vars.allowed = true;
+    }
+}
 function onEval(a) {
     if( vars.value2 < 2 ){
         dontAllow();
