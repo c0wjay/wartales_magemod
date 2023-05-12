@@ -176,7 +176,7 @@ function onSkill() {
     if ( num < 3 || num == 4 ) {
         skill.target.addStatus(Status.Enervate, randomDice(will));
     }
-    if ( num == 3 ) skill.target.addStatus(Status.Berserk, 1,);
+    if ( num == 3 ) skill.target.addStatus(Status.Berserk, 1);
     if ( num == 5 ) skill.target.addStatus(Status.BrothersFury, 1);
     if( skill.level == 2 ) {
         var num2 = randomDice( max(will - vars.value2, 0) );
