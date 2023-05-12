@@ -370,7 +370,6 @@ function onSkill() {
             break;
         }
     }
-    var previous = getAllies(skill.unit);
     var dice = [];
     dice.push(randomDice(will));
     dice.push(randomDice(max(will - vars.value1, 0)));
@@ -396,11 +395,6 @@ function onSkill() {
         spawnRenfort(tab[0], num, false);
     } else {
         spawnRenfort(tab[idx], num, false);
-    }
-    for (u in getAllies(skill.unit)) {
-        if (!previous.contains(u)) {
-            u.movePoints += 16;
-        }
     }
 }
 function randomDice (w) {
@@ -438,7 +432,6 @@ function onSkill() {
             break;
         }
     }
-    var previous = getAllies(skill.unit);
     var dice = [];
     dice.push(randomDice(will));
     dice.push(randomDice(max(will - vars.value1, 0)));
@@ -461,11 +454,6 @@ function onSkill() {
         spawnRenfort(tab[0], dice[1], false);
     } else {
         spawnRenfort(tab[idx], dice[1], false);
-    }
-    for (u in getAllies(skill.unit)) {
-        if (!previous.contains(u)) {
-            u.movePoints += 16;
-        }
     }
     vars.value2 = 0;
 }
@@ -500,7 +488,6 @@ function onSkill() {
             break;
         }
     }
-    var previous = getAllies(skill.unit);
     var dice = [];
     dice.push(randomDice(max(will - vars.value1, 0)));
     dice.push(randomDice(will));
@@ -547,11 +534,6 @@ function onSkill() {
             spawnRenfort(tab[i], idx[i], false);
         }
         i++;
-    }
-    for (u in getAllies(skill.unit)) {
-        if (!previous.contains(u)) {
-            u.movePoints += 16;
-        }
     }
     vars.allowed = false;
 }
