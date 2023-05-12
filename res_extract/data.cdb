@@ -77244,8 +77244,8 @@
 						"apCost": 0,
 						"defaultAction": true,
 						"vars": {
-							"value1": 0.5,
-							"value2": 80
+							"value1": 0.4,
+							"value2": 50
 						},
 						"needDisengaged": true,
 						"castFx": "prefabs/fx/environment/RockSlide/RockSlide.fx",
@@ -77257,8 +77257,8 @@
 						{
 							"props": {
 								"vars": {
-									"value1": 0.75,
-									"value2": 150
+									"value1": 0.6,
+									"value2": 100
 								}
 							}
 						}
@@ -77357,8 +77357,8 @@
 						{
 							"props": {
 								"vars": {
-									"value1": 0.6,
-									"value2": 100
+									"value1": 0.5,
+									"value2": 80
 								},
 								"tooltipStatus": [
 									{
