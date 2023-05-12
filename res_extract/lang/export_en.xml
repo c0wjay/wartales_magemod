@@ -34722,7 +34722,7 @@
             </levels>
         </SummonBeast>
         <SummonUndead>
-            <name>Summoning Undeads</name>
+            <name>Summoning Undead</name>
             <desc>Summon 1-5 of one of the following: [Molerat], [GhostBoar], [GhostWolf], or [Crawler].<br/>This spell costs 2 [Puppet], and can use once per 2 turns.<br/>The higher the caster's [Willpower], the stronger the unit summoned.</desc>
             <levels>
                 <line0>
