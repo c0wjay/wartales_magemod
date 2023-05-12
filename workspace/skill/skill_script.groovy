@@ -47,7 +47,7 @@ function onSkill() {
 
 // RangeHeal (BeastMaster, FirstAid, PoisonFlask 참고)
 function onSkill() {
-    playAttack();
+    play();
     var recovery = vars.value1;
     for ( s in skill.unit.getAllStatus() ) {
         if( s.kind == Status.ReinforcedRecovery ) {
