@@ -34677,7 +34677,7 @@
       <desc>대상 아군은 [Enervate], [Berserk], [BrothersFury] 중 한가지 상태가 됩니다.</desc>
       <levels>
         <line0>
-          <desc>대상 아군은 [Enervate], [Berserk], [BrothersFury] 중 한가지 상태가 됩니다.<br/>아군은 낮은 확률로 [Immortal]을 부여합니다.</desc>
+          <desc>대상 아군은 [Enervate], [Berserk], [BrothersFury] 중 한가지 상태가 됩니다.<br/>아군은 낮은 확률로 [Arena_Willforce]을 부여합니다.</desc>
         </line0>
       </levels>
     </PainLess>

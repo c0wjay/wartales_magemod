@@ -180,9 +180,9 @@ function onSkill() {
     if ( num == 5 ) skill.target.addStatus(Status.BrothersFury, 1);
     if( skill.level == 2 ) {
         var num2 = randomDice( max(will - vars.value2, 0) );
-        if( num2 > 3 ) {
-            if (!skill.target.getPassiveSkills().contains(Skill.Immortal)) {
-                skill.target.addTemporarySkill(Skill.Immortal);
+        if( num2 > 2 ) {
+            if (!skill.target.hasStatus(Status.Arena_Willforce)) {
+                skill.target.addStatus(Status.Arena_Willforce);
             } else {
                 skill.target.addStatus(Status.Enervate, 3);
             }

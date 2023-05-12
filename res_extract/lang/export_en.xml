@@ -34677,7 +34677,7 @@
             <desc>The targeted ally will be in one of the following states: [Enervate], [Berserk], or [BrothersFury].</desc>
             <levels>
                 <line0>
-                    <desc>The targeted ally will be in one of the following states: [Enervate], [Berserk], or [BrothersFury].<br/>Allies have a low chance to become [Immortal].</desc>
+                    <desc>The targeted ally will be in one of the following states: [Enervate], [Berserk], or [BrothersFury].<br/>Allies have a low chance to become [Arena_Willforce].</desc>
                 </line0>
             </levels>
         </PainLess>
