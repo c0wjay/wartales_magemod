@@ -164,7 +164,7 @@ function randomDice (w) {
 
 // PainLess
 function onSkill() {
-    playAttack();
+    play();
     var will = min(skill.unit.stats.willpower, 50);
     for ( s in skill.unit.getAllStatus() ) {
         if( s.kind == Status.ReinforcedCurse ) {
