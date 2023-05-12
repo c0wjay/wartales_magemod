@@ -170,7 +170,7 @@
         },
         "zoneFx": "prefabs/fx/environment/lightning/BattleCelestiumElectrifiedZone.fx"
     },
-    "script": "function onSkill() {\n\tcreateAreaEffect(\"Infinite\", 0);\n}\n\nfunction onZoneIn( a ) {\n\tfor( u in a.getTargets() )\n\t\tu.addStatus(Status.Immobile);\n\ta.remove();\n}",
+    "script": "function onSkill() {\n\tcreateAreaEffect(\"Infinite\", 0);\n}\n\nfunction onZoneIn( a ) {\n\ta.stopMove(true);\n\tfor( u in a.getTargets() )\n\t\tu.addStatus(Status.Immobile);\n\ta.remove();\n}",
     "notes": "",
     "iconeDone": true,
     "group": 16,

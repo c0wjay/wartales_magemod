@@ -281,6 +281,7 @@ function onSkill() {
 }
 
 function onZoneIn( a ) {
+    a.stopMove(true);
     for( u in a.getTargets() )
         u.addStatus(Status.Immobile);
     a.remove();
