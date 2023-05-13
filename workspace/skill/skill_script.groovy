@@ -207,7 +207,8 @@ function calculateDamage(t) {
     if (target_hp == null) {
         target_hp = t.stats.health;
     }
-    var damage = (target_hp * vars.value1) + vars.value2; 
+    if ( t.hasStatus(Status.Champion) ) target_hp = floor(target_hp * vars.elite);
+    var damage = (target_hp * vars.multiplier) + vars.fixdmg;
     damage = damage * skill.unit.stats.willpower / 100;
     return ceil(damage);
 }
