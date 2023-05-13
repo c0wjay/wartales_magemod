@@ -37,10 +37,7 @@ function onSkill() {
     }
     skill.target.gainsHealth( ceil( skill.target.stats.health * ( min(skill.unit.stats.willpower, 50)/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);
     if( skill.level == 2 ) {
-        for( s in skill.target.getAllStatus() ) {
-            if( s.isMalus )
-                s.cancel();
-        }
+        skill.target.addStatus(Status.Protection);
     }
 }
 
@@ -57,11 +54,12 @@ function onSkill() {
     }
     var will = min(skill.unit.stats.willpower, 50);
 	for( t in skill.getTargets() ) {
-        if( t.target.side == skill.unit.side ) {
-            t.target.gainsHealth( ceil( t.target.stats.health * ( will/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);
-            if( skill.level == 2 && randomDice(will) == 3 ) {
-                t.target.addStatus(Status.Protection);
+        t.target.gainsHealth( ceil( t.target.stats.health * ( will/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);
+        if( skill.level == 2 && randomDice(will) > 2 ) {
+            for( s in t.target.getAllStatus() ) {
+                if( s.isMalus ) s.cancel();
             }
+            spawnFx();
         }
 	}
 }
@@ -221,7 +219,8 @@ function onEval(a) {
 }
 function calculateDamage(t) {
     var target_hp = t.stats.health + t.stats.armor;
-    var damage = (target_hp * vars.value1) + vars.value2;
+    if ( t.hasStatus(Status.Champion) ) target_hp = floor(target_hp * vars.elite);
+    var damage = (target_hp * vars.multiplier) + vars.fixdmg;
     damage = damage * (skill.unit.stats.willpower / 100);
     for ( s in skill.unit.getAllStatus() ) {
         if( s.kind == Status.ReinforcedElement ) {
@@ -242,7 +241,8 @@ function onZoneHit() {
 }
 function calculateDamage(t) {
     var target_hp = t.stats.health + t.stats.armor;
-    var damage = (target_hp * vars.value1) + vars.value2;
+    if ( t.hasStatus(Status.Champion) ) target_hp = floor(target_hp * vars.elite);
+    var damage = (target_hp * vars.multiplier) + vars.fixdmg;
     damage = damage * (skill.unit.stats.willpower / 100);
     for ( s in skill.unit.getAllStatus() ) {
         if( s.kind == Status.ReinforcedElement ) {
@@ -263,7 +263,8 @@ function onPostSkill() {
 }
 function calculateDamage(t) {
     var target_hp = t.stats.health;
-    var damage = (target_hp * vars.value1) + vars.value2;
+    if ( t.hasStatus(Status.Champion) ) target_hp = floor(target_hp * vars.elite);
+    var damage = (target_hp * vars.multiplier) + vars.fixdmg;
     damage = damage * (skill.unit.stats.willpower / 100);
     for ( s in skill.unit.getAllStatus() ) {
         if( s.kind == Status.ReinforcedElement ) {
@@ -282,12 +283,18 @@ function onSkill() {
 
 function onZoneIn( a ) {
     a.stopMove(true);
-    for( u in a.getTargets() )
-        u.addStatus(Status.Immobile);
+    cast(Skill.Discharge, { unit : a.target }, skill);
+    a.target.addStatus(Status.Immobile);
     a.remove();
 }
 
 "
+
+// Discharge
+function onEval(a) {
+    var value = a.target.hasStatus(Status.Champion) ? vars.value2 : vars.value1;
+    a.dmg = floor(a.target.health * value / 100);
+}
 
 
 

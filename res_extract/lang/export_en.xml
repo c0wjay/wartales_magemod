@@ -34630,7 +34630,7 @@
             <desc>Restores [Health] to an allied unit. This skill is affected by the caster's [Willpower].</desc>
             <levels>
                 <line0>
-                    <desc>Restores [Health] to an allied unit. This skill is affected by the caster's [Willpower].<br/>Increases healing and remove any harmful effects from this unit.</desc>
+                    <desc>Restores [Health] to an allied unit. This skill is affected by the caster's [Willpower].<br/>Increases healing and apply [Protection].</desc>
                 </line0>
             </levels>
         </TargetHeal>
@@ -34639,7 +34639,7 @@
             <desc>Restores [Health] to all allied units in the area. This skill is affected by the caster's [Willpower].</desc>
             <levels>
                 <line0>
-                    <desc>Restores [Health] to all allied units in the area. This skill is affected by the caster's [Willpower].<br/>Increases healing and has a chance to apply [Protection].</desc>
+                    <desc>Restores [Health] to all allied units in the area. This skill is affected by the caster's [Willpower].<br/>Increases healing and has a chance to remove any harmful effects from allies.</desc>
                 </line0>
             </levels>
         </RangeHeal>
