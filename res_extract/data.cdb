@@ -77059,7 +77059,7 @@
 					"mode": 5,
 					"range": {
 						"type": 1,
-						"angle": 60,
+						"angle": 90,
 						"radius": 3,
 						"allowedTargets": 0
 					},
@@ -77081,12 +77081,12 @@
 						"useWithoutWeapon": true,
 						"extraFx": "prefabs/fx/fight/BuffCry/BionnTransformation.fx"
 					},
-					"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedCurse ) {\n\t\t\twill += ( s.count * 2 );\n\t\t\tbreak;\n\t\t}\n\t}\n\tfor( t in skill.getTargets() ) {\n\t\tvar num = randomDice( max(will - vars.value1, 0) );\n\t\tt.target.addStatus(Status.Terror, num);\n\t\tif( skill.level == 2 ) {\n\t\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\t\tif( num2 > 2 ) {\n\t\t\t\tt.target.addStatus(Status.Immobile);\n\t\t\t}\n\t\t}\n\t}\n}\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice > 90 ) return 5;\n\tif ( dice > 80 ) return 4;\n\tif ( dice > 60 ) return 3;\n\tif ( dice > 30 ) return 2;\n\telse return 1;\n}",
+					"script": "function onSkill() {\n\tplayAttack();\n\tvar will = min(skill.unit.stats.willpower, 50);\n\tfor ( s in skill.unit.getAllStatus() ) {\n\t\tif( s.kind == Status.ReinforcedCurse ) {\n\t\t\twill += ( s.count * 2 );\n\t\t\tbreak;\n\t\t}\n\t}\n\tfor( t in skill.getTargets() ) {\n\t\tvar num = randomDice( max(will - vars.value1, 0) );\n\t\tif ( !t.target.hasStatus(Status.Champion) ) t.target.addStatus(Status.Terror, num);\n\t\tif( skill.level == 2 ) {\n\t\t\tvar num2 = randomDice( max(will - vars.value2, 0) );\n\t\t\tif( num2 > 2 ) {\n\t\t\t\tt.target.addStatus(Status.Immobile);\n\t\t\t}\n\t\t}\n\t}\n}\nfunction randomDice (w) {\n\tvar dice = randInt(w, 100);\n\tif ( dice > 90 ) return 5;\n\tif ( dice > 80 ) return 4;\n\tif ( dice > 60 ) return 3;\n\tif ( dice > 30 ) return 2;\n\telse return 1;\n}",
 					"notes": "",
 					"levels": [
 						{
 							"props": {
-								"rangeRadius": 4,
+								"rangeRadius": 5,
 								"vars": {
 									"value1": 10,
 									"value2": 10

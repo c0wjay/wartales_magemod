@@ -105,7 +105,7 @@ function onSkill() {
     }
     for( t in skill.getTargets() ) {
         var num = randomDice( max(will - vars.value1, 0) );
-        t.target.addStatus(Status.Terror, num);
+        if ( !t.target.hasStatus(Status.Champion) ) t.target.addStatus(Status.Terror, num);
         if( skill.level == 2 ) {
             var num2 = randomDice( max(will - vars.value2, 0) );
             if( num2 > 2 ) {
