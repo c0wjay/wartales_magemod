@@ -34665,10 +34665,10 @@
         </FearVoice>
         <DeathScent>
             <name>Scent of Death</name>
-            <desc>Enemies in the range will be in one of the following states: 3 - 5 stacks of [Fever], [Slowdown], or [Weakening].</desc>
+            <desc>Enemies in the range will be in one of the following states: 3 - 5 stacks of [Fever], [Slowdown], or [Weakening]. Create clouds of poison on the area.</desc>
             <levels>
                 <line0>
-                    <desc>Enemies in the range will be in one of the following states: 3 - 5 stacks of [Fever], [Slowdown], or [Weakening].<br/>Enemies will be [Stun] or get 2 stacks of [Fever].</desc>
+                    <desc>Enemies in the range will be in one of the following states: 3 - 5 stacks of [Fever], [Slowdown], or [Weakening]. Create clouds of poison on the area.<br/>Enemies will get 2 stacks of [Fever]. Enemies in the [Terror] state lose all beneficial effects.</desc>
                 </line0>
             </levels>
         </DeathScent>
@@ -34818,7 +34818,7 @@
         <WarlockPath>
             <name>Path of Warlock</name>
             <desc>
-                At the start of combat, you gain ::value1:: stacks of [ReinforcedCurse].
+                At the start of combat, you gain [Protection] and ::value1:: stacks of [ReinforcedCurse].
             </desc>
         </WarlockPath>
         <SorcererPath>

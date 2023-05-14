@@ -28,40 +28,50 @@ function canCaptureTarget(t){
 // TargetHeal (TerrorLink, DopingSshot 참고)
 function onSkill() {
     play();
-    var recovery = vars.value1;
+    var multiple = vars.multiplier;
     for ( s in skill.unit.getAllStatus() ) {
         if( s.kind == Status.ReinforcedRecovery ) {
-            recovery += ( vars.value1 * s.count / 10 );
+            multiple += ( multiple * s.count / 10 );
             break;
         }
     }
-    skill.target.gainsHealth( ceil( skill.target.stats.health * ( min(skill.unit.stats.willpower, 50)/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);
+    skill.target.gainsHealth( calculateRecovery(skill.target, multiple) , null);
     if( skill.level == 2 ) {
         skill.target.addStatus(Status.Protection);
     }
+}
+function calculateRecovery(t, mul) {
+    var target_hp = t.stats.health;
+    var recovery = (target_hp * mul) + vars.fixheal;
+    recovery = recovery * ( min(skill.unit.stats.willpower, 50)/50 * randInt(12,20)/16 );
+    return ceil(recovery);
 }
 
 
 // RangeHeal (BeastMaster, FirstAid, PoisonFlask 참고)
 function onSkill() {
     play();
-    var recovery = vars.value1;
+    var multiple = vars.multiplier;
     for ( s in skill.unit.getAllStatus() ) {
         if( s.kind == Status.ReinforcedRecovery ) {
-            recovery += ( vars.value1 * s.count / 10 );
+            multiple += ( multiple * s.count / 10 );
             break;
         }
     }
-    var will = min(skill.unit.stats.willpower, 50);
 	for( t in skill.getTargets() ) {
-        t.target.gainsHealth( ceil( t.target.stats.health * ( will/50 ) * (recovery/100) * randInt(12,20)/16 ) , null);
-        if( skill.level == 2 && randomDice(will) > 2 ) {
+        t.target.gainsHealth( calculateRecovery(t.target, multiple) , null);
+        if( skill.level == 2 && randomDice(skill.unit.stats.willpower) > 2 ) {
             for( s in t.target.getAllStatus() ) {
                 if( s.isMalus ) s.cancel();
             }
-            spawnFx();
         }
 	}
+}
+function calculateRecovery(t, mul) {
+    var target_hp = t.stats.health;
+    var recovery = (target_hp * mul) + vars.fixheal;
+    recovery = recovery * ( min(skill.unit.stats.willpower, 50)/50 * randInt(12,20)/16 );
+    return ceil(recovery);
 }
 function randomDice (w) {
     var dice = randInt(w, 100);
@@ -76,17 +86,19 @@ function randomDice (w) {
 // GroupHeal (BeastMaster, Ovation 참고)
 function onSkill() {
     play();
-    var recovery = vars.value1;
+    var multiple = vars.multiplier;
     for ( s in skill.unit.getAllStatus() ) {
         if( s.kind == Status.ReinforcedRecovery ) {
-            recovery += ( vars.value1 * s.count / 10 );
+            multiple += ( multiple * s.count / 10 );
             break;
         }
     }
     @sync for( u in getAllies(skill.unit) ) {
-        u.gainsHealth(ceil( u.stats.health * min(skill.unit.stats.willpower, 50)/50 * (recovery/100) ), null);
+        var recovery = (u.stats.health * multiple) + vars.fixheal;
+        recovery = recovery * ( min(skill.unit.stats.willpower, 50)/50 );
+        u.gainsHealth(ceil( recovery ), null);
         if( skill.level == 2 ) {
-            var armorRecovery = ceil ( u.stats.armor * min(skill.unit.stats.willpower, 50)/100 * (recovery/100) );
+            var armorRecovery = ceil ( u.stats.armor * skill.unit.stats.willpower/100 * multiple );
             u.armor = min(u.armor + armorRecovery, u.stats.armor);
         }
     }
@@ -141,14 +153,17 @@ function onSkill() {
             if ( num == 3 || num == 4 ) t.target.addStatus(Status.Weakening);
             if ( num == 5 ) t.target.addStatus(Status.Fever, 5);
             if( skill.level == 2 ) {
-                var num2 = randomDice( max(will - vars.value2, 0) );
-                if( num2 > 3 ) {
-                    t.target.addStatus(Status.Stun);
-                } else {
-                    t.target.addStatus(Status.Fever, 2);
+                if( t.target.hasStatus(Status.Terror) ) {
+                    for( s in t.target.getAllStatus() ) {
+                        if( s.isBonus ) s.cancel();
+                    }
                 }
+                t.target.addStatus(Status.Fever, 2);
             }
     }
+}
+function onZoneHit() {
+    createSkillZone(Skill.PoisonZone);
 }
 function randomDice (w) {
     var dice = randInt(w, 100);
@@ -353,7 +368,9 @@ function onBeginBattle() {
 }
 function onBeginAction() {
     if ( vars.start == false ) {
+        skill.unit.addStatusPersist(Status.Protection, skill);
         skill.unit.addStatus(Status.ReinforcedCurse, vars.value1);
+        skill.unit.armor = skill.unit.stats.armor;
         vars.start = true;
     }
 }

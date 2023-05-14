@@ -34665,10 +34665,10 @@
     </FearVoice>
     <DeathScent>
       <name>죽음의 향기</name>
-      <desc>해당 범위의 적들은 3 - 5 스택의 [Fever], [Slowdown], [Weakening] 중 한가지 상태가 됩니다.</desc>
+      <desc>해당 범위의 적들은 3 - 5 스택의 [Fever], [Slowdown], [Weakening] 중 한가지 상태가 됩니다. 해당 지역에 독 구름을 생성합니다.</desc>
       <levels>
         <line0>
-          <desc>해당 범위의 적들은 3 - 5 스택의 [Fever], [Slowdown], [Weakening] 중 한가지 상태가 됩니다.<br/>적은 [Stun] 상태가 되거나, 2 스택의 [Fever]를 얻습니다.</desc>
+          <desc>해당 범위의 적들은 3 - 5 스택의 [Fever], [Slowdown], [Weakening] 중 한가지 상태가 됩니다. 해당 지역에 독 구름을 생성합니다.<br/>적은 2 스택의 [Fever]를 얻으며, [Terror] 상태의 적은 이로운 효과를 모두 잃습니다.</desc>
         </line0>
       </levels>
     </DeathScent>
@@ -34818,7 +34818,7 @@
     <WarlockPath>
       <name>주술사의 길</name>
       <desc>
-        전투를 시작할 때, [ReinforcedCurse]를 ::value1:: 스택 얻습니다.
+        전투를 시작할 때, [ReinforcedCurse] ::value1:: 스택 및 [Protection]을 얻습니다. 
       </desc>
     </WarlockPath>
     <SorcererPath>

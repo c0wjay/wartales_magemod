@@ -276,7 +276,7 @@
             "value1": 5
         }
     },
-    "script": "function onBeginBattle() {\n\tvars.start = false;\n}\n\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatus(Status.ReinforcedCurse, vars.value1);\n\t\tvars.start = true;\n\t}\n}",
+    "script": "function onBeginBattle() {\n\tvars.start = false;\n}\nfunction onBeginAction() {\n\tif ( vars.start == false ) {\n\t\tskill.unit.addStatusPersist(Status.Protection, skill);\n\t\tskill.unit.addStatus(Status.ReinforcedCurse, vars.value1);\n\t\tskill.unit.armor = skill.unit.stats.armor;\n\t\tvars.start = true;\n\t}\n}",
     "notes": "",
     "icon": {
         "file": "ui/Icons_Resources.png",
