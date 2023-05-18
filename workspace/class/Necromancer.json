@@ -1,5 +1,5 @@
 {
-	"id": "Priest",
+	"id": "Necromancer",
 	"weaponTypes": [
 		{
 			"wp": "Wand"
@@ -7,7 +7,7 @@
 	],
 	"baseSkills": [
 		{
-			"skill": "PriestPath"
+			"skill": "NecromancerPath"
 		}
 	],
 	"props": {
@@ -47,10 +47,10 @@
 	],
 	"model": "chars/Prefabs/Prefab_WP.prefab",
 	"notes": "",
-	"name": "Priest",
+	"name": "Necromancer",
 	"tier": 1,
 	"equipment": [],
 	"rarity": 0,
 	"timelinePriority": 0,
 	"iconeDone": true
-}
+},

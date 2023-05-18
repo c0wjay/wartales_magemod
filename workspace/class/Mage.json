@@ -19,16 +19,36 @@
 			"minLevel": 0
 		},
 		{
-			"skill": "BraveBoldness",
+			"skill": "TargetHeal",
 			"minLevel": 2
 		},
 		{
-			"skill": "BraveDuel",
+			"skill": "FearVoice",
 			"minLevel": 2
 		},
 		{
-			"skill": "BraveSupport",
+			"skill": "EarthQuake",
 			"minLevel": 2
+		},
+		{
+			"skill": "SummonBeast",
+			"minLevel": 2
+		},
+		{
+			"skill": "RangeHeal",
+			"minLevel": 5
+		},
+		{
+			"skill": "DeathScent",
+			"minLevel": 5
+		},
+		{
+			"skill": "FireBall",
+			"minLevel": 5
+		},
+		{
+			"skill": "SummonUndead",
+			"minLevel": 5
 		},
 		{
 			"skill": "Meditation",
@@ -41,6 +61,22 @@
 		{
 			"skill": "AutoSwapPosition",
 			"minLevel": 8
+		},
+		{
+			"skill": "GroupHeal",
+			"minLevel": 10
+		},
+		{
+			"skill": "PainLess",
+			"minLevel": 10
+		},
+		{
+			"skill": "ThunderStorm",
+			"minLevel": 10
+		},
+		{
+			"skill": "SummonChampion",
+			"minLevel": 10
 		},
 		{
 			"skill": "SwapPosition",
@@ -80,9 +116,9 @@
 			"attribute": "Movement"
 		},
 		{
-			"value": 12,
+			"value": 6,
 			"attribute": "Willpower",
-            "upValue": 30
+			"upValue": 30
 		}
 	],
 	"model": "chars/Prefabs/Prefab_WP.prefab",

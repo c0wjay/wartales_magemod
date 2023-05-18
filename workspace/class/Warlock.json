@@ -7,15 +7,7 @@
 	],
 	"baseSkills": [
 		{
-			"skill": "FearVoice"
-		},
-		{
-			"skill": "DeathScent",
-			"minLevel": 5
-		},
-		{
-			"skill": "PainLess",
-			"minLevel": 10
+			"skill": "WarlockPath"
 		}
 	],
 	"props": {
@@ -48,9 +40,9 @@
 			"attribute": "Movement"
 		},
 		{
-			"value": 12,
+			"value": 6,
 			"attribute": "Willpower",
-            "upValue": 30
+			"upValue": 30
 		}
 	],
 	"model": "chars/Prefabs/Prefab_WP.prefab",
