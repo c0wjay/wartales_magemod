@@ -15,8 +15,12 @@ function onEval(a) {
 }
 
 function onSkill() {
+    playAttack();
     for (t in skill.getTargets()){
-        captureTarget(t);
+        if ( randInt(0, 100) <= vars.value1 ) {
+            captureTarget(t);
+            spawnFx();
+        }
     }
 }
 
