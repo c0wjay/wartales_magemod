@@ -36073,10 +36073,10 @@
             <name>Óleo Escorregadio Concentrado</name>
             <desc>Óleo Escorregadio tem uma chance adicional de ::value1::% de infligir seus efeitos.</desc>
         </BeltAccOilSwipping>
-        <BeltAccProcFever>
+        <BeltAccOilProcFever>
             <name>Óleo Febril Concentrado</name>
             <desc>Óleo Febril tem uma chance adicional de ::value1::% de infligir seus efeitos.</desc>
-        </BeltAccProcFever>
+        </BeltAccOilProcFever>
         <BeltAccOilBrave>
             <name>Óleo Encorajador Concentrado</name>
             <desc>Óleo Encorajador tem uma chance adicional de ::value1::% de infligir seus efeitos.</desc>
@@ -37356,7 +37356,7 @@
             <desc>Os materiais de conserto e ferreiros de aldeia restauram [VALUE] pontos de Armadura adicionais.</desc>
         </RawMaterialEfficacity>
         <RawMaterialOnRest>
-            <desc>[JOBASSIGN] faz &lt;img src="item/RawMaterials"/&gt;[VALUE] matérias-primas toda vez que descansar.</desc>
+            <desc>Produz &lt;img src="item/RawMaterials"/&gt;[VALUE] durante cada Descanso.</desc>
         </RawMaterialOnRest>
         <KnowledgeExperienceBonus>
             <desc>O ganho de EXP de Conhecimento aumenta em [VALUE]%.</desc>

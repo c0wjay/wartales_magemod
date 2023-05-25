@@ -36073,10 +36073,10 @@
             <name>Stężony olej poślizgu</name>
             <desc>Szansa na nałożenie efektów oleju poślizgu większa o ::value1::%.</desc>
         </BeltAccOilSwipping>
-        <BeltAccProcFever>
+        <BeltAccOilProcFever>
             <name>Stężony olej gorączki</name>
             <desc>Szansa na nałożenie efektów oleju gorączki większa o ::value1::%.</desc>
-        </BeltAccProcFever>
+        </BeltAccOilProcFever>
         <BeltAccOilBrave>
             <name>Stężony olej odwagi</name>
             <desc>Szansa na nałożenie efektów oleju odwagi większa o ::value1::%.</desc>
@@ -37356,7 +37356,7 @@
             <desc>Materiały naprawcze i wioskowi kowale przywracają dodatkowo [VALUE] pkt. Pancerza.</desc>
         </RawMaterialEfficacity>
         <RawMaterialOnRest>
-            <desc>[JOBASSIGN] podczas każdego odpoczynku wytwarza surowce (&lt;img src="item/RawMaterials"/&gt;[VALUE]).</desc>
+            <desc>Podczas każdego odpoczynku wytwarza surowce (&lt;img src="item/RawMaterials"/&gt;[VALUE]).</desc>
         </RawMaterialOnRest>
         <KnowledgeExperienceBonus>
             <desc>Otrzymywane doświadczenie związane z Wiedzą większe o [VALUE]%.</desc>

@@ -36073,10 +36073,10 @@
             <name>Concentrado de aceite resbaladizo</name>
             <desc>El aceite resbaladizo tiene un ::value1::% más de probabilidades de aplicar sus efectos.</desc>
         </BeltAccOilSwipping>
-        <BeltAccProcFever>
+        <BeltAccOilProcFever>
             <name>Concentrado de aceite febril</name>
             <desc>El aceite febril tiene un ::value1::% más de probabilidades de aplicar sus efectos.</desc>
-        </BeltAccProcFever>
+        </BeltAccOilProcFever>
         <BeltAccOilBrave>
             <name>Concentrado de aceite valiente</name>
             <desc>El aceite valiente tiene un ::value1::% más de probabilidades de aplicar sus efectos.</desc>
@@ -37356,7 +37356,7 @@
             <desc>Los materiales de reparación y los herreros de la aldea restauran [VALUE] puntos de armadura adicionales.</desc>
         </RawMaterialEfficacity>
         <RawMaterialOnRest>
-            <desc>[JOBASSIGN] hace &lt;img src="item/RawMaterials"/&gt;[VALUE] materias primas cada vez que descansa.</desc>
+            <desc>Produce &lt;img src="item/RawMaterials"/&gt;[VALUE] durante cada descanso.</desc>
         </RawMaterialOnRest>
         <KnowledgeExperienceBonus>
             <desc>La ganancia de EXP de conocimiento aumenta un [VALUE]%.</desc>

@@ -36073,10 +36073,10 @@
             <name>Концентрат скольжения</name>
             <desc>Шанс применения эффектов масла скольжения повышен на ::value1::%.</desc>
         </BeltAccOilSwipping>
-        <BeltAccProcFever>
+        <BeltAccOilProcFever>
             <name>Концентрат лихорадки</name>
             <desc>Шанс применения эффектов масла лихорадки повышен на ::value1::%.</desc>
-        </BeltAccProcFever>
+        </BeltAccOilProcFever>
         <BeltAccOilBrave>
             <name>Концентрат храбрости</name>
             <desc>Шанс применения эффектов масла храбрости повышен на ::value1::%.</desc>
@@ -37356,7 +37356,7 @@
             <desc>Материалы для починки и деревенские кузнецы восстанавливают дополнительно [VALUE] брони.</desc>
         </RawMaterialEfficacity>
         <RawMaterialOnRest>
-            <desc>[JOBASSIGN] производит &lt;img src="item/RawMaterials"/&gt;[VALUE] ед. сырья на каждом привале.</desc>
+            <desc>Производит на каждом привале: &lt;img src="item/RawMaterials"/&gt;[VALUE].</desc>
         </RawMaterialOnRest>
         <KnowledgeExperienceBonus>
             <desc>Получаемый опыт знаний повышается на [VALUE]%.</desc>
