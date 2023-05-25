@@ -669,6 +669,17 @@
 					"iconeDone": true
 				},
 				{
+					"id": "ForsakenWorship",
+					"iconeDone": false,
+					"group": 3,
+					"icon": {
+						"file": "ui/Icons/WM_Icons.png",
+						"size": 42,
+						"x": 5,
+						"y": 0
+					}
+				},
+				{
 					"id": "Setting",
 					"group": 4,
 					"icon": {
@@ -1168,7 +1179,7 @@
 						"x": 16,
 						"y": 1
 					},
-					"text": "Accepter",
+					"text": "Accepté",
 					"iconeDone": true
 				},
 				{
@@ -2493,26 +2504,15 @@
 					"iconeDone": true
 				},
 				{
-					"id": "TimelinePlayer",
-					"icon": {
-						"file": "ui/elements/battle/player_timeline.png",
-						"size": 70,
-						"x": 0,
-						"y": 0
-					},
-					"group": 11,
-					"iconeDone": true
-				},
-				{
-					"id": "TimelineAI",
+					"id": "TimelineIcon",
+					"iconeDone": true,
 					"group": 11,
 					"icon": {
 						"file": "ui/elements/battle/player_timeline.png",
 						"size": 70,
 						"x": 2,
-						"y": 0
-					},
-					"iconeDone": true
+						"y": 1
+					}
 				},
 				{
 					"id": "TimelineEndRound",
@@ -6893,7 +6893,7 @@
 				{
 					"typeStr": "1",
 					"name": "desc",
-					"kind": null
+					"kind": "localizable"
 				}
 			]
 		},
@@ -8522,7 +8522,7 @@
 					"opt": true
 				},
 				{
-					"typeStr": "10:WithEquipment,NoEquipment,Pestiferous,BadTraits,LockName,DontProtectSteal,AccompanyCanDie,NoAnimalGen,HideWeapons,IsCapturable,NoInspect,NotSentient,NotAlly,NoName,SystemicUseSkinData",
+					"typeStr": "10:WithEquipment,NoEquipment,Pestiferous,BadTraits,LockName,DontProtectSteal,AccompanyCanDie,NoAnimalGen,HideWeapons,IsCapturable,NoInspect,NotSentient,NotAlly,NoName,SystemicUseSkinData,KeepClothesWhenCaptured",
 					"name": "flags",
 					"opt": true
 				},
@@ -12183,7 +12183,7 @@
 					"name": "De garde",
 					"desc": "Un prisonnier adjacent a [VALUE]% de chances de moins de s'enfuir.",
 					"props": {
-						"value": 1
+						"value": 30
 					},
 					"group": 3,
 					"actionName": "",
@@ -12508,7 +12508,6 @@
 							}
 						],
 						"flags": 1,
-						"xpScale": 1,
 						"levels": [
 							{
 								"bonus": "MinerApprentice"
@@ -12566,7 +12565,6 @@
 							}
 						],
 						"flags": 1,
-						"xpScale": 1,
 						"levels": [
 							{
 								"bonus": "BlacksmithApprentice"
@@ -12625,7 +12623,6 @@
 						],
 						"skipActivity": true,
 						"flags": 1,
-						"xpScale": 1,
 						"levels": [
 							{
 								"bonus": "AlchimistApprentice"
@@ -12703,7 +12700,6 @@
 							}
 						],
 						"flags": 1,
-						"xpScale": 1,
 						"levels": [
 							{
 								"bonus": "ThiefApprentice"
@@ -12762,7 +12758,6 @@
 						],
 						"skipActivity": true,
 						"flags": 1,
-						"xpScale": 1,
 						"levels": [
 							{
 								"bonus": "CookApprentice"
@@ -12822,7 +12817,6 @@
 						],
 						"skipActivity": true,
 						"flags": 1,
-						"xpScale": 1,
 						"levels": [
 							{
 								"bonus": "TinkererApprentice"
@@ -12900,7 +12894,6 @@
 							}
 						],
 						"flags": 1,
-						"xpScale": 1,
 						"levels": [
 							{
 								"bonus": "FishermanApprentice"
@@ -12958,7 +12951,6 @@
 							}
 						],
 						"flags": 1,
-						"xpScale": 1,
 						"levels": [
 							{
 								"bonus": "ScholarApprentice"
@@ -13036,7 +13028,6 @@
 							}
 						],
 						"flags": 1,
-						"xpScale": 1,
 						"levels": [
 							{
 								"bonus": "BardApprentice"
@@ -13067,7 +13058,6 @@
 					"desc": "Peut couper du bois.",
 					"props": {
 						"hasLevel": true,
-						"xpScale": 1,
 						"levels": [
 							{
 								"bonus": "WoodcutterApprentice"
@@ -13443,12 +13433,6 @@
 				{
 					"typeStr": "2",
 					"name": "skipActivity",
-					"opt": true,
-					"kind": null
-				},
-				{
-					"typeStr": "4",
-					"name": "xpScale",
 					"opt": true,
 					"kind": null
 				},
@@ -21166,8 +21150,8 @@
 					"icon": {
 						"file": "ui/Icons/Icons_Resources_02.png",
 						"size": 96,
-						"x": 14,
-						"y": 3,
+						"x": 16,
+						"y": 5,
 						"height": 2
 					},
 					"type": "LeftHand",
@@ -23308,7 +23292,7 @@
 				},
 				{
 					"id": "MediumArmorRareAlazar",
-					"name": "Gambison d'Alazar",
+					"name": "Gambison du Colosse",
 					"weight": 3,
 					"baseBonus": [
 						{
@@ -24317,7 +24301,7 @@
 				},
 				{
 					"id": "LightArmorUncoAlazar",
-					"name": "Pourpoint d'Alazar",
+					"name": "Pourpoint rembourré d'Alazar",
 					"weight": 2,
 					"baseBonus": [
 						{
@@ -25974,7 +25958,7 @@
 					"type": "BeltAccessory",
 					"price": 50,
 					"rarity": 0,
-					"desc": "La silhouette totalement plate représente un jongleur en pleine accrobacie.",
+					"desc": "La silhouette totalement plate représente un jongleur en pleine acrobatie.",
 					"group": 21,
 					"iconeDone": true
 				},
@@ -27225,7 +27209,7 @@
 				},
 				{
 					"id": "BeltAccAtlessHorn",
-					"name": "Olifant d'Atless",
+					"name": "Olifant de Mehyt",
 					"weight": 0.5,
 					"baseBonus": [],
 					"props": {
@@ -30839,7 +30823,7 @@
 				},
 				{
 					"id": "OilStrengthProcWeak",
-					"name": "Huile fortifiante",
+					"name": "Huile revigorante",
 					"weight": 0.5,
 					"baseBonus": [],
 					"props": {
@@ -31029,7 +31013,7 @@
 				},
 				{
 					"id": "OilDamageTakenProc1",
-					"name": "Huile de renforcement I",
+					"name": "Huile de blindage I",
 					"weight": 0.5,
 					"baseBonus": [],
 					"props": {
@@ -31287,7 +31271,7 @@
 				},
 				{
 					"id": "OilProcSolid",
-					"name": "Huile fortifiante I",
+					"name": "Huile solidifiante I",
 					"weight": 0.5,
 					"baseBonus": [],
 					"props": {
@@ -33942,87 +33926,6 @@
 					"rarity": 2
 				},
 				{
-					"id": "WarriorCodex1",
-					"name": "Codex du Guerrier - Chapitre I",
-					"weight": 0.1,
-					"baseBonus": [],
-					"props": {
-						"refItems": [
-							{
-								"item": "RuneCity"
-							},
-							{
-								"item": "RuneBuilding"
-							}
-						]
-					},
-					"icon": {
-						"file": "ui/Icons_Resources.png",
-						"size": 96,
-						"x": 10,
-						"y": 16
-					},
-					"desc": "…. fut détruite par le feu. Tyr fut engloutie dans les flots. Manat fut ensevelie sous la montagne. C'est de cette ville dont venait Narsès.",
-					"rarity": 2,
-					"type": "Codex",
-					"group": 32,
-					"iconeDone": true
-				},
-				{
-					"id": "WarriorCodex2",
-					"name": "Codex du Guerrier - Chapitre II",
-					"weight": 0.1,
-					"baseBonus": [],
-					"props": {
-						"refItems": [
-							{
-								"item": "RuneCity"
-							},
-							{
-								"item": "RuneBuilding"
-							}
-						]
-					},
-					"icon": {
-						"file": "ui/Icons_Resources.png",
-						"size": 96,
-						"x": 11,
-						"y": 16
-					},
-					"rarity": 2,
-					"desc": "Narsès mena le Peuple contre les monstres. (Phrase effacée) Les villes furent refondées mais celle de Narsès demeura détruite. … déposa son bouclier là où était Manat et renonça au combat.",
-					"type": "Codex",
-					"group": 32,
-					"iconeDone": true
-				},
-				{
-					"id": "WarriorCodex3",
-					"name": "Codex du Guerrier - Chapitre III",
-					"weight": 0.1,
-					"baseBonus": [],
-					"props": {
-						"refItems": [
-							{
-								"item": "RuneCity"
-							},
-							{
-								"item": "RuneBuilding"
-							}
-						]
-					},
-					"icon": {
-						"file": "ui/Icons_Resources.png",
-						"size": 96,
-						"x": 12,
-						"y": 16
-					},
-					"rarity": 2,
-					"desc": "Le Peuple enterra Narsès selon ses souhaits. D'un seul regard, son âme pourrait contempler sa ville et la mer.",
-					"type": "Codex",
-					"group": 32,
-					"iconeDone": true
-				},
-				{
 					"id": "BuilderCodex1",
 					"name": "Codex de la Bâtisseuse - Chapitre I",
 					"weight": 0.1,
@@ -34530,7 +34433,7 @@
 					},
 					"type": "Codex",
 					"rarity": 2,
-					"desc": "Il suffit d’avoir contempler le port de Drometh une fois, pour s’en rendre compte. Temple du commerce, certes, mais prouesse d’ingéniosité, surtout ! Ce port qui ne ressemble à nul autre, qui transforma une médiocre presqu’île en région prospère, aurait fait mériter à son créateur une plus digne postérité."
+					"desc": "Il suffit d’avoir contemplé le port de Drometh une fois, pour s’en rendre compte. Temple du commerce, certes, mais prouesse d’ingéniosité, surtout ! Ce port qui ne ressemble à nul autre, qui transforma une médiocre presqu’île en région prospère, aurait fait mériter à son créateur une plus digne postérité."
 				},
 				{
 					"id": "MerchantCodex3",
@@ -40098,7 +40001,7 @@
 						"height": 2
 					},
 					"type": "ToolProd",
-					"desc": "Un petit atelier de fortune qui permet à vos compagnons de concevoir de nombreux objets utiles.\n\n[JOBASSIGN] production de <img src=\"item/RawMaterials\"/>[VALUE] à chaque Repos.",
+					"desc": "Un petit atelier de fortune qui permet à vos compagnons de concevoir de nombreux objets utiles.\n\n[JOBASSIGN] produit <img src=\"item/RawMaterials\"/>[VALUE] à chaque Repos.",
 					"price": 100,
 					"tool": {
 						"campWidth": 2,
@@ -40151,7 +40054,7 @@
 					"rarity": 2,
 					"type": "ToolProd",
 					"price": 100,
-					"desc": "Un petit atelier de fortune qui permet à vos compagnons de concevoir de nombreux objets utiles.\n\n[JOBASSIGN] production de <img src=\"item/RawMaterials\"/>[VALUE] à chaque Repos.",
+					"desc": "Un petit atelier de fortune qui permet à vos compagnons de concevoir de nombreux objets utiles.\n\n[JOBASSIGN] produit <img src=\"item/RawMaterials\"/>[VALUE] à chaque Repos.",
 					"tool": {
 						"campWidth": 2,
 						"campHeight": 2,
@@ -40200,7 +40103,7 @@
 					"type": "ToolProd",
 					"rarity": 2,
 					"price": 100,
-					"desc": "Un petit atelier de fortune qui permet à vos compagnons de concevoir de nombreux objets utiles.\n\n[JOBASSIGN] production de <img src=\"item/RawMaterials\"/>[VALUE] à chaque Repos.",
+					"desc": "Un petit atelier de fortune qui permet à vos compagnons de concevoir de nombreux objets utiles.\n\n[JOBASSIGN] produit <img src=\"item/RawMaterials\"/>[VALUE] à chaque Repos.",
 					"tool": {
 						"campWidth": 2,
 						"campHeight": 2,
@@ -41153,7 +41056,7 @@
 					"type": "Tool",
 					"price": 100,
 					"rarity": 2,
-					"desc": "[JOBASSIGN] \n- Reconstitue des Antiquités trouvées dans les Tombeaux des Anciens pendant le Repos.\n- Augmente votre connaissance pendant le Repos.",
+					"desc": "[JOBASSIGN]\n- Reconstitue des Antiquités trouvées dans les Tombeaux des Anciens pendant le Repos.\n- Augmente votre connaissance pendant le Repos.",
 					"tool": {
 						"campWidth": 2,
 						"campHeight": 2,
@@ -41260,7 +41163,7 @@
 						"animation": "Lectern",
 						"tier": 3
 					},
-					"desc": "[JOBASSIGN] \n- Reconstitue des Antiquités trouvées dans les Tombeaux des Anciens pendant le Repos.\n- Augmente votre connaissance pendant le Repos.",
+					"desc": "[JOBASSIGN]\n- Reconstitue des Antiquités trouvées dans les Tombeaux des Anciens pendant le Repos.\n- Augmente votre connaissance pendant le Repos.",
 					"price": 100
 				},
 				{
@@ -41667,7 +41570,7 @@
 						"hideHandEquipment": true,
 						"animation": "Chest"
 					},
-					"desc": "Stockez les objets que vous souhaitez conserver dans ce coffre.\n\n[JOBASSIGN] : Blanchit petit à petit les objets stockés volés pendant les Repos.",
+					"desc": "Stockez les objets que vous souhaitez conserver dans ce coffre.\n\n[JOBASSIGN] blanchit petit à petit les objets stockés volés pendant les Repos.",
 					"group": 35,
 					"iconeDone": true
 				},
@@ -44380,7 +44283,7 @@
 				},
 				{
 					"title": "Codex",
-					"id": "WarriorCodex1"
+					"id": "BuilderCodex1"
 				},
 				{
 					"title": "Food",
@@ -49023,7 +48926,7 @@
 					"jobLevel": 2,
 					"learnCost": [
 						{
-							"qty": 0,
+							"qty": 1,
 							"item": "RecipeBackAccCookingNoSalt"
 						}
 					],
@@ -51402,7 +51305,12 @@
 						}
 					],
 					"props": {},
-					"learnCost": [],
+					"learnCost": [
+						{
+							"qty": 1,
+							"item": "RecipePlagueRemedy"
+						}
+					],
 					"itemCost": [],
 					"jobLevel": 4
 				},
@@ -51455,6 +51363,84 @@
 					"jobLevel": 1
 				},
 				{
+					"item": "OilDexterityProcWeak",
+					"tool": "ApothecaryTable",
+					"recipe": [
+						{
+							"qty": 1,
+							"item": "Flask"
+						},
+						{
+							"qty": 2,
+							"item": "SnowIris"
+						},
+						{
+							"qty": 3,
+							"item": "FishOil"
+						},
+						{
+							"qty": 3,
+							"item": "Fangs"
+						}
+					],
+					"props": {},
+					"jobLevel": 1,
+					"learnCost": [],
+					"itemCost": []
+				},
+				{
+					"item": "OilDamageTakenProcWeak",
+					"tool": "ApothecaryTable",
+					"recipe": [
+						{
+							"qty": 1,
+							"item": "Flask"
+						},
+						{
+							"qty": 3,
+							"item": "Fat"
+						},
+						{
+							"qty": 3,
+							"item": "FishOil"
+						},
+						{
+							"qty": 2,
+							"item": "IronOre"
+						}
+					],
+					"props": {},
+					"jobLevel": 1,
+					"learnCost": [],
+					"itemCost": []
+				},
+				{
+					"item": "OilStrengthProcWeak",
+					"tool": "ApothecaryTable",
+					"recipe": [
+						{
+							"qty": 1,
+							"item": "Flask"
+						},
+						{
+							"qty": 2,
+							"item": "Comfrey"
+						},
+						{
+							"qty": 3,
+							"item": "FishOil"
+						},
+						{
+							"qty": 3,
+							"item": "Fangs"
+						}
+					],
+					"props": {},
+					"jobLevel": 1,
+					"learnCost": [],
+					"itemCost": []
+				},
+				{
 					"item": "BeeBomb",
 					"tool": "ApothecaryTable",
 					"recipe": [
@@ -51501,7 +51487,7 @@
 					"jobLevel": 1,
 					"learnCost": [
 						{
-							"qty": 0,
+							"qty": 1,
 							"item": "RecipeCorrosiveBomb"
 						}
 					],
@@ -51684,6 +51670,95 @@
 					],
 					"itemCost": [],
 					"jobLevel": 2
+				},
+				{
+					"item": "BundleThrowingLeftHandSpecialT1",
+					"tool": "ApothecaryTable",
+					"recipe": [],
+					"props": {
+						"require": [
+							{
+								"item": "BundleThrowingLeftHandT1"
+							}
+						]
+					},
+					"jobLevel": 2,
+					"learnCost": [
+						{
+							"qty": 1,
+							"item": "Knowledge"
+						}
+					],
+					"itemCost": []
+				},
+				{
+					"item": "BundleThrowingLeftHandSpecialT2",
+					"tool": "ApothecaryTable",
+					"recipe": [],
+					"props": {
+						"require": [
+							{
+								"item": "BundleThrowingLeftHandSpecialT1"
+							},
+							{
+								"item": "BundleThrowingLeftHandT2"
+							}
+						]
+					},
+					"jobLevel": 3,
+					"learnCost": [
+						{
+							"qty": 1,
+							"item": "Knowledge"
+						}
+					],
+					"itemCost": []
+				},
+				{
+					"item": "BundleThrowingLeftHandSpecialT3",
+					"tool": "ApothecaryTable",
+					"recipe": [],
+					"props": {
+						"require": [
+							{
+								"item": "BundleThrowingLeftHandSpecialT2"
+							},
+							{
+								"item": "BundleThrowingLeftHandT3"
+							}
+						]
+					},
+					"jobLevel": 4,
+					"learnCost": [
+						{
+							"qty": 1,
+							"item": "Knowledge"
+						}
+					],
+					"itemCost": []
+				},
+				{
+					"item": "BundleThrowingLeftHandSpecialT4",
+					"tool": "ApothecaryTable",
+					"recipe": [],
+					"props": {
+						"require": [
+							{
+								"item": "BundleThrowingLeftHandSpecialT3"
+							},
+							{
+								"item": "BundleThrowingLeftHandT4"
+							}
+						]
+					},
+					"jobLevel": 5,
+					"learnCost": [
+						{
+							"qty": 1,
+							"item": "Knowledge"
+						}
+					],
+					"itemCost": []
 				},
 				{
 					"item": "PoisonedThrowingKnife",
@@ -71463,7 +71538,12 @@
 							"proba": 1
 						}
 					],
-					"id": "Purifiers"
+					"id": "Purifiers",
+					"passiveSkills": [
+						{
+							"skill": "CloseRanks"
+						}
+					]
 				},
 				{
 					"types": [
@@ -73637,7 +73717,7 @@
 				{
 					"id": "nake",
 					"name": "Condamnation",
-					"desc": "Inflige [DMG] à la cible et lui applique [Condemn].",
+					"desc": "Applique [Condemn] à la cible et lui inflige [DMG].",
 					"mode": 0,
 					"range": {
 						"baseDistance": 3
@@ -73658,7 +73738,7 @@
 						"oncePerFight": true,
 						"useWithoutWeapon": true
 					},
-					"script": "function onDamage(a) {\n\ta.target.addStatus(Status.Condemn);\n}",
+					"script": "function onBeforeHit(a) {\n\ta.target.addStatus(Status.Condemn);\n}",
 					"notes": "",
 					"iconeDone": true,
 					"icon": {
@@ -74695,7 +74775,8 @@
 						"vars": {
 							"value1": 5
 						},
-						"extraFx": "prefabs/fx/fight/Attack/AttackPower_B.fx"
+						"extraFx": "prefabs/fx/fight/Attack/AttackPower_B.fx",
+						"isAttack": true
 					},
 					"script": "function onEval(a) {\n\tvar dist = round(getDistance(a.target, skill.unit) );\n\ta.baseDamageBonus += ceil(vars.value1*dist);\n\tif( skill.level == 2 ) {\n\t\ta.criticalHitPercent += ceil(vars.value1*dist);\n\t}\n}",
 					"notes": "",
@@ -74950,15 +75031,16 @@
 						"baseDistance": 4
 					},
 					"props": {
-						"dmgAttribute": 1,
 						"vars": {
 							"value1": 4
 						},
-						"specialAnim": "Throw",
+						"dmgAttribute": 1,
+						"flags": 64,
+						"specialAnim": "ThrowLeft",
 						"preventEngage": true,
-						"flags": 64
+						"throwModel": "chars/Weapons/LeftHand_Dagger_01.fbx"
 					},
-					"script": "function onSkillPlayed(s) {\n\tvar minD : Float = vars.value1;\n\tvar minFoe = null;\n\tif(s.kind == Skill.KnockOut)\n\t\treturn;\n\tfor( u in getFoes(skill.unit) ) {\n\t\tvar d = getDistance(skill.unit, u);\n\t\tif( d < minD ) {\n\t\t\tminD = d;\n\t\t\tminFoe = u;\n\t\t}\n\t}\n\tif (minFoe != null) {\n\t\t//play(); // made the animation attack play twice\n\t\tspawnFx();\n\t\tattackTarget(minFoe);\n\t\tif ( skill.level == 2 ) {\n\t\t\tskill.unit.movePoints = skill.unit.getMaxMovePoints();\n\t\t}\n\t}\n}",
+					"script": "function onSkillPlayed(s) {\n\tif (s.kind == Skill.KnockOut) return;\n\tvar minD : Float = vars.value1;\n\tvar minFoe = null;\n\tfor( u in getFoes(skill.unit) ) {\n\t\tvar d = getDistance(skill.unit, u);\n\t\tif( d < minD ) {\n\t\t\tminD = d;\n\t\t\tminFoe = u;\n\t\t}\n\t}\n\tif (minFoe != null) {\n\t\tspawnFx();\n\t\tattackTarget(minFoe);\n\t\tif ( skill.level == 2 ) {\n\t\t\tskill.unit.movePoints = skill.unit.getMaxMovePoints();\n\t\t}\n\t}\n}",
 					"notes": "",
 					"icon": {
 						"file": "ui/Icons/BattleIcons96PX.png",
@@ -74966,7 +75048,6 @@
 						"x": 14,
 						"y": 5
 					},
-					"minDmg": 2,
 					"levels": [
 						{
 							"props": {},
@@ -74975,7 +75056,8 @@
 					],
 					"iconeDone": true,
 					"group": 11,
-					"done": 2
+					"done": 2,
+					"minDmg": 2
 				},
 				{
 					"id": "DeadlyContract",
@@ -75954,7 +76036,7 @@
 							"value1": 100
 						}
 					},
-					"script": "function onSkillEval(s) {\n\tif( !vars.used ) {\n\t\tfor( t in s.getTargets() ) {\n\t\t\tt.baseDamageBonus += vars.value1;\n\t\t}\n\t}\n}\n\nfunction onSkillPlayed(a) {\n\tif( !vars.used ) {\n\t\tvar damageDone = false;\n\t\tfor( t in a.getTargets() ) {\n\t\t\tdamageDone = t.damagedArmor + t.damagedHealth > 0;\n\t\t\ttrace(damageDone);\n\t\t\tif( damageDone ) break;\n\t\t}\n\t\tif( damageDone ) {\n\t\t\tspawnFx();\n\t\t\tvars.used = true;\n\t\t}\n\t}\n}",
+					"script": "function onSkillEval(s) {\n\tif( !vars.used ) {\n\t\tfor( t in s.getTargets() ) {\n\t\t\tt.baseDamageBonus += vars.value1;\n\t\t}\n\t}\n}\n\nfunction onSkillPlayed(a) {\n\tif( !vars.used ) {\n\t\tvar damageDone = false;\n\t\tfor( t in a.getTargets() ) {\n\t\t\tdamageDone = t.damagedArmor + t.damagedHealth > 0;\n\t\t\tif( damageDone ) break;\n\t\t}\n\t\tif( damageDone ) {\n\t\t\tspawnFx();\n\t\t\tvars.used = true;\n\t\t}\n\t}\n}",
 					"notes": "",
 					"icon": {
 						"file": "ui/Icons/BattleIcons96PX.png",
@@ -76836,7 +76918,7 @@
 						},
 						"feature": "Alazar1_Update"
 					},
-					"script": "function onSkillEval(a) {\n\tfor( t in a.getTargets() ) {\n\t\tif( skill.unit.armor > t.target.armor ) {\n\t\t\tt.criticalHitPercent == 100;\n\t\t\tif( skill.level == 2 ) {\n\t\t\t\tt.target.addStatus(Status.Confus, vars.value1, true);\n\t\t\t}\n\t\t}\n\t}\n}",
+					"script": "function onSkillEval(a) {\n\tif (skill.unit.engagedUnit != null && skill.unit.armor > skill.unit.engagedUnit.armor) {\n\t\tfor (t in a.getTargets()){\n\t\t\tt.criticalHitPercent = 100;\n\t\t}\n\t}\n}\n\nfunction onDamageDealt(t){\n\tif (skill.level == 2 && skill.unit.engagedUnit != null && skill.unit.armor > skill.unit.engagedUnit.armor) {\n\t\tt.target.addStatus(Status.Confus, vars.value1, true);\n\t}\n}",
 					"notes": "",
 					"iconeDone": true,
 					"group": 14,
@@ -80616,8 +80698,8 @@
 						"defaultAction": true,
 						"feature": "Difficulty_Update"
 					},
-					"script": "var arr = [Status.Burning];\nfunction onInit() {\n\tvars.statusIndex = randInt(0 , arr.length-1);\n}\n\nfunction onDamage(a) {\n\ta.target.addStatus(arr[vars.statusIndex%arr.length]);\n}",
-					"notes": "Ajouter les status // 2",
+					"script": "var arr = [\n\tStatus.Poison,\n\tStatus.Bleeding,\n\tStatus.Fragility,\n\tStatus.Weakening,\n\tStatus.Vulnerability\n];\n\nfunction onBeginRound(){\n\tif (vars.statusIndex == -1)\n\t\tvars.statusIndex = randInt(0, arr.length - 1);\n}\n\nfunction onDamage(a) {\n\ta.target.addStatus(arr[vars.statusIndex]);\n}",
+					"notes": "2",
 					"iconeDone": true,
 					"minDmg": 8,
 					"maxDmg": 10,
@@ -84234,7 +84316,7 @@
 							}
 						]
 					},
-					"script": "function onDamageDealt(a) {\n\ttrace(\"onDamageDealt\");\n\ta.target.addStatus(Status.Frightened);\n\ttrace(\"+++++++++++++++++++++++++++++++++++++++++++++++++++++++\");\n}",
+					"script": "function onDamageDealt(a) {\n\ta.target.addStatus(Status.Frightened);\n}",
 					"notes": "",
 					"iconeDone": true,
 					"group": 36,
@@ -87398,7 +87480,7 @@
 						},
 						"feature": "Alazar1_Update"
 					},
-					"script": "function onDamageDealt(a) {\n\tif(!a.unit.isEngaged())\n\t\treturn;\n\n\tvar engagedUnit = a.unit.engagedUnit;\n\n\tvar tab = [];\n\tfor(u in getAllies(skill.unit)) {\n\t\tif( getDistance(u, skill.unit) <= vars.value1 && !u.isEngaged() && !u.isAnimal && u.canMove() ) {\n\t\t\ttab.push(u);\n\t\t}\n\t}\n\tif(tab.length > 0) {\n\t\tvar target = tab[randInt(0, tab.length-1)];\n\n\t\ta.unit.swapPositionWith(target, 0.2);\n\n\t\ttarget.engage(engagedUnit);\n\t\tif( target != skill.unit ) {\n\t\t\tengagedUnit.opportunityAttack(target, skill);\n\t\t}\n\t}\n\telse {\n\t\ta.unit.swapPositionWith(engagedUnit, 0.2);\n\t\ta.unit.engage(engagedUnit);\n\t}\n}",
+					"script": "function onDamageDealt(a) {\n\tif(!a.unit.isEngaged())\n\t\treturn;\n\n\tvar engagedUnit = a.unit.engagedUnit;\n\n\tvar tab = [];\n\tfor(u in getAllies(skill.unit)) {\n\t\tif( getDistance(u, skill.unit) <= vars.value1 && !u.isEngaged() && !u.isAnimal && u.canMove() ) {\n\t\t\ttab.push(u);\n\t\t}\n\t}\n\tif(tab.length > 0) {\n\t\tvar target = tab[randInt(0, tab.length-1)];\n\n\t\ta.unit.swapPositionWith(target, 0.2);\n\n\t\ttarget.engage(engagedUnit);\n\t\tif( target != skill.unit ) {\n\t\t\tengagedUnit.opportunityAttack(target, skill);\n\t\t}\n\t}\n\telse if(!engagedUnit.isAnimal) {\n\t\ta.unit.swapPositionWith(engagedUnit, 0.2);\n\t\ta.unit.engage(engagedUnit);\n\t}\n}",
 					"notes": "",
 					"iconeDone": true,
 					"group": 56,
@@ -88843,7 +88925,7 @@
 				},
 				{
 					"id": "BeltAccOilProcPoison",
-					"name": "Concentré d'huile empoisonnée",
+					"name": "Concentré d'<item>OilProcPoison1</item>",
 					"desc": "L'Huile empoisonnée a ::value1::% de chances supplémentaires d'appliquer ses effets.",
 					"mode": 2,
 					"range": {},
@@ -88896,7 +88978,7 @@
 				},
 				{
 					"id": "BeltAccOilProcBleeding",
-					"name": "Concentré d'huile d'aiguisage",
+					"name": "Concentré d'<item>OilProcBleeding1</item>",
 					"desc": "L'Huile d'aiguisage a ::value1::% de chances supplémentaires d'appliquer ses effets.",
 					"mode": 2,
 					"range": {},
@@ -88932,7 +89014,7 @@
 				},
 				{
 					"id": "BeltAccOilProcBurning",
-					"name": "Concentré d'huile acide",
+					"name": "Concentré d'<item>OilProcBurning1</item>",
 					"desc": "L'Huile acide a ::value1::% de chances supplémentaires d'appliquer ses effets.",
 					"mode": 2,
 					"range": {},
@@ -89090,7 +89172,7 @@
 							}
 						]
 					},
-					"script": "function onSkillEval(s) {\n\tfor( t in s.getTargets() ) {\n\t\tif( s.kind == Skill.OpportunityAttack && t.target == skill.unit ) {\n\t\t\tt.baseDamageBonus -= vars.value1;\n\t\t}\n\t}\n}",
+					"script": "function onSkillEval(s) {\n\tif ( s.isOpportunityAttack() ){\n\t\tfor( t in s.getTargets() ) {\n\t\t\tif( t.target == skill.unit ) {\n\t\t\t\tt.baseDamageBonus -= vars.value1;\n\t\t\t}\n\t\t}\n\t}\n}",
 					"notes": "",
 					"iconeDone": true,
 					"group": 65,
@@ -89173,7 +89255,7 @@
 				},
 				{
 					"id": "BeltAccOilProcTrueDmg",
-					"name": "Concentré d'huile explosive",
+					"name": "Concentré d'<item>OilProcTrueDmg1</item>",
 					"desc": "L'Huile explosive a ::value1::% de chances supplémentaires d'appliquer ses effets.",
 					"mode": 2,
 					"range": {},
@@ -89190,7 +89272,7 @@
 				},
 				{
 					"id": "BeltAccOilStrengthProc",
-					"name": "Concentré d'huile de force",
+					"name": "Concentré d'<item>OilStrengthProc1</item>",
 					"desc": "L'Huile de force a ::value1::% de chances supplémentaires d'appliquer ses effets.",
 					"mode": 2,
 					"range": {},
@@ -89207,7 +89289,7 @@
 				},
 				{
 					"id": "BeltAccOilDexterityProc",
-					"name": "Concentré d'huile de promptitude",
+					"name": "Concentré d'<item>OilDexterityProc1</item>",
 					"desc": "L'Huile de promptitude a ::value1::% de chances supplémentaires d'appliquer ses effets.",
 					"mode": 2,
 					"range": {},
@@ -89224,7 +89306,7 @@
 				},
 				{
 					"id": "BeltAccOilDamageTakenProc",
-					"name": "Concentré d'huile de renforcement",
+					"name": "Concentré d'<item>OilDamageTakenProc1</item>",
 					"desc": "L'Huile de renforcement a ::value1::% de chances supplémentaires d'appliquer ses effets.",
 					"mode": 2,
 					"range": {},
@@ -89241,7 +89323,7 @@
 				},
 				{
 					"id": "BeltAccOilSlowProc",
-					"name": "Concentré d'huile paralysante",
+					"name": "Concentré d'<item>OilSlowProc1</item>",
 					"desc": "L'Huile paralysante a ::value1::% de chances supplémentaires d'appliquer ses effets.",
 					"mode": 2,
 					"range": {},
@@ -89258,7 +89340,7 @@
 				},
 				{
 					"id": "BeltAccOilSelfHeal",
-					"name": "Concentré d'huile de conversion",
+					"name": "Concentré d'<item>OilSelfheal1</item>",
 					"desc": "L'Huile de conversion a ::value1::% de chances supplémentaires d'appliquer ses effets.",
 					"mode": 2,
 					"range": {},
@@ -89275,7 +89357,7 @@
 				},
 				{
 					"id": "BeltAccOilDotEffect",
-					"name": "Concentré d'huile infectieuse",
+					"name": "Concentré d'<item>OilDotEffect1</item>",
 					"desc": "L'Huile infectieuse a ::value1::% de chances supplémentaires d'appliquer ses effets.",
 					"mode": 2,
 					"range": {},
@@ -89292,7 +89374,7 @@
 				},
 				{
 					"id": "BeltAccOilCleave",
-					"name": "Concentré d'huile vaporeuse",
+					"name": "Concentré d'<item>OilCleave1</item>",
 					"desc": "L'Huile vaporeuse a ::value1::% de chances supplémentaires d'appliquer ses effets.",
 					"mode": 2,
 					"range": {},
@@ -89309,7 +89391,7 @@
 				},
 				{
 					"id": "BeltAccOilWindfury",
-					"name": "Concentré d'huile instable",
+					"name": "Concentré d'<item>OilWindfury1</item>",
 					"desc": "L'Huile instable a ::value1::% de chances supplémentaires d'appliquer ses effets.",
 					"mode": 2,
 					"range": {},
@@ -89326,7 +89408,7 @@
 				},
 				{
 					"id": "BeltAccOilHemorraghe",
-					"name": "Concentré d'huile hémorragique",
+					"name": "Concentré d'<item>OilHemorraghe1</item>",
 					"desc": "L'Huile hémorragique a ::value1::% de chances supplémentaires d'appliquer ses effets.",
 					"mode": 2,
 					"range": {},
@@ -89343,7 +89425,7 @@
 				},
 				{
 					"id": "BeltAccOilSticky",
-					"name": "Concentré d'huile poisseuse",
+					"name": "Concentré d'<item>OilSticky1</item>",
 					"desc": "L'Huile hémorragique a ::value1::% de chances supplémentaires d'appliquer ses effets.",
 					"mode": 2,
 					"range": {},
@@ -89360,7 +89442,7 @@
 				},
 				{
 					"id": "BeltAccOilProcSolid",
-					"name": "Concentré d'huile solidifiante",
+					"name": "Concentré d'<item>OilProcSolid</item>",
 					"desc": "L'Huile solidifiante a ::value1::% de chances supplémentaires d'appliquer ses effets.",
 					"mode": 2,
 					"range": {},
@@ -89377,7 +89459,7 @@
 				},
 				{
 					"id": "BeltAccOilSwipping",
-					"name": "Concentré d'huile glissante",
+					"name": "Concentré d'<item>OilSwipping</item>",
 					"desc": "L'Huile glissante a ::value1::% de chances supplémentaires d'appliquer ses effets.",
 					"mode": 2,
 					"range": {},
@@ -89394,7 +89476,7 @@
 				},
 				{
 					"id": "BeltAccProcFever",
-					"name": "Concentré d'huile fiévreuse",
+					"name": "Concentré d'<item>OilProcFever</item>",
 					"desc": "L'Huile fiévreuse a ::value1::% de chances supplémentaires d'appliquer ses effets.",
 					"mode": 2,
 					"range": {},
@@ -89411,7 +89493,7 @@
 				},
 				{
 					"id": "BeltAccOilBrave",
-					"name": "Concentré d'huile de bravoure",
+					"name": "Concentré d'<item>OilBrave</item>",
 					"desc": "L'Huile de bravoure a ::value1::% de chances supplémentaires d'appliquer ses effets.",
 					"mode": 2,
 					"range": {},
@@ -89428,7 +89510,7 @@
 				},
 				{
 					"id": "BeltAccOilProcSlowReflexes",
-					"name": "Concentré d'huile d'épuisement",
+					"name": "Concentré d'<item>OilProcSlowReflexes</item>",
 					"desc": "L'Huile d'épuisement a ::value1::% de chances supplémentaires d'appliquer ses effets.",
 					"mode": 2,
 					"range": {},
@@ -89574,10 +89656,16 @@
 				{
 					"id": "BeltAccMudGuard",
 					"name": "Garde boue",
-					"desc": "Cette unité ne subit pas les malus de [Boue].",
+					"desc": "Cette unité ne subit pas les malus de [Mud].",
 					"mode": 2,
 					"range": {},
-					"props": {},
+					"props": {
+						"tooltipStatus": [
+							{
+								"st": "Mud"
+							}
+						]
+					},
 					"script": "",
 					"notes": "",
 					"iconeDone": true,
@@ -91639,7 +91727,7 @@
 					"props": {
 						"globalEvents": true
 					},
-					"script": "function onBeginRound() {\n\ttrace(\"hi\");\n\tfor( u in getFoeUnits() ) {\n\t\ttrace(\"hi2\");\n\t\tif( u.hasStatus(Status.A1ArenaRedGazZone) ) {\n\t\t\ttrace(\"hi3\");\n\t\t\tu.addStatus(Status.A1ArenaRedGaz);\n\t\t\tu.cancelStatus(Status.A1ArenaBlueGaz);\n\t\t}\n\t}\n\tfor( u in getFoeUnits() ) {\n\t\ttrace(\"hiblue2\");\n\t\tif( u.hasStatus(Status.A1ArenaBlueGazZone) ) {\n\t\t\ttrace(\"hiblue3\");\n\t\t\tu.addStatus(Status.A1ArenaBlueGaz);\n\t\t\tu.cancelStatus(Status.A1ArenaRedGaz);\n\t\t}\n\t}\n}",
+					"script": "function onBeginRound() {\n\tfor( u in getFoeUnits() ) {\n\t\tif( u.hasStatus(Status.A1ArenaRedGazZone) ) {\n\t\t\tu.addStatus(Status.A1ArenaRedGaz);\n\t\t\tu.cancelStatus(Status.A1ArenaBlueGaz);\n\t\t}\n\t}\n\tfor( u in getFoeUnits() ) {\n\t\tif( u.hasStatus(Status.A1ArenaBlueGazZone) ) {\n\t\t\tu.addStatus(Status.A1ArenaBlueGaz);\n\t\t\tu.cancelStatus(Status.A1ArenaRedGaz);\n\t\t}\n\t}\n}",
 					"notes": "Fait dans le prefab de l'arena",
 					"iconeDone": true,
 					"group": 75,
@@ -98518,7 +98606,7 @@
 				},
 				{
 					"id": "CookingPotMoreAssign",
-					"desc": "Assigner un compagnon réduit la consomation de nourriture quotidienne de <food>[VALUE]</food>",
+					"desc": "Assigner un compagnon réduit la consommation de nourriture quotidienne de <food>[VALUE]</food>",
 					"props": {},
 					"group": 1,
 					"done": true
@@ -104924,7 +105012,141 @@
 					"name": "",
 					"props": {
 						"songTitle": "D'aventure en aventure",
-						"loot": "BaseSong"
+						"loot": "BaseSong",
+						"partition": [
+							{
+								"timeStamp": 1,
+								"track": 1
+							},
+							{
+								"timeStamp": 2,
+								"track": 2
+							},
+							{
+								"timeStamp": 3,
+								"track": 1
+							},
+							{
+								"timeStamp": 4,
+								"track": 0
+							},
+							{
+								"timeStamp": 5,
+								"track": 0
+							},
+							{
+								"timeStamp": 5.66,
+								"track": 2
+							},
+							{
+								"timeStamp": 6,
+								"track": 2
+							},
+							{
+								"timeStamp": 7,
+								"track": 2
+							},
+							{
+								"timeStamp": 7.66,
+								"track": 1
+							},
+							{
+								"timeStamp": 8,
+								"track": 1
+							},
+							{
+								"timeStamp": 9,
+								"track": 1
+							},
+							{
+								"timeStamp": 10,
+								"track": 2
+							},
+							{
+								"timeStamp": 11,
+								"track": 1
+							},
+							{
+								"timeStamp": 11.66,
+								"track": 0
+							},
+							{
+								"timeStamp": 12,
+								"track": 0
+							},
+							{
+								"timeStamp": 13,
+								"track": 0
+							},
+							{
+								"timeStamp": 13.66,
+								"track": 1
+							},
+							{
+								"timeStamp": 14,
+								"track": 2
+							},
+							{
+								"timeStamp": 15,
+								"track": 2
+							},
+							{
+								"timeStamp": 15.66,
+								"track": 2
+							},
+							{
+								"timeStamp": 16,
+								"track": 1
+							},
+							{
+								"timeStamp": 17,
+								"track": 1
+							},
+							{
+								"timeStamp": 17.66,
+								"track": 1
+							},
+							{
+								"timeStamp": 18,
+								"track": 2
+							},
+							{
+								"timeStamp": 19,
+								"track": 1
+							},
+							{
+								"timeStamp": 19.66,
+								"track": 1
+							},
+							{
+								"timeStamp": 20,
+								"track": 0
+							},
+							{
+								"timeStamp": 21,
+								"track": 0
+							},
+							{
+								"timeStamp": 21.66,
+								"track": 1
+							},
+							{
+								"timeStamp": 22,
+								"track": 2
+							},
+							{
+								"timeStamp": 23,
+								"track": 2
+							},
+							{
+								"timeStamp": 23.66,
+								"track": 2
+							},
+							{
+								"timeStamp": 24,
+								"track": 1
+							}
+						]
 					},
 					"desc": "",
 					"done": true
@@ -104935,7 +105157,141 @@
 					"props": {
 						"titleRequired": 5,
 						"songTitle": "La geste de Jean-Bon le sanglier",
-						"loot": "JeanBon"
+						"loot": "JeanBon",
+						"partition": [
+							{
+								"timeStamp": 1,
+								"track": 1
+							},
+							{
+								"timeStamp": 2,
+								"track": 2
+							},
+							{
+								"timeStamp": 3,
+								"track": 1
+							},
+							{
+								"timeStamp": 4,
+								"track": 0
+							},
+							{
+								"timeStamp": 5,
+								"track": 0
+							},
+							{
+								"timeStamp": 5.66,
+								"track": 2
+							},
+							{
+								"timeStamp": 6,
+								"track": 2
+							},
+							{
+								"timeStamp": 7,
+								"track": 2
+							},
+							{
+								"timeStamp": 7.66,
+								"track": 1
+							},
+							{
+								"timeStamp": 8,
+								"track": 1
+							},
+							{
+								"timeStamp": 9,
+								"track": 1
+							},
+							{
+								"timeStamp": 10,
+								"track": 2
+							},
+							{
+								"timeStamp": 11,
+								"track": 1
+							},
+							{
+								"timeStamp": 11.66,
+								"track": 0
+							},
+							{
+								"timeStamp": 12,
+								"track": 0
+							},
+							{
+								"timeStamp": 13,
+								"track": 0
+							},
+							{
+								"timeStamp": 13.66,
+								"track": 1
+							},
+							{
+								"timeStamp": 14,
+								"track": 2
+							},
+							{
+								"timeStamp": 15,
+								"track": 2
+							},
+							{
+								"timeStamp": 15.66,
+								"track": 2
+							},
+							{
+								"timeStamp": 16,
+								"track": 1
+							},
+							{
+								"timeStamp": 17,
+								"track": 1
+							},
+							{
+								"timeStamp": 17.66,
+								"track": 1
+							},
+							{
+								"timeStamp": 18,
+								"track": 2
+							},
+							{
+								"timeStamp": 19,
+								"track": 1
+							},
+							{
+								"timeStamp": 19.66,
+								"track": 1
+							},
+							{
+								"timeStamp": 20,
+								"track": 0
+							},
+							{
+								"timeStamp": 21,
+								"track": 0
+							},
+							{
+								"timeStamp": 21.66,
+								"track": 1
+							},
+							{
+								"timeStamp": 22,
+								"track": 2
+							},
+							{
+								"timeStamp": 23,
+								"track": 2
+							},
+							{
+								"timeStamp": 23.66,
+								"track": 2
+							},
+							{
+								"timeStamp": 24,
+								"track": 1
+							}
+						]
 					},
 					"desc": "",
 					"done": true
@@ -104946,7 +105302,141 @@
 					"props": {
 						"titleRequired": 8,
 						"songTitle": "La balade des gens-tout-nus",
-						"loot": "NakedPeople"
+						"loot": "NakedPeople",
+						"partition": [
+							{
+								"timeStamp": 1,
+								"track": 1
+							},
+							{
+								"timeStamp": 2,
+								"track": 2
+							},
+							{
+								"timeStamp": 3,
+								"track": 1
+							},
+							{
+								"timeStamp": 4,
+								"track": 0
+							},
+							{
+								"timeStamp": 5,
+								"track": 0
+							},
+							{
+								"timeStamp": 5.66,
+								"track": 2
+							},
+							{
+								"timeStamp": 6,
+								"track": 2
+							},
+							{
+								"timeStamp": 7,
+								"track": 2
+							},
+							{
+								"timeStamp": 7.66,
+								"track": 1
+							},
+							{
+								"timeStamp": 8,
+								"track": 1
+							},
+							{
+								"timeStamp": 9,
+								"track": 1
+							},
+							{
+								"timeStamp": 10,
+								"track": 2
+							},
+							{
+								"timeStamp": 11,
+								"track": 1
+							},
+							{
+								"timeStamp": 11.66,
+								"track": 0
+							},
+							{
+								"timeStamp": 12,
+								"track": 0
+							},
+							{
+								"timeStamp": 13,
+								"track": 0
+							},
+							{
+								"timeStamp": 13.66,
+								"track": 1
+							},
+							{
+								"timeStamp": 14,
+								"track": 2
+							},
+							{
+								"timeStamp": 15,
+								"track": 2
+							},
+							{
+								"timeStamp": 15.66,
+								"track": 2
+							},
+							{
+								"timeStamp": 16,
+								"track": 1
+							},
+							{
+								"timeStamp": 17,
+								"track": 1
+							},
+							{
+								"timeStamp": 17.66,
+								"track": 1
+							},
+							{
+								"timeStamp": 18,
+								"track": 2
+							},
+							{
+								"timeStamp": 19,
+								"track": 1
+							},
+							{
+								"timeStamp": 19.66,
+								"track": 1
+							},
+							{
+								"timeStamp": 20,
+								"track": 0
+							},
+							{
+								"timeStamp": 21,
+								"track": 0
+							},
+							{
+								"timeStamp": 21.66,
+								"track": 1
+							},
+							{
+								"timeStamp": 22,
+								"track": 2
+							},
+							{
+								"timeStamp": 23,
+								"track": 2
+							},
+							{
+								"timeStamp": 23.66,
+								"track": 2
+							},
+							{
+								"timeStamp": 24,
+								"track": 1
+							}
+						]
 					},
 					"desc": "",
 					"done": true
@@ -104957,7 +105447,141 @@
 					"props": {
 						"songTitle": "L'épopée du petit chanceux",
 						"loot": "Nek",
-						"titleRequired": 0
+						"titleRequired": 0,
+						"partition": [
+							{
+								"timeStamp": 1,
+								"track": 1
+							},
+							{
+								"timeStamp": 2,
+								"track": 2
+							},
+							{
+								"timeStamp": 3,
+								"track": 1
+							},
+							{
+								"timeStamp": 4,
+								"track": 0
+							},
+							{
+								"timeStamp": 5,
+								"track": 0
+							},
+							{
+								"timeStamp": 5.66,
+								"track": 2
+							},
+							{
+								"timeStamp": 6,
+								"track": 2
+							},
+							{
+								"timeStamp": 7,
+								"track": 2
+							},
+							{
+								"timeStamp": 7.66,
+								"track": 1
+							},
+							{
+								"timeStamp": 8,
+								"track": 1
+							},
+							{
+								"timeStamp": 9,
+								"track": 1
+							},
+							{
+								"timeStamp": 10,
+								"track": 2
+							},
+							{
+								"timeStamp": 11,
+								"track": 1
+							},
+							{
+								"timeStamp": 11.66,
+								"track": 0
+							},
+							{
+								"timeStamp": 12,
+								"track": 0
+							},
+							{
+								"timeStamp": 13,
+								"track": 0
+							},
+							{
+								"timeStamp": 13.66,
+								"track": 1
+							},
+							{
+								"timeStamp": 14,
+								"track": 2
+							},
+							{
+								"timeStamp": 15,
+								"track": 2
+							},
+							{
+								"timeStamp": 15.66,
+								"track": 2
+							},
+							{
+								"timeStamp": 16,
+								"track": 1
+							},
+							{
+								"timeStamp": 17,
+								"track": 1
+							},
+							{
+								"timeStamp": 17.66,
+								"track": 1
+							},
+							{
+								"timeStamp": 18,
+								"track": 2
+							},
+							{
+								"timeStamp": 19,
+								"track": 1
+							},
+							{
+								"timeStamp": 19.66,
+								"track": 1
+							},
+							{
+								"timeStamp": 20,
+								"track": 0
+							},
+							{
+								"timeStamp": 21,
+								"track": 0
+							},
+							{
+								"timeStamp": 21.66,
+								"track": 1
+							},
+							{
+								"timeStamp": 22,
+								"track": 2
+							},
+							{
+								"timeStamp": 23,
+								"track": 2
+							},
+							{
+								"timeStamp": 23.66,
+								"track": 2
+							},
+							{
+								"timeStamp": 24,
+								"track": 1
+							}
+						]
 					},
 					"desc": "",
 					"done": true
@@ -105313,6 +105937,12 @@
 					"name": "coopMode",
 					"opt": true,
 					"kind": null
+				},
+				{
+					"typeStr": "8",
+					"name": "partition",
+					"opt": true,
+					"kind": null
 				}
 			]
 		},
@@ -105355,6 +105985,26 @@
 				{
 					"typeStr": "3",
 					"name": "value",
+					"kind": null
+				}
+			]
+		},
+		{
+			"name": "counter@props@partition",
+			"props": {
+				"hide": true
+			},
+			"separators": [],
+			"lines": [],
+			"columns": [
+				{
+					"typeStr": "4",
+					"name": "timeStamp",
+					"kind": null
+				},
+				{
+					"typeStr": "3",
+					"name": "track",
 					"kind": null
 				}
 			]
@@ -105831,7 +106481,7 @@
 				{
 					"id": "PitonPlaceRope",
 					"color": 16753920,
-					"value": 0.2
+					"value": 0.15
 				},
 				{
 					"id": "RoamingUnitScale",
@@ -110654,6 +111304,12 @@
 					"name": "noDynamicShadows",
 					"opt": true,
 					"kind": null
+				},
+				{
+					"typeStr": "2",
+					"name": "overrideBattlePolygon",
+					"opt": true,
+					"kind": null
 				}
 			]
 		},
@@ -112045,7 +112701,9 @@
 				{
 					"id": "Start_Sing",
 					"gameObject": "UI",
-					"wiseEvents": "Play_WT_Activity_Sing"
+					"wiseEvents": "Play_WT_Activity_Sing",
+					"notes": "BaseSong = LUTH_Common_01\nJeanBon = LUTH_Common_02\nNakedPeople = LUTH_Common_03\nNek = ?",
+					"todo": true
 				},
 				{
 					"id": "Stop_Sing",
@@ -116467,11 +117125,6 @@
 					"opt": true
 				},
 				{
-					"typeStr": "6:itemType",
-					"name": "defaultWeapon",
-					"opt": true
-				},
-				{
 					"typeStr": "5:Strength,Dexterity,BestOfTwo",
 					"name": "dmgAttribute",
 					"opt": true
@@ -117258,7 +117911,7 @@
 					"typeStr": "1",
 					"name": "actionTitle",
 					"opt": true,
-					"kind": null
+					"kind": "localizable"
 				},
 				{
 					"typeStr": "8",

@@ -31094,75 +31094,75 @@
             <desc>This accurate representation of the Beast reminds the wearer what it's like to look fear in the eye.</desc>
         </BeltAccTerrorReduceRound>
         <BeltAccOilProcPoison>
-            <name>Poisonous Oil Concentrate</name>
+            <name><item>OilProcPoison1</item> Concentrate</name>
             <desc>This substance must be handled with care. Be sure to wash your hands thoroughly after use.</desc>
         </BeltAccOilProcPoison>
         <BeltAccOilProcBurning>
-            <name>Acidic Oil Concentrate</name>
+            <name><item>OilProcBurning1</item> Concentrate</name>
             <desc>An apothecary thought it wise to add a disclaimer advising not to ingest this oil.</desc>
         </BeltAccOilProcBurning>
         <BeltAccOilProcBleeding>
-            <name>Whetting Oil Concentrate</name>
+            <name><item>OilProcBleeding1</item> Concentrate</name>
             <desc>This odourless mixture will allow any inexperienced warrior to sharpen any blade.</desc>
         </BeltAccOilProcBleeding>
         <BeltAccOilProcTrueDmg>
-            <name>Explosive Oil Concentrate</name>
+            <name><item>OilProcTrueDmg1</item> Concentrate</name>
             <desc>Warning: This flask should be handled with care.</desc>
         </BeltAccOilProcTrueDmg>
         <BeltAccOilStrengthProc>
-            <name>Strength Oil Concentrate</name>
+            <name><item>OilStrengthProc1</item> Concentrate</name>
             <desc>Developed by Alazarian scholars, the recipe for this concentrate has long remained secret.</desc>
         </BeltAccOilStrengthProc>
         <BeltAccOilDexterityProc>
-            <name>Swiftness Oil Concentrate</name>
+            <name><item>OilDexterityProc1</item> Concentrate</name>
             <desc>No one can explain the colour of this concentrate.</desc>
         </BeltAccOilDexterityProc>
         <BeltAccOilDamageTakenProc>
-            <name>Fortifying Oil Concentrate</name>
+            <name><item>OilDamageTakenProc1</item> Concentrate</name>
             <desc>This substance casts a mesmerising shine when the sun hits it just so.</desc>
         </BeltAccOilDamageTakenProc>
         <BeltAccOilSlowProc>
-            <name>Paralysing Oil Concentrate</name>
+            <name><item>OilSlowProc1</item> Concentrate</name>
             <desc>The Rooks have used this as a poison by passing it off as a type of seasoning.</desc>
         </BeltAccOilSlowProc>
         <BeltAccOilSelfHeal>
-            <name>Conversion Oil Concentrate</name>
+            <name><item>OilSelfheal1</item> Concentrate</name>
             <desc>Its colour is reminiscent of remedies prepared by apothecaries.</desc>
         </BeltAccOilSelfHeal>
         <BeltAccOilDotEffect>
-            <name>Infectious Oil Concentrate</name>
+            <name><item>OilDotEffect1</item> Concentrate</name>
             <desc>The oil smells dreadful enough as it is, so the concentrated form is... vileness itself.</desc>
         </BeltAccOilDotEffect>
         <BeltAccOilCleave>
-            <name>Misty Oil Concentrate</name>
+            <name><item>OilCleave1</item> Concentrate</name>
             <desc>Even as a concentrate, this oil has an ethereal consistency.</desc>
         </BeltAccOilCleave>
         <BeltAccOilWindfury>
-            <name>Unstable Oil Concentrate</name>
+            <name><item>OilWindfury1</item> Concentrate</name>
             <desc>This oil was devised by an apothecary famous for murdering his Lord Mayor.</desc>
         </BeltAccOilWindfury>
         <BeltAccOilHemorraghe>
-            <name>Bleeding Oil Concentrate</name>
+            <name><item>OilHemorraghe1</item> Concentrate</name>
             <desc>Considered an abomination by healers and apothecaries alike.</desc>
         </BeltAccOilHemorraghe>
         <BeltAccOilProcSolid>
-            <name>Fortifying Oil Concentrate</name>
+            <name><item>OilProcSolid</item> Concentrate</name>
             <desc>This fortifying oil is so efficient that even its vial is strengthened.</desc>
         </BeltAccOilProcSolid>
         <BeltAccOilSwipping>
-            <name>Protective Oil Concentrate</name>
+            <name><item>OilSwipping</item> Concentrate</name>
             <desc>There is something comforting about this oil's colour.</desc>
         </BeltAccOilSwipping>
         <BeltAccOilProcFever>
-            <name>Putrid Oil Concentrate</name>
+            <name><item>OilProcFever</item> Concentrate</name>
             <desc>Unidentified chunks are steeping in this oil.</desc>
         </BeltAccOilProcFever>
         <BeltAccOilBrave>
-            <name>The Brave's Oil Concentrate</name>
+            <name><item>OilBrave</item> Concentrate</name>
             <desc>This oil is meant for the most courageous, who carry it proudly on their belts.</desc>
         </BeltAccOilBrave>
         <BeltAccOilProcSlowReflexes>
-            <name>Exhausting Oil Concentrate</name>
+            <name><item>OilProcSlowReflexes</item> Concentrate</name>
             <desc>One drop of this concentrate on your fingers and your whole hand goes numb.</desc>
         </BeltAccOilProcSlowReflexes>
         <BeltAccRadiusVision>
@@ -31830,7 +31830,7 @@
             <desc>A light oil that very subtly lubricates the weapon it is applied to without making it slippery, which allows for quick and easy readjustment of the grip to constantly take advantage of the best possible balance.</desc>
         </OilDexterityProc1>
         <OilDamageTakenProc1>
-            <name>Fortifying Oil I</name>
+            <name>Shielding Oil I</name>
             <desc>Though foul smelling, this medicinal oil, to which a transdermal carrier has been added, reduces the sensation of pain, making its user more resistant.</desc>
         </OilDamageTakenProc1>
         <OilIgnoreGuard1>
@@ -31878,7 +31878,7 @@
             <desc>Initially designed as an anticoagulant cream to stop bleeding, this greasy solution is now primarily used to accelerate blood loss in combat.</desc>
         </OilHemorraghe1>
         <OilProcSolid>
-            <name>Fortifying Oil I</name>
+            <name>Strengthening Oil I</name>
             <desc>A weapon coated in this oil is less likely to break on impact.</desc>
         </OilProcSolid>
         <OilSwipping>
@@ -33178,7 +33178,7 @@
             <desc>Your troop learns more from their fights.</desc>
         </FightForPower>
         <ActionPointBonus2>
-            <name>Bravest of the Braves</name>
+            <name>Bravest of the Brave</name>
             <desc>Your troop is highly trained and ready to do anything to win. With class.</desc>
         </ActionPointBonus2>
         <Ruthless>
@@ -36313,68 +36313,68 @@
             <desc>At the end of their turn, this unit has a ::value1::% chance to gain &lt;apt&gt;::value2::&lt;/apt&gt;.</desc>
         </BeltAccGritEndTurn>
         <BeltAccOilProcTrueDmg>
-            <name>Explosive Oil Concentrate</name>
-            <desc>The Explosive Oil has an additional ::value1::% chance to apply its effects.</desc>
+            <name><item>OilProcTrueDmg1</item> Concentrate</name>
+            <desc><item>OilProcTrueDmg1</item> has an additional ::value1::% chance to apply its effects.</desc>
         </BeltAccOilProcTrueDmg>
         <BeltAccOilStrengthProc>
-            <name>Strength Oil Concentrate</name>
-            <desc>The Strength Oil has an additional ::value1::% chance to apply its effects.</desc>
+            <name><item>OilStrengthProc1</item> Concentrate</name>
+            <desc><item>OilStrengthProc1</item> has an additional ::value1::% chance to apply its effects.</desc>
         </BeltAccOilStrengthProc>
         <BeltAccOilDexterityProc>
-            <name>Swiftness Oil Concentrate</name>
-            <desc>The Swiftness Oil has an additional ::value1::% chance to apply its effects.</desc>
+            <name><item>OilDexterityProc1</item> Concentrate</name>
+            <desc><item>OilDexterityProc1</item> has an additional ::value1::% chance to apply its effects.</desc>
         </BeltAccOilDexterityProc>
         <BeltAccOilDamageTakenProc>
-            <name>Fortifying Oil Concentrate</name>
-            <desc>The Fortifying Oil has an additional ::value1::% chance to apply its effects.</desc>
+            <name><item>OilDamageTakenProc1</item> Concentrate</name>
+            <desc><item>OilDamageTakenProc1</item> has an additional ::value1::% chance to apply its effects.</desc>
         </BeltAccOilDamageTakenProc>
         <BeltAccOilSlowProc>
-            <name>Paralysing Oil Concentrated</name>
-            <desc>The Paralysing Oil has an additional ::value1::% chance to apply its effects.</desc>
+            <name><item>OilSlowProc1</item> Concentrated</name>
+            <desc><item>OilSlowProc1</item> has an additional ::value1::% chance to apply its effects.</desc>
         </BeltAccOilSlowProc>
         <BeltAccOilSelfHeal>
-            <name>Conversion Oil Concentrate</name>
-            <desc>The Conversion Oil has an additional ::value1::% chance to apply its effects.</desc>
+            <name><item>OilSelfheal1</item> Concentrate</name>
+            <desc><item>OilSelfheal1</item> has an additional ::value1::% chance to apply its effects.</desc>
         </BeltAccOilSelfHeal>
         <BeltAccOilDotEffect>
-            <name>Infectious Oil Concentrate</name>
-            <desc>The Infectious Oil has an additional ::value1::% chance to apply its effects.</desc>
+            <name><item>OilDotEffect1</item> Concentrate</name>
+            <desc><item>OilDotEffect1</item> has an additional ::value1::% chance to apply its effects.</desc>
         </BeltAccOilDotEffect>
         <BeltAccOilCleave>
-            <name>Misty Oil Concentrate</name>
-            <desc>The Misty Oil has an additional ::value1::% chance to apply its effects.</desc>
+            <name><item>OilCleave1</item> Concentrate</name>
+            <desc><item>OilCleave1</item> has an additional ::value1::% chance to apply its effects.</desc>
         </BeltAccOilCleave>
         <BeltAccOilWindfury>
-            <name>Unstable Oil Concentrate</name>
-            <desc>The Unstable Oil has an additional ::value1::% chance to apply its effects.</desc>
+            <name><item>OilWindfury1</item> Concentrate</name>
+            <desc><item>OilWindfury1</item> has an additional ::value1::% chance to apply its effects.</desc>
         </BeltAccOilWindfury>
         <BeltAccOilHemorraghe>
-            <name>Bleeding Oil Concentrate</name>
-            <desc>The Bleeding Oil has an additional ::value1::% chance to apply its effects.</desc>
+            <name><item>OilHemorraghe1</item> Concentrate</name>
+            <desc><item>OilHemorraghe1</item> has an additional ::value1::% chance to apply its effects.</desc>
         </BeltAccOilHemorraghe>
         <BeltAccOilSticky>
-            <name>Sticky Oil Concentrate</name>
-            <desc>Bleeding Oil has an additional ::value1::% chance to apply its effects.</desc>
+            <name><item>OilSticky1</item> Concentrate</name>
+            <desc><item>OilSticky1</item> has an additional ::value1::% chance to apply its effects.</desc>
         </BeltAccOilSticky>
         <BeltAccOilProcSolid>
-            <name>Hardening Oil Concentrate</name>
-            <desc>Hardening Oil has an additional ::value1::% chance to apply its effects.</desc>
+            <name><item>OilProcSolid</item> Concentrate</name>
+            <desc><item>OilProcSolid</item> has an additional ::value1::% chance to apply its effects.</desc>
         </BeltAccOilProcSolid>
         <BeltAccOilSwipping>
-            <name>Slippery Oil Concentrate</name>
-            <desc>Slippery Oil has an additional ::value1::% chance to apply its effects.</desc>
+            <name><item>OilSwipping</item> Concentrate</name>
+            <desc><item>OilSwipping</item> has an additional ::value1::% chance to apply its effects.</desc>
         </BeltAccOilSwipping>
-        <BeltAccProcFever>
-            <name>Feverish Oil Concentrate</name>
-            <desc>Feverish Oil has an additional ::value1::% chance to apply its effects.</desc>
-        </BeltAccProcFever>
+        <BeltAccOilProcFever>
+            <name><item>OilProcFever</item> Concentrate</name>
+            <desc><item>OilProcFever</item> has an additional ::value1::% chance to apply its effects.</desc>
+        </BeltAccOilProcFever>
         <BeltAccOilBrave>
-            <name>Courageous Oil Concentrate</name>
-            <desc>Courageous Oil has an additional ::value1::% chance to apply its effects.</desc>
+            <name><item>OilBrave</item> Concentrate</name>
+            <desc><item>OilBrave</item> has an additional ::value1::% chance to apply its effects.</desc>
         </BeltAccOilBrave>
         <BeltAccOilProcSlowReflexes>
-            <name>Exhausting Oil Concentrate</name>
-            <desc>Exhausting Oil has an additional ::value1::% chance to apply its effects.</desc>
+            <name><item>OilProcSlowReflexes</item> Concentrate</name>
+            <desc><item>OilProcSlowReflexes</item> has an additional ::value1::% chance to apply its effects.</desc>
         </BeltAccOilProcSlowReflexes>
         <BeltAccTerrorMax>
             <name>Trackers’ Charm</name>
@@ -37671,7 +37671,7 @@
             <desc>Repair materials and village blacksmiths restore [VALUE] additional Armour points.</desc>
         </RawMaterialEfficacity>
         <RawMaterialOnRest>
-            <desc>[JOBASSIGN] makes &lt;img src="item/RawMaterials"/&gt;[VALUE] raw materials every time they rest.</desc>
+            <desc>Produces &lt;img src="item/RawMaterials"/&gt;[VALUE] during each Rest.</desc>
         </RawMaterialOnRest>
         <KnowledgeExperienceBonus>
             <desc>Knowledge XP gains increased by [VALUE]%.</desc>
@@ -38680,7 +38680,7 @@
         </RatsKilled>
         <GritSpent>
             <name>Valour Points spent</name>
-            <props.title>Bravest of the Braves</props.title>
+            <props.title>Bravest of the Brave</props.title>
         </GritSpent>
         <KilledByBleeding>
             <name>Enemies exsanguinated</name>

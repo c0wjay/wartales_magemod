@@ -36073,10 +36073,10 @@
             <name>Ölkonzentrat der Glitschigkeit</name>
             <desc>Öl der Glitschigkeit bewirkt seine Effekte mit einer zusätzlichen Wahrscheinlichkeit von ::value1:: %.</desc>
         </BeltAccOilSwipping>
-        <BeltAccProcFever>
+        <BeltAccOilProcFever>
             <name>Ölkonzentrat der Fieberhaftigkeit</name>
             <desc>Öl der Fieberhaftigkeit bewirkt seine Effekte mit einer zusätzlichen Wahrscheinlichkeit von ::value1:: %.</desc>
-        </BeltAccProcFever>
+        </BeltAccOilProcFever>
         <BeltAccOilBrave>
             <name>Ölkonzentrat des Mutes</name>
             <desc>Öl des Mutes bewirkt seine Effekte mit einer zusätzlichen Wahrscheinlichkeit von ::value1:: %.</desc>
@@ -37356,7 +37356,7 @@
             <desc>Reparaturmaterialien und Dorfschmiede stellen [VALUE] zusätzliche Rüstungspunkte wieder her.</desc>
         </RawMaterialEfficacity>
         <RawMaterialOnRest>
-            <desc>[JOBASSIGN] generiert bei jeder Rast &lt;img src="item/RawMaterials"/&gt;[VALUE] Rohmaterialien.</desc>
+            <desc>Produziert während jeder Rast [VALUE] &lt;img src="item/RawMaterials"/&gt;.</desc>
         </RawMaterialOnRest>
         <KnowledgeExperienceBonus>
             <desc>Erhaltene Wissen-EP um[VALUE] % erhöht.</desc>

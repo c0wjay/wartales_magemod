@@ -25,6 +25,7 @@ world = {
 	tatooAuthorized : false,
 	wolfyGiven : false,
 	wolfyDead : false,
+	wolfyShow : false,
 	refugeeGosenbergBorderPostHelped : false,
 	stromkappTutoHelp : false,
 	//HaragEnd
